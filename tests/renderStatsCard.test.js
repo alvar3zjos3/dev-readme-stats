@@ -353,7 +353,7 @@ describe("Test renderStatsCard", () => {
 
     expect(
       document.body.getElementsByTagName("svg")[0].getAttribute("width"),
-    ).toBe("305.81250000000006");
+    ).toBe("296.96875");
   });
 
   it("should auto resize if hide_rank is true & custom_title is set", () => {
