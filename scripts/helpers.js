@@ -4,8 +4,8 @@
 
 import { getInput } from "@actions/core";
 
-const OWNER = "anuraghazra";
-const REPO = "github-readme-stats";
+const OWNER = "alvar3zjos3";
+const REPO = "dev-readme-stats";
 
 /**
  * Retrieve information about the repository that ran the action.
