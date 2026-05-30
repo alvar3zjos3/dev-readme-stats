@@ -5,7 +5,7 @@ import { it, jest } from "@jest/globals";
 import { runAndLogStats } from "./utils.js";
 
 const stats = {
-  name: "Anurag Hazra",
+  name: "Jose Alvarez",
   totalStars: 100,
   totalCommits: 200,
   totalIssues: 300,
@@ -56,7 +56,7 @@ const mock = new MockAdapter(axios);
 const faker = (query, data) => {
   const req = {
     query: {
-      username: "anuraghazra",
+      username: "alvar3zjos3",
       ...query,
     },
   };

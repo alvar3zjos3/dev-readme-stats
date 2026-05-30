@@ -20,7 +20,7 @@ import { CACHE_TTL, DURATIONS } from "../src/common/cache.js";
  * @type {import("../src/fetchers/stats").StatsData}
  */
 const stats = {
-  name: "Anurag Hazra",
+  name: "Jose Alvarez",
   totalStars: 100,
   totalCommits: 200,
   totalIssues: 300,
@@ -94,7 +94,7 @@ const mock = new MockAdapter(axios);
 const faker = (query, data) => {
   const req = {
     query: {
-      username: "anuraghazra",
+      username: "alvar3zjos3",
       ...query,
     },
   };
@@ -161,7 +161,7 @@ describe("Test /api/", () => {
   it("should get the query options", async () => {
     const { req, res } = faker(
       {
-        username: "anuraghazra",
+        username: "alvar3zjos3",
         hide: "issues,prs,contribs",
         show_icons: true,
         hide_border: true,
@@ -324,7 +324,7 @@ describe("Test /api/", () => {
   it("should allow changing ring_color", async () => {
     const { req, res } = faker(
       {
-        username: "anuraghazra",
+        username: "alvar3zjos3",
         hide: "issues,prs,contribs",
         show_icons: true,
         hide_border: true,
@@ -387,11 +387,11 @@ describe("Test /api/", () => {
 
   it("should render error card when include_all_commits true and upstream API fails", async () => {
     mock
-      .onGet("https://api.github.com/search/commits?q=author:anuraghazra")
+      .onGet("https://api.github.com/search/commits?q=author:alvar3zjos3")
       .reply(200, { error: "Some test error message" });
 
     const { req, res } = faker(
-      { username: "anuraghazra", include_all_commits: true },
+      { username: "alvar3zjos3", include_all_commits: true },
       data_stats,
     );
 
