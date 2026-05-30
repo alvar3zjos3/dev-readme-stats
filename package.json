@@ -1,22 +1,22 @@
 {
-  "name": "github-readme-stats",
+  "name": "dev-readme-stats",
   "version": "1.0.0",
-  "description": "Dynamically generate stats for your GitHub readme",
+  "description": "Servicio de estadísticas para desarrolladores de GitHub. Genera tarjetas dinámicas con métricas de commits, repositorios y lenguajes para integrarlas en archivos README",
   "keywords": [
-    "github-readme-stats",
+    "dev-readme-stats",
     "readme-stats",
     "cards",
     "card-generator"
   ],
   "main": "src/index.js",
   "type": "module",
-  "homepage": "https://github.com/anuraghazra/github-readme-stats",
+  "homepage": "https://github.com/alvar3zjos3/dev-readme-stats",
   "bugs": {
-    "url": "https://github.com/anuraghazra/github-readme-stats/issues"
+    "url": "https://github.com/alvar3zjos3/dev-readme-stats/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/anuraghazra/github-readme-stats.git"
+    "url": "https://github.com/alvar3zjos3/dev-readme-stats.git"
   },
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
@@ -33,7 +33,7 @@
     "lint": "npx eslint --max-warnings 0 \"./src/**/*.js\" \"./scripts/**/*.js\" \"./tests/**/*.js\" \"./api/**/*.js\" \"./themes/**/*.js\"",
     "bench": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config jest.bench.config.js"
   },
-  "author": "Anurag Hazra",
+  "author": "Jose Alvarez",
   "license": "MIT",
   "devDependencies": {
     "@actions/core": "^2.0.1",
