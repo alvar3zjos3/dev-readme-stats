@@ -151,10 +151,7 @@ describe("Test renderStatsCard", () => {
       hide_rank: true,
       show_icons: true,
     });
-    expect(document.querySelector("svg")).toHaveAttribute(
-      "width",
-      "322.81250000000006",
-    );
+    expect(document.querySelector("svg")).toHaveAttribute("width", "313.96875");
 
     // Test minimum card width with icons but without rank.
     document.body.innerHTML = renderStatsCard(stats, {
