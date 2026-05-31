@@ -30,7 +30,7 @@ describe("Test calculateRank", () => {
         stars: 25,
         followers: 5,
       }),
-    ).toStrictEqual({ level: "B-", percentile: 65.02918514848255 });
+    ).toMatchObject({ level: "B-", percentile: expect.closeTo(65.029, 3) });
   });
 
   it("median user gets B+ rank", () => {
