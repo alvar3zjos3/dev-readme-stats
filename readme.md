@@ -5,808 +5,748 @@
 
 <p align="center">
   <a href="https://github.com/alvar3zjos3/dev-readme-stats/actions">
-    <img alt="Tests Passing" src="https://github.com/alvar3zjos3/dev-readme-stats/workflows/Test/badge.svg" />
+    <img alt="Tests Pasando" src="https://github.com/alvar3zjos3/dev-readme-stats/workflows/Test/badge.svg" />
   </a>
   <a href="https://github.com/alvar3zjos3/dev-readme-stats/graphs/contributors">
-    <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/alvar3zjos3/dev-readme-stats" />
+    <img alt="Colaboradores de GitHub" src="https://img.shields.io/github/contributors/alvar3zjos3/dev-readme-stats" />
   </a>
   <a href="https://codecov.io/gh/alvar3zjos3/dev-readme-stats">
-    <img alt="Tests Coverage" src="https://codecov.io/gh/alvar3zjos3/dev-readme-stats/branch/master/graph/badge.svg" />
+    <img alt="Cobertura de Tests" src="https://codecov.io/gh/alvar3zjos3/dev-readme-stats/branch/master/graph/badge.svg" />
   </a>
   <a href="https://github.com/alvar3zjos3/dev-readme-stats/issues">
     <img alt="Issues" src="https://img.shields.io/github/issues/alvar3zjos3/dev-readme-stats?color=0088ff" />
   </a>
   <a href="https://github.com/alvar3zjos3/dev-readme-stats/pulls">
-    <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/alvar3zjos3/dev-readme-stats?color=0088ff" />
+    <img alt="Pull Requests de GitHub" src="https://img.shields.io/github/issues-pr/alvar3zjos3/dev-readme-stats?color=0088ff" />
   </a>
   <a href="https://securityscorecards.dev/viewer/?uri=github.com/alvar3zjos3/dev-readme-stats">
     <img alt="OpenSSF Scorecard" src="https://api.securityscorecards.dev/projects/github.com/alvar3zjos3/dev-readme-stats/badge" />
   </a>
   <br />
   <br />
-  <a href="https://vercel.com?utm\_source=github\_readme\_stats\_team\&utm\_campaign=oss">
+  <a href="https://vercel.com?utm_source=github_readme_stats_team&utm_campaign=oss">
     <img src="./powered-by-vercel.svg"/>
   </a>
 </p>
 
 <p align="center">
-  <a href="#all-demos">View Demo</a>
+  <a href="#todas-las-demos">Ver Demo</a>
   ·
-  <a href="https://github.com/alvar3zjos3/dev-readme-stats/issues/new?assignees=&labels=bug&projects=&template=bug_report.yml">Report Bug</a>
+  <a href="https://github.com/alvar3zjos3/dev-readme-stats/issues/new?assignees=&labels=bug&projects=&template=bug_report.yml">Reportar Bug</a>
   ·
-  <a href="https://github.com/alvar3zjos3/dev-readme-stats/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.yml">Request Feature</a>
+  <a href="https://github.com/alvar3zjos3/dev-readme-stats/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.yml">Solicitar Función</a>
   ·
-  <a href="https://github.com/alvar3zjos3/dev-readme-stats/discussions/1770">FAQ</a>
-  ·
-  <a href="https://github.com/alvar3zjos3/dev-readme-stats/discussions/new?category=q-a">Ask Question</a>
+  <a href="https://github.com/alvar3zjos3/dev-readme-stats/discussions/new?category=q-a">Hacer Pregunta</a>
 </p>
 
-
-<p align="center">Love the project? Please consider <a href="https://www.paypal.me/alvar3zjos3">donating</a> to help it improve!</p>
+<p align="center">¿Te gusta el proyecto? ¡Considera <a href="https://www.paypal.me/alvar3zjos3">donar</a> para ayudar a mejorarlo!</p>
 
 <details>
-<summary>Table of contents (Click to show)</summary>
+<summary>Tabla de contenidos (Click para mostrar)</summary>
 
-- [GitHub Stats Card](#github-stats-card)
-    - [Hiding individual stats](#hiding-individual-stats)
-    - [Showing additional individual stats](#showing-additional-individual-stats)
-    - [Showing icons](#showing-icons)
-    - [Showing commits count for specified year](#showing-commits-count-for-specified-year)
-    - [Themes](#themes)
-    - [Customization](#customization)
-- [GitHub Extra Pins](#github-extra-pins)
-    - [Usage](#usage)
-    - [Options](#options)
+- [Tarjeta de Estadísticas de GitHub](#tarjeta-de-estadísticas-de-github)
+    - [Ocultar estadísticas individuales](#ocultar-estadísticas-individuales)
+    - [Mostrar estadísticas adicionales](#mostrar-estadísticas-adicionales)
+    - [Mostrar iconos](#mostrar-iconos)
+    - [Mostrar commits de un año específico](#mostrar-commits-de-un-año-específico)
+    - [Temas](#temas)
+    - [Personalización](#personalización)
+- [Pins Extra de GitHub](#pins-extra-de-github)
+    - [Uso](#uso)
+    - [Opciones](#opciones)
     - [Demo](#demo)
-- [GitHub Gist Pins](#github-gist-pins)
-    - [Usage](#usage-1)
-    - [Options](#options-1)
+- [Pins de Gists de GitHub](#pins-de-gists-de-github)
+    - [Uso](#uso-1)
+    - [Opciones](#opciones-1)
     - [Demo](#demo-1)
-- [Top Languages Card](#top-languages-card)
-    - [Usage](#usage-2)
-    - [Options](#options-2)
-    - [Language stats algorithm](#language-stats-algorithm)
-    - [Exclude individual repositories](#exclude-individual-repositories)
-    - [Hide individual languages](#hide-individual-languages)
-    - [Show more languages](#show-more-languages)
-    - [Compact Language Card Layout](#compact-language-card-layout)
-    - [Donut Chart Language Card Layout](#donut-chart-language-card-layout)
-    - [Donut Vertical Chart Language Card Layout](#donut-vertical-chart-language-card-layout)
-    - [Pie Chart Language Card Layout](#pie-chart-language-card-layout)
-    - [Hide Progress Bars](#hide-progress-bars)
-    - [Change format of language's stats](#change-format-of-languages-stats)
+- [Tarjeta de Lenguajes Principales](#tarjeta-de-lenguajes-principales)
+    - [Uso](#uso-2)
+    - [Opciones](#opciones-2)
+    - [Algoritmo de estadísticas de lenguajes](#algoritmo-de-estadísticas-de-lenguajes)
+    - [Excluir repositorios individuales](#excluir-repositorios-individuales)
+    - [Ocultar lenguajes individuales](#ocultar-lenguajes-individuales)
+    - [Mostrar más lenguajes](#mostrar-más-lenguajes)
+    - [Diseño compacto](#diseño-compacto)
+    - [Diseño de gráfico de dona](#diseño-de-gráfico-de-dona)
+    - [Diseño de gráfico de dona vertical](#diseño-de-gráfico-de-dona-vertical)
+    - [Diseño de gráfico de tarta](#diseño-de-gráfico-de-tarta)
+    - [Ocultar barras de progreso](#ocultar-barras-de-progreso)
+    - [Cambiar formato de estadísticas](#cambiar-formato-de-estadísticas)
     - [Demo](#demo-2)
-- [WakaTime Stats Card](#wakatime-stats-card)
-    - [Options](#options-3)
+- [Tarjeta de Estadísticas WakaTime](#tarjeta-de-estadísticas-wakatime)
+    - [Opciones](#opciones-3)
     - [Demo](#demo-3)
-- [All Demos](#all-demos)
-  - [Quick Tip (Align The Cards)](#quick-tip-align-the-cards)
-    - [Stats and top languages cards](#stats-and-top-languages-cards)
-    - [Pinning repositories](#pinning-repositories)
-- [Deploy on your own (recommended)](#deploy-on-your-own-recommended)
+- [Todas las Demos](#todas-las-demos)
+  - [Consejo Rápido (Alinear Tarjetas)](#consejo-rápido-alinear-tarjetas)
+    - [Tarjetas de estadísticas y lenguajes](#tarjetas-de-estadísticas-y-lenguajes)
+    - [Pinear repositorios](#pinear-repositorios)
+- [Desplegar tu propia instancia (recomendado)](#desplegar-tu-propia-instancia-recomendado)
   - [GitHub Actions](#github-actions)
-  - [Self-hosted (Vercel/Other)](#self-hosted-vercelother)
-    - [First step: get your Personal Access Token (PAT)](#first-step-get-your-personal-access-token-pat)
-    - [On Vercel](#on-vercel)
-    - [:film\_projector: Check Out Step By Step Video Tutorial By @codeSTACKr](#film_projector-check-out-step-by-step-video-tutorial-by-codestackr)
-    - [On other platforms](#on-other-platforms)
-    - [Available environment variables](#available-environment-variables)
-  - [Keep your fork up to date](#keep-your-fork-up-to-date)
-- [:sparkling\_heart: Support the project](#sparkling_heart-support-the-project)
+  - [Auto-alojado (Vercel/Otro)](#auto-alojado-vercelotro)
+    - [Primer paso: obtener tu Token de Acceso Personal (PAT)](#primer-paso-obtener-tu-token-de-acceso-personal-pat)
+    - [En Vercel](#en-vercel)
+    - [En otras plataformas](#en-otras-plataformas)
+    - [Variables de entorno disponibles](#variables-de-entorno-disponibles)
+  - [Mantener tu fork actualizado](#mantener-tu-fork-actualizado)
 </details>
 
-# Important Notices <!-- omit in toc -->
+# Avisos Importantes <!-- omit in toc -->
 
 > [!IMPORTANT]
-> The public Vercel instance at `https://github-readme-stats.vercel.app/api` is best-effort and can be unreliable due to rate limits and traffic spikes (see [#1471](https://github.com/alvar3zjos3/dev-readme-stats/issues/1471)). We use caching to improve stability (see [common options](#common-options)), but for reliable cards we recommend [self-hosting](#deploy-on-your-own) (Vercel or other) or using the [GitHub Actions workflow](#github-actions-recommended) to generate cards in your [profile repository](https://docs.github.com/en/account-and-profile/how-tos/profile-customization/managing-your-profile-readme).
+> La instancia pública de Vercel en `https://dev-readme-stats.vercel.app/api` funciona con el mejor esfuerzo posible y puede ser poco fiable debido a los límites de velocidad y picos de tráfico. Usamos caché para mejorar la estabilidad (ver [opciones comunes](#opciones-comunes)), pero para tarjetas fiables recomendamos [auto-alojamiento](#desplegar-tu-propia-instancia-recomendado) (Vercel u otro) o usar el [flujo de trabajo de GitHub Actions](#github-actions) para generar tarjetas en tu [repositorio de perfil](https://docs.github.com/es/account-and-profile/how-tos/profile-customization/managing-your-profile-readme).
 
-<img alt="Uptime Badge" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fgithub-readme-stats-git-monitoring-github-readme-stats-team.vercel.app%2Fapi%2Fstatus%2Fup%3Ftype%3Dshields">
+<img alt="Badge de Uptime" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdev-readme-stats.vercel.app%2Fapi%2Fstatus%2Fup%3Ftype%3Dshields">
 
 > [!IMPORTANT]
-> We're a small team, and to prioritize, we rely on upvotes :+1:. We use the Top Issues dashboard for tracking community demand (see [#1935](https://github.com/alvar3zjos3/dev-readme-stats/issues/1935)). Do not hesitate to upvote the issues and pull requests you are interested in. We will work on the most upvoted first.
+> Somos un equipo pequeño y para priorizar dependemos de los votos positivos :+1:. No dudes en votar a favor de los issues y pull requests que te interesen. Trabajaremos primero en los que más votos tengan.
 
-# GitHub Stats Card
+# Tarjeta de Estadísticas de GitHub
 
-Copy and paste this into your markdown, and that's it. Simple!
+Copia y pega esto en tu markdown, ¡y listo!
 
-Change the `?username=` value to your GitHub username.
+Cambia el valor de `?username=` por tu nombre de usuario de GitHub.
 
 ```md
-[![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api?username=alvar3zjos3)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3)](https://github.com/alvar3zjos3/dev-readme-stats)
 ```
 
 > [!WARNING]
-> By default, the stats card only shows statistics like stars, commits, and pull requests from public repositories. To show private statistics on the stats card, you should [deploy your own instance](#deploy-on-your-own) using your own GitHub API token.
+> Por defecto, la tarjeta de estadísticas solo muestra estadísticas de repositorios públicos como estrellas, commits y pull requests. Para mostrar estadísticas privadas debes [desplegar tu propia instancia](#desplegar-tu-propia-instancia-recomendado) con tu propio token de la API de GitHub.
 
 > [!NOTE]
-> Available ranks are S (top 1%), A+ (12.5%), A (25%), A- (37.5%), B+ (50%), B (62.5%), B- (75%), C+ (87.5%) and C (everyone). This ranking scheme is based on the [Japanese academic grading](https://wikipedia.org/wiki/Academic_grading_in_Japan) system. The global percentile is calculated as a weighted sum of percentiles for each statistic (number of commits, pull requests, reviews, issues, stars, and followers), based on the cumulative distribution function of the [exponential](https://wikipedia.org/wiki/exponential_distribution) and the [log-normal](https://wikipedia.org/wiki/Log-normal_distribution) distributions. The implementation can be investigated at [src/calculateRank.js](https://github.com/alvar3zjos3/dev-readme-stats/blob/master/src/calculateRank.js). The circle around the rank shows 100 minus the global percentile.
+> Los rangos disponibles son S (top 1%), A+ (12.5%), A (25%), A- (37.5%), B+ (50%), B (62.5%), B- (75%), C+ (87.5%) y C (todos). Este esquema de clasificación está basado en el [sistema de calificación académica japonés](https://wikipedia.org/wiki/Academic_grading_in_Japan). El percentil global se calcula como una suma ponderada de percentiles para cada estadística (número de commits, pull requests, revisiones, issues, estrellas y seguidores). El círculo alrededor del rango muestra 100 menos el percentil global.
 
-### Hiding individual stats
+### Ocultar estadísticas individuales
 
-You can pass a query parameter `&hide=` to hide any specific stats with comma-separated values.
+Puedes pasar el parámetro `&hide=` para ocultar estadísticas específicas con valores separados por comas.
 
-> Options: `&hide=stars,commits,prs,issues,contribs`
+> Opciones: `&hide=stars,commits,prs,issues,contribs`
 
 ```md
-![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api?username=alvar3zjos3&hide=contribs,prs)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=contribs,prs)
 ```
 
-### Showing additional individual stats
+### Mostrar estadísticas adicionales
 
-You can pass a query parameter `&show=` to show any specific additional stats with comma-separated values.
+Puedes pasar el parámetro `&show=` para mostrar estadísticas adicionales con valores separados por comas.
 
-> Options: `&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage`
+> Opciones: `&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage`
 
 ```md
-![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api?username=alvar3zjos3&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)
 ```
 
-### Showing icons
+### Mostrar iconos
 
-To enable icons, you can pass `&show_icons=true` in the query param, like so:
+Para activar los iconos, pasa `&show_icons=true` en el parámetro de consulta:
 
 ```md
-![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true)
 ```
 
-### Showing commits count for specified year
+### Mostrar commits de un año específico
 
-You can specify a year and fetch only the commits that were made in that year by passing `&commits_year=YYYY` to the parameter.
+Puedes especificar un año y obtener solo los commits realizados ese año pasando `&commits_year=AAAA`:
 
 ```md
-![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api?username=alvar3zjos3&commits_year=2020)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&commits_year=2024)
 ```
 
-### Themes
+### Temas
 
-With inbuilt themes, you can customize the look of the card without doing any [manual customization](#customization).
+Con los temas integrados puedes personalizar el aspecto de la tarjeta sin hacer ninguna [personalización manual](#personalización).
 
-Use `&theme=THEME_NAME` parameter like so :
+Usa el parámetro `&theme=NOMBRE_TEMA`:
 
 ```md
-![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&theme=radical)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&theme=radical)
 ```
 
-#### All inbuilt themes
+#### Todos los temas integrados
 
-GitHub Readme Stats comes with several built-in themes (e.g. `dark`, `radical`, `merko`, `gruvbox`, `tokyonight`, `onedark`, `cobalt`, `synthwave`, `highcontrast`, `dracula`).
+Dev Readme Stats viene con varios temas integrados (p. ej. `dark`, `radical`, `merko`, `gruvbox`, `tokyonight`, `onedark`, `cobalt`, `synthwave`, `highcontrast`, `dracula`).
 
-<img src="https://res.cloudinary.com/alvar3zjos3/image/upload/v1595174536/grs-themes_l4ynja.png" alt="GitHub Readme Stats Themes" width="600px"/>
+Puedes ver una vista previa de [todos los temas disponibles](themes/README.md) o consultar el [archivo de configuración de temas](themes/index.js).
 
-You can look at a preview for [all available themes](themes/README.md) or checkout the [theme config file](themes/index.js). Please note that we paused the addition of new themes to decrease maintenance efforts; all pull requests related to new themes will be closed.
+#### Tema Responsivo
 
-#### Responsive Card Theme
+[![Estadísticas GitHub de Alvarez - Oscuro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3\&show_icons=true\&theme=dark#gh-dark-mode-only)](https://github.com/alvar3zjos3/dev-readme-stats#gh-dark-mode-only)
+[![Estadísticas GitHub de Alvarez - Claro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3\&show_icons=true\&theme=default#gh-light-mode-only)](https://github.com/alvar3zjos3/dev-readme-stats#gh-light-mode-only)
 
-[![Alvarez GitHub stats-Dark](https://github-readme-stats.vercel.app/api?username=alvar3zjos3\&show_icons=true\&theme=dark#gh-dark-mode-only)](https://github.com/alvar3zjos3/dev-readme-stats#responsive-card-theme#gh-dark-mode-only)
-[![Alvarez GitHub stats-Light](https://github-readme-stats.vercel.app/api?username=alvar3zjos3\&show_icons=true\&theme=default#gh-light-mode-only)](https://github.com/alvar3zjos3/dev-readme-stats#responsive-card-theme#gh-light-mode-only)
+Como GitHub re-sube las tarjetas y las sirve desde su [CDN](https://docs.github.com/es/authentication/keeping-your-account-and-data-secure/about-anonymized-urls), no podemos inferir el tema del navegador en el lado del servidor. Sin embargo, hay cuatro métodos para crear temas dinámicos en el lado del cliente.
 
-Since GitHub will re-upload the cards and serve them from their [CDN](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-anonymized-urls), we can not infer the browser/GitHub theme on the server side. There are, however, four methods you can use to create dynamics themes on the client side.
+##### Usar el tema transparente
 
-##### Use the transparent theme
-
-We have included a `transparent` theme that has a transparent background. This theme is optimized to look good on GitHub's dark and light default themes. You can enable this theme using the `&theme=transparent` parameter like so:
+Hemos incluido un tema `transparent` con fondo transparente, optimizado para verse bien tanto en el tema oscuro como en el claro de GitHub:
 
 ```md
-![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&theme=transparent)
-```
-
-<details>
-<summary>:eyes: Show example</summary>
-
-![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api?username=alvar3zjos3\&show_icons=true\&theme=transparent)
-
-</details>
-
-##### Add transparent alpha channel to a themes bg\_color
-
-You can use the `bg_color` parameter to make any of [the available themes](themes/README.md) transparent. This is done by setting the `bg_color` to a color with a transparent alpha channel (i.e. `bg_color=00000000`):
-
-```md
-![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&bg_color=00000000)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&theme=transparent)
 ```
 
 <details>
-<summary>:eyes: Show example</summary>
+<summary>:eyes: Ver ejemplo</summary>
 
-![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api?username=alvar3zjos3\&show_icons=true\&bg_color=00000000)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3\&show_icons=true\&theme=transparent)
 
 </details>
 
-##### Use GitHub's theme context tag
+##### Añadir canal alfa transparente al bg\_color del tema
 
-You can use [GitHub's theme context](https://github.blog/changelog/2021-11-24-specify-theme-context-for-images-in-markdown/) tags to switch the theme based on the user GitHub theme automatically. This is done by appending `#gh-dark-mode-only` or `#gh-light-mode-only` to the end of an image URL. This tag will define whether the image specified in the markdown is only shown to viewers using a light or a dark GitHub theme:
+Puedes usar el parámetro `bg_color` para hacer cualquier tema transparente estableciendo el color con un canal alfa transparente (p. ej. `bg_color=00000000`):
 
 ```md
-[![Alvarez GitHub stats-Dark](https://github-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&theme=dark#gh-dark-mode-only)](https://github.com/alvar3zjos3/dev-readme-stats#gh-dark-mode-only)
-[![Alvarez GitHub stats-Light](https://github-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&theme=default#gh-light-mode-only)](https://github.com/alvar3zjos3/dev-readme-stats#gh-light-mode-only)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&bg_color=00000000)
 ```
 
 <details>
-<summary>:eyes: Show example</summary>
+<summary>:eyes: Ver ejemplo</summary>
 
-[![Alvarez GitHub stats-Dark](https://github-readme-stats.vercel.app/api?username=alvar3zjos3\&show_icons=true\&theme=dark#gh-dark-mode-only)](https://github.com/alvar3zjos3/dev-readme-stats#gh-dark-mode-only)
-[![Alvarez GitHub stats-Light](https://github-readme-stats.vercel.app/api?username=alvar3zjos3\&show_icons=true\&theme=default#gh-light-mode-only)](https://github.com/alvar3zjos3/dev-readme-stats#gh-light-mode-only)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3\&show_icons=true\&bg_color=00000000)
 
 </details>
 
-##### Use GitHub's new media feature
+##### Usar la etiqueta de contexto de tema de GitHub
 
-You can use [GitHub's new media feature](https://github.blog/changelog/2022-05-19-specify-theme-context-for-images-in-markdown-beta/) in HTML to specify whether to display images for light or dark themes. This is done using the HTML `<picture>` element in combination with the `prefers-color-scheme` media feature.
+Puedes usar las [etiquetas de contexto de tema de GitHub](https://github.blog/changelog/2021-11-24-specify-theme-context-for-images-in-markdown/) añadiendo `#gh-dark-mode-only` o `#gh-light-mode-only` al final de la URL de la imagen:
+
+```md
+[![Estadísticas GitHub de Alvarez - Oscuro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&theme=dark#gh-dark-mode-only)](https://github.com/alvar3zjos3/dev-readme-stats#gh-dark-mode-only)
+[![Estadísticas GitHub de Alvarez - Claro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&theme=default#gh-light-mode-only)](https://github.com/alvar3zjos3/dev-readme-stats#gh-light-mode-only)
+```
+
+<details>
+<summary>:eyes: Ver ejemplo</summary>
+
+[![Estadísticas GitHub de Alvarez - Oscuro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3\&show_icons=true\&theme=dark#gh-dark-mode-only)](https://github.com/alvar3zjos3/dev-readme-stats#gh-dark-mode-only)
+[![Estadísticas GitHub de Alvarez - Claro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3\&show_icons=true\&theme=default#gh-light-mode-only)](https://github.com/alvar3zjos3/dev-readme-stats#gh-light-mode-only)
+
+</details>
+
+##### Usar la nueva función de medios de GitHub
+
+Puedes usar la [nueva función de medios de GitHub](https://github.blog/changelog/2022-05-19-specify-theme-context-for-images-in-markdown-beta/) en HTML con el elemento `<picture>` y la función `prefers-color-scheme`:
 
 ```html
 <picture>
   <source
-    srcset="https://github-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&theme=dark"
+    srcset="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&theme=dark"
     media="(prefers-color-scheme: dark)"
   />
   <source
-    srcset="https://github-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true"
+    srcset="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true"
     media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
   />
-  <img src="https://github-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true" />
+  <img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true" />
 </picture>
 ```
 
 <details>
-<summary>:eyes: Show example</summary>
+<summary>:eyes: Ver ejemplo</summary>
 
 <picture>
   <source
-    srcset="https://github-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&theme=dark"
+    srcset="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&theme=dark"
     media="(prefers-color-scheme: dark)"
   />
   <source
-    srcset="https://github-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true"
+    srcset="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true"
     media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
   />
-  <img src="https://github-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true" />
+  <img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true" />
 </picture>
 
 </details>
 
-### Customization
+### Personalización
 
-You can customize the appearance of all your cards however you wish with URL parameters.
+Puedes personalizar el aspecto de todas tus tarjetas con parámetros de URL.
 
-#### Common Options
+#### Opciones Comunes
 
-| Name | Description | Type | Default value |
+| Nombre | Descripción | Tipo | Valor por defecto |
 | --- | --- | --- | --- |
-| `title_color` | Card's title color. | string (hex color) | `2f80ed` |
-| `text_color` | Body text color. | string (hex color) | `434d58` |
-| `icon_color` | Icons color if available. | string (hex color) | `4c71f2` |
-| `border_color` | Card's border color. Does not apply when `hide_border` is enabled. | string (hex color) | `e4e2e2` |
-| `bg_color` | Card's background color. | string (hex color or a gradient in the form of *angle,start,end*) | `fffefe` |
-| `hide_border` | Hides the card's border. | boolean | `false` |
-| `theme` | Name of the theme, choose from [all available themes](themes/README.md). | enum | `default` |
-| `cache_seconds` | Sets the cache header manually (min: 21600, max: 86400). | integer | `21600` |
-| `locale` | Sets the language in the card, you can check full list of available locales [here](#available-locales). | enum | `en` |
-| `border_radius` | Corner rounding on the card. | number | `4.5` |
+| `title_color` | Color del título de la tarjeta. | string (color hex) | `2f80ed` |
+| `text_color` | Color del texto del cuerpo. | string (color hex) | `434d58` |
+| `icon_color` | Color de los iconos si están disponibles. | string (color hex) | `4c71f2` |
+| `border_color` | Color del borde de la tarjeta. No aplica cuando `hide_border` está activado. | string (color hex) | `e4e2e2` |
+| `bg_color` | Color de fondo de la tarjeta. | string (color hex o gradiente en forma de *ángulo,inicio,fin*) | `fffefe` |
+| `hide_border` | Oculta el borde de la tarjeta. | boolean | `false` |
+| `theme` | Nombre del tema, elige entre [todos los temas disponibles](themes/README.md). | enum | `default` |
+| `cache_seconds` | Establece manualmente la cabecera de caché (mín: 21600, máx: 86400). | integer | `21600` |
+| `locale` | Establece el idioma de la tarjeta. | enum | `en` |
+| `border_radius` | Radio de las esquinas de la tarjeta. | number | `4.5` |
 
 > [!WARNING]
-> We use caching to decrease the load on our servers (see <https://github.com/alvar3zjos3/dev-readme-stats/issues/1471#issuecomment-1271551425>). Our cards have the following default cache hours: stats card - 24 hours, top languages card - 144 hours (6 days), pin card - 240 hours (10 days), gist card - 48 hours (2 days), and wakatime card - 24 hours. If you want the data on your cards to be updated more often you can [deploy your own instance](#deploy-on-your-own) and set [environment variable](#available-environment-variables) `CACHE_SECONDS` to a value of your choosing.
+> Usamos caché para reducir la carga en nuestros servidores. Los tiempos de caché por defecto son: tarjeta de estadísticas - 24 horas, tarjeta de lenguajes principales - 144 horas (6 días), tarjeta pin - 240 horas (10 días), tarjeta gist - 48 horas (2 días) y tarjeta wakatime - 24 horas. Si quieres que los datos se actualicen más frecuentemente puedes [desplegar tu propia instancia](#desplegar-tu-propia-instancia-recomendado) y establecer la variable de entorno `CACHE_SECONDS` con el valor que desees.
 
-##### Gradient in bg\_color
+##### Degradado en bg\_color
 
-You can provide multiple comma-separated values in the bg\_color option to render a gradient with the following format:
+Puedes proporcionar múltiples valores separados por comas en la opción `bg_color` para renderizar un degradado con el siguiente formato:
 
-    &bg_color=DEG,COLOR1,COLOR2,COLOR3...COLOR10
+    &bg_color=GRADO,COLOR1,COLOR2,COLOR3...COLOR10
 
-##### Available locales
+##### Idiomas disponibles
 
-Here is a list of all available locales:
+Lista de todos los idiomas disponibles:
 
 <table>
 <tr><td>
 
-| Code | Locale |
+| Código | Idioma |
 | --- | --- |
-| `ar` | Arabic |
-| `az` | Azerbaijani |
-| `bn` | Bengali |
-| `bg` | Bulgarian |
-| `my` | Burmese |
-| `ca` | Catalan |
-| `cn` | Chinese |
-| `zh-tw` | Chinese (Taiwan) |
-| `cs` | Czech |
-| `nl` | Dutch |
-| `en` | English |
+| `ar` | Árabe |
+| `az` | Azerbaiyano |
+| `bn` | Bengalí |
+| `bg` | Búlgaro |
+| `my` | Birmano |
+| `ca` | Catalán |
+| `cn` | Chino |
+| `zh-tw` | Chino (Taiwán) |
+| `cs` | Checo |
+| `nl` | Holandés |
+| `en` | Inglés |
 | `fil` | Filipino |
-| `fi` | Finnish |
-| `fr` | French |
-| `de` | German |
-| `el` | Greek |
+| `fi` | Finlandés |
+| `fr` | Francés |
+| `de` | Alemán |
+| `el` | Griego |
 
 </td><td>
 
-| Code | Locale |
+| Código | Idioma |
 | --- | --- |
-| `he` | Hebrew |
+| `he` | Hebreo |
 | `hi` | Hindi |
-| `hu` | Hungarian |
-| `id` | Indonesian |
-| `it` | Italian |
-| `ja` | Japanese |
-| `kr` | Korean |
+| `hu` | Húngaro |
+| `id` | Indonesio |
+| `it` | Italiano |
+| `ja` | Japonés |
+| `kr` | Coreano |
 | `ml` | Malayalam |
-| `np` | Nepali |
-| `no` | Norwegian |
-| `fa` | Persian (Farsi) |
-| `pl` | Polish |
-| `pt-br` | Portuguese (Brazil) |
-| `pt-pt` | Portuguese (Portugal) |
-| `ro` | Romanian |
+| `np` | Nepalés |
+| `no` | Noruego |
+| `fa` | Persa (Farsi) |
+| `pl` | Polaco |
+| `pt-br` | Portugués (Brasil) |
+| `pt-pt` | Portugués (Portugal) |
+| `ro` | Rumano |
 
 </td><td>
 
-| Code | Locale |
+| Código | Idioma |
 | --- | --- |
-| `ru` | Russian |
-| `sa` | Sanskrit |
-| `sr` | Serbian (Cyrillic) |
-| `sr-latn` | Serbian (Latin) |
-| `sk` | Slovak |
-| `es` | Spanish |
-| `sw` | Swahili |
-| `se` | Swedish |
+| `ru` | Ruso |
+| `sa` | Sánscrito |
+| `sr` | Serbio (Cirílico) |
+| `sr-latn` | Serbio (Latino) |
+| `sk` | Eslovaco |
+| `es` | Español |
+| `sw` | Suajili |
+| `se` | Sueco |
 | `ta` | Tamil |
-| `th` | Thai |
-| `tr` | Turkish |
-| `uk-ua` | Ukrainian |
+| `th` | Tailandés |
+| `tr` | Turco |
+| `uk-ua` | Ucraniano |
 | `ur` | Urdu |
-| `uz` | Uzbek |
-| `vi` | Vietnamese |
+| `uz` | Uzbeko |
+| `vi` | Vietnamita |
 
 </td></tr>
 </table>
 
-If we don't support your language, please consider contributing! You can find more information about how to do it in our [contributing guidelines](CONTRIBUTING.md#translations-contribution).
+#### Opciones Exclusivas de la Tarjeta de Estadísticas
 
-#### Stats Card Exclusive Options
-
-| Name | Description | Type | Default value |
+| Nombre | Descripción | Tipo | Valor por defecto |
 | --- | --- | --- | --- |
-| `hide` | Hides the [specified items](#hiding-individual-stats) from stats. | string (comma-separated values) | `null` |
-| `hide_title` | Hides the title of your stats card. | boolean | `false` |
-| `card_width` | Sets the card's width manually. | number | `500px  (approx.)` |
-| `hide_rank` | Hides the rank and automatically resizes the card width. | boolean | `false` |
-| `rank_icon` | Shows alternative rank icon (i.e. `github`, `percentile` or `default`). | enum | `default` |
-| `show_icons` | Shows icons near all stats. | boolean | `false` |
-| `include_all_commits` | Count total commits instead of just the current year commits. | boolean | `false` |
-| `line_height` | Sets the line height between text. | integer | `25` |
-| `exclude_repo` | Excludes specified repositories. | string (comma-separated values) | `null` |
-| `custom_title` | Sets a custom title for the card. | string | `<username> GitHub Stats` |
-| `text_bold` | Uses bold text. | boolean | `true` |
-| `disable_animations` | Disables all animations in the card. | boolean | `false` |
-| `ring_color` | Color of the rank circle. | string (hex color) | `2f80ed` |
-| `number_format` | Switches between two available formats for displaying the card values `short` (i.e. `6.6k`) and `long` (i.e. `6626`). | enum | `short` |
-| `number_precision` | Enforce the number of digits after the decimal point for `short` number format. Must be an integer between 0 and 2. Will be ignored for `long` number format. | integer (0, 1 or 2) | `null` |
-| `show` | Shows [additional items](#showing-additional-individual-stats) on stats card (i.e. `reviews`, `discussions_started`, `discussions_answered`, `prs_merged` or `prs_merged_percentage`). | string (comma-separated values) | `null` |
-| `commits_year` | Filters and counts only commits made in the specified year. | integer _(YYYY)_ | `<current year> (one year to date)` |
-
-> [!WARNING]
-> Custom title should be URI-escaped, as specified in [Percent Encoding](https://en.wikipedia.org/wiki/Percent-encoding) (i.e: `Alvarez GitHub Stats` should become `Anurag%27s%20GitHub%20Stats`). You can use [urlencoder.org](https://www.urlencoder.org/) to help you do this automatically.
-
-> [!NOTE]
-> When hide\_rank=`true`, the minimum card width is 270 px + the title length and padding.
+| `hide` | Oculta los [elementos especificados](#ocultar-estadísticas-individuales) de las estadísticas. | string (valores separados por comas) | `null` |
+| `hide_title` | Oculta el título de tu tarjeta de estadísticas. | boolean | `false` |
+| `card_width` | Establece el ancho de la tarjeta manualmente. | number | `500px (aprox.)` |
+| `hide_rank` | Oculta el rango y redimensiona automáticamente el ancho de la tarjeta. | boolean | `false` |
+| `rank_icon` | Muestra un icono de rango alternativo (`github`, `percentile` o `default`). | enum | `default` |
+| `show_icons` | Muestra iconos junto a todas las estadísticas. | boolean | `false` |
+| `include_all_commits` | Cuenta el total de commits en lugar de solo los del año actual. | boolean | `false` |
+| `line_height` | Establece el alto de línea entre el texto. | integer | `25` |
+| `exclude_repo` | Excluye repositorios específicos. | string (valores separados por comas) | `null` |
+| `custom_title` | Establece un título personalizado para la tarjeta. | string | `<usuario> GitHub Stats` |
+| `text_bold` | Usa texto en negrita. | boolean | `true` |
+| `disable_animations` | Desactiva todas las animaciones de la tarjeta. | boolean | `false` |
+| `ring_color` | Color del círculo del rango. | string (color hex) | `2f80ed` |
+| `number_format` | Cambia entre dos formatos: `short` (p. ej. `6.6k`) y `long` (p. ej. `6626`). | enum | `short` |
+| `show` | Muestra [elementos adicionales](#mostrar-estadísticas-adicionales) en la tarjeta. | string (valores separados por comas) | `null` |
+| `commits_year` | Filtra y cuenta solo los commits del año especificado. | integer _(AAAA)_ | `<año actual>` |
 
 ***
 
-# GitHub Extra Pins
+# Pins Extra de GitHub
 
-GitHub extra pins allow you to pin more than 6 repositories in your profile using a GitHub readme profile.
+Los pins extra de GitHub te permiten pinear más de 6 repositorios en tu perfil usando un README de perfil de GitHub.
 
-Yay! You are no longer limited to 6 pinned repositories.
+### Uso
 
-### Usage
+Copia y pega este código en tu readme y cambia los enlaces.
 
-Copy-paste this code into your readme and change the links.
-
-Endpoint: `api/pin?username=alvar3zjos3&repo=github-readme-stats`
+Endpoint: `api/pin?username=alvar3zjos3&repo=dev-readme-stats`
 
 ```md
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=github-readme-stats)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Tarjeta Readme](https://dev-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=dev-readme-stats)](https://github.com/alvar3zjos3/dev-readme-stats)
 ```
 
-### Options
+### Opciones
 
-You can customize the appearance and behavior of the pinned repository card using the [common options](#common-options) and exclusive options listed in the table below.
-
-| Name | Description | Type | Default value |
+| Nombre | Descripción | Tipo | Valor por defecto |
 | --- | --- | --- | --- |
-| `show_owner` | Shows the repo's owner name. | boolean | `false` |
-| `description_lines_count` | Manually set the number of lines for the description. Specified value will be clamped between 1 and 3. If this parameter is not specified, the number of lines will be automatically adjusted according to the actual length of the description. | number | `null` |
+| `show_owner` | Muestra el nombre del propietario del repositorio. | boolean | `false` |
+| `description_lines_count` | Establece manualmente el número de líneas para la descripción (entre 1 y 3). | number | `null` |
 
 ### Demo
 
-![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=alvar3zjos3\&repo=github-readme-stats)
+![Tarjeta Readme](https://dev-readme-stats.vercel.app/api/pin/?username=alvar3zjos3\&repo=dev-readme-stats)
 
-Use `show_owner` query option to include the repo's owner username
+Usa la opción `show_owner` para incluir el nombre de usuario del propietario del repositorio
 
-![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=alvar3zjos3\&repo=github-readme-stats\&show_owner=true)
+![Tarjeta Readme](https://dev-readme-stats.vercel.app/api/pin/?username=alvar3zjos3\&repo=dev-readme-stats\&show_owner=true)
 
-# GitHub Gist Pins
+# Pins de Gists de GitHub
 
-GitHub gist pins allow you to pin gists in your GitHub profile using a GitHub readme profile.
+Los pins de Gists de GitHub te permiten pinear gists en tu perfil de GitHub.
 
-### Usage
+### Uso
 
-Copy-paste this code into your readme and change the links.
+Copia y pega este código en tu readme y cambia los enlaces.
 
 Endpoint: `api/gist?id=bbfce31e0217a3689c8d961a356cb10d`
 
 ```md
-[![Gist Card](https://github-readme-stats.vercel.app/api/gist?id=bbfce31e0217a3689c8d961a356cb10d)](https://gist.github.com/Yizack/bbfce31e0217a3689c8d961a356cb10d/)
+[![Tarjeta Gist](https://dev-readme-stats.vercel.app/api/gist?id=bbfce31e0217a3689c8d961a356cb10d)](https://gist.github.com/alvar3zjos3/)
 ```
 
-### Options
+### Opciones
 
-You can customize the appearance and behavior of the gist card using the [common options](#common-options) and exclusive options listed in the table below.
-
-| Name | Description | Type | Default value |
+| Nombre | Descripción | Tipo | Valor por defecto |
 | --- | --- | --- | --- |
-| `show_owner` | Shows the gist's owner name. | boolean | `false` |
+| `show_owner` | Muestra el nombre del propietario del gist. | boolean | `false` |
 
 ### Demo
 
-![Gist Card](https://github-readme-stats.vercel.app/api/gist?id=bbfce31e0217a3689c8d961a356cb10d)
+![Tarjeta Gist](https://dev-readme-stats.vercel.app/api/gist?id=bbfce31e0217a3689c8d961a356cb10d)
 
-Use `show_owner` query option to include the gist's owner username
+Usa la opción `show_owner` para incluir el nombre de usuario del propietario
 
-![Gist Card](https://github-readme-stats.vercel.app/api/gist?id=bbfce31e0217a3689c8d961a356cb10d\&show_owner=true)
+![Tarjeta Gist](https://dev-readme-stats.vercel.app/api/gist?id=bbfce31e0217a3689c8d961a356cb10d\&show_owner=true)
 
-# Top Languages Card
+# Tarjeta de Lenguajes Principales
 
-The top languages card shows a GitHub user's most frequently used languages.
+La tarjeta de lenguajes principales muestra los lenguajes más utilizados por un usuario de GitHub.
 
 > [!WARNING]
-> By default, the language card shows language results only from public repositories. To include languages used in private repositories, you should [deploy your own instance](#deploy-on-your-own) using your own GitHub API token.
+> Por defecto, la tarjeta de lenguajes solo muestra resultados de repositorios públicos. Para incluir lenguajes de repositorios privados, debes [desplegar tu propia instancia](#desplegar-tu-propia-instancia-recomendado) con tu propio token de la API de GitHub.
 
 > [!NOTE]
-> Top Languages does not indicate the user's skill level or anything like that; it's a GitHub metric to determine which languages have the most code on GitHub. It is a new feature of github-readme-stats.
+> Los Lenguajes Principales no indican el nivel de habilidad del usuario; es una métrica de GitHub para determinar qué lenguajes tienen más código en GitHub.
 
 > [!WARNING]
-> This card shows language usage only inside your own non-forked repositories, not depending on who the author of the commits is. It does not include your contributions into another users/organizations repositories. Currently there are no way to get this data from GitHub API. If you want this behavior to be improved you can support [this feature request](https://github.com/orgs/community/discussions/18230) created by [@rickstaa](https://github.com/rickstaa) inside GitHub Community.
+> Esta tarjeta muestra el uso de lenguajes solo dentro de tus propios repositorios no bifurcados, sin importar quién sea el autor de los commits. No incluye tus contribuciones a repositorios de otros usuarios u organizaciones.
 
 > [!WARNING]
-> Currently this card shows data only about first 100 repositories. This is because GitHub API limitations which cause downtimes of public instances (see [#1471](https://github.com/alvar3zjos3/dev-readme-stats/issues/1471)). In future this behavior will be improved by releasing GitHub action or providing environment variables for user's own instances.
+> Actualmente esta tarjeta solo muestra datos sobre los primeros 100 repositorios debido a las limitaciones de la API de GitHub.
 
-### Usage
+### Uso
 
-Copy-paste this code into your readme and change the links.
+Copia y pega este código en tu readme y cambia los enlaces.
 
 Endpoint: `api/top-langs?username=alvar3zjos3`
 
 ```md
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3)](https://github.com/alvar3zjos3/dev-readme-stats)
 ```
 
-### Options
+### Opciones
 
-You can customize the appearance and behavior of the top languages card using the [common options](#common-options) and exclusive options listed in the table below.
-
-| Name | Description | Type | Default value |
+| Nombre | Descripción | Tipo | Valor por defecto |
 | --- | --- | --- | --- |
-| `hide` | Hides the [specified languages](#hide-individual-languages) from card. | string (comma-separated values) | `null` |
-| `hide_title` | Hides the title of your card. | boolean | `false` |
-| `layout` | Switches between five available layouts `normal` & `compact` & `donut` & `donut-vertical` & `pie`. | enum | `normal` |
-| `card_width` | Sets the card's width manually. | number | `300` |
-| `langs_count` | Shows more languages on the card, between 1-20. | integer | `5` for `normal` and `donut`, `6` for other layouts |
-| `exclude_repo` | Excludes specified repositories. | string (comma-separated values) | `null` |
-| `custom_title` | Sets a custom title for the card. | string | `Most Used Languages` |
-| `disable_animations` | Disables all animations in the card. | boolean | `false` |
-| `hide_progress` | Uses the compact layout option, hides percentages, and removes the bars. | boolean | `false` |
-| `size_weight` | Configures language stats algorithm (see [Language stats algorithm](#language-stats-algorithm)). | integer | `1` |
-| `count_weight` | Configures language stats algorithm (see [Language stats algorithm](#language-stats-algorithm)). | integer | `0` |
-| `stats_format` | Switches between two available formats for language's stats `percentages` and `bytes`. | enum | `percentages` |
+| `hide` | Oculta los [lenguajes especificados](#ocultar-lenguajes-individuales) de la tarjeta. | string (valores separados por comas) | `null` |
+| `hide_title` | Oculta el título de tu tarjeta. | boolean | `false` |
+| `layout` | Cambia entre cinco diseños: `normal`, `compact`, `donut`, `donut-vertical` y `pie`. | enum | `normal` |
+| `card_width` | Establece el ancho de la tarjeta manualmente. | number | `300` |
+| `langs_count` | Muestra más lenguajes en la tarjeta, entre 1 y 20. | integer | `5` para `normal` y `donut`, `6` para otros diseños |
+| `exclude_repo` | Excluye repositorios específicos. | string (valores separados por comas) | `null` |
+| `custom_title` | Establece un título personalizado para la tarjeta. | string | `Most Used Languages` |
+| `disable_animations` | Desactiva todas las animaciones de la tarjeta. | boolean | `false` |
+| `hide_progress` | Usa el diseño compacto, oculta los porcentajes y elimina las barras. | boolean | `false` |
+| `size_weight` | Configura el algoritmo de estadísticas de lenguajes. | integer | `1` |
+| `count_weight` | Configura el algoritmo de estadísticas de lenguajes. | integer | `0` |
+| `stats_format` | Cambia entre dos formatos: `percentages` y `bytes`. | enum | `percentages` |
 
-> [!WARNING]
-> Language names and custom title should be URI-escaped, as specified in [Percent Encoding](https://en.wikipedia.org/wiki/Percent-encoding) (i.e: `c++` should become `c%2B%2B`, `jupyter notebook` should become `jupyter%20notebook`, `Most Used Languages` should become `Most%20Used%20Languages`, etc.) You can use [urlencoder.org](https://www.urlencoder.org/) to help you do this automatically.
+### Algoritmo de estadísticas de lenguajes
 
-### Language stats algorithm
-
-We use the following algorithm to calculate the languages percentages on the language card:
+Usamos el siguiente algoritmo para calcular los porcentajes de lenguajes:
 
 ```js
 ranking_index = (byte_count ^ size_weight) * (repo_count ^ count_weight)
 ```
 
-By default, only the byte count is used for determining the languages percentages shown on the language card (i.e. `size_weight=1` and `count_weight=0`). You can, however, use the `&size_weight=` and `&count_weight=` options to weight the language usage calculation. The values must be positive real numbers. [More details about the algorithm can be found here](https://github.com/alvar3zjos3/dev-readme-stats/issues/1600#issuecomment-1046056305).
-
-*   `&size_weight=1&count_weight=0` - *(default)* Orders by byte count.
-*   `&size_weight=0.5&count_weight=0.5` - *(recommended)* Uses both byte and repo count for ranking
-*   `&size_weight=0&count_weight=1` - Orders by repo count
+*   `&size_weight=1&count_weight=0` - *(por defecto)* Ordena por recuento de bytes.
+*   `&size_weight=0.5&count_weight=0.5` - *(recomendado)* Usa tanto el recuento de bytes como el de repositorios.
+*   `&size_weight=0&count_weight=1` - Ordena por recuento de repositorios.
 
 ```md
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&size_weight=0.5&count_weight=0.5)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&size_weight=0.5&count_weight=0.5)
 ```
 
-### Exclude individual repositories
-
-You can use the `&exclude_repo=repo1,repo2` parameter to exclude individual repositories.
+### Excluir repositorios individuales
 
 ```md
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&exclude_repo=github-readme-stats,alvar3zjos3.github.io)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&exclude_repo=dev-readme-stats,alvar3zjos3.github.io)
 ```
 
-### Hide individual languages
-
-You can use `&hide=language1,language2` parameter to hide individual languages.
+### Ocultar lenguajes individuales
 
 ```md
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&hide=javascript,html)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&hide=javascript,html)
 ```
 
-### Show more languages
-
-You can use the `&langs_count=` option to increase or decrease the number of languages shown on the card. Valid values are integers between 1 and 20 (inclusive). By default it was set to `5` for `normal` & `donut` and `6` for other layouts.
+### Mostrar más lenguajes
 
 ```md
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&langs_count=8)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&langs_count=8)
 ```
 
-### Compact Language Card Layout
-
-You can use the `&layout=compact` option to change the card design.
+### Diseño compacto
 
 ```md
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=compact)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=compact)
 ```
 
-### Donut Chart Language Card Layout
-
-You can use the `&layout=donut` option to change the card design.
+### Diseño de gráfico de dona
 
 ```md
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=donut)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=donut)](https://github.com/alvar3zjos3/dev-readme-stats)
 ```
 
-### Donut Vertical Chart Language Card Layout
-
-You can use the `&layout=donut-vertical` option to change the card design.
+### Diseño de gráfico de dona vertical
 
 ```md
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=donut-vertical)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=donut-vertical)](https://github.com/alvar3zjos3/dev-readme-stats)
 ```
 
-### Pie Chart Language Card Layout
-
-You can use the `&layout=pie` option to change the card design.
+### Diseño de gráfico de tarta
 
 ```md
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=pie)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=pie)](https://github.com/alvar3zjos3/dev-readme-stats)
 ```
 
-### Hide Progress Bars
-
-You can use the `&hide_progress=true` option to hide the percentages and the progress bars (layout will be automatically set to `compact`).
+### Ocultar barras de progreso
 
 ```md
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&hide_progress=true)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&hide_progress=true)
 ```
 
-### Change format of language's stats
-
-You can use the `&stats_format=bytes` option to display the stats in bytes instead of percentage.
+### Cambiar formato de estadísticas
 
 ```md
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&stats_format=bytes)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&stats_format=bytes)
 ```
-
 
 ### Demo
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&locale=es&hide_title=false&layout=compact&card_width=320&langs_count=11&theme=tokyonight&hide_border=false&order=2)
 
-*   Compact layout
+*   Diseño compacto
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3\&layout=compact)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3\&layout=compact)
 
-*   Donut Chart layout
+*   Diseño de gráfico de dona
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3\&layout=donut)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3\&layout=donut)](https://github.com/alvar3zjos3/dev-readme-stats)
 
-*   Donut Vertical Chart layout
+*   Diseño de gráfico de dona vertical
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3\&layout=donut-vertical)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3\&layout=donut-vertical)](https://github.com/alvar3zjos3/dev-readme-stats)
 
-*   Pie Chart layout
+*   Diseño de gráfico de tarta
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3\&layout=pie)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3\&layout=pie)](https://github.com/alvar3zjos3/dev-readme-stats)
 
-*   Hidden progress bars
+*   Barras de progreso ocultas
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3\&hide_progress=true)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3\&hide_progress=true)
 
+*   Mostrar bytes en lugar de porcentaje
 
-*  Display bytes instead of percentage
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3\&stats_format=bytes)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3\&stats_format=bytes)
-
-# WakaTime Stats Card
-
-> [!WARNING]
-> Please be aware that we currently only show data from WakaTime profiles that are public. You therefore have to make sure that **BOTH** `Display code time publicly` and `Display languages, editors, os, categories publicly` are enabled.
+# Tarjeta de Estadísticas WakaTime
 
 > [!WARNING]
-> In case you just created a new WakaTime account, then it might take up to 24 hours until your stats will become visible on the WakaTime stats card.
+> Ten en cuenta que actualmente solo mostramos datos de perfiles de WakaTime que sean públicos. Debes asegurarte de que **AMBAS** opciones `Display code time publicly` y `Display languages, editors, os, categories publicly` estén activadas.
 
-Change the `?username=` value to your [WakaTime](https://wakatime.com) username.
+> [!WARNING]
+> Si acabas de crear una cuenta nueva de WakaTime, puede tardar hasta 24 horas en aparecer tus estadísticas en la tarjeta.
+
+Cambia el valor de `?username=` por tu nombre de usuario de [WakaTime](https://wakatime.com).
 
 ```md
-[![Harlok's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ffflabs)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Estadísticas WakaTime de Alvarez](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3)](https://github.com/alvar3zjos3/dev-readme-stats)
 ```
 
-### Options
+### Opciones
 
-You can customize the appearance and behavior of the WakaTime stats card using the [common options](#common-options) and exclusive options listed in the table below.
-
-| Name | Description | Type | Default value |
+| Nombre | Descripción | Tipo | Valor por defecto |
 | --- | --- | --- | --- |
-| `hide` | Hides the languages specified from the card. | string (comma-separated values) | `null` |
-| `hide_title` | Hides the title of your card. | boolean | `false` |
-| `card_width` | Sets the card's width manually. | number | `495` |
-| `line_height` | Sets the line height between text. | integer | `25` |
-| `hide_progress` | Hides the progress bar and percentage. | boolean | `false` |
-| `custom_title` | Sets a custom title for the card. | string | `WakaTime Stats` |
-| `layout` | Switches between two available layouts `default` & `compact`. | enum | `default` |
-| `langs_count` | Limits the number of languages on the card, defaults to all reported languages. | integer | `null` |
-| `api_domain` | Sets a custom API domain for the card, e.g. to use services like [Hakatime](https://github.com/mujx/hakatime) or [Wakapi](https://github.com/muety/wakapi) | string | `wakatime.com` |
-| `display_format` | Sets the WakaTime stats display format. Choose `time` to display time-based stats or `percent` to show percentages. | enum | `time` |
-| `disable_animations` | Disables all animations in the card. | boolean | `false` |
-
-> [!WARNING]
-> Custom title should be URI-escaped, as specified in [Percent Encoding](https://en.wikipedia.org/wiki/Percent-encoding) (i.e: `WakaTime Stats` should become `WakaTime%20Stats`). You can use [urlencoder.org](https://www.urlencoder.org/) to help you do this automatically.
+| `hide` | Oculta los lenguajes especificados de la tarjeta. | string (valores separados por comas) | `null` |
+| `hide_title` | Oculta el título de tu tarjeta. | boolean | `false` |
+| `card_width` | Establece el ancho de la tarjeta manualmente. | number | `495` |
+| `line_height` | Establece el alto de línea entre el texto. | integer | `25` |
+| `hide_progress` | Oculta la barra de progreso y el porcentaje. | boolean | `false` |
+| `custom_title` | Establece un título personalizado para la tarjeta. | string | `WakaTime Stats` |
+| `layout` | Cambia entre dos diseños: `default` y `compact`. | enum | `default` |
+| `langs_count` | Limita el número de lenguajes en la tarjeta. | integer | `null` |
+| `api_domain` | Establece un dominio de API personalizado para la tarjeta. | string | `wakatime.com` |
+| `display_format` | Formato de visualización: `time` para tiempo o `percent` para porcentajes. | enum | `time` |
+| `disable_animations` | Desactiva todas las animaciones de la tarjeta. | boolean | `false` |
 
 ### Demo
 
-![Harlok's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ffflabs)
+![Estadísticas WakaTime de Alvarez](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3)
 
-![Harlok's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ffflabs\&hide_progress=true)
+![Estadísticas WakaTime de Alvarez](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3\&hide_progress=true)
 
-*   Compact layout
+*   Diseño compacto
 
-![Harlok's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ffflabs\&layout=compact)
-
-***
-
-# All Demos
-
-*   Default
-
-![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api?username=alvar3zjos3)
-
-*   Hiding specific stats
-
-![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api?username=alvar3zjos3\&hide=contribs,issues)
-
-*   Showing additional stats
-
-![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api?username=alvar3zjos3\&show_icons=true\&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)
-
-*   Showing icons
-
-![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api?username=alvar3zjos3\&hide=issues\&show_icons=true)
-
-*   Shows GitHub logo instead rank level
-
-![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api?username=alvar3zjos3\&rank_icon=github)
-
-*   Shows user rank percentile instead of rank level
-
-![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api?username=alvar3zjos3\&rank_icon=percentile)
-
-*   Customize Border Color
-
-![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api?username=alvar3zjos3\&border_color=2e4058)
-
-*   Include All Commits
-
-![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api?username=alvar3zjos3\&include_all_commits=true)
-
-*   Themes
-
-Choose from any of the [default themes](#themes)
-
-![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api?username=alvar3zjos3\&show_icons=true\&theme=radical)
-
-*   Gradient
-
-![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api?username=alvar3zjos3\&bg_color=30,e96443,904e95\&title_color=fff\&text_color=fff)
-
-*   Customizing stats card
-
-![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api/?username=alvar3zjos3\&show_icons=true\&title_color=fff\&icon_color=79ff97\&text_color=9f9f9f\&bg_color=151515)
-
-*   Setting card locale
-
-![Alvarez GitHub stats](https://github-readme-stats.vercel.app/api/?username=alvar3zjos3\&locale=es)
-
-*   Customizing repo card
-
-![Customized Card](https://github-readme-stats.vercel.app/api/pin?username=alvar3zjos3\&repo=github-readme-stats\&title_color=fff\&icon_color=f9f9f9\&text_color=9f9f9f\&bg_color=151515)
-
-*   Gist card
-
-![Gist Card](https://github-readme-stats.vercel.app/api/gist?id=bbfce31e0217a3689c8d961a356cb10d)
-
-*   Customizing gist card
-
-![Gist Card](https://github-readme-stats.vercel.app/api/gist?id=bbfce31e0217a3689c8d961a356cb10d&theme=calm)
-
-*   Top languages
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3)
-
-*   WakaTime card
-
-![Harlok's WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=ffflabs)
+![Estadísticas WakaTime de Alvarez](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3\&layout=compact)
 
 ***
 
-## Quick Tip (Align The Cards)
+# Todas las Demos
 
-By default, GitHub does not lay out the cards side by side. To do that, you can use such approaches:
+*   Por defecto
 
-### Stats and top languages cards
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=tokyonight&locale=es&hide_border=false&order=1)
+
+*   Ocultar estadísticas específicas
+
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3\&hide=contribs,issues)
+
+*   Mostrar estadísticas adicionales
+
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3\&show_icons=true\&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)
+
+*   Mostrar iconos
+
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3\&hide=issues\&show_icons=true)
+
+*   Mostrar logo de GitHub en lugar del nivel de rango
+
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3\&rank_icon=github)
+
+*   Mostrar percentil de rango del usuario
+
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3\&rank_icon=percentile)
+
+*   Personalizar color del borde
+
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3\&border_color=2e4058)
+
+*   Incluir todos los commits
+
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3\&include_all_commits=true)
+
+*   Temas
+
+Elige entre cualquiera de los [temas por defecto](#temas)
+
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3\&show_icons=true\&theme=radical)
+
+*   Degradado
+
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3\&bg_color=30,e96443,904e95\&title_color=fff\&text_color=fff)
+
+*   Personalizar tarjeta de estadísticas
+
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api/?username=alvar3zjos3\&show_icons=true\&title_color=fff\&icon_color=79ff97\&text_color=9f9f9f\&bg_color=151515)
+
+*   Establecer idioma de la tarjeta
+
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api/?username=alvar3zjos3\&locale=es)
+
+*   Personalizar tarjeta de repositorio
+
+![Tarjeta Personalizada](https://dev-readme-stats.vercel.app/api/pin?username=alvar3zjos3\&repo=dev-readme-stats\&title_color=fff\&icon_color=f9f9f9\&text_color=9f9f9f\&bg_color=151515)
+
+*   Tarjeta de Gist
+
+![Tarjeta Gist](https://dev-readme-stats.vercel.app/api/gist?id=bbfce31e0217a3689c8d961a356cb10d)
+
+*   Personalizar tarjeta de Gist
+
+![Tarjeta Gist](https://dev-readme-stats.vercel.app/api/gist?id=bbfce31e0217a3689c8d961a356cb10d&theme=calm)
+
+*   Lenguajes principales
+
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&locale=es&hide_title=false&layout=compact&card_width=320&langs_count=11&theme=tokyonight&hide_border=false&order=2)
+
+*   Tarjeta WakaTime
+
+![Estadísticas WakaTime de Alvarez](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3)
+
+***
+
+## Consejo Rápido (Alinear Tarjetas)
+
+Por defecto, GitHub no coloca las tarjetas lado a lado. Para hacerlo, puedes usar los siguientes enfoques:
+
+### Tarjetas de estadísticas y lenguajes
 
 ```html
 <a href="https://github.com/alvar3zjos3/dev-readme-stats">
-  <img height=200 align="center" src="https://github-readme-stats.vercel.app/api?username=alvar3zjos3" />
+  <img height=200 align="center" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=tokyonight&locale=es&hide_border=false&order=1" />
 </a>
-<a href="https://github.com/alvar3zjos3/convoychat">
-  <img height=200 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&layout=compact&langs_count=8&card_width=320" />
+<a href="https://github.com/alvar3zjos3/dev-readme-stats">
+  <img height=200 align="center" src="https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&locale=es&hide_title=false&layout=compact&card_width=320&langs_count=11&theme=tokyonight&hide_border=false&order=2" />
 </a>
 ```
 
 <details>
-<summary>:eyes: Show example</summary>
+<summary>:eyes: Ver ejemplo</summary>
 
 <a href="https://github.com/alvar3zjos3/dev-readme-stats">
-  <img height=200 align="center" src="https://github-readme-stats.vercel.app/api?username=alvar3zjos3" />
+  <img height=200 align="center" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=tokyonight&locale=es&hide_border=false&order=1" />
 </a>
-<a href="https://github.com/alvar3zjos3/convoychat">
-  <img height=200 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&layout=compact&langs_count=8&card_width=320" />
+<a href="https://github.com/alvar3zjos3/dev-readme-stats">
+  <img height=200 align="center" src="https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&locale=es&hide_title=false&layout=compact&card_width=320&langs_count=11&theme=tokyonight&hide_border=false&order=2" />
 </a>
 
 </details>
 
-### Pinning repositories
+### Pinear repositorios
 
 ```html
 <a href="https://github.com/alvar3zjos3/dev-readme-stats">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=github-readme-stats" />
-</a>
-<a href="https://github.com/alvar3zjos3/convoychat">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=convoychat" />
+  <img align="center" src="https://dev-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=dev-readme-stats" />
 </a>
 ```
 
 <details>
-<summary>:eyes: Show example</summary>
+<summary>:eyes: Ver ejemplo</summary>
 
 <a href="https://github.com/alvar3zjos3/dev-readme-stats">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=github-readme-stats" />
-</a>
-<a href="https://github.com/alvar3zjos3/convoychat">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=convoychat" />
+  <img align="center" src="https://dev-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=dev-readme-stats" />
 </a>
 
 </details>
 
-# Deploy on your own (recommended)
+# Desplegar tu propia instancia (recomendado)
 
-Because the public endpoint is [not reliable](#Important-Notices), we recommend self-deployment via GitHub Actions or your own hosted instance. GitHub Actions is the simplest setup with static SVGs stored in your repo but less frequent updates, while self-hosting takes more work and can serve fresher stats (with caching).
+Dado que el endpoint público [no es fiable](#avisos-importantes), recomendamos el auto-despliegue mediante GitHub Actions o tu propia instancia alojada. GitHub Actions es la configuración más sencilla con SVGs estáticos almacenados en tu repositorio, mientras que el auto-alojamiento requiere más trabajo pero puede servir estadísticas más recientes (con caché).
 
 ## GitHub Actions
 
-GitHub Actions generates static SVGs and avoids per-request API calls. By default it uses `GITHUB_TOKEN` (public stats only), for private stats, set a [PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) as a secret and pass it to the action instead.
+GitHub Actions genera SVGs estáticos y evita las llamadas a la API por solicitud. Por defecto usa `GITHUB_TOKEN` (solo estadísticas públicas); para estadísticas privadas, establece un [PAT](https://docs.github.com/es/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) como secreto y pásalo a la acción.
 
-Create `/.github/workflows/grs.yml` in your profile repo (`USERNAME/USERNAME`):
+Crea `/.github/workflows/grs.yml` en tu repositorio de perfil (`alvar3zjos3/alvar3zjos3`):
 
 ```yaml
-name: Update README cards
+name: Actualizar tarjetas del README
 
 on:
   schedule:
@@ -819,7 +759,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate stats card
+      - name: Generar tarjeta de estadísticas
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: stats
@@ -827,179 +767,132 @@ jobs:
           path: profile/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit cards
+      - name: Confirmar tarjetas
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
           git add profile/*.svg
-          git commit -m "Update README cards" || exit 0
+          git commit -m "Actualizar tarjetas del README" || exit 0
           git push
 ```
 
-Then embed from your profile README:
+Luego inclúyelo en tu README de perfil:
 
 ```md
-![Stats](./profile/stats.svg)
+![Estadísticas](./profile/stats.svg)
 ```
 
-See more options and examples in the [GitHub Readme Stats Action README](https://github.com/readme-tools/github-readme-stats-action#readme).
+## Auto-alojado (Vercel/Otro)
 
-## Self-hosted (Vercel/Other)
+Ejecutar tu propia instancia evita los límites de velocidad públicos y te da control total sobre el caché, tokens y estadísticas privadas.
 
-Running your own instance avoids public rate limits and gives you full control over caching, tokens, and private stats.
+### Primer paso: obtener tu Token de Acceso Personal (PAT)
 
-### First step: get your Personal Access Token (PAT)
+Para desplegar tu propia instancia de Dev Readme Stats, necesitarás crear un Token de Acceso Personal (PAT) de GitHub.
 
-For deploying your own instance of GitHub Readme Stats, you will need to create a GitHub Personal Access Token (PAT). Below are the steps to create one and the scopes you need to select for both classic and fine-grained tokens.
+#### Token clásico
 
-Selecting the right scopes for your token is important in case you want to display private contributions on your cards.
-
-#### Classic token
-
-* Go to [Account -> Settings -> Developer Settings -> Personal access tokens -> Tokens (classic)](https://github.com/settings/tokens).
-* Click on `Generate new token -> Generate new token (classic)`.
-* Scopes to select:
+* Ve a [Cuenta -> Ajustes -> Developer Settings -> Personal access tokens -> Tokens (classic)](https://github.com/settings/tokens).
+* Haz clic en `Generate new token -> Generate new token (classic)`.
+* Permisos a seleccionar:
   * repo
   * read:user
-* Click on `Generate token` and copy it.
+* Haz clic en `Generate token` y cópialo.
 
-#### Fine-grained token
+#### Token de grano fino
 
-> [!WARNING]\
-> This limits the scope to issues in your repositories and includes only public commits.
-
-* Go to [Account -> Settings -> Developer Settings -> Personal access tokens -> Fine-grained tokens](https://github.com/settings/tokens).
-* Click on `Generate new token -> Generate new token`.
-* Select an expiration date
-* Select `All repositories`
-* Scopes to select in `Repository permission`:
+* Ve a [Cuenta -> Ajustes -> Developer Settings -> Personal access tokens -> Fine-grained tokens](https://github.com/settings/tokens).
+* Haz clic en `Generate new token`.
+* Selecciona una fecha de vencimiento.
+* Selecciona `All repositories`.
+* Permisos a seleccionar en `Repository permission`:
   * Commit statuses: read-only
   * Contents: read-only
   * Issues: read-only
   * Metadata: read-only
   * Pull requests: read-only
-* Click on `Generate token` and copy it.
+* Haz clic en `Generate token` y cópialo.
 
-### On Vercel
+### En Vercel
 
-### :film\_projector: [Check Out Step By Step Video Tutorial By @codeSTACKr](https://youtu.be/n6d4KHSKqGk?t=107)
+Dado que la API de GitHub solo permite 5k solicitudes por hora, la instancia pública podría alcanzar el límite de velocidad. Si la alojas en tu propio servidor de Vercel, no tendrás que preocuparte por ello. ¡Haz clic en el botón de despliegue para empezar!
 
-Since the GitHub API only allows 5k requests per hour, my `https://github-readme-stats.vercel.app/api` could possibly hit the rate limiter. If you host it on your own Vercel server, then you do not have to worry about anything. Click on the deploy button to get started!
-
-> [!NOTE]
-> Since [#58](https://github.com/alvar3zjos3/dev-readme-stats/pull/58), we should be able to handle more than 5k requests and have fewer issues with downtime :grin:.
-
-> [!NOTE]
-> If you are on the [Pro (i.e. paid)](https://vercel.com/pricing) Vercel plan, the [maxDuration](https://vercel.com/docs/concepts/projects/project-configuration#value-definition) value found in the [vercel.json](https://github.com/alvar3zjos3/dev-readme-stats/blob/master/vercel.json) can be increased when your Vercel instance frequently times out during the card request. You are advised to keep this value lower than `30` seconds to prevent high memory usage.
-
-[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/alvar3zjos3/dev-readme-stats)
+[![Desplegar en Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/alvar3zjos3/dev-readme-stats)
 
 <details>
- <summary><b>:hammer_and_wrench: Step-by-step guide on setting up your own Vercel instance</b></summary>
+ <summary><b>:hammer_and_wrench: Guía paso a paso para configurar tu instancia de Vercel</b></summary>
 
-1.  Go to [vercel.com](https://vercel.com/).
-2.  Click on `Log in`.
-    ![](https://files.catbox.moe/pcxk33.png)
-3.  Sign in with GitHub by pressing `Continue with GitHub`.
-    ![](https://files.catbox.moe/b9oxey.png)
-4.  Sign in to GitHub and allow access to all repositories if prompted.
-5.  Fork this repo.
-6.  Go back to your [Vercel dashboard](https://vercel.com/dashboard).
-7.  To import a project, click the `Add New...` button and select the `Project` option.
-    ![](https://files.catbox.moe/3n76fh.png)
-8.  Click the `Continue with GitHub` button, search for the required Git Repository and import it by clicking the `Import` button. Alternatively, you can import a Third-Party Git Repository using the `Import Third-Party Git Repository ->` link at the bottom of the page.
-    ![](https://files.catbox.moe/mg5p04.png)
-9.  Create a Personal Access Token (PAT) as described in the [previous section](#first-step-get-your-personal-access-token-pat).
-10. Add the PAT as an environment variable named `PAT_1` (as shown).
-    ![](https://files.catbox.moe/0yclio.png)
-11. Click deploy, and you're good to go. See your domains to use the API!
+1.  Ve a [vercel.com](https://vercel.com/).
+2.  Haz clic en `Log in`.
+3.  Inicia sesión con GitHub pulsando `Continue with GitHub`.
+4.  Inicia sesión en GitHub y permite el acceso a todos los repositorios si se solicita.
+5.  Haz un fork de este repositorio.
+6.  Vuelve a tu [panel de Vercel](https://vercel.com/dashboard).
+7.  Para importar un proyecto, haz clic en el botón `Add New...` y selecciona la opción `Project`.
+8.  Haz clic en el botón `Continue with GitHub`, busca el repositorio Git requerido e impórtalo haciendo clic en `Import`.
+9.  Crea un Token de Acceso Personal (PAT) como se describe en la [sección anterior](#primer-paso-obtener-tu-token-de-acceso-personal-pat).
+10. Añade el PAT como variable de entorno con el nombre `PAT_1`.
+11. Haz clic en desplegar, ¡y listo!
 
 </details>
 
-### On other platforms
-
-> [!WARNING]
-> This way of using GRS is not officially supported and was added to cater to some particular use cases where Vercel could not be used (e.g. [#2341](https://github.com/alvar3zjos3/dev-readme-stats/discussions/2341)). The support for this method, therefore, is limited.
+### En otras plataformas
 
 <details>
-<summary><b>:hammer_and_wrench: Step-by-step guide for deploying on other platforms</b></summary>
+<summary><b>:hammer_and_wrench: Guía paso a paso para desplegar en otras plataformas</b></summary>
 
-1.  Fork or clone this repo as per your needs
-2.  Move `express` from the devDependencies to the dependencies section of `package.json`
-    <https://github.com/alvar3zjos3/dev-readme-stats/blob/ba7c2f8b55eac8452e479c8bd38b044d204d0424/package.json#L54-L61>
-3.  Run `npm i` if needed (initial setup)
-4.  Run `node express.js` to start the server, or set the entry point to `express.js` in `package.json` if you're deploying on a managed service
-    <https://github.com/alvar3zjos3/dev-readme-stats/blob/ba7c2f8b55eac8452e479c8bd38b044d204d0424/package.json#L11>
-5.  You're done 🎉
-    </details>
+1.  Haz un fork o clona este repositorio según tus necesidades.
+2.  Mueve `express` de las devDependencies a las dependencies en `package.json`.
+3.  Ejecuta `npm i` si es necesario (configuración inicial).
+4.  Ejecuta `node express.js` para iniciar el servidor, o establece el punto de entrada en `express.js` en `package.json`.
+5.  ¡Listo! 🎉
+</details>
 
-### Available environment variables
-
-GitHub Readme Stats provides several environment variables that can be used to customize the behavior of your self-hosted instance. These include:
+### Variables de entorno disponibles
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Supported values</th>
+      <th>Nombre</th>
+      <th>Descripción</th>
+      <th>Valores soportados</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code>CACHE_SECONDS</code></td>
-      <td>Sets the cache duration in seconds for the generated cards. This variable takes precedence over the default cache timings for the public instance. If this variable is not set, the default cache duration is 24 hours (86,400 seconds).</td>
-      <td>Any positive integer or <code>0</code> to disable caching</td>
+      <td>Establece la duración del caché en segundos para las tarjetas generadas.</td>
+      <td>Cualquier entero positivo o <code>0</code> para desactivar el caché</td>
     </tr>
     <tr>
       <td><code>WHITELIST</code></td>
-      <td>A comma-separated list of GitHub usernames that are allowed to access your instance. If this variable is not set, all usernames are allowed.</td>
-      <td>Comma-separated GitHub usernames</td>
+      <td>Lista de nombres de usuario de GitHub separados por comas que pueden acceder a tu instancia.</td>
+      <td>Nombres de usuario de GitHub separados por comas</td>
     </tr>
     <tr>
       <td><code>GIST_WHITELIST</code></td>
-      <td>A comma-separated list of GitHub Gist IDs that are allowed to be accessed on your instance. If this variable is not set, all Gist IDs are allowed.</td>
-      <td>Comma-separated GitHub Gist IDs</td>
+      <td>Lista de IDs de GitHub Gist separados por comas que pueden accederse en tu instancia.</td>
+      <td>IDs de GitHub Gist separados por comas</td>
     </tr>
     <tr>
       <td><code>EXCLUDE_REPO</code></td>
-      <td>A comma-separated list of repositories that will be excluded from stats and top languages cards on your instance. This allows repository exclusion without exposing repository names in public URLs. This enhances privacy for self-hosted instances that include private repositories in stats cards.</td>
-      <td>Comma-separated repository names</td>
+      <td>Lista de repositorios separados por comas que se excluirán de las tarjetas de estadísticas y lenguajes.</td>
+      <td>Nombres de repositorios separados por comas</td>
     </tr>
     <tr>
       <td><code>FETCH_MULTI_PAGE_STARS</code></td>
-      <td>Enables fetching all starred repositories for accurate star counts, especially for users with more than 100 repositories. This may increase response times and API points usage, so it is disabled on the public instance.</td>
-      <td><code>true</code> or <code>false</code></td>
+      <td>Activa la obtención de todos los repositorios con estrellas para recuentos precisos.</td>
+      <td><code>true</code> o <code>false</code></td>
     </tr>
   </tbody>
 </table>
 
-See [the Vercel documentation](https://vercel.com/docs/concepts/projects/environment-variables) on adding these environment variables to your Vercel instance.
+Consulta la [documentación de Vercel](https://vercel.com/docs/concepts/projects/environment-variables) para añadir estas variables de entorno a tu instancia.
 
 > [!WARNING]
-> Please remember to redeploy your instance after making any changes to the environment variables so that the updates take effect. The changes will not be applied to the previous deployments.
+> Recuerda redesplegar tu instancia después de realizar cualquier cambio en las variables de entorno para que las actualizaciones surtan efecto.
 
-## Keep your fork up to date
+## Mantener tu fork actualizado
 
-You can keep your fork, and thus your private Vercel instance up to date with the upstream using GitHub's [Sync Fork button](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork). You can also use the [pull](https://github.com/wei/pull) package created by [@wei](https://github.com/wei) to automate this process.
+Puedes mantener tu fork actualizado con el repositorio original usando el botón [Sync Fork de GitHub](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork).
 
-# :sparkling\_heart: Support the project
-
-I open-source almost everything I can and try to reply to everyone needing help using these projects. Obviously,
-this takes time. You can use this service for free.
-
-However, if you are using this project and are happy with it or just want to encourage me to continue creating stuff, there are a few ways you can do it:
-
-*   Giving proper credit when you use github-readme-stats on your readme, linking back to it. :D
-*   Starring and sharing the project. :rocket:
-*   [![paypal.me/alvarezjos3](https://ionicabizau.github.io/badges/paypal.svg)](https://www.paypal.me/alvarezjos3) - You can make a one-time donation via PayPal. I'll probably buy a ~~coffee~~ tea. :tea:
-
-Thanks! :heart:
-
-***
-
-[![https://vercel.com?utm\_source=github\_readme\_stats\_team\&utm\_campaign=oss](powered-by-vercel.svg)](https://vercel.com?utm_source=github_readme_stats_team\&utm_campaign=oss)
-
-Contributions are welcome! <3
-
-Made with :heart: and JavaScript.
