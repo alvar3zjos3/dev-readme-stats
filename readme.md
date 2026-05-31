@@ -184,7 +184,7 @@ Hemos incluido un tema `transparent` con fondo transparente, optimizado para ver
 ```
 
 <details>
-<summary>:eyes: Ver ejemplo</summary>
+<summary>Ver ejemplo</summary>
 
 ![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3\&show_icons=true\&theme=transparent)
 
@@ -199,7 +199,7 @@ Puedes usar el parámetro `bg_color` para hacer cualquier tema transparente esta
 ```
 
 <details>
-<summary>:eyes: Ver ejemplo</summary>
+<summary>Ver ejemplo</summary>
 
 ![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3\&show_icons=true\&bg_color=00000000)
 
@@ -215,7 +215,7 @@ Puedes usar las [etiquetas de contexto de tema de GitHub](https://github.blog/ch
 ```
 
 <details>
-<summary>:eyes: Ver ejemplo</summary>
+<summary>Ver ejemplo</summary>
 
 [![Estadísticas GitHub de Alvarez - Oscuro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3\&show_icons=true\&theme=dark#gh-dark-mode-only)](https://github.com/alvar3zjos3/dev-readme-stats#gh-dark-mode-only)
 [![Estadísticas GitHub de Alvarez - Claro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3\&show_icons=true\&theme=default#gh-light-mode-only)](https://github.com/alvar3zjos3/dev-readme-stats#gh-light-mode-only)
@@ -241,7 +241,7 @@ Puedes usar la [nueva función de medios de GitHub](https://github.blog/changelo
 ```
 
 <details>
-<summary>:eyes: Ver ejemplo</summary>
+<summary>Ver ejemplo</summary>
 
 <picture>
   <source
@@ -707,7 +707,7 @@ Por defecto, GitHub no coloca las tarjetas lado a lado. Para hacerlo, puedes usa
 ```
 
 <details>
-<summary>:eyes: Ver ejemplo</summary>
+<summary>Ver ejemplo</summary>
 
 <a href="https://github.com/alvar3zjos3/dev-readme-stats">
   <img height=200 align="center" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=tokyonight&locale=es&hide_border=false&order=1" />
@@ -727,7 +727,7 @@ Por defecto, GitHub no coloca las tarjetas lado a lado. Para hacerlo, puedes usa
 ```
 
 <details>
-<summary>:eyes: Ver ejemplo</summary>
+<summary>Ver ejemplo</summary>
 
 <a href="https://github.com/alvar3zjos3/dev-readme-stats">
   <img align="center" src="https://dev-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=dev-readme-stats" />
@@ -820,7 +820,7 @@ Dado que la API de GitHub solo permite 5k solicitudes por hora, la instancia pú
 [![Desplegar en Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/alvar3zjos3/dev-readme-stats)
 
 <details>
- <summary><b>:hammer_and_wrench: Guía paso a paso para configurar tu instancia de Vercel</b></summary>
+ <summary><b>Guía paso a paso para configurar tu instancia de Vercel</b></summary>
 
 1.  Ve a [vercel.com](https://vercel.com/).
 2.  Haz clic en `Log in`.
@@ -839,7 +839,7 @@ Dado que la API de GitHub solo permite 5k solicitudes por hora, la instancia pú
 ### En otras plataformas
 
 <details>
-<summary><b>:hammer_and_wrench: Guía paso a paso para desplegar en otras plataformas</b></summary>
+<summary><b>Guía paso a paso para desplegar en otras plataformas</b></summary>
 
 1.  Haz un fork o clona este repositorio según tus necesidades.
 2.  Mueve `express` de las devDependencies a las dependencies en `package.json`.
