@@ -48,10 +48,10 @@ export default async (req, res) => {
   res.setHeader("Content-Type", "image/svg+xml");
 
   const safeColors = {
-    title_color: encodeHTML(title_color),
-    text_color: encodeHTML(text_color),
-    bg_color: encodeHTML(bg_color),
-    border_color: encodeHTML(border_color),
+    title_color: title_color ? encodeHTML(title_color) : undefined,
+    text_color: text_color ? encodeHTML(text_color) : undefined,
+    bg_color: bg_color ? encodeHTML(bg_color) : undefined,
+    border_color: border_color ? encodeHTML(border_color) : undefined,
   };
 
   const access = guardAccess({
@@ -99,7 +99,7 @@ export default async (req, res) => {
         card_width: parseInt(card_width, 10),
         hide: parseArray(hide),
         line_height,
-        icon_color: encodeHTML(icon_color),
+        icon_color: icon_color ? encodeHTML(icon_color) : undefined,
         hide_progress,
         border_radius,
         locale: locale ? locale.toLowerCase() : null,
