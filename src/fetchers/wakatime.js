@@ -8,11 +8,13 @@ const ALLOWED_DOMAINS = ["wakatime.com", "wakapi.dev"];
 
 /**
  * Valida que el api_domain sea uno de los dominios permitidos.
- * @param {string | undefined} domain
+ * @param {string | undefined} domain Domain parameter from URL.
  * @returns {string} Dominio seguro y validado.
  */
 const sanitizeApiDomain = (domain) => {
-  if (!domain) return "wakatime.com";
+  if (!domain) {
+    return "wakatime.com";
+  }
 
   // Elimina la barra final y normaliza a minúsculas
   const cleanDomain = domain.replace(/\/$/gi, "").toLowerCase().trim();
