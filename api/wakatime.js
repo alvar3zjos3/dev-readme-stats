@@ -16,6 +16,7 @@ import {
   retrieveSecondaryMessage,
 } from "../src/common/error.js";
 import { parseArray, parseBoolean } from "../src/common/ops.js";
+import { encodeHTML } from "../src/common/html.js";
 
 // @ts-ignore
 export default async (req, res) => {
@@ -46,15 +47,19 @@ export default async (req, res) => {
 
   res.setHeader("Content-Type", "image/svg+xml");
 
+  const safeColors = {
+    title_color: encodeHTML(title_color),
+    text_color: encodeHTML(text_color),
+    bg_color: encodeHTML(bg_color),
+    border_color: encodeHTML(border_color),
+  };
+
   const access = guardAccess({
     res,
     id: username,
     type: "wakatime",
     colors: {
-      title_color,
-      text_color,
-      bg_color,
-      border_color,
+      ...safeColors,
       theme,
     },
   });
@@ -68,10 +73,7 @@ export default async (req, res) => {
         message: "Something went wrong",
         secondaryMessage: "Language not found",
         renderOptions: {
-          title_color,
-          text_color,
-          bg_color,
-          border_color,
+          ...safeColors,
           theme,
         },
       }),
@@ -97,19 +99,19 @@ export default async (req, res) => {
         card_width: parseInt(card_width, 10),
         hide: parseArray(hide),
         line_height,
-        title_color,
-        icon_color,
-        text_color,
-        bg_color,
-        theme,
+        icon_color: encodeHTML(icon_color),
         hide_progress,
         border_radius,
-        border_color,
         locale: locale ? locale.toLowerCase() : null,
         layout,
         langs_count,
         display_format,
         disable_animations: parseBoolean(disable_animations),
+        title_color: safeColors.title_color,
+        text_color: safeColors.text_color,
+        bg_color: safeColors.bg_color,
+        border_color: safeColors.border_color,
+        theme,
       }),
     );
   } catch (err) {
@@ -120,10 +122,10 @@ export default async (req, res) => {
           message: err.message,
           secondaryMessage: retrieveSecondaryMessage(err),
           renderOptions: {
-            title_color,
-            text_color,
-            bg_color,
-            border_color,
+            title_color: safeColors.title_color,
+            text_color: safeColors.text_color,
+            bg_color: safeColors.bg_color,
+            border_color: safeColors.border_color,
             theme,
             show_repo_link: !(err instanceof MissingParamError),
           },
@@ -134,10 +136,10 @@ export default async (req, res) => {
       renderError({
         message: "An unknown error occurred",
         renderOptions: {
-          title_color,
-          text_color,
-          bg_color,
-          border_color,
+          title_color: safeColors.title_color,
+          text_color: safeColors.text_color,
+          bg_color: safeColors.bg_color,
+          border_color: safeColors.border_color,
           theme,
         },
       }),
