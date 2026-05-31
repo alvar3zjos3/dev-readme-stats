@@ -17,6 +17,7 @@ import {
 } from "../src/common/error.js";
 import { parseArray, parseBoolean } from "../src/common/ops.js";
 import { encodeHTML } from "../src/common/html.js";
+import { themes } from "../themes/index.js";
 
 // @ts-ignore
 export default async (req, res) => {
@@ -47,21 +48,33 @@ export default async (req, res) => {
 
   res.setHeader("Content-Type", "image/svg+xml");
 
-  const safeColors = {
-    title_color: title_color ? encodeHTML(title_color) : undefined,
-    text_color: text_color ? encodeHTML(text_color) : undefined,
-    bg_color: bg_color ? encodeHTML(bg_color) : undefined,
-    border_color: border_color ? encodeHTML(border_color) : undefined,
+  const safeTitleColor = title_color
+    ? encodeHTML(String(title_color))
+    : undefined;
+  const safeTextColor = text_color ? encodeHTML(String(text_color)) : undefined;
+  const safeBgColor = bg_color ? encodeHTML(String(bg_color)) : undefined;
+  const safeBorderColor = border_color
+    ? encodeHTML(String(border_color))
+    : undefined;
+  const safeIconColor = icon_color ? encodeHTML(String(icon_color)) : undefined;
+  const safeTheme =
+    theme && Object.keys(themes).includes(String(theme))
+      ? String(theme)
+      : "default";
+
+  const renderOptions = {
+    title_color: safeTitleColor,
+    text_color: safeTextColor,
+    bg_color: safeBgColor,
+    border_color: safeBorderColor,
+    theme: safeTheme,
   };
 
   const access = guardAccess({
     res,
     id: username,
     type: "wakatime",
-    colors: {
-      ...safeColors,
-      theme,
-    },
+    colors: renderOptions,
   });
   if (!access.isPassed) {
     return access.result;
@@ -72,10 +85,7 @@ export default async (req, res) => {
       renderError({
         message: "Something went wrong",
         secondaryMessage: "Language not found",
-        renderOptions: {
-          ...safeColors,
-          theme,
-        },
+        renderOptions,
       }),
     );
   }
@@ -99,7 +109,7 @@ export default async (req, res) => {
         card_width: parseInt(card_width, 10),
         hide: parseArray(hide),
         line_height,
-        icon_color: icon_color ? encodeHTML(icon_color) : undefined,
+        icon_color: safeIconColor,
         hide_progress,
         border_radius,
         locale: locale ? locale.toLowerCase() : null,
@@ -107,11 +117,12 @@ export default async (req, res) => {
         langs_count,
         display_format,
         disable_animations: parseBoolean(disable_animations),
-        title_color: safeColors.title_color,
-        text_color: safeColors.text_color,
-        bg_color: safeColors.bg_color,
-        border_color: safeColors.border_color,
-        theme,
+        title_color: safeTitleColor,
+        text_color: safeTextColor,
+        bg_color: safeBgColor,
+        border_color: safeBorderColor,
+        // @ts-ignore
+        theme: safeTheme, // safeTheme ya es un string válido del objeto themes
       }),
     );
   } catch (err) {
@@ -122,11 +133,7 @@ export default async (req, res) => {
           message: err.message,
           secondaryMessage: retrieveSecondaryMessage(err),
           renderOptions: {
-            title_color: safeColors.title_color,
-            text_color: safeColors.text_color,
-            bg_color: safeColors.bg_color,
-            border_color: safeColors.border_color,
-            theme,
+            ...renderOptions,
             show_repo_link: !(err instanceof MissingParamError),
           },
         }),
@@ -135,13 +142,7 @@ export default async (req, res) => {
     return res.send(
       renderError({
         message: "An unknown error occurred",
-        renderOptions: {
-          title_color: safeColors.title_color,
-          text_color: safeColors.text_color,
-          bg_color: safeColors.bg_color,
-          border_color: safeColors.border_color,
-          theme,
-        },
+        renderOptions,
       }),
     );
   }
