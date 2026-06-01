@@ -48,13 +48,6 @@ jobs:
             }}&layout=compact&locale=es&theme=default
           path: profile/themes/default/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - default
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=default
-          path: profile/themes/default/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: TRANSPARENT ---
       - name: stats - transparent
@@ -92,13 +85,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=transparent
           path: profile/themes/transparent/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - transparent
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=transparent
-          path: profile/themes/transparent/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: SHADOW_RED ---
@@ -138,13 +124,6 @@ jobs:
             }}&layout=compact&locale=es&theme=shadow_red
           path: profile/themes/shadow_red/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - shadow_red
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=shadow_red
-          path: profile/themes/shadow_red/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: SHADOW_GREEN ---
       - name: stats - shadow_green
@@ -182,13 +161,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=shadow_green
           path: profile/themes/shadow_green/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - shadow_green
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=shadow_green
-          path: profile/themes/shadow_green/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: SHADOW_BLUE ---
@@ -228,13 +200,6 @@ jobs:
             }}&layout=compact&locale=es&theme=shadow_blue
           path: profile/themes/shadow_blue/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - shadow_blue
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=shadow_blue
-          path: profile/themes/shadow_blue/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: DARK ---
       - name: stats - dark
@@ -272,13 +237,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=dark
           path: profile/themes/dark/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - dark
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=dark
-          path: profile/themes/dark/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: RADICAL ---
@@ -318,13 +276,6 @@ jobs:
             }}&layout=compact&locale=es&theme=radical
           path: profile/themes/radical/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - radical
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=radical
-          path: profile/themes/radical/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: MERKO ---
       - name: stats - merko
@@ -362,13 +313,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=merko
           path: profile/themes/merko/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - merko
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=merko
-          path: profile/themes/merko/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: GRUVBOX ---
@@ -408,13 +352,6 @@ jobs:
             }}&layout=compact&locale=es&theme=gruvbox
           path: profile/themes/gruvbox/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - gruvbox
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=gruvbox
-          path: profile/themes/gruvbox/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: GRUVBOX_LIGHT ---
       - name: stats - gruvbox_light
@@ -452,13 +389,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=gruvbox_light
           path: profile/themes/gruvbox_light/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - gruvbox_light
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=gruvbox_light
-          path: profile/themes/gruvbox_light/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: TOKYONIGHT ---
@@ -498,13 +428,6 @@ jobs:
             }}&layout=compact&locale=es&theme=tokyonight
           path: profile/themes/tokyonight/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - tokyonight
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=tokyonight
-          path: profile/themes/tokyonight/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: ONEDARK ---
       - name: stats - onedark
@@ -542,13 +465,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=onedark
           path: profile/themes/onedark/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - onedark
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=onedark
-          path: profile/themes/onedark/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: COBALT ---
@@ -588,13 +504,6 @@ jobs:
             }}&layout=compact&locale=es&theme=cobalt
           path: profile/themes/cobalt/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - cobalt
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=cobalt
-          path: profile/themes/cobalt/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: SYNTHWAVE ---
       - name: stats - synthwave
@@ -632,13 +541,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=synthwave
           path: profile/themes/synthwave/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - synthwave
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=synthwave
-          path: profile/themes/synthwave/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: HIGHCONTRAST ---
@@ -678,13 +580,6 @@ jobs:
             }}&layout=compact&locale=es&theme=highcontrast
           path: profile/themes/highcontrast/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - highcontrast
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=highcontrast
-          path: profile/themes/highcontrast/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: DRACULA ---
       - name: stats - dracula
@@ -722,13 +617,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=dracula
           path: profile/themes/dracula/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - dracula
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=dracula
-          path: profile/themes/dracula/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: PRUSSIAN ---
@@ -768,13 +656,6 @@ jobs:
             }}&layout=compact&locale=es&theme=prussian
           path: profile/themes/prussian/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - prussian
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=prussian
-          path: profile/themes/prussian/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: MONOKAI ---
       - name: stats - monokai
@@ -812,13 +693,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=monokai
           path: profile/themes/monokai/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - monokai
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=monokai
-          path: profile/themes/monokai/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: VUE ---
@@ -858,13 +732,6 @@ jobs:
             }}&layout=compact&locale=es&theme=vue
           path: profile/themes/vue/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - vue
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=vue
-          path: profile/themes/vue/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: VUE-DARK ---
       - name: stats - vue-dark
@@ -902,13 +769,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=vue-dark
           path: profile/themes/vue-dark/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - vue-dark
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=vue-dark
-          path: profile/themes/vue-dark/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: SHADES-OF-PURPLE ---
@@ -948,13 +808,6 @@ jobs:
             }}&layout=compact&locale=es&theme=shades-of-purple
           path: profile/themes/shades-of-purple/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - shades-of-purple
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=shades-of-purple
-          path: profile/themes/shades-of-purple/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: NIGHTOWL ---
       - name: stats - nightowl
@@ -992,13 +845,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=nightowl
           path: profile/themes/nightowl/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - nightowl
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=nightowl
-          path: profile/themes/nightowl/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: BUEFY ---
@@ -1038,13 +884,6 @@ jobs:
             }}&layout=compact&locale=es&theme=buefy
           path: profile/themes/buefy/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - buefy
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=buefy
-          path: profile/themes/buefy/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: BLUE-GREEN ---
       - name: stats - blue-green
@@ -1082,13 +921,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=blue-green
           path: profile/themes/blue-green/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - blue-green
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=blue-green
-          path: profile/themes/blue-green/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: ALGOLIA ---
@@ -1128,13 +960,6 @@ jobs:
             }}&layout=compact&locale=es&theme=algolia
           path: profile/themes/algolia/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - algolia
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=algolia
-          path: profile/themes/algolia/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: GREAT-GATSBY ---
       - name: stats - great-gatsby
@@ -1172,13 +997,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=great-gatsby
           path: profile/themes/great-gatsby/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - great-gatsby
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=great-gatsby
-          path: profile/themes/great-gatsby/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: DARCULA ---
@@ -1218,13 +1036,6 @@ jobs:
             }}&layout=compact&locale=es&theme=darcula
           path: profile/themes/darcula/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - darcula
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=darcula
-          path: profile/themes/darcula/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: BEAR ---
       - name: stats - bear
@@ -1262,13 +1073,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=bear
           path: profile/themes/bear/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - bear
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=bear
-          path: profile/themes/bear/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: SOLARIZED-DARK ---
@@ -1308,13 +1112,6 @@ jobs:
             }}&layout=compact&locale=es&theme=solarized-dark
           path: profile/themes/solarized-dark/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - solarized-dark
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=solarized-dark
-          path: profile/themes/solarized-dark/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: SOLARIZED-LIGHT ---
       - name: stats - solarized-light
@@ -1352,13 +1149,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=solarized-light
           path: profile/themes/solarized-light/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - solarized-light
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=solarized-light
-          path: profile/themes/solarized-light/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: CHARTREUSE-DARK ---
@@ -1398,13 +1188,6 @@ jobs:
             }}&layout=compact&locale=es&theme=chartreuse-dark
           path: profile/themes/chartreuse-dark/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - chartreuse-dark
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=chartreuse-dark
-          path: profile/themes/chartreuse-dark/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: NORD ---
       - name: stats - nord
@@ -1442,13 +1225,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=nord
           path: profile/themes/nord/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - nord
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=nord
-          path: profile/themes/nord/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: GOTHAM ---
@@ -1488,13 +1264,6 @@ jobs:
             }}&layout=compact&locale=es&theme=gotham
           path: profile/themes/gotham/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - gotham
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=gotham
-          path: profile/themes/gotham/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: MATERIAL-PALENIGHT ---
       - name: stats - material-palenight
@@ -1532,13 +1301,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=material-palenight
           path: profile/themes/material-palenight/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - material-palenight
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=material-palenight
-          path: profile/themes/material-palenight/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: GRAYWHITE ---
@@ -1578,13 +1340,6 @@ jobs:
             }}&layout=compact&locale=es&theme=graywhite
           path: profile/themes/graywhite/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - graywhite
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=graywhite
-          path: profile/themes/graywhite/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: VISION-FRIENDLY-DARK ---
       - name: stats - vision-friendly-dark
@@ -1622,13 +1377,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=vision-friendly-dark
           path: profile/themes/vision-friendly-dark/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - vision-friendly-dark
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=vision-friendly-dark
-          path: profile/themes/vision-friendly-dark/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: AYU-MIRAGE ---
@@ -1668,13 +1416,6 @@ jobs:
             }}&layout=compact&locale=es&theme=ayu-mirage
           path: profile/themes/ayu-mirage/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - ayu-mirage
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=ayu-mirage
-          path: profile/themes/ayu-mirage/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: MIDNIGHT-PURPLE ---
       - name: stats - midnight-purple
@@ -1712,13 +1453,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=midnight-purple
           path: profile/themes/midnight-purple/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - midnight-purple
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=midnight-purple
-          path: profile/themes/midnight-purple/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: CALM ---
@@ -1758,13 +1492,6 @@ jobs:
             }}&layout=compact&locale=es&theme=calm
           path: profile/themes/calm/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - calm
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=calm
-          path: profile/themes/calm/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: FLAG-INDIA ---
       - name: stats - flag-india
@@ -1802,13 +1529,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=flag-india
           path: profile/themes/flag-india/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - flag-india
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=flag-india
-          path: profile/themes/flag-india/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: OMNI ---
@@ -1848,13 +1568,6 @@ jobs:
             }}&layout=compact&locale=es&theme=omni
           path: profile/themes/omni/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - omni
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=omni
-          path: profile/themes/omni/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: REACT ---
       - name: stats - react
@@ -1892,13 +1605,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=react
           path: profile/themes/react/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - react
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=react
-          path: profile/themes/react/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: JOLLY ---
@@ -1938,13 +1644,6 @@ jobs:
             }}&layout=compact&locale=es&theme=jolly
           path: profile/themes/jolly/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - jolly
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=jolly
-          path: profile/themes/jolly/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: MAROONGOLD ---
       - name: stats - maroongold
@@ -1982,13 +1681,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=maroongold
           path: profile/themes/maroongold/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - maroongold
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=maroongold
-          path: profile/themes/maroongold/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: YEBLU ---
@@ -2028,13 +1720,6 @@ jobs:
             }}&layout=compact&locale=es&theme=yeblu
           path: profile/themes/yeblu/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - yeblu
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=yeblu
-          path: profile/themes/yeblu/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: BLUEBERRY ---
       - name: stats - blueberry
@@ -2072,13 +1757,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=blueberry
           path: profile/themes/blueberry/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - blueberry
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=blueberry
-          path: profile/themes/blueberry/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: SLATEORANGE ---
@@ -2118,13 +1796,6 @@ jobs:
             }}&layout=compact&locale=es&theme=slateorange
           path: profile/themes/slateorange/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - slateorange
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=slateorange
-          path: profile/themes/slateorange/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: KACHO_GA ---
       - name: stats - kacho_ga
@@ -2162,13 +1833,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=kacho_ga
           path: profile/themes/kacho_ga/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - kacho_ga
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=kacho_ga
-          path: profile/themes/kacho_ga/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: OUTRUN ---
@@ -2208,13 +1872,6 @@ jobs:
             }}&layout=compact&locale=es&theme=outrun
           path: profile/themes/outrun/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - outrun
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=outrun
-          path: profile/themes/outrun/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: OCEAN_DARK ---
       - name: stats - ocean_dark
@@ -2252,13 +1909,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=ocean_dark
           path: profile/themes/ocean_dark/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - ocean_dark
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=ocean_dark
-          path: profile/themes/ocean_dark/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: CITY_LIGHTS ---
@@ -2298,13 +1948,6 @@ jobs:
             }}&layout=compact&locale=es&theme=city_lights
           path: profile/themes/city_lights/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - city_lights
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=city_lights
-          path: profile/themes/city_lights/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: GITHUB_DARK ---
       - name: stats - github_dark
@@ -2342,13 +1985,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=github_dark
           path: profile/themes/github_dark/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - github_dark
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=github_dark
-          path: profile/themes/github_dark/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: GITHUB_DARK_DIMMED ---
@@ -2388,13 +2024,6 @@ jobs:
             }}&layout=compact&locale=es&theme=github_dark_dimmed
           path: profile/themes/github_dark_dimmed/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - github_dark_dimmed
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=github_dark_dimmed
-          path: profile/themes/github_dark_dimmed/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: DISCORD_OLD_BLURPLE ---
       - name: stats - discord_old_blurple
@@ -2432,13 +2061,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=discord_old_blurple
           path: profile/themes/discord_old_blurple/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - discord_old_blurple
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=discord_old_blurple
-          path: profile/themes/discord_old_blurple/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: AURA_DARK ---
@@ -2478,13 +2100,6 @@ jobs:
             }}&layout=compact&locale=es&theme=aura_dark
           path: profile/themes/aura_dark/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - aura_dark
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=aura_dark
-          path: profile/themes/aura_dark/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: PANDA ---
       - name: stats - panda
@@ -2522,13 +2137,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=panda
           path: profile/themes/panda/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - panda
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=panda
-          path: profile/themes/panda/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: NOCTIS_MINIMUS ---
@@ -2568,13 +2176,6 @@ jobs:
             }}&layout=compact&locale=es&theme=noctis_minimus
           path: profile/themes/noctis_minimus/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - noctis_minimus
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=noctis_minimus
-          path: profile/themes/noctis_minimus/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: COBALT2 ---
       - name: stats - cobalt2
@@ -2612,13 +2213,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=cobalt2
           path: profile/themes/cobalt2/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - cobalt2
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=cobalt2
-          path: profile/themes/cobalt2/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: SWIFT ---
@@ -2658,13 +2252,6 @@ jobs:
             }}&layout=compact&locale=es&theme=swift
           path: profile/themes/swift/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - swift
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=swift
-          path: profile/themes/swift/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: AURA ---
       - name: stats - aura
@@ -2702,13 +2289,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=aura
           path: profile/themes/aura/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - aura
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=aura
-          path: profile/themes/aura/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: APPRENTICE ---
@@ -2748,13 +2328,6 @@ jobs:
             }}&layout=compact&locale=es&theme=apprentice
           path: profile/themes/apprentice/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - apprentice
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=apprentice
-          path: profile/themes/apprentice/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: MOLTACK ---
       - name: stats - moltack
@@ -2792,13 +2365,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=moltack
           path: profile/themes/moltack/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - moltack
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=moltack
-          path: profile/themes/moltack/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: CODESTACKR ---
@@ -2838,13 +2404,6 @@ jobs:
             }}&layout=compact&locale=es&theme=codeSTACKr
           path: profile/themes/codeSTACKr/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - codeSTACKr
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=codeSTACKr
-          path: profile/themes/codeSTACKr/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: ROSE_PINE ---
       - name: stats - rose_pine
@@ -2882,13 +2441,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=rose_pine
           path: profile/themes/rose_pine/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - rose_pine
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=rose_pine
-          path: profile/themes/rose_pine/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: CATPPUCCIN_LATTE ---
@@ -2928,13 +2480,6 @@ jobs:
             }}&layout=compact&locale=es&theme=catppuccin_latte
           path: profile/themes/catppuccin_latte/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - catppuccin_latte
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=catppuccin_latte
-          path: profile/themes/catppuccin_latte/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: CATPPUCCIN_MOCHA ---
       - name: stats - catppuccin_mocha
@@ -2972,13 +2517,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=catppuccin_mocha
           path: profile/themes/catppuccin_mocha/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - catppuccin_mocha
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=catppuccin_mocha
-          path: profile/themes/catppuccin_mocha/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: DATE_NIGHT ---
@@ -3018,13 +2556,6 @@ jobs:
             }}&layout=compact&locale=es&theme=date_night
           path: profile/themes/date_night/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - date_night
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=date_night
-          path: profile/themes/date_night/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: ONE_DARK_PRO ---
       - name: stats - one_dark_pro
@@ -3062,13 +2593,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=one_dark_pro
           path: profile/themes/one_dark_pro/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - one_dark_pro
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=one_dark_pro
-          path: profile/themes/one_dark_pro/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: ROSE ---
@@ -3108,13 +2632,6 @@ jobs:
             }}&layout=compact&locale=es&theme=rose
           path: profile/themes/rose/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - rose
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=rose
-          path: profile/themes/rose/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: HOLI ---
       - name: stats - holi
@@ -3152,13 +2669,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=holi
           path: profile/themes/holi/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - holi
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=holi
-          path: profile/themes/holi/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: NEON ---
@@ -3198,13 +2708,6 @@ jobs:
             }}&layout=compact&locale=es&theme=neon
           path: profile/themes/neon/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - neon
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=neon
-          path: profile/themes/neon/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: BLUE_NAVY ---
       - name: stats - blue_navy
@@ -3242,13 +2745,6 @@ jobs:
             username=${{ github.repository_owner
             }}&layout=compact&locale=es&theme=blue_navy
           path: profile/themes/blue_navy/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - blue_navy
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=blue_navy
-          path: profile/themes/blue_navy/gist.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: CALM_PINK ---
@@ -3288,13 +2784,6 @@ jobs:
             }}&layout=compact&locale=es&theme=calm_pink
           path: profile/themes/calm_pink/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - calm_pink
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=calm_pink
-          path: profile/themes/calm_pink/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # --- TEMA: AMBIENT_GRADIENT ---
       - name: stats - ambient_gradient
@@ -3333,18 +2822,16 @@ jobs:
             }}&layout=compact&locale=es&theme=ambient_gradient
           path: profile/themes/ambient_gradient/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: gist - ambient_gradient
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: gist
-          options: id=bbfce31e0217a3689c8d961a356cb10d&show_owner=true&locale=es&theme=ambient_gradient
-          path: profile/themes/ambient_gradient/gist.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Confirmar y subir todas las tarjetas
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-          git add profile/themes/*
-          git commit -m "Actualizar TODAS las combinaciones de tarjetas y temas" || exit 0
+
+          # Eliminar los archivos de gist antiguos si existen para no ocupar espacio
+          find profile/themes/ -name "gist.svg" -type f -delete || true
+
+          # Añadir todos los cambios (incluyendo borrados)
+          git add -A profile/themes/
+          git commit -m "Actualizar combinaciones de tarjetas y temas (sin gists)" || exit 0
           git push
