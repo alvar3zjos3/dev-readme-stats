@@ -37,13 +37,20 @@ const isValidGradient = (colors) => {
 const fallbackColor = (color, fallbackColor) => {
   let gradient = null;
 
-  let colors = color ? color.split(",") : [];
-  if (colors.length > 1 && isValidGradient(colors)) {
-    gradient = colors;
+  const normalizedColor =
+    typeof color === "string" ? color.trim() : "";
+  let colors = normalizedColor ? normalizedColor.split(",") : [];
+  if (colors.length > 1) {
+    colors = colors.map((c) => c.trim());
+    if (isValidGradient(colors)) {
+      gradient = colors;
+    }
   }
 
   return (
-    (gradient ? gradient : isValidHexColor(color) && `#${color}`) ||
+    (gradient
+      ? gradient
+      : isValidHexColor(normalizedColor) && `#${normalizedColor}`) ||
     fallbackColor
   );
 };
