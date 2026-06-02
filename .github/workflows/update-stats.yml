@@ -2827,11 +2827,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-
-          # Eliminar los archivos de gist antiguos si existen para no ocupar espacio
-          find profile/themes/ -name "gist.svg" -type f -delete || true
-
-          # Añadir todos los cambios (incluyendo borrados)
           git add -A profile/themes/
-          git commit -m "Actualizar combinaciones de tarjetas y temas (sin gists)" || exit 0
+          git commit -m "Actualizar combinaciones de tarjetas y temas" || exit 0
           git push
