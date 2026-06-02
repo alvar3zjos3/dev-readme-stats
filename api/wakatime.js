@@ -48,7 +48,7 @@ export default async (req, res) => {
 
   res.setHeader("Content-Type", "image/svg+xml");
 
-  // ✅ CORRECCIÓN: sanitizar username y custom_title antes de usarlos
+  //CORRECCIÓN: sanitizar username y custom_title antes de usarlos
   const safeUsername = username ? encodeHTML(String(username)) : undefined;
   const safeCustomTitle = custom_title
     ? encodeHTML(String(custom_title))
@@ -79,7 +79,7 @@ export default async (req, res) => {
 
   const access = guardAccess({
     res,
-    // ✅ usar safeUsername en lugar del username crudo
+    //usar safeUsername en lugar del username crudo
     id: safeUsername ?? "",
     type: "wakatime",
     colors: renderOptions,
@@ -88,7 +88,7 @@ export default async (req, res) => {
     return access.result;
   }
 
-  // ✅ usar safeLocale ya sanitizado
+  //usar safeLocale ya sanitizado
   if (safeLocale && !isLocaleAvailable(safeLocale)) {
     return res.send(
       renderError({
@@ -100,7 +100,7 @@ export default async (req, res) => {
   }
 
   try {
-    // ✅ pasar safeUsername al fetcher, no el valor crudo
+    //pasar safeUsername al fetcher, no el valor crudo
     const stats = await fetchWakatimeStats({
       username: safeUsername ?? "",
       api_domain,
@@ -116,7 +116,7 @@ export default async (req, res) => {
 
     return res.send(
       renderWakatimeCard(stats, {
-        // ✅ usar safeCustomTitle y safeLocale
+        //usar safeCustomTitle y safeLocale
         custom_title: safeCustomTitle,
         hide_title: parseBoolean(hide_title),
         hide_border: parseBoolean(hide_border),
@@ -142,14 +142,20 @@ export default async (req, res) => {
   } catch (err) {
     setErrorCacheHeaders(res);
     if (err instanceof Error) {
+      // Solo pasamos el mensaje si el error es de lógica interna conocida
+      // Para evitar XSS, nunca reflejamos el mensaje crudo si puede venir del usuario
+      const isSafeError = err instanceof MissingParamError;
       return res.send(
         renderError({
-          // ✅ sanitizar el mensaje de error antes de renderizarlo
-          message: encodeHTML(err.message ?? ""),
-          secondaryMessage: encodeHTML(retrieveSecondaryMessage(err) ?? ""),
+          message: isSafeError
+            ? encodeHTML(err.message ?? "")
+            : "Something went wrong",
+          secondaryMessage: isSafeError
+            ? encodeHTML(retrieveSecondaryMessage(err) ?? "")
+            : "Please try again later",
           renderOptions: {
             ...renderOptions,
-            show_repo_link: !(err instanceof MissingParamError),
+            show_repo_link: !isSafeError,
           },
         }),
       );
