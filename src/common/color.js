@@ -37,8 +37,7 @@ const isValidGradient = (colors) => {
 const fallbackColor = (color, fallbackColor) => {
   let gradient = null;
 
-  const normalizedColor =
-    typeof color === "string" ? color.trim() : "";
+  const normalizedColor = typeof color === "string" ? color.trim() : "";
   let colors = normalizedColor ? normalizedColor.split(",") : [];
   if (colors.length > 1) {
     colors = colors.map((c) => c.trim());
