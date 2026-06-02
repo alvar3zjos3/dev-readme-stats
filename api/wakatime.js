@@ -11,10 +11,7 @@ import {
   setErrorCacheHeaders,
 } from "../src/common/cache.js";
 import { guardAccess } from "../src/common/access.js";
-import {
-  MissingParamError,
-  retrieveSecondaryMessage,
-} from "../src/common/error.js";
+import { MissingParamError } from "../src/common/error.js";
 import { parseArray, parseBoolean } from "../src/common/ops.js";
 import { encodeHTML } from "../src/common/html.js";
 import { themes } from "../themes/index.js";
