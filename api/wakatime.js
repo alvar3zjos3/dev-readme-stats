@@ -48,6 +48,13 @@ export default async (req, res) => {
 
   res.setHeader("Content-Type", "image/svg+xml");
 
+  // ✅ CORRECCIÓN: sanitizar username y custom_title antes de usarlos
+  const safeUsername = username ? encodeHTML(String(username)) : undefined;
+  const safeCustomTitle = custom_title
+    ? encodeHTML(String(custom_title))
+    : undefined;
+  const safeLocale = locale ? encodeHTML(String(locale).toLowerCase()) : null;
+
   const safeTitleColor = title_color
     ? encodeHTML(String(title_color))
     : undefined;
@@ -72,7 +79,8 @@ export default async (req, res) => {
 
   const access = guardAccess({
     res,
-    id: username,
+    // ✅ usar safeUsername en lugar del username crudo
+    id: safeUsername ?? "",
     type: "wakatime",
     colors: renderOptions,
   });
@@ -80,7 +88,8 @@ export default async (req, res) => {
     return access.result;
   }
 
-  if (locale && !isLocaleAvailable(locale)) {
+  // ✅ usar safeLocale ya sanitizado
+  if (safeLocale && !isLocaleAvailable(safeLocale)) {
     return res.send(
       renderError({
         message: "Something went wrong",
@@ -91,7 +100,11 @@ export default async (req, res) => {
   }
 
   try {
-    const stats = await fetchWakatimeStats({ username, api_domain });
+    // ✅ pasar safeUsername al fetcher, no el valor crudo
+    const stats = await fetchWakatimeStats({
+      username: safeUsername ?? "",
+      api_domain,
+    });
     const cacheSeconds = resolveCacheSeconds({
       requested: parseInt(cache_seconds, 10),
       def: CACHE_TTL.WAKATIME_CARD.DEFAULT,
@@ -103,7 +116,8 @@ export default async (req, res) => {
 
     return res.send(
       renderWakatimeCard(stats, {
-        custom_title,
+        // ✅ usar safeCustomTitle y safeLocale
+        custom_title: safeCustomTitle,
         hide_title: parseBoolean(hide_title),
         hide_border: parseBoolean(hide_border),
         card_width: parseInt(card_width, 10),
@@ -112,7 +126,7 @@ export default async (req, res) => {
         icon_color: safeIconColor,
         hide_progress,
         border_radius,
-        locale: locale ? locale.toLowerCase() : null,
+        locale: safeLocale ?? undefined,
         layout,
         langs_count,
         display_format,
@@ -122,7 +136,7 @@ export default async (req, res) => {
         bg_color: safeBgColor,
         border_color: safeBorderColor,
         // @ts-ignore
-        theme: safeTheme, // safeTheme ya es un string válido del objeto themes
+        theme: safeTheme,
       }),
     );
   } catch (err) {
@@ -130,8 +144,9 @@ export default async (req, res) => {
     if (err instanceof Error) {
       return res.send(
         renderError({
-          message: err.message,
-          secondaryMessage: retrieveSecondaryMessage(err),
+          // ✅ sanitizar el mensaje de error antes de renderizarlo
+          message: encodeHTML(err.message ?? ""),
+          secondaryMessage: encodeHTML(retrieveSecondaryMessage(err) ?? ""),
           renderOptions: {
             ...renderOptions,
             show_repo_link: !(err instanceof MissingParamError),
