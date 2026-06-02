@@ -14,6 +14,7 @@ import { guardAccess } from "../src/common/access.js";
 import { MissingParamError } from "../src/common/error.js";
 import { parseArray, parseBoolean } from "../src/common/ops.js";
 import { encodeHTML } from "../src/common/html.js";
+import { isValidHexColor } from "../src/common/color.js";
 import { themes } from "../themes/index.js";
 
 // @ts-ignore
@@ -52,15 +53,39 @@ export default async (req, res) => {
     : undefined;
   const safeLocale = locale ? encodeHTML(String(locale).toLowerCase()) : null;
 
-  const safeTitleColor = title_color
-    ? encodeHTML(String(title_color))
-    : undefined;
-  const safeTextColor = text_color ? encodeHTML(String(text_color)) : undefined;
-  const safeBgColor = bg_color ? encodeHTML(String(bg_color)) : undefined;
-  const safeBorderColor = border_color
-    ? encodeHTML(String(border_color))
-    : undefined;
-  const safeIconColor = icon_color ? encodeHTML(String(icon_color)) : undefined;
+  /**
+   * Accept only valid hex colors (with optional '#') or valid gradients:
+   * "<angle>,<hex>,<hex>[,<hex>...]"
+   * Returns normalized value or undefined.
+   */
+  const normalizeColorParam = (value) => {
+    if (!value) return undefined;
+    const input = String(value).trim();
+    if (!input) return undefined;
+
+    const parts = input.split(",").map((p) => p.trim());
+    if (parts.length > 1) {
+      const [angle, ...colors] = parts;
+      const normalizedColors = colors.map((c) => c.replace(/^#/, ""));
+      if (
+        angle &&
+        normalizedColors.length >= 2 &&
+        normalizedColors.every((c) => isValidHexColor(c))
+      ) {
+        return [angle, ...normalizedColors].join(",");
+      }
+      return undefined;
+    }
+
+    const normalizedHex = input.replace(/^#/, "");
+    return isValidHexColor(normalizedHex) ? normalizedHex : undefined;
+  };
+
+  const safeTitleColor = normalizeColorParam(title_color);
+  const safeTextColor = normalizeColorParam(text_color);
+  const safeBgColor = normalizeColorParam(bg_color);
+  const safeBorderColor = normalizeColorParam(border_color);
+  const safeIconColor = normalizeColorParam(icon_color);
   const safeTheme =
     theme && Object.keys(themes).includes(String(theme))
       ? String(theme)
