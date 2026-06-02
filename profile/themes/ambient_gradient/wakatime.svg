@@ -1,8 +1,8 @@
 
       <svg
         width="495"
-        height="115"
-        viewBox="0 0 495 115"
+        height="140"
+        viewBox="0 0 495 140"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         role="img"
@@ -139,7 +139,17 @@
             data-testid="lang-progress"
             x="0"
             y="0"
-            width="262.81800000000004"
+            width="327.7785"
+            height="8"
+            fill="#083fa1"
+          />
+        
+          <rect
+            mask="url(#rect-mask)"
+            data-testid="lang-progress"
+            x="327.7785"
+            y="0"
+            width="123.039"
             height="8"
             fill="#f1e05a"
           />
@@ -147,25 +157,32 @@
           <rect
             mask="url(#rect-mask)"
             data-testid="lang-progress"
-            x="262.81800000000004"
+            x="450.8175"
             y="0"
-            width="200.415"
+            width="13.3455"
             height="8"
-            fill="#083fa1"
+            fill="#cb171e"
           />
         
       
     <g transform="translate(25, 25)">
-      <circle cx="5" cy="6" r="5" fill="#f1e05a" />
+      <circle cx="5" cy="6" r="5" fill="#083fa1" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        JavaScript - 1 hr 2 mins
+        Markdown - 2 hrs 55 mins
       </text>
     </g>
   
     <g transform="translate(230, 25)">
-      <circle cx="5" cy="6" r="5" fill="#083fa1" />
+      <circle cx="5" cy="6" r="5" fill="#f1e05a" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Markdown - 47 mins
+        JavaScript - 1 hr 5 mins
+      </text>
+    </g>
+  
+    <g transform="translate(25, 50)">
+      <circle cx="5" cy="6" r="5" fill="#cb171e" />
+      <text data-testid="lang-name" x="15" y="10" class='lang-name'>
+        YAML - 7 mins
       </text>
     </g>
   
