@@ -57,11 +57,17 @@ export default async (req, res) => {
    * Accept only valid hex colors (with optional '#') or valid gradients:
    * "<angle>,<hex>,<hex>[,<hex>...]"
    * Returns normalized value or undefined.
+   * @param {string | string[] | undefined} value - Color query param value.
+   * @returns {string | undefined} Normalized color or undefined.
    */
   const normalizeColorParam = (value) => {
-    if (!value) return undefined;
+    if (!value) {
+      return undefined;
+    }
     const input = String(value).trim();
-    if (!input) return undefined;
+    if (!input) {
+      return undefined;
+    }
 
     const parts = input.split(",").map((p) => p.trim());
     if (parts.length > 1) {
