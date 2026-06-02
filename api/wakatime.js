@@ -141,28 +141,14 @@ export default async (req, res) => {
     );
   } catch (err) {
     setErrorCacheHeaders(res);
-    if (err instanceof Error) {
-      // Solo pasamos el mensaje si el error es de lógica interna conocida
-      // Para evitar XSS, nunca reflejamos el mensaje crudo si puede venir del usuario
-      const isSafeError = err instanceof MissingParamError;
-      return res.send(
-        renderError({
-          message: isSafeError
-            ? encodeHTML(err.message ?? "")
-            : "Something went wrong",
-          secondaryMessage: isSafeError
-            ? encodeHTML(retrieveSecondaryMessage(err) ?? "")
-            : "Please try again later",
-          renderOptions: {
-            ...renderOptions,
-            show_repo_link: !isSafeError,
-          },
-        }),
-      );
-    }
+    // Nunca reflejamos datos del error al cliente para evitar XSS
     return res.send(
       renderError({
-        message: "An unknown error occurred",
+        message: "Something went wrong",
+        secondaryMessage:
+          err instanceof MissingParamError
+            ? "Missing required parameter"
+            : "Please try again later",
         renderOptions,
       }),
     );
