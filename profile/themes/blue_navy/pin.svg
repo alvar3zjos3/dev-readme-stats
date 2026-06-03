@@ -100,7 +100,7 @@
     
 
     <text class="description" x="25" y="-5">
-      <tspan dy="1.2em" x="25">Servicio de estad&#237;sticas de github. Genera tarjetas</tspan><tspan dy="1.2em" x="25">din&#225;micas con m&#233;tricas de commits, repositorios y</tspan><tspan dy="1.2em" x="25">lenguajes para integrarlas en archivos README.</tspan>
+      <tspan dy="1.2em" x="25">Genera tarjetas din&#225;micas con m&#233;tricas de</tspan><tspan dy="1.2em" x="25">commits, repositorios y lenguajes para integrarlas en</tspan><tspan dy="1.2em" x="25">archivos README!</tspan>
     </text>
 
     <g transform="translate(30, 75)">
