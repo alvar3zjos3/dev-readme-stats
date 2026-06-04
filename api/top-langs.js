@@ -64,8 +64,8 @@ export default async (req, res) => {
   if (locale && !isLocaleAvailable(locale)) {
     return res.send(
       renderError({
-        message: "Something went wrong",
-        secondaryMessage: "Locale not found",
+        message: "Algo salió mal",
+        secondaryMessage: "Lenguaje no encontrado",
         renderOptions: {
           title_color,
           text_color,
@@ -84,8 +84,8 @@ export default async (req, res) => {
   ) {
     return res.send(
       renderError({
-        message: "Something went wrong",
-        secondaryMessage: "Incorrect layout input",
+        message: "Algo salió mal",
+        secondaryMessage: "Entrada de layout incorrecta",
         renderOptions: {
           title_color,
           text_color,
@@ -104,8 +104,8 @@ export default async (req, res) => {
   ) {
     return res.send(
       renderError({
-        message: "Something went wrong",
-        secondaryMessage: "Incorrect stats_format input",
+        message: "Algo salió mal",
+        secondaryMessage: "Entrada de stats_format incorrecta",
         renderOptions: {
           title_color,
           text_color,
@@ -174,7 +174,7 @@ export default async (req, res) => {
     }
     return res.send(
       renderError({
-        message: "An unknown error occurred",
+        message: "Ocurrió un error desconocido",
         renderOptions: {
           title_color,
           text_color,

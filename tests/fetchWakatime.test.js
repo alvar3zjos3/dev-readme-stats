@@ -119,7 +119,7 @@ describe("WakaTime fetcher", () => {
     mock.onGet(/\/https:\/\/wakatime\.com\/api/).reply(404, wakaTimeData);
 
     await expect(fetchWakatimeStats("noone")).rejects.toThrow(
-      'Missing params "username" make sure you pass the parameters in URL',
+      'Parámetros faltantes "username" asegúrate de pasar los parámetros en la URL',
     );
   });
 
@@ -127,7 +127,7 @@ describe("WakaTime fetcher", () => {
     mock.onGet(/\/https:\/\/wakatime\.com\/api/).reply(404, wakaTimeData);
 
     await expect(fetchWakatimeStats({ username: "noone" })).rejects.toThrow(
-      "Could not resolve to a User with the login of 'noone'",
+      "No se pudo resolver a un usuario con el login de 'noone'",
     );
   });
 });

@@ -8,7 +8,7 @@ const ALLOWED_DOMAINS = ["wakatime.com", "wakapi.dev"];
 
 /**
  * Valida que el api_domain sea uno de los dominios permitidos.
- * @param {string | undefined} domain Domain parameter from URL.
+ * @param {string | undefined} domain Parámetro de dominio de la URL.
  * @returns {string} Dominio seguro y validado.
  */
 const sanitizeApiDomain = (domain) => {
@@ -29,10 +29,10 @@ const sanitizeApiDomain = (domain) => {
 };
 
 /**
- * WakaTime data fetcher.
+ * Recuperador de datos de WakaTime.
  *
- * @param {{username: string, api_domain: string }} props Fetcher props.
- * @returns {Promise<import("./types").WakaTimeData>} WakaTime data response.
+ * @param {{username: string, api_domain: string }} props Props del recuperador.
+ * @returns {Promise<import("./types").WakaTimeData>} Respuesta de datos de WakaTime.
  */
 const fetchWakatimeStats = async ({ username, api_domain }) => {
   if (!username) {
@@ -41,7 +41,10 @@ const fetchWakatimeStats = async ({ username, api_domain }) => {
 
   // Validar que username solo tenga caracteres seguros
   if (!/^[a-zA-Z0-9._-]+$/.test(username)) {
-    throw new CustomError("Invalid username format", "WAKATIME_USER_NOT_FOUND");
+    throw new CustomError(
+      "Formato de nombre de usuario no válido",
+      "WAKATIME_USER_NOT_FOUND",
+    );
   }
 
   // Usar el dominio validado en lugar del input directo del usuario
@@ -56,7 +59,7 @@ const fetchWakatimeStats = async ({ username, api_domain }) => {
   } catch (err) {
     if (err.response?.status < 200 || err.response?.status > 299) {
       throw new CustomError(
-        `Could not resolve to a User with the login of '${username}'`,
+        `No se pudo resolver a un usuario con el login de '${username}'`,
         "WAKATIME_USER_NOT_FOUND",
       );
     }

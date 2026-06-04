@@ -233,7 +233,7 @@ describe("test renderGistCard", () => {
       description: undefined,
     });
     expect(document.getElementsByClassName("description")[0]).toHaveTextContent(
-      "No description provided",
+      "Sin descripción proporcionada",
     );
   });
 });

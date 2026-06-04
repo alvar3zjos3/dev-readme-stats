@@ -3,10 +3,10 @@
 import { themes } from "../../themes/index.js";
 
 /**
- * Checks if a string is a valid hex color.
+ * Verifica si una cadena es un color hexadecimal válido.
  *
- * @param {string} hexColor String to check.
- * @returns {boolean} True if the given string is a valid hex color.
+ * @param {string} hexColor Cadena a verificar.
+ * @returns {boolean} Verdadero si la cadena dada es un color hexadecimal válido.
  */
 const isValidHexColor = (hexColor) => {
   return new RegExp(
@@ -15,10 +15,10 @@ const isValidHexColor = (hexColor) => {
 };
 
 /**
- * Check if the given string is a valid gradient.
+ * Verifica si la cadena dada es un degradado válido.
  *
- * @param {string[]} colors Array of colors.
- * @returns {boolean} True if the given string is a valid gradient.
+ * @param {string[]} colors Arreglo de colores.
+ * @returns {boolean} Verdadero si la cadena dada es un degradado válido.
  */
 const isValidGradient = (colors) => {
   return (
@@ -28,11 +28,11 @@ const isValidGradient = (colors) => {
 };
 
 /**
- * Retrieves a gradient if color has more than one valid hex codes else a single color.
+ * Recupera un degradado si el color tiene más de un código hexadecimal válido, de lo contrario un color único.
  *
- * @param {string} color The color to parse.
- * @param {string | string[]} fallbackColor The fallback color.
- * @returns {string | string[]} The gradient or color.
+ * @param {string} color El color a analizar.
+ * @param {string | string[]} fallbackColor El color de respaldo.
+ * @returns {string | string[]} El degradado o color.
  */
 const fallbackColor = (color, fallbackColor) => {
   let gradient = null;

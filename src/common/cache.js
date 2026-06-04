@@ -7,7 +7,7 @@ const HOUR = 60 * MIN;
 const DAY = 24 * HOUR;
 
 /**
- * Common durations in seconds.
+ * Duraciones comunes en segundos.
  */
 const DURATIONS = {
   ONE_MINUTE: MIN,
@@ -29,7 +29,7 @@ const DURATIONS = {
 };
 
 /**
- * Common cache TTL values in seconds.
+ * Valores comunes de TTL de caché en segundos.
  */
 const CACHE_TTL = {
   STATS_CARD: {
@@ -61,14 +61,14 @@ const CACHE_TTL = {
 };
 
 /**
- * Resolves the cache seconds based on the requested, default, min, and max values.
+ * Resuelve los segundos de caché en función de los valores solicitados, predeterminados, mínimos y máximos.
  *
- * @param {Object} args The parameters object.
- * @param {number} args.requested The requested cache seconds.
- * @param {number} args.def The default cache seconds.
- * @param {number} args.min The minimum cache seconds.
- * @param {number} args.max The maximum cache seconds.
- * @returns {number} The resolved cache seconds.
+ * @param {Object} args El objeto de parámetros.
+ * @param {number} args.requested Los segundos de caché solicitados.
+ * @param {number} args.def Los segundos de caché predeterminados.
+ * @param {number} args.min Los segundos de caché mínimos.
+ * @param {number} args.max Los segundos de caché máximos.
+ * @returns {number} Los segundos de caché resueltos.
  */
 const resolveCacheSeconds = ({ requested, def, min, max }) => {
   let cacheSeconds = clampValue(isNaN(requested) ? def : requested, min, max);
@@ -84,12 +84,12 @@ const resolveCacheSeconds = ({ requested, def, min, max }) => {
 };
 
 /**
- * Disables caching by setting appropriate headers on the response object.
+ * Deshabilita el almacenamiento en caché estableciendo encabezados apropiados en el objeto de respuesta.
  *
- * @param {any} res The response object.
+ * @param {any} res El objeto de respuesta.
  */
 const disableCaching = (res) => {
-  // Disable caching for browsers, shared caches/CDNs, and GitHub Camo.
+  // Deshabilita el almacenamiento en caché para navegadores, cachés compartidas/CDN y GitHub Camo.
   res.setHeader(
     "Cache-Control",
     "no-cache, no-store, must-revalidate, max-age=0, s-maxage=0",
@@ -99,10 +99,10 @@ const disableCaching = (res) => {
 };
 
 /**
- * Sets the Cache-Control headers on the response object.
+ * Establece los encabezados Cache-Control en el objeto de respuesta.
  *
- * @param {any} res The response object.
- * @param {number} cacheSeconds The cache seconds to set in the headers.
+ * @param {any} res El objeto de respuesta.
+ * @param {number} cacheSeconds Los segundos de caché a establecer en los encabezados.
  */
 const setCacheHeaders = (res, cacheSeconds) => {
   if (cacheSeconds < 1 || process.env.NODE_ENV === "development") {
@@ -119,9 +119,9 @@ const setCacheHeaders = (res, cacheSeconds) => {
 };
 
 /**
- * Sets the Cache-Control headers for error responses on the response object.
+ * Establece los encabezados Cache-Control para respuestas de error en el objeto de respuesta.
  *
- * @param {any} res The response object.
+ * @param {any} res El objeto de respuesta.
  */
 const setErrorCacheHeaders = (res) => {
   const envCacheSeconds = process.env.CACHE_SECONDS
@@ -135,7 +135,7 @@ const setErrorCacheHeaders = (res) => {
     return;
   }
 
-  // Use lower cache period for errors.
+  // Utiliza un período de caché más bajo para errores.
   res.setHeader(
     "Cache-Control",
     `max-age=${CACHE_TTL.ERROR}, ` +

@@ -3,15 +3,15 @@
 const FALLBACK_LOCALE = "en";
 
 /**
- * I18n translation class.
+ * Clase de traducción i18n.
  */
 class I18n {
   /**
    * Constructor.
    *
-   * @param {Object} options Options.
-   * @param {string=} options.locale Locale.
-   * @param {any} options.translations Translations.
+   * @param {Object} options Opciones.
+   * @param {string=} options.locale Localizador.
+   * @param {any} options.translations Traducciones.
    */
   constructor({ locale, translations }) {
     this.locale = locale || FALLBACK_LOCALE;
@@ -19,19 +19,19 @@ class I18n {
   }
 
   /**
-   * Get translation.
+   * Obtiene la traducción.
    *
-   * @param {string} str String to translate.
-   * @returns {string} Translated string.
+   * @param {string} str Cadena a traducir.
+   * @returns {string} Cadena traducida.
    */
   t(str) {
     if (!this.translations[str]) {
-      throw new Error(`${str} Translation string not found`);
+      throw new Error(`${str} Cadena de traducción no encontrada`);
     }
 
     if (!this.translations[str][this.locale]) {
       throw new Error(
-        `'${str}' translation not found for locale '${this.locale}'`,
+        `'${str}' traducción no encontrada para el locale '${this.locale}'`,
       );
     }
 

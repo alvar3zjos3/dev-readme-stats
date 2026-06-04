@@ -6,19 +6,19 @@ import { encodeHTML } from "./html.js";
 import { clampValue } from "./ops.js";
 
 /**
- * Auto layout utility, allows us to layout things vertically or horizontally with
- * proper gaping.
+ * Utilidad de diseño automático, nos permite diseñar cosas verticalmente u horizontalmente con
+ * espaciado adecuado.
  *
- * @param {object} props Function properties.
- * @param {string[]} props.items Array of items to layout.
- * @param {number} props.gap Gap between items.
- * @param {"column" | "row"=} props.direction Direction to layout items.
- * @param {number[]=} props.sizes Array of sizes for each item.
- * @returns {string[]} Array of items with proper layout.
+ * @param {object} props Propiedades de la función.
+ * @param {string[]} props.items Arreglo de elementos a diseñar.
+ * @param {number} props.gap Espacio entre elementos.
+ * @param {"column" | "row"=} props.direction Dirección para diseñar elementos.
+ * @param {number[]=} props.sizes Arreglo de tamaños para cada elemento.
+ * @returns {string[]} Arreglo de elementos con diseño adecuado.
  */
 const flexLayout = ({ items, gap, direction, sizes = [] }) => {
   let lastSize = 0;
-  // filter() for filtering out empty strings
+  // filtro() para filtrar cadenas vacías
   return items.filter(Boolean).map((item, i) => {
     const size = sizes[i] || 0;
     let transform = `translate(${lastSize}, 0)`;
@@ -31,11 +31,11 @@ const flexLayout = ({ items, gap, direction, sizes = [] }) => {
 };
 
 /**
- * Creates a node to display the primary programming language of the repository/gist.
+ * Crea un nodo para mostrar el lenguaje de programación principal del repositorio/gist.
  *
- * @param {string} langName Language name.
- * @param {string} langColor Language color.
- * @returns {string} Language display SVG object.
+ * @param {string} langName Nombre del lenguaje.
+ * @param {string} langColor Color del lenguaje.
+ * @returns {string} Objeto SVG de visualización de lenguaje.
  */
 const createLanguageNode = (langName, langColor) => {
   return `
@@ -47,17 +47,17 @@ const createLanguageNode = (langName, langColor) => {
 };
 
 /**
- * Create a node to indicate progress in percentage along a horizontal line.
+ * Crea un nodo para indicar progreso en porcentaje a lo largo de una línea horizontal.
  *
- * @param {Object} params Object that contains the createProgressNode parameters.
- * @param {number} params.x X-axis position.
- * @param {number} params.y Y-axis position.
- * @param {number} params.width Width of progress bar.
- * @param {string} params.color Progress color.
- * @param {number} params.progress Progress value.
- * @param {string} params.progressBarBackgroundColor Progress bar bg color.
- * @param {number} params.delay Delay before animation starts.
- * @returns {string} Progress node.
+ * @param {Object} params Objeto que contiene los parámetros de createProgressNode.
+ * @param {number} params.x Posición en el eje X.
+ * @param {number} params.y Posición en el eje Y.
+ * @param {number} params.width Ancho de la barra de progreso.
+ * @param {string} params.color Color de progreso.
+ * @param {number} params.progress Valor de progreso.
+ * @param {string} params.progressBarBackgroundColor Color de fondo de la barra de progreso.
+ * @param {number} params.delay Retraso antes de que comience la animación.
+ * @returns {string} Nodo de progreso.
  */
 const createProgressNode = ({
   x,
@@ -87,13 +87,13 @@ const createProgressNode = ({
 };
 
 /**
- * Creates an icon with label to display repository/gist stats like forks, stars, etc.
+ * Crea un icono con etiqueta para mostrar estadísticas de repositorio/gist como bifurcaciones, estrellas, etc.
  *
- * @param {string} icon The icon to display.
- * @param {number|string} label The label to display.
- * @param {string} testid The testid to assign to the label.
- * @param {number} iconSize The size of the icon.
- * @returns {string} Icon with label SVG object.
+ * @param {string} icon El icono a mostrar.
+ * @param {number|string} label La etiqueta a mostrar.
+ * @param {string} testid El testid a asignar a la etiqueta.
+ * @param {number} iconSize El tamaño del icono.
+ * @returns {string} Icono con objeto SVG de etiqueta.
  */
 const iconWithLabel = (icon, label, testid, iconSize) => {
   if (typeof label === "number" && label <= 0) {
@@ -115,7 +115,7 @@ const iconWithLabel = (icon, label, testid, iconSize) => {
   return flexLayout({ items: [iconSvg, text], gap: 20 }).join("");
 };
 
-// Script parameters.
+// Parámetros de script.
 const ERROR_CARD_LENGTH = 576.5;
 
 const UPSTREAM_API_ERRORS = [
@@ -124,19 +124,19 @@ const UPSTREAM_API_ERRORS = [
 ];
 
 /**
- * Renders error message on the card.
+ * Renderiza el mensaje de error en la tarjeta.
  *
- * @param {object} args Function arguments.
- * @param {string} args.message Main error message.
- * @param {string} [args.secondaryMessage=""] The secondary error message.
- * @param {object} [args.renderOptions={}] Render options.
- * @param {string=} args.renderOptions.title_color Card title color.
- * @param {string=} args.renderOptions.text_color Card text color.
- * @param {string=} args.renderOptions.bg_color Card background color.
- * @param {string=} args.renderOptions.border_color Card border color.
- * @param {Parameters<typeof getCardColors>[0]["theme"]=} args.renderOptions.theme Card theme.
- * @param {boolean=} args.renderOptions.show_repo_link Whether to show repo link or not.
- * @returns {string} The SVG markup.
+ * @param {object} args Argumentos de función.
+ * @param {string} args.message Mensaje de error principal.
+ * @param {string} [args.secondaryMessage=""] El mensaje de error secundario.
+ * @param {object} [args.renderOptions={}] Opciones de renderizado.
+ * @param {string=} args.renderOptions.title_color Color del título de la tarjeta.
+ * @param {string=} args.renderOptions.text_color Color del texto de la tarjeta.
+ * @param {string=} args.renderOptions.bg_color Color de fondo de la tarjeta.
+ * @param {string=} args.renderOptions.border_color Color del borde de la tarjeta.
+ * @param {Parameters<typeof getCardColors>[0]["theme"]=} args.renderOptions.theme Tema de la tarjeta.
+ * @param {boolean=} args.renderOptions.show_repo_link Si mostrar enlace del repositorio o no.
+ * @returns {string} El marcado SVG.
  */
 const renderError = ({
   message,
@@ -152,7 +152,7 @@ const renderError = ({
     show_repo_link = true,
   } = renderOptions;
 
-  // returns theme based colors with proper overrides and defaults
+  // devuelve colores basados en tema con sobrescrituras adecuadas y predeterminados
   const { titleColor, textColor, bgColor, borderColor } = getCardColors({
     title_color,
     text_color,
@@ -173,10 +173,10 @@ const renderError = ({
     <rect x="0.5" y="0.5" width="${
       ERROR_CARD_LENGTH - 1
     }" height="99%" rx="4.5" fill="${bgColor}" stroke="${borderColor}"/>
-    <text x="25" y="45" class="text">Something went wrong!${
+    <text x="25" y="45" class="text">¡Algo salió mal!${
       UPSTREAM_API_ERRORS.includes(secondaryMessage) || !show_repo_link
         ? ""
-        : " file an issue at https://tiny.one/readme-stats"
+        : " presenta un problema en https://tiny.one/readme-stats"
     }</text>
     <text data-testid="message" x="25" y="55" class="text small">
       <tspan x="25" dy="18">${encodeHTML(message)}</tspan>
@@ -187,12 +187,12 @@ const renderError = ({
 };
 
 /**
- * Retrieve text length.
+ * Obtiene la longitud del texto.
  *
  * @see https://stackoverflow.com/a/48172630/10629172
- * @param {string} str String to measure.
- * @param {number} fontSize Font size.
- * @returns {number} Text length.
+ * @param {string} str Cadena a medir.
+ * @param {number} fontSize Tamaño de fuente.
+ * @returns {number} Longitud del texto.
  */
 const measureText = (str, fontSize = 10) => {
   // prettier-ignore

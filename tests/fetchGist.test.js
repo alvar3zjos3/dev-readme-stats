@@ -97,7 +97,7 @@ describe("Test fetchGist", () => {
       .reply(200, gist_not_found_data);
 
     await expect(fetchGist("bbfce31e0217a3689c8d961a356cb10d")).rejects.toThrow(
-      "Gist not found",
+      "Gist no encontrado",
     );
   });
 
@@ -111,7 +111,7 @@ describe("Test fetchGist", () => {
 
   it("should throw error if id is not provided", async () => {
     await expect(fetchGist()).rejects.toThrow(
-      'Missing params "id" make sure you pass the parameters in URL',
+      'Parámetros faltantes "id" asegúrate de pasar los parámetros en la URL',
     );
   });
 });

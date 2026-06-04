@@ -3,9 +3,9 @@
 import { CustomError } from "./error.js";
 import { logger } from "./log.js";
 
-// Script variables.
+// Variables de script.
 
-// Count the number of GitHub API tokens available.
+// Cuenta la cantidad de tokens disponibles de la API de GitHub.
 const PATs = Object.keys(process.env).filter((key) =>
   /PAT_\d*$/.exec(key),
 ).length;
@@ -17,65 +17,68 @@ const RETRIES = process.env.NODE_ENV === "test" ? 7 : PATs;
  */
 
 /**
- * Try to execute the fetcher function until it succeeds or the max number of retries is reached.
+ * Intenta ejecutar la función fetcher hasta que tenga éxito o se alcance el número máximo de reintentos.
  *
- * @param {FetcherFunction} fetcher The fetcher function.
- * @param {any} variables Object with arguments to pass to the fetcher function.
- * @param {number} retries How many times to retry.
- * @returns {Promise<any>} The response from the fetcher function.
+ * @param {FetcherFunction} fetcher La función fetcher.
+ * @param {any} variables Objeto con argumentos para pasar a la función fetcher.
+ * @param {number} retries Cuántas veces reintentar.
+ * @returns {Promise<any>} La respuesta de la función fetcher.
  */
 const retryer = async (fetcher, variables, retries = 0) => {
   if (!RETRIES) {
-    throw new CustomError("No GitHub API tokens found", CustomError.NO_TOKENS);
+    throw new CustomError(
+      "No se encontraron tokens de la API de GitHub",
+      CustomError.NO_TOKENS,
+    );
   }
 
   if (retries > RETRIES) {
     throw new CustomError(
-      "Downtime due to GitHub API rate limiting",
+      "Tiempo de inactividad por límite de tasa de la API de GitHub",
       CustomError.MAX_RETRY,
     );
   }
 
   try {
-    // try to fetch with the first token since RETRIES is 0 index i'm adding +1
+    // intenta traer con el primer token desde RETRIES es 0 index estoy agregando +1
     let response = await fetcher(
       variables,
       // @ts-ignore
       process.env[`PAT_${retries + 1}`],
-      // used in tests for faking rate limit
+      // utilizado en pruebas para simular limitación de tasa
       retries,
     );
 
-    // react on both type and message-based rate-limit signals.
-    // https://github.com/anuraghazra/github-readme-stats/issues/4425
+    // reacciona tanto a señales de limitación de tasa basadas en tipo como en mensaje.
+    // https://github.com/alvar3zjos3/dev-readme-stats/issues/4425
     const errors = response?.data?.errors;
     const errorType = errors?.[0]?.type;
     const errorMsg = errors?.[0]?.message || "";
     const isRateLimited =
       (errors && errorType === "RATE_LIMITED") || /rate limit/i.test(errorMsg);
 
-    // if rate limit is hit increase the RETRIES and recursively call the retryer
-    // with username, and current RETRIES
+    // si se alcanza el límite de tasa, aumenta los REINTENTOS y llama recursivamente al retryer
+    // con nombre de usuario y REINTENTOS actuales
     if (isRateLimited) {
       logger.log(`PAT_${retries + 1} Failed`);
       retries++;
-      // directly return from the function
+      // devuelve directamente de la función
       return retryer(fetcher, variables, retries);
     }
 
-    // finally return the response
+    // finalmente devuelve la respuesta
     return response;
   } catch (err) {
     /** @type {any} */
     const e = err;
 
-    // network/unexpected error → let caller treat as failure
+    // error de red/inesperado → dejar que la persona que llama lo trate como un fracaso
     if (!e?.response) {
       throw e;
     }
 
     // prettier-ignore
-    // also checking for bad credentials if any tokens gets invalidated
+    // también comprobando credenciales incorrectas si algún token se invalida
     const isBadCredential =
       e?.response?.data?.message === "Bad credentials";
     const isAccountSuspended =
@@ -84,11 +87,11 @@ const retryer = async (fetcher, variables, retries = 0) => {
     if (isBadCredential || isAccountSuspended) {
       logger.log(`PAT_${retries + 1} Failed`);
       retries++;
-      // directly return from the function
+      // devuelve directamente de la función
       return retryer(fetcher, variables, retries);
     }
 
-    // HTTP error with a response → return it for caller-side handling
+    // Error HTTP con una respuesta → devuélvelo para que la persona que llama lo maneje
     return e.response;
   }
 };

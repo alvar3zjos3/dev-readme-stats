@@ -29,11 +29,11 @@ query gistInfo($gistName: String!) {
 `;
 
 /**
- * Gist data fetcher.
+ * Obtenedor de datos de gist.
  *
- * @param {object} variables Fetcher variables.
- * @param {string} token GitHub token.
- * @returns {Promise<import('axios').AxiosResponse>} The response.
+ * @param {object} variables Variables del obtenedor.
+ * @param {string} token Token de GitHub.
+ * @returns {Promise<import('axios').AxiosResponse>} La respuesta.
  */
 const fetcher = async (variables, token) => {
   return await request(
@@ -47,10 +47,10 @@ const fetcher = async (variables, token) => {
  */
 
 /**
- * This function calculates the primary language of a gist by files size.
+ * Esta función calcula el lenguaje primario de un gist por tamaño de archivos.
  *
- * @param {GistFile[]} files Files.
- * @returns {string} Primary language.
+ * @param {GistFile[]} files Archivos.
+ * @returns {string} Lenguaje primario.
  */
 const calculatePrimaryLanguage = (files) => {
   /** @type {Record<string, number>} */
@@ -81,10 +81,10 @@ const calculatePrimaryLanguage = (files) => {
  */
 
 /**
- * Fetch GitHub gist information by given username and ID.
+ * Obtiene información de gist de GitHub por ID de gist dado.
  *
- * @param {string} id GitHub gist ID.
- * @returns {Promise<GistData>} Gist data.
+ * @param {string} id ID de gist de GitHub.
+ * @returns {Promise<GistData>} Datos de gist.
  */
 const fetchGist = async (id) => {
   if (!id) {
@@ -95,7 +95,7 @@ const fetchGist = async (id) => {
     throw new Error(res.data.errors[0].message);
   }
   if (!res.data.data.viewer.gist) {
-    throw new Error("Gist not found");
+    throw new Error("Gist no encontrado");
   }
   const data = res.data.data.viewer.gist;
   return {

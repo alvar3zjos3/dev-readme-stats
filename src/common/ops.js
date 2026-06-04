@@ -3,10 +3,10 @@
 import toEmoji from "emoji-name-map";
 
 /**
- * Returns boolean if value is either "true" or "false" else the value as it is.
+ * Devuelve un booleano si el valor es "true" o "false", de lo contrario devuelve el valor tal como está.
  *
- * @param {string | boolean} value The value to parse.
- * @returns {boolean | undefined } The parsed value.
+ * @param {string | boolean} value El valor a analizar.
+ * @returns {boolean | undefined } El valor analizado.
  */
 const parseBoolean = (value) => {
   if (typeof value === "boolean") {
@@ -24,10 +24,10 @@ const parseBoolean = (value) => {
 };
 
 /**
- * Parse string to array of strings.
+ * Analiza una cadena en un arreglo de cadenas.
  *
- * @param {string} str The string to parse.
- * @returns {string[]} The array of strings.
+ * @param {string} str La cadena a analizar.
+ * @returns {string[]} El arreglo de cadenas.
  */
 const parseArray = (str) => {
   if (!str) {
@@ -37,12 +37,12 @@ const parseArray = (str) => {
 };
 
 /**
- * Clamp the given number between the given range.
+ * Fija el número dado entre el rango dado.
  *
- * @param {number} number The number to clamp.
- * @param {number} min The minimum value.
- * @param {number} max The maximum value.
- * @returns {number} The clamped number.
+ * @param {number} number El número a fijar.
+ * @param {number} min El valor mínimo.
+ * @param {number} max El valor máximo.
+ * @returns {number} El número fijado.
  */
 const clampValue = (number, min, max) => {
   // @ts-ignore
@@ -53,20 +53,20 @@ const clampValue = (number, min, max) => {
 };
 
 /**
- * Lowercase and trim string.
+ * Convierte a minúsculas y recorta la cadena.
  *
- * @param {string} name String to lowercase and trim.
- * @returns {string} Lowercased and trimmed string.
+ * @param {string} name Cadena a convertir a minúsculas y recortar.
+ * @returns {string} Cadena convertida a minúsculas y recortada.
  */
 const lowercaseTrim = (name) => name.toLowerCase().trim();
 
 /**
- * Split array of languages in two columns.
+ * Divide arreglo de lenguajes en dos columnas.
  *
- * @template T Language object.
- * @param {Array<T>} arr Array of languages.
- * @param {number} perChunk Number of languages per column.
- * @returns {Array<T>} Array of languages split in two columns.
+ * @template T Objeto de idioma.
+ * @param {Array<T>} arr Arreglo de lenguajes.
+ * @param {number} perChunk Cantidad de lenguajes por columna.
+ * @returns {Array<T>} Arreglo de lenguajes dividido en dos columnas.
  */
 const chunkArray = (arr, perChunk) => {
   return arr.reduce((resultArray, item, index) => {
@@ -74,7 +74,7 @@ const chunkArray = (arr, perChunk) => {
 
     if (!resultArray[chunkIndex]) {
       // @ts-ignore
-      resultArray[chunkIndex] = []; // start a new chunk
+      resultArray[chunkIndex] = []; // comienza un nuevo fragmento
     }
 
     // @ts-ignore
@@ -85,14 +85,14 @@ const chunkArray = (arr, perChunk) => {
 };
 
 /**
- * Parse emoji from string.
+ * Analiza emoji de una cadena.
  *
- * @param {string} str String to parse emoji from.
- * @returns {string} String with emoji parsed.
+ * @param {string} str Cadena para analizar emoji desde.
+ * @returns {string} Cadena con emoji analizado.
  */
 const parseEmojis = (str) => {
   if (!str) {
-    throw new Error("[parseEmoji]: str argument not provided");
+    throw new Error("[parseEmoji]: argumento str no proporcionado");
   }
   return str.replace(/:\w+:/gm, (emoji) => {
     return toEmoji.get(emoji) || "";
@@ -100,11 +100,11 @@ const parseEmojis = (str) => {
 };
 
 /**
- * Get diff in minutes between two dates.
+ * Obtiene la diferencia en minutos entre dos fechas.
  *
- * @param {Date} d1 First date.
- * @param {Date} d2 Second date.
- * @returns {number} Number of minutes between the two dates.
+ * @param {Date} d1 Primera fecha.
+ * @param {Date} d2 Segunda fecha.
+ * @returns {number} Cantidad de minutos entre las dos fechas.
  */
 const dateDiff = (d1, d2) => {
   const date1 = new Date(d1);

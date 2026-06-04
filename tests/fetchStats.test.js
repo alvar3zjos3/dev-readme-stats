@@ -235,8 +235,8 @@ describe("Test fetchStats", () => {
   });
 
   it("should throw specific error when include_all_commits true and invalid username", async () => {
-    expect(fetchStats("asdf///---", true)).rejects.toThrow(
-      new Error("Invalid username provided."),
+    await expect(fetchStats("asdf///---", true)).rejects.toThrow(
+      new Error("Nombre de usuario no válido proporcionado."),
     );
   });
 
@@ -245,8 +245,8 @@ describe("Test fetchStats", () => {
       .onGet("https://api.github.com/search/commits?q=author:alvar3zjos3")
       .reply(200, { error: "Some test error message" });
 
-    expect(fetchStats("alvar3zjos3", true)).rejects.toThrow(
-      new Error("Could not fetch total commits."),
+    await expect(fetchStats("alvar3zjos3", true)).rejects.toThrow(
+      new Error("No se pudo obtener el total de confirmaciones."),
     );
   });
 

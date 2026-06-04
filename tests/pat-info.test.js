@@ -234,9 +234,7 @@ describe("Test /api/status/pat-info", () => {
       "Content-Type",
       "application/json",
     );
-    expect(res.send).toHaveBeenCalledWith(
-      "Something went wrong: Network Error",
-    );
+    expect(res.send).toHaveBeenCalledWith("Algo salió mal: Network Error");
   });
 
   it("should have proper cache when no error is thrown", async () => {

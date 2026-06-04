@@ -118,7 +118,7 @@ describe("Test /api/pin", () => {
 
     expect(res.setHeader).toHaveBeenCalledWith("Content-Type", "image/svg+xml");
     expect(res.send).toHaveBeenCalledWith(
-      renderError({ message: "User Repository Not found" }),
+      renderError({ message: "Repositorio de usuario no encontrado" }),
     );
   });
 
@@ -141,7 +141,7 @@ describe("Test /api/pin", () => {
 
     expect(res.setHeader).toHaveBeenCalledWith("Content-Type", "image/svg+xml");
     expect(res.send).toHaveBeenCalledWith(
-      renderError({ message: "Organization Repository Not found" }),
+      renderError({ message: "Repositorio de organización no encontrado" }),
     );
   });
 
@@ -163,8 +163,8 @@ describe("Test /api/pin", () => {
     expect(res.setHeader).toHaveBeenCalledWith("Content-Type", "image/svg+xml");
     expect(res.send).toHaveBeenCalledWith(
       renderError({
-        message: "This username is blacklisted",
-        secondaryMessage: "Please deploy your own instance",
+        message: "Este nombre de usuario está en la lista negra",
+        secondaryMessage: "Por favor, desplega tu propia instancia",
         renderOptions: { show_repo_link: false },
       }),
     );
@@ -189,8 +189,8 @@ describe("Test /api/pin", () => {
     expect(res.setHeader).toHaveBeenCalledWith("Content-Type", "image/svg+xml");
     expect(res.send).toHaveBeenCalledWith(
       renderError({
-        message: "Something went wrong",
-        secondaryMessage: "Language not found",
+        message: "Algo salió mal",
+        secondaryMessage: "Lenguaje no encontrado",
       }),
     );
   });
@@ -210,7 +210,7 @@ describe("Test /api/pin", () => {
     expect(res.send).toHaveBeenCalledWith(
       renderError({
         message:
-          'Missing params "username", "repo" make sure you pass the parameters in URL',
+          'Parámetros faltantes "username", "repo" asegúrate de pasar los parámetros en la URL',
         secondaryMessage: "/api/pin?username=USERNAME&amp;repo=REPO_NAME",
         renderOptions: { show_repo_link: false },
       }),

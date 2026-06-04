@@ -120,7 +120,7 @@ describe("Test renderRepoCard", () => {
     );
 
     expect(queryByTestId(document.body, "lang-name")).toHaveTextContent(
-      "Unspecified",
+      "No especificado",
     );
   });
 
@@ -335,7 +335,7 @@ describe("Test renderRepoCard", () => {
       isArchived: true,
     });
     expect(document.getElementsByClassName("description")[0]).toHaveTextContent(
-      "No description provided",
+      "Sin descripción proporcionada",
     );
   });
 

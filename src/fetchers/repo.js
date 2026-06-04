@@ -5,11 +5,11 @@ import { request } from "../common/http.js";
 import { retryer } from "../common/retryer.js";
 
 /**
- * Repo data fetcher.
+ * Obtenedor de datos de repositorio.
  *
- * @param {object} variables Fetcher variables.
- * @param {string} token GitHub token.
- * @returns {Promise<import('axios').AxiosResponse>} The response.
+ * @param {object} variables Variables del obtenedor.
+ * @param {string} token Token de GitHub.
+ * @returns {Promise<import('axios').AxiosResponse>} La respuesta.
  */
 const fetcher = (variables, token) => {
   return request(
@@ -60,11 +60,11 @@ const urlExample = "/api/pin?username=USERNAME&amp;repo=REPO_NAME";
  */
 
 /**
- * Fetch repository data.
+ * Obtiene datos del repositorio.
  *
- * @param {string} username GitHub username.
- * @param {string} reponame GitHub repository name.
- * @returns {Promise<RepositoryData>} Repository data.
+ * @param {string} username Nombre de usuario de GitHub.
+ * @param {string} reponame Nombre del repositorio de GitHub.
+ * @returns {Promise<RepositoryData>} Datos del repositorio.
  */
 const fetchRepo = async (username, reponame) => {
   if (!username && !reponame) {
@@ -82,7 +82,7 @@ const fetchRepo = async (username, reponame) => {
   const data = res.data.data;
 
   if (!data.user && !data.organization) {
-    throw new Error("Not found");
+    throw new Error("No encontrado");
   }
 
   const isUser = data.organization === null && data.user;
@@ -90,7 +90,7 @@ const fetchRepo = async (username, reponame) => {
 
   if (isUser) {
     if (!data.user.repository || data.user.repository.isPrivate) {
-      throw new Error("User Repository Not found");
+      throw new Error("Repositorio de usuario no encontrado");
     }
     return {
       ...data.user.repository,
@@ -103,7 +103,7 @@ const fetchRepo = async (username, reponame) => {
       !data.organization.repository ||
       data.organization.repository.isPrivate
     ) {
-      throw new Error("Organization Repository Not found");
+      throw new Error("Repositorio de organización no encontrado");
     }
     return {
       ...data.organization.repository,
@@ -111,7 +111,7 @@ const fetchRepo = async (username, reponame) => {
     };
   }
 
-  throw new Error("Unexpected behavior");
+  throw new Error("Comportamiento inesperado");
 };
 
 export { fetchRepo };

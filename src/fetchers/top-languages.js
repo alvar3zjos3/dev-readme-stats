@@ -8,11 +8,11 @@ import { wrapTextMultiline } from "../common/fmt.js";
 import { request } from "../common/http.js";
 
 /**
- * Top languages fetcher object.
+ * Objeto recuperador de lenguajes principales.
  *
- * @param {any} variables Fetcher variables.
- * @param {string} token GitHub token.
- * @returns {Promise<import("axios").AxiosResponse>} Languages fetcher response.
+ * @param {any} variables Variables del recuperador.
+ * @param {string} token Token de GitHub.
+ * @returns {Promise<import("axios").AxiosResponse>} Respuesta del recuperador de lenguajes.
  */
 const fetcher = (variables, token) => {
   return request(
@@ -47,17 +47,17 @@ const fetcher = (variables, token) => {
 };
 
 /**
- * @typedef {import("./types").TopLangData} TopLangData Top languages data.
+ * @typedef {import("./types").TopLangData} TopLangData Datos de lenguajes principales.
  */
 
 /**
- * Fetch top languages for a given username.
+ * Obtiene los lenguajes principales para un usuario dado.
  *
- * @param {string} username GitHub username.
- * @param {string[]} exclude_repo List of repositories to exclude.
- * @param {number} size_weight Weightage to be given to size.
- * @param {number} count_weight Weightage to be given to count.
- * @returns {Promise<TopLangData>} Top languages data.
+ * @param {string} username Nombre de usuario de GitHub.
+ * @param {string[]} exclude_repo Lista de repositorios a excluir.
+ * @param {number} size_weight Ponderación a dar al tamaño.
+ * @param {number} count_weight Ponderación a dar al conteo.
+ * @returns {Promise<TopLangData>} Datos de lenguajes principales.
  */
 const fetchTopLanguages = async (
   username,
@@ -75,7 +75,7 @@ const fetchTopLanguages = async (
     logger.error(res.data.errors);
     if (res.data.errors[0].type === "NOT_FOUND") {
       throw new CustomError(
-        res.data.errors[0].message || "Could not fetch user.",
+        res.data.errors[0].message || "No se pudo obtener el usuario.",
         CustomError.USER_NOT_FOUND,
       );
     }
@@ -86,7 +86,7 @@ const fetchTopLanguages = async (
       );
     }
     throw new CustomError(
-      "Something went wrong while trying to retrieve the language data using the GraphQL API.",
+      "Algo salió mal al intentar recuperar los datos de lenguaje usando la API de GraphQL.",
       CustomError.GRAPHQL_ERROR,
     );
   }
@@ -96,15 +96,15 @@ const fetchTopLanguages = async (
   let repoToHide = {};
   const allExcludedRepos = [...exclude_repo, ...excludeRepositories];
 
-  // populate repoToHide map for quick lookup
-  // while filtering out
+  // poblar el mapa repoToHide para búsquedas rápidas
+  // mientras se filtran
   if (allExcludedRepos) {
     allExcludedRepos.forEach((repoName) => {
       repoToHide[repoName] = true;
     });
   }
 
-  // filter out repositories to be hidden
+  // filtrar repositorios a ocultar
   repoNodes = repoNodes
     .sort((a, b) => b.size - a.size)
     .filter((name) => !repoToHide[name.name]);
@@ -113,21 +113,21 @@ const fetchTopLanguages = async (
 
   repoNodes = repoNodes
     .filter((node) => node.languages.edges.length > 0)
-    // flatten the list of language nodes
+    // aplanar la lista de nodos de lenguaje
     .reduce((acc, curr) => curr.languages.edges.concat(acc), [])
     .reduce((acc, prev) => {
-      // get the size of the language (bytes)
+      // obtener el tamaño del lenguaje (bytes)
       let langSize = prev.size;
 
-      // if we already have the language in the accumulator
-      // & the current language name is same as previous name
-      // add the size to the language size and increase repoCount.
+      // si ya tenemos el lenguaje en el acumulador
+      // & el nombre del lenguaje actual es igual al anterior
+      // agregar el tamaño al tamaño del lenguaje e incrementar repoCount.
       if (acc[prev.node.name] && prev.node.name === acc[prev.node.name].name) {
         langSize = prev.size + acc[prev.node.name].size;
         repoCount += 1;
       } else {
-        // reset repoCount to 1
-        // language must exist in at least one repo to be detected
+        // restablecer repoCount a 1
+        // el lenguaje debe existir en al menos un repositorio para ser detectado
         repoCount = 1;
       }
       return {
@@ -142,7 +142,7 @@ const fetchTopLanguages = async (
     }, {});
 
   Object.keys(repoNodes).forEach((name) => {
-    // comparison index calculation
+    // cálculo del índice de comparación
     repoNodes[name].size =
       Math.pow(repoNodes[name].size, size_weight) *
       Math.pow(repoNodes[name].count, count_weight);

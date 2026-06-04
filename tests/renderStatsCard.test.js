@@ -458,7 +458,7 @@ describe("Test renderStatsCard", () => {
       }),
     ).toThrow(
       new CustomError(
-        "Could not render stats card.",
+        "No se pudo renderizar la tarjeta de estadísticas.",
         "Either stats or rank are required.",
       ),
     );

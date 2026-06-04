@@ -70,8 +70,8 @@ export default async (req, res) => {
   if (locale && !isLocaleAvailable(locale)) {
     return res.send(
       renderError({
-        message: "Something went wrong",
-        secondaryMessage: "Language not found",
+        message: "Algo salió mal",
+        secondaryMessage: "Lenguaje no encontrado",
         renderOptions: {
           title_color,
           text_color,
@@ -153,7 +153,7 @@ export default async (req, res) => {
     }
     return res.send(
       renderError({
-        message: "An unknown error occurred",
+        message: "Ocurrió un error desconocido",
         renderOptions: {
           title_color,
           text_color,
