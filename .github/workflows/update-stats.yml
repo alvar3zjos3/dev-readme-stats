@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
 
@@ -2828,10 +2829,13 @@ jobs:
           path: profile/themes/ambient_gradient/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Confirmar y subir todas las tarjetas
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@users.noreply.github.com"
-          git add -A profile/themes/
-          git commit -m "Actualizar combinaciones de tarjetas y temas" || exit 0
-          git push
+      - name: Create Pull Request with updated stats
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        with:
+          commit-message: "Actualizar combinaciones de tarjetas y temas"
+          branch: "update-stats/patch"
+          delete-branch: true
+          title: "Actualizar combinaciones de tarjetas y temas"
+          body: |
+            Actualización automática de las tarjetas y temas generados por el flujo de trabajo de GitHub Actions.
+          labels: "ci, stats-update"
