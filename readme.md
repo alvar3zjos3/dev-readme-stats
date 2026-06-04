@@ -22,11 +22,6 @@
   <a href="https://securityscorecards.dev/viewer/?uri=github.com/alvar3zjos3/dev-readme-stats">
     <img alt="OpenSSF Scorecard" src="https://api.securityscorecards.dev/projects/github.com/alvar3zjos3/dev-readme-stats/badge" />
   </a>
-  <br />
-  <br />
-  <a href="https://vercel.com?utm_source=github_readme_stats_team&utm_campaign=oss">
-    <img src="./powered-by-vercel.svg"/>
-  </a>
 </p>
 
 <p align="center">
@@ -42,6 +37,7 @@
 <details>
 <summary>Tabla de contenidos (Click para mostrar)</summary>
 
+- [Avisos Importantes](#avisos-importantes)
 - [Tarjeta de Estadísticas de GitHub](#tarjeta-de-estadísticas-de-github)
     - [Ocultar estadísticas individuales](#ocultar-estadísticas-individuales)
     - [Mostrar estadísticas adicionales](#mostrar-estadísticas-adicionales)
@@ -88,15 +84,12 @@
   - [Mantener tu fork actualizado](#mantener-tu-fork-actualizado)
 </details>
 
-# Avisos Importantes <!-- omit in toc -->
+# Avisos Importantes
 
 > [!IMPORTANT]
 > La instancia pública de Vercel en `https://dev-readme-stats.vercel.app/api` funciona con el mejor esfuerzo posible y puede ser poco fiable debido a los límites de velocidad y picos de tráfico. Usamos caché para mejorar la estabilidad (ver [opciones comunes](#opciones-comunes)), pero para tarjetas fiables recomendamos [auto-alojamiento](#desplegar-tu-propia-instancia-recomendado) (Vercel u otro) o usar el [flujo de trabajo de GitHub Actions](#github-actions) para generar tarjetas en tu [repositorio de perfil](https://docs.github.com/es/account-and-profile/how-tos/profile-customization/managing-your-profile-readme).
 
 <img alt="Badge de Uptime" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdev-readme-stats.vercel.app%2Fapi%2Fstatus%2Fup%3Ftype%3Dshields">
-
-> [!IMPORTANT]
-> Somos un equipo pequeño y para priorizar dependemos de los votos positivos :+1:. No dudes en votar a favor de los issues y pull requests que te interesen. Trabajaremos primero en los que más votos tengan.
 
 # Tarjeta de Estadísticas de GitHub
 
@@ -208,8 +201,8 @@ Puedes usar el parámetro `bg_color` para hacer cualquier tema transparente esta
 Puedes usar las [etiquetas de contexto de tema de GitHub](https://github.blog/changelog/2021-11-24-specify-theme-context-for-images-in-markdown/) añadiendo `#gh-dark-mode-only` o `#gh-light-mode-only` al final de la URL de la imagen:
 
 ```md
-[![Estadísticas GitHub de Alvarez - Oscuro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&theme=dark&locale=es)](https://github.com/alvar3zjos3/dev-readme-stats)
-[![Estadísticas GitHub de Alvarez - Claro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&theme=default&locale=es)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Estadísticas GitHub de Alvarez - Oscuro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&theme=dark&locale=es)]
+[![Estadísticas GitHub de Alvarez - Claro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&theme=default&locale=es)]
 ```
 
 <details>
@@ -261,18 +254,18 @@ Puedes personalizar el aspecto de todas tus tarjetas con parámetros de URL.
 
 #### Opciones Comunes
 
-| Nombre | Descripción | Tipo | Valor por defecto |
-| --- | --- | --- | --- |
-| `title_color` | Color del título de la tarjeta. | string (color hex) | `2f80ed` |
-| `text_color` | Color del texto del cuerpo. | string (color hex) | `434d58` |
-| `icon_color` | Color de los iconos si están disponibles. | string (color hex) | `4c71f2` |
-| `border_color` | Color del borde de la tarjeta. No aplica cuando `hide_border` está activado. | string (color hex) | `e4e2e2` |
-| `bg_color` | Color de fondo de la tarjeta. | string (color hex o gradiente en forma de *ángulo,inicio,fin*) | `fffefe` |
-| `hide_border` | Oculta el borde de la tarjeta. | boolean | `false` |
-| `theme` | Nombre del tema, elige entre [todos los temas disponibles](themes/README.md). | enum | `default` |
-| `cache_seconds` | Establece manualmente la cabecera de caché (mín: 21600, máx: 86400). | integer | `21600` |
-| `locale` | Establece el idioma de la tarjeta. | enum | `es` |
-| `border_radius` | Radio de las esquinas de la tarjeta. | number | `4.5` |
+| Nombre          | Descripción                                                                   | Tipo                                                           | Valor por defecto |
+| --------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------- | ----------------- |
+| `title_color`   | Color del título de la tarjeta.                                               | string (color hex)                                             | `2f80ed`          |
+| `text_color`    | Color del texto del cuerpo.                                                   | string (color hex)                                             | `434d58`          |
+| `icon_color`    | Color de los iconos si están disponibles.                                     | string (color hex)                                             | `4c71f2`          |
+| `border_color`  | Color del borde de la tarjeta. No aplica cuando `hide_border` está activado.  | string (color hex)                                             | `e4e2e2`          |
+| `bg_color`      | Color de fondo de la tarjeta.                                                 | string (color hex o gradiente en forma de *ángulo,inicio,fin*) | `fffefe`          |
+| `hide_border`   | Oculta el borde de la tarjeta.                                                | boolean                                                        | `false`           |
+| `theme`         | Nombre del tema, elige entre [todos los temas disponibles](themes/README.md). | enum                                                           | `default`         |
+| `cache_seconds` | Establece manualmente la cabecera de caché (mín: 21600, máx: 86400).          | integer                                                        | `21600`           |
+| `locale`        | Establece el idioma de la tarjeta.                                            | enum                                                           | `es`              |
+| `border_radius` | Radio de las esquinas de la tarjeta.                                          | number                                                         | `4.5`             |
 
 > [!WARNING]
 > Usamos caché para reducir la carga en nuestros servidores. Los tiempos de caché por defecto son: tarjeta de estadísticas - 24 horas, tarjeta de lenguajes principales - 144 horas (6 días), tarjeta pin - 240 horas (10 días), tarjeta gist - 48 horas (2 días) y tarjeta wakatime - 24 horas. Si quieres que los datos se actualicen más frecuentemente puedes [desplegar tu propia instancia](#desplegar-tu-propia-instancia-recomendado) y establecer la variable de entorno `CACHE_SECONDS` con el valor que desees.
@@ -290,88 +283,88 @@ Lista de todos los idiomas disponibles:
 <table>
 <tr><td>
 
-| Código | Idioma |
-| --- | --- |
-| `ar` | Árabe |
-| `az` | Azerbaiyano |
-| `bn` | Bengalí |
-| `bg` | Búlgaro |
-| `my` | Birmano |
-| `ca` | Catalán |
-| `cn` | Chino |
+| Código  | Idioma         |
+| ------- | -------------- |
+| `ar`    | Árabe          |
+| `az`    | Azerbaiyano    |
+| `bn`    | Bengalí        |
+| `bg`    | Búlgaro        |
+| `my`    | Birmano        |
+| `ca`    | Catalán        |
+| `cn`    | Chino          |
 | `zh-tw` | Chino (Taiwán) |
-| `cs` | Checo |
-| `nl` | Holandés |
-| `en` | Inglés |
-| `fil` | Filipino |
-| `fi` | Finlandés |
-| `fr` | Francés |
-| `de` | Alemán |
-| `el` | Griego |
+| `cs`    | Checo          |
+| `nl`    | Holandés       |
+| `en`    | Inglés         |
+| `fil`   | Filipino       |
+| `fi`    | Finlandés      |
+| `fr`    | Francés        |
+| `de`    | Alemán         |
+| `el`    | Griego         |
 
 </td><td>
 
-| Código | Idioma |
-| --- | --- |
-| `he` | Hebreo |
-| `hi` | Hindi |
-| `hu` | Húngaro |
-| `id` | Indonesio |
-| `it` | Italiano |
-| `ja` | Japonés |
-| `kr` | Coreano |
-| `ml` | Malayalam |
-| `np` | Nepalés |
-| `no` | Noruego |
-| `fa` | Persa (Farsi) |
-| `pl` | Polaco |
-| `pt-br` | Portugués (Brasil) |
+| Código  | Idioma               |
+| ------- | -------------------- |
+| `he`    | Hebreo               |
+| `hi`    | Hindi                |
+| `hu`    | Húngaro              |
+| `id`    | Indonesio            |
+| `it`    | Italiano             |
+| `ja`    | Japonés              |
+| `kr`    | Coreano              |
+| `ml`    | Malayalam            |
+| `np`    | Nepalés              |
+| `no`    | Noruego              |
+| `fa`    | Persa (Farsi)        |
+| `pl`    | Polaco               |
+| `pt-br` | Portugués (Brasil)   |
 | `pt-pt` | Portugués (Portugal) |
-| `ro` | Rumano |
+| `ro`    | Rumano               |
 
 </td><td>
 
-| Código | Idioma |
-| --- | --- |
-| `ru` | Ruso |
-| `sa` | Sánscrito |
-| `sr` | Serbio (Cirílico) |
-| `sr-latn` | Serbio (Latino) |
-| `sk` | Eslovaco |
-| `es` | Español |
-| `sw` | Suajili |
-| `se` | Sueco |
-| `ta` | Tamil |
-| `th` | Tailandés |
-| `tr` | Turco |
-| `uk-ua` | Ucraniano |
-| `ur` | Urdu |
-| `uz` | Uzbeko |
-| `vi` | Vietnamita |
+| Código    | Idioma            |
+| --------- | ----------------- |
+| `ru`      | Ruso              |
+| `sa`      | Sánscrito         |
+| `sr`      | Serbio (Cirílico) |
+| `sr-latn` | Serbio (Latino)   |
+| `sk`      | Eslovaco          |
+| `es`      | Español           |
+| `sw`      | Suajili           |
+| `se`      | Sueco             |
+| `ta`      | Tamil             |
+| `th`      | Tailandés         |
+| `tr`      | Turco             |
+| `uk-ua`   | Ucraniano         |
+| `ur`      | Urdu              |
+| `uz`      | Uzbeko            |
+| `vi`      | Vietnamita        |
 
 </td></tr>
 </table>
 
 #### Opciones Exclusivas de la Tarjeta de Estadísticas
 
-| Nombre | Descripción | Tipo | Valor por defecto |
-| --- | --- | --- | --- |
-| `hide` | Oculta los [elementos especificados](#ocultar-estadísticas-individuales) de las estadísticas. | string (valores separados por comas) | `null` |
-| `hide_title` | Oculta el título de tu tarjeta de estadísticas. | boolean | `false` |
-| `card_width` | Establece el ancho de la tarjeta manualmente. | number | `500px (aprox.)` |
-| `hide_rank` | Oculta el rango y redimensiona automáticamente el ancho de la tarjeta. | boolean | `false` |
-| `rank_icon` | Muestra un icono de rango alternativo (`github`, `percentile` o `default`). | enum | `default` |
-| `show_icons` | Muestra iconos junto a todas las estadísticas. | boolean | `false` |
-| `include_all_commits` | Cuenta el total de commits en lugar de solo los del año actual. | boolean | `false` |
-| `line_height` | Establece el alto de línea entre el texto. | integer | `25` |
-| `exclude_repo` | Excluye repositorios específicos. | string (valores separados por comas) | `null` |
-| `custom_title` | Establece un título personalizado para la tarjeta. | string | `<usuario> GitHub Stats` |
-| `text_bold` | Usa texto en negrita. | boolean | `true` |
-| `disable_animations` | Desactiva todas las animaciones de la tarjeta. | boolean | `false` |
-| `ring_color` | Color del círculo del rango. | string (color hex) | `2f80ed` |
-| `number_format` | Cambia entre dos formatos: `short` (p. ej. `6.6k`) y `long` (p. ej. `6626`). | enum | `short` |
-| `show` | Muestra [elementos adicionales](#mostrar-estadísticas-adicionales) en la tarjeta. | string (valores separados por comas) | `null` |
-| `commits_year` | Filtra y cuenta solo los commits del año especificado. | integer _(AAAA)_ | `<año actual>` |
+| Nombre                | Descripción                                                                                   | Tipo                                 | Valor por defecto        |
+| --------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------ |
+| `hide`                | Oculta los [elementos especificados](#ocultar-estadísticas-individuales) de las estadísticas. | string (valores separados por comas) | `null`                   |
+| `hide_title`          | Oculta el título de tu tarjeta de estadísticas.                                               | boolean                              | `false`                  |
+| `card_width`          | Establece el ancho de la tarjeta manualmente.                                                 | number                               | `500px (aprox.)`         |
+| `hide_rank`           | Oculta el rango y redimensiona automáticamente el ancho de la tarjeta.                        | boolean                              | `false`                  |
+| `rank_icon`           | Muestra un icono de rango alternativo (`github`, `percentile` o `default`).                   | enum                                 | `default`                |
+| `show_icons`          | Muestra iconos junto a todas las estadísticas.                                                | boolean                              | `false`                  |
+| `include_all_commits` | Cuenta el total de commits en lugar de solo los del año actual.                               | boolean                              | `false`                  |
+| `line_height`         | Establece el alto de línea entre el texto.                                                    | integer                              | `25`                     |
+| `exclude_repo`        | Excluye repositorios específicos.                                                             | string (valores separados por comas) | `null`                   |
+| `custom_title`        | Establece un título personalizado para la tarjeta.                                            | string                               | `<usuario> GitHub Stats` |
+| `text_bold`           | Usa texto en negrita.                                                                         | boolean                              | `true`                   |
+| `disable_animations`  | Desactiva todas las animaciones de la tarjeta.                                                | boolean                              | `false`                  |
+| `ring_color`          | Color del círculo del rango.                                                                  | string (color hex)                   | `2f80ed`                 |
+| `number_format`       | Cambia entre dos formatos: `short` (p. ej. `6.6k`) y `long` (p. ej. `6626`).                  | enum                                 | `short`                  |
+| `show`                | Muestra [elementos adicionales](#mostrar-estadísticas-adicionales) en la tarjeta.             | string (valores separados por comas) | `null`                   |
+| `commits_year`        | Filtra y cuenta solo los commits del año especificado.                                        | integer _(AAAA)_                     | `<año actual>`           |
 
 ***
 
@@ -391,10 +384,10 @@ Endpoint: `api/pin?username=alvar3zjos3&repo=dev-readme-stats`
 
 ### Opciones
 
-| Nombre | Descripción | Tipo | Valor por defecto |
-| --- | --- | --- | --- |
-| `show_owner` | Muestra el nombre del propietario del repositorio. | boolean | `false` |
-| `description_lines_count` | Establece manualmente el número de líneas para la descripción (entre 1 y 3). | number | `null` |
+| Nombre                    | Descripción                                                                  | Tipo    | Valor por defecto |
+| ------------------------- | ---------------------------------------------------------------------------- | ------- | ----------------- |
+| `show_owner`              | Muestra el nombre del propietario del repositorio.                           | boolean | `false`           |
+| `description_lines_count` | Establece manualmente el número de líneas para la descripción (entre 1 y 3). | number  | `null`            |
 
 ### Demo
 
@@ -420,9 +413,9 @@ Endpoint: `api/gist?id=bbfce31e0217a3689c8d961a356cb10d`
 
 ### Opciones
 
-| Nombre | Descripción | Tipo | Valor por defecto |
-| --- | --- | --- | --- |
-| `show_owner` | Muestra el nombre del propietario del gist. | boolean | `false` |
+| Nombre       | Descripción                                 | Tipo    | Valor por defecto |
+| ------------ | ------------------------------------------- | ------- | ----------------- |
+| `show_owner` | Muestra el nombre del propietario del gist. | boolean | `false`           |
 
 ### Demo
 
@@ -455,25 +448,25 @@ Copia y pega este código en tu readme y cambia los enlaces.
 Endpoint: `api/top-langs?username=alvar3zjos3`
 
 ```md
-[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&locale=es&theme=tokyonight)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&locale=es&theme=tokyonight)]
 ```
 
 ### Opciones
 
-| Nombre | Descripción | Tipo | Valor por defecto |
-| --- | --- | --- | --- |
-| `hide` | Oculta los [lenguajes especificados](#ocultar-lenguajes-individuales) de la tarjeta. | string (valores separados por comas) | `null` |
-| `hide_title` | Oculta el título de tu tarjeta. | boolean | `false` |
-| `layout` | Cambia entre cinco diseños: `normal`, `compact`, `donut`, `donut-vertical` y `pie`. | enum | `normal` |
-| `card_width` | Establece el ancho de la tarjeta manualmente. | number | `300` |
-| `langs_count` | Muestra más lenguajes en la tarjeta, entre 1 y 20. | integer | `5` para `normal` y `donut`, `6` para otros diseños |
-| `exclude_repo` | Excluye repositorios específicos. | string (valores separados por comas) | `null` |
-| `custom_title` | Establece un título personalizado para la tarjeta. | string | `Most Used Languages` |
-| `disable_animations` | Desactiva todas las animaciones de la tarjeta. | boolean | `false` |
-| `hide_progress` | Usa el diseño compacto, oculta los porcentajes y elimina las barras. | boolean | `false` |
-| `size_weight` | Configura el algoritmo de estadísticas de lenguajes. | integer | `1` |
-| `count_weight` | Configura el algoritmo de estadísticas de lenguajes. | integer | `0` |
-| `stats_format` | Cambia entre dos formatos: `percentages` y `bytes`. | enum | `percentages` |
+| Nombre               | Descripción                                                                          | Tipo                                 | Valor por defecto                                   |
+| -------------------- | ------------------------------------------------------------------------------------ | ------------------------------------ | --------------------------------------------------- |
+| `hide`               | Oculta los [lenguajes especificados](#ocultar-lenguajes-individuales) de la tarjeta. | string (valores separados por comas) | `null`                                              |
+| `hide_title`         | Oculta el título de tu tarjeta.                                                      | boolean                              | `false`                                             |
+| `layout`             | Cambia entre cinco diseños: `normal`, `compact`, `donut`, `donut-vertical` y `pie`.  | enum                                 | `normal`                                            |
+| `card_width`         | Establece el ancho de la tarjeta manualmente.                                        | number                               | `300`                                               |
+| `langs_count`        | Muestra más lenguajes en la tarjeta, entre 1 y 20.                                   | integer                              | `5` para `normal` y `donut`, `6` para otros diseños |
+| `exclude_repo`       | Excluye repositorios específicos.                                                    | string (valores separados por comas) | `null`                                              |
+| `custom_title`       | Establece un título personalizado para la tarjeta.                                   | string                               | `Most Used Languages`                               |
+| `disable_animations` | Desactiva todas las animaciones de la tarjeta.                                       | boolean                              | `false`                                             |
+| `hide_progress`      | Usa el diseño compacto, oculta los porcentajes y elimina las barras.                 | boolean                              | `false`                                             |
+| `size_weight`        | Configura el algoritmo de estadísticas de lenguajes.                                 | integer                              | `1`                                                 |
+| `count_weight`       | Configura el algoritmo de estadísticas de lenguajes.                                 | integer                              | `0`                                                 |
+| `stats_format`       | Cambia entre dos formatos: `percentages` y `bytes`.                                  | enum                                 | `percentages`                                       |
 
 ### Algoritmo de estadísticas de lenguajes
 
@@ -518,19 +511,19 @@ ranking_index = (byte_count ^ size_weight) * (repo_count ^ count_weight)
 ### Diseño de gráfico de dona
 
 ```md
-[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=donut&locale=es&theme=tokyonight)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=donut&locale=es&theme=tokyonight)]
 ```
 
 ### Diseño de gráfico de dona vertical
 
 ```md
-[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=donut-vertical&locale=es&theme=tokyonight)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=donut-vertical&locale=es&theme=tokyonight)]
 ```
 
 ### Diseño de gráfico de tarta
 
 ```md
-[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=pie&locale=es&theme=tokyonight)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=pie&locale=es&theme=tokyonight)]
 ```
 
 ### Ocultar barras de progreso
@@ -584,24 +577,24 @@ ranking_index = (byte_count ^ size_weight) * (repo_count ^ count_weight)
 Cambia el valor de `?username=` por tu nombre de usuario de [WakaTime](https://wakatime.com).
 
 ```md
-[![Estadísticas WakaTime de Alvarez](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&locale=es&theme=dracula)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Estadísticas WakaTime de Alvarez](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&locale=es&theme=dracula)]
 ```
 
 ### Opciones
 
-| Nombre | Descripción | Tipo | Valor por defecto |
-| --- | --- | --- | --- |
-| `hide` | Oculta los lenguajes especificados de la tarjeta. | string (valores separados por comas) | `null` |
-| `hide_title` | Oculta el título de tu tarjeta. | boolean | `false` |
-| `card_width` | Establece el ancho de la tarjeta manualmente. | number | `495` |
-| `line_height` | Establece el alto de línea entre el texto. | integer | `25` |
-| `hide_progress` | Oculta la barra de progreso y el porcentaje. | boolean | `false` |
-| `custom_title` | Establece un título personalizado para la tarjeta. | string | `WakaTime Stats` |
-| `layout` | Cambia entre dos diseños: `default` y `compact`. | enum | `default` |
-| `langs_count` | Limita el número de lenguajes en la tarjeta. | integer | `null` |
-| `api_domain` | Establece un dominio de API personalizado para la tarjeta. | string | `wakatime.com` |
-| `display_format` | Formato de visualización: `time` para tiempo o `percent` para porcentajes. | enum | `time` |
-| `disable_animations` | Desactiva todas las animaciones de la tarjeta. | boolean | `false` |
+| Nombre               | Descripción                                                                | Tipo                                 | Valor por defecto |
+| -------------------- | -------------------------------------------------------------------------- | ------------------------------------ | ----------------- |
+| `hide`               | Oculta los lenguajes especificados de la tarjeta.                          | string (valores separados por comas) | `null`            |
+| `hide_title`         | Oculta el título de tu tarjeta.                                            | boolean                              | `false`           |
+| `card_width`         | Establece el ancho de la tarjeta manualmente.                              | number                               | `495`             |
+| `line_height`        | Establece el alto de línea entre el texto.                                 | integer                              | `25`              |
+| `hide_progress`      | Oculta la barra de progreso y el porcentaje.                               | boolean                              | `false`           |
+| `custom_title`       | Establece un título personalizado para la tarjeta.                         | string                               | `WakaTime Stats`  |
+| `layout`             | Cambia entre dos diseños: `default` y `compact`.                           | enum                                 | `default`         |
+| `langs_count`        | Limita el número de lenguajes en la tarjeta.                               | integer                              | `null`            |
+| `api_domain`         | Establece un dominio de API personalizado para la tarjeta.                 | string                               | `wakatime.com`    |
+| `display_format`     | Formato de visualización: `time` para tiempo o `percent` para porcentajes. | enum                                 | `time`            |
+| `disable_animations` | Desactiva todas las animaciones de la tarjeta.                             | boolean                              | `false`           |
 
 ### Demo
 
@@ -744,40 +737,79 @@ GitHub Actions genera SVGs estáticos y evita las llamadas a la API por solicitu
 Crea `/.github/workflows/grs.yml` en tu repositorio de perfil (`alvar3zjos3/alvar3zjos3`):
 
 ```yaml
-name: Actualizar tarjetas del README
+name: Generar todas las tarjetas y temas
 
 on:
   schedule:
     - cron: "0 3 * * *"
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
 
-      - name: Generar tarjeta de estadísticas
-        uses: readme-tools/github-readme-stats-action@v1
+      # --- TEMA: DEFAULT ---
+      - name: stats - default
+        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true
-          path: profile/stats.svg
+          options:
+            username=${{ github.repository_owner
+            }}&show_icons=true&locale=es&theme=default
+          path: profile/themes/default/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: top-langs - default
+        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        with:
+          card: top-langs
+          options:
+            username=${{ github.repository_owner
+            }}&layout=compact&locale=es&theme=default
+          path: profile/themes/default/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: pin - default
+        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        with:
+          card: pin
+          options:
+            username=${{ github.repository_owner
+            }}&repo=dev-readme-stats&show_owner=true&locale=es&theme=default
+          path: profile/themes/default/pin.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: wakatime - default
+        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        with:
+          card: wakatime
+          options:
+            username=${{ github.repository_owner
+            }}&layout=compact&locale=es&theme=default
+          path: profile/themes/default/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Confirmar tarjetas
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@users.noreply.github.com"
-          git add profile/*.svg
-          git commit -m "Actualizar tarjetas del README" || exit 0
-          git push
+      - name: Create Pull Request with updated stats
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        with:
+          commit-message: "Actualizar combinaciones de tarjetas y temas"
+          branch: "update-stats/patch"
+          delete-branch: true
+          title: "Actualizar combinaciones de tarjetas y temas"
+          body: |
+            Actualización automática de las tarjetas y temas generados por el flujo de trabajo de GitHub Actions.
+          labels: "ci, stats-update"
 ```
 
 Luego inclúyelo en tu README de perfil:
 
 ```md
-![Estadísticas](./profile/stats.svg)
+![Estadísticas](./profile/themes/)
 ```
 
 ## Auto-alojado (Vercel/Otro)
