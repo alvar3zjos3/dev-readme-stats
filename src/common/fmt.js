@@ -46,7 +46,9 @@ const formatBytes = (bytes) => {
   const i = Math.floor(Math.log(bytes) / Math.log(base));
 
   if (i >= sizes.length) {
-    throw new Error("Los bytes son demasiado grandes para convertir a una cadena legible para humanos");
+    throw new Error(
+      "Los bytes son demasiado grandes para convertir a una cadena legible para humanos",
+    );
   }
 
   return `${(bytes / Math.pow(base, i)).toFixed(1)} ${sizes[i]}`;

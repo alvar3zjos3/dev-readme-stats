@@ -4,8 +4,10 @@ import { renderError } from "./render.js";
 import { blacklist } from "./blacklist.js";
 import { whitelist, gistWhitelist } from "./envs.js";
 
-const NOT_WHITELISTED_USERNAME_MESSAGE = "Este nombre de usuario no está en la lista blanca";
-const NOT_WHITELISTED_GIST_MESSAGE = "Este ID de gist no está en la lista blanca";
+const NOT_WHITELISTED_USERNAME_MESSAGE =
+  "Este nombre de usuario no está en la lista blanca";
+const NOT_WHITELISTED_GIST_MESSAGE =
+  "Este ID de gist no está en la lista blanca";
 const BLACKLISTED_MESSAGE = "Este nombre de usuario está en la lista negra";
 
 /**

@@ -13,10 +13,12 @@ const SECONDARY_ERROR_MESSAGES = {
     "Puedes desplegar tu propia instancia o esperar hasta que la pública ya no esté limitada",
   NO_TOKENS:
     "Por favor, agrega una variable de entorno llamada PAT_1 con tu token de API de GitHub en vercel",
-  USER_NOT_FOUND: "Asegúrate de que el nombre de usuario proporcionado no sea una organización",
+  USER_NOT_FOUND:
+    "Asegúrate de que el nombre de usuario proporcionado no sea una organización",
   GRAPHQL_ERROR: TRY_AGAIN_LATER,
   GITHUB_REST_API_ERROR: TRY_AGAIN_LATER,
-  WAKATIME_USER_NOT_FOUND: "Asegúrate de que tengas un perfil público de WakaTime",
+  WAKATIME_USER_NOT_FOUND:
+    "Asegúrate de que tengas un perfil público de WakaTime",
 };
 
 /**

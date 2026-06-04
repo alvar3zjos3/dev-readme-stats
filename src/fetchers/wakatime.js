@@ -41,7 +41,10 @@ const fetchWakatimeStats = async ({ username, api_domain }) => {
 
   // Validar que username solo tenga caracteres seguros
   if (!/^[a-zA-Z0-9._-]+$/.test(username)) {
-    throw new CustomError("Formato de nombre de usuario no válido", "WAKATIME_USER_NOT_FOUND");
+    throw new CustomError(
+      "Formato de nombre de usuario no válido",
+      "WAKATIME_USER_NOT_FOUND",
+    );
   }
 
   // Usar el dominio validado en lugar del input directo del usuario
