@@ -18,7 +18,7 @@ const RANK_ONLY_CARD_MIN_WIDTH = 290;
 const RANK_ONLY_CARD_DEFAULT_WIDTH = 290;
 
 /**
- * Long locales that need more space for text. Keep sorted alphabetically.
+ * Localizadores largos que necesitan más espacio para el texto. Manténgase ordenado alfabéticamente.
  *
  * @type {(keyof typeof wakatimeCardLocales["wakatimecard.title"])[]}
  */
@@ -52,21 +52,21 @@ const LONG_LOCALES = [
 ];
 
 /**
- * Create a stats card text item.
+ * Crea un elemento de texto de tarjeta de estadísticas.
  *
- * @param {object} params Object that contains the createTextNode parameters.
- * @param {string} params.icon The icon to display.
- * @param {string} params.label The label to display.
- * @param {number} params.value The value to display.
- * @param {string} params.id The id of the stat.
- * @param {string=} params.unitSymbol The unit symbol of the stat.
- * @param {number} params.index The index of the stat.
- * @param {boolean} params.showIcons Whether to show icons.
- * @param {number} params.shiftValuePos Number of pixels the value has to be shifted to the right.
- * @param {boolean} params.bold Whether to bold the label.
- * @param {string} params.numberFormat The format of numbers on card.
- * @param {number=} params.numberPrecision The precision of numbers on card.
- * @returns {string} The stats card text item SVG object.
+ * @param {object} params Objeto que contiene los parámetros de createTextNode.
+ * @param {string} params.icon El icono a mostrar.
+ * @param {string} params.label La etiqueta a mostrar.
+ * @param {number} params.value El valor a mostrar.
+ * @param {string} params.id El id de la estadística.
+ * @param {string=} params.unitSymbol El símbolo de unidad de la estadística.
+ * @param {number} params.index El índice de la estadística.
+ * @param {boolean} params.showIcons Si mostrar iconos.
+ * @param {number} params.shiftValuePos Cantidad de píxeles que el valor debe desplazarse hacia la derecha.
+ * @param {boolean} params.bold Si debe engrosar la etiqueta.
+ * @param {string} params.numberFormat El formato de números en la tarjeta.
+ * @param {number=} params.numberPrecision La precisión de números en la tarjeta.
+ * @returns {string} El objeto SVG del elemento de texto de la tarjeta de estadísticas.
  */
 const createTextNode = ({
   icon,
@@ -116,10 +116,10 @@ const createTextNode = ({
 };
 
 /**
- * Calculates progress along the boundary of the circle, i.e. its circumference.
+ * Calcula el progreso a lo largo del límite del círculo, es decir, su circunferencia.
  *
- * @param {number} value The rank value to calculate progress for.
- * @returns {number} Progress value.
+ * @param {number} value El valor de rango para calcular el progreso.
+ * @returns {number} Valor de progreso.
  */
 const calculateCircleProgress = (value) => {
   const radius = 40;
@@ -136,11 +136,11 @@ const calculateCircleProgress = (value) => {
 };
 
 /**
- * Retrieves the animation to display progress along the circumference of circle
- * from the beginning to the given value in a clockwise direction.
+ * Recupera la animación para mostrar el progreso a lo largo de la circunferencia del círculo
+ * desde el principio hasta el valor dado en dirección hacia el sentido de las agujas del reloj.
  *
- * @param {{progress: number}} progress The progress value to animate to.
- * @returns {string} Progress animation css.
+ * @param {{progress: number}} progress El valor de progreso para animar.
+ * @returns {string} CSS de animación de progreso.
  */
 const getProgressAnimation = ({ progress }) => {
   return `
@@ -156,16 +156,16 @@ const getProgressAnimation = ({ progress }) => {
 };
 
 /**
- * Retrieves CSS styles for a card.
+ * Recupera los estilos CSS para una tarjeta.
  *
- * @param {Object} colors The colors to use for the card.
- * @param {string} colors.titleColor The title color.
- * @param {string} colors.textColor The text color.
- * @param {string} colors.iconColor The icon color.
- * @param {string} colors.ringColor The ring color.
- * @param {boolean} colors.show_icons Whether to show icons.
- * @param {number} colors.progress The progress value to animate to.
- * @returns {string} Card CSS styles.
+ * @param {Object} colors Los colores a usar para la tarjeta.
+ * @param {string} colors.titleColor El color del título.
+ * @param {string} colors.textColor El color del texto.
+ * @param {string} colors.iconColor El color del icono.
+ * @param {string} colors.ringColor El color del anillo.
+ * @param {boolean} colors.show_icons Si mostrar iconos.
+ * @param {number} colors.progress El valor de progreso para animar.
+ * @returns {string} Estilos CSS de la tarjeta.
  */
 const getStyles = ({
   // eslint-disable-next-line no-unused-vars
@@ -181,7 +181,7 @@ const getStyles = ({
       font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${textColor};
     }
     @supports(-moz-appearance: auto) {
-      /* Selector detects Firefox */
+      /* El selector detecta Firefox */
       .stat { font-size:12px; }
     }
     .stagger {
@@ -228,12 +228,12 @@ const getStyles = ({
 };
 
 /**
- * Return the label for commits according to the selected options
+ * Devuelve la etiqueta para commits de acuerdo con las opciones seleccionadas
  *
- * @param {boolean} include_all_commits Option to include all years
- * @param {number|undefined} commits_year Option to include only selected year
- * @param {I18n} i18n The I18n instance.
- * @returns {string} The label corresponding to the options.
+ * @param {boolean} include_all_commits Opción para incluir todos los años
+ * @param {number|undefined} commits_year Opción para incluir solo el año seleccionado
+ * @param {I18n} i18n La instancia de I18n.
+ * @returns {string} La etiqueta correspondiente a las opciones.
  */
 const getTotalCommitsYearLabel = (include_all_commits, commits_year, i18n) =>
   include_all_commits
@@ -248,11 +248,11 @@ const getTotalCommitsYearLabel = (include_all_commits, commits_year, i18n) =>
  */
 
 /**
- * Renders the stats card.
+ * Renderiza la tarjeta de estadísticas.
  *
- * @param {StatsData} stats The stats data.
- * @param {Partial<StatCardOptions>} options The card options.
- * @returns {string} The stats card SVG object.
+ * @param {StatsData} stats Los datos de estadísticas.
+ * @param {Partial<StatCardOptions>} options Las opciones de tarjeta.
+ * @returns {string} El objeto SVG de la tarjeta de estadísticas.
  */
 const renderStatsCard = (stats, options = {}) => {
   const {
@@ -299,7 +299,7 @@ const renderStatsCard = (stats, options = {}) => {
 
   const lheight = parseInt(String(line_height), 10);
 
-  // returns theme based colors with proper overrides and defaults
+  // devuelve colores basados en tema con sobrescrituras adecuadas y predeterminados
   const { titleColor, iconColor, textColor, bgColor, borderColor, ringColor } =
     getCardColors({
       title_color,
@@ -320,7 +320,7 @@ const renderStatsCard = (stats, options = {}) => {
     },
   });
 
-  // Meta data for creating text nodes with createTextNode function
+  // Metadatos para crear nodos de texto con la función createTextNode
   const STATS = {};
 
   STATS.stars = {
@@ -437,19 +437,19 @@ const renderStatsCard = (stats, options = {}) => {
 
   if (statItems.length === 0 && hide_rank) {
     throw new CustomError(
-      "Could not render stats card.",
-      "Either stats or rank are required.",
+      "No se pudo renderizar la tarjeta de estadísticas.",
+      "Se requiere estadísticas o rango.",
     );
   }
 
-  // Calculate the card height depending on how many items there are
-  // but if rank circle is visible clamp the minimum height to `150`
+  // Calcula la altura de la tarjeta dependiendo de cuántos elementos hay
+  // pero si el círculo de rango es visible fija la altura mínima a `150`
   let height = Math.max(
     45 + (statItems.length + 1) * lheight,
     hide_rank ? 0 : statItems.length ? 150 : 180,
   );
 
-  // the lower the user's percentile the better
+  // cuanto menor sea el percentil del usuario, mejor
   const progress = 100 - rank.percentile;
   const cssStyles = getStyles({
     titleColor,
@@ -471,9 +471,9 @@ const renderStatsCard = (stats, options = {}) => {
   };
 
   /*
-    When hide_rank=true, the minimum card width is 270 px + the title length and padding.
-    When hide_rank=false, the minimum card_width is 340 px + the icon width (if show_icons=true).
-    Numbers are picked by looking at existing dimensions on production.
+    Cuando hide_rank=true, el ancho mínimo de la tarjeta es 270 px + la longitud del título y relleno.
+    Cuando hide_rank=false, el ancho mínimo de card_width es 340 px + ancho del icono (si show_icons=true).
+    Los números se seleccionan mirando las dimensiones existentes en la producción.
   */
   const iconWidth = show_icons && statItems.length ? 16 + /* padding */ 1 : 0;
   const minCardWidth =
@@ -527,14 +527,14 @@ const renderStatsCard = (stats, options = {}) => {
   }
 
   /**
-   * Calculates the right rank circle translation values such that the rank circle
-   * keeps respecting the following padding:
+   * Calcula los valores correctos de traducción del círculo de rango de modo que el círculo de rango
+   * continúe respetando el relleno siguiente:
    *
-   * width > RANK_CARD_DEFAULT_WIDTH: The default right padding of 70 px will be used.
-   * width < RANK_CARD_DEFAULT_WIDTH: The left and right padding will be enlarged
-   *   equally from a certain minimum at RANK_CARD_MIN_WIDTH.
+   * ancho > RANK_CARD_DEFAULT_WIDTH: Se usará el relleno derecho predeterminado de 70 px.
+   * ancho < RANK_CARD_DEFAULT_WIDTH: El relleno izquierdo y derecho se ampliarán
+   *   igualmente desde un mínimo determinado en RANK_CARD_MIN_WIDTH.
    *
-   * @returns {number} - Rank circle translation value.
+   * @returns {number} - Valor de traducción del círculo de rango.
    */
   const calculateRankXTranslation = () => {
     if (statItems.length) {
@@ -550,7 +550,7 @@ const renderStatsCard = (stats, options = {}) => {
     }
   };
 
-  // Conditionally rendered elements
+  // Elementos renderizados condicionalmente
   const rankCircle = hide_rank
     ? ""
     : `<g data-testid="rank-circle"
@@ -564,7 +564,7 @@ const renderStatsCard = (stats, options = {}) => {
         </g>
       </g>`;
 
-  // Accessibility Labels
+  // Etiquetas de accesibilidad
   const labels = Object.keys(STATS)
     .filter((key) => !hide.includes(key))
     .map((key) => {

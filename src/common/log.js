@@ -3,7 +3,7 @@
 const noop = () => {};
 
 /**
- * Return console instance based on the environment.
+ * Devuelve la instancia de consola basada en el entorno.
  *
  * @type {Console | {log: () => void, error: () => void}}
  */

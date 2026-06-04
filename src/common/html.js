@@ -1,12 +1,12 @@
 // @ts-check
 
 /**
- * Encode string as HTML.
+ * Codifica una cadena como HTML.
  *
  * @see https://stackoverflow.com/a/48073476/10629172
  *
- * @param {string} str String to encode.
- * @returns {string} Encoded string.
+ * @param {string} str Cadena a codificar.
+ * @returns {string} Cadena codificada.
  */
 const encodeHTML = (str) => {
   return str

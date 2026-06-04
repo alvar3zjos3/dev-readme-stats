@@ -1,33 +1,33 @@
 // @ts-check
 
 /**
- * @type {string} A general message to ask user to try again later.
+ * @type {string} Mensaje general para pedir al usuario que intente más tarde.
  */
-const TRY_AGAIN_LATER = "Please try again later";
+const TRY_AGAIN_LATER = "Por favor, intenta más tarde";
 
 /**
- * @type {Object<string, string>} A map of error types to secondary error messages.
+ * @type {Object<string, string>} Mapa de tipos de error a mensajes de error secundarios.
  */
 const SECONDARY_ERROR_MESSAGES = {
   MAX_RETRY:
-    "You can deploy own instance or wait until public will be no longer limited",
+    "Puedes desplegar tu propia instancia o esperar hasta que la pública ya no esté limitada",
   NO_TOKENS:
-    "Please add an env variable called PAT_1 with your GitHub API token in vercel",
-  USER_NOT_FOUND: "Make sure the provided username is not an organization",
+    "Por favor, agrega una variable de entorno llamada PAT_1 con tu token de API de GitHub en vercel",
+  USER_NOT_FOUND: "Asegúrate de que el nombre de usuario proporcionado no sea una organización",
   GRAPHQL_ERROR: TRY_AGAIN_LATER,
   GITHUB_REST_API_ERROR: TRY_AGAIN_LATER,
-  WAKATIME_USER_NOT_FOUND: "Make sure you have a public WakaTime profile",
+  WAKATIME_USER_NOT_FOUND: "Asegúrate de que tengas un perfil público de WakaTime",
 };
 
 /**
- * Custom error class to handle custom GRS errors.
+ * Clase de error personalizado para manejar errores de GRS personalizados.
  */
 class CustomError extends Error {
   /**
-   * Custom error constructor.
+   * Constructor de error personalizado.
    *
-   * @param {string} message Error message.
-   * @param {string} type Error type.
+   * @param {string} message Mensaje de error.
+   * @param {string} type Tipo de error.
    */
   constructor(message, type) {
     super(message);
@@ -44,19 +44,19 @@ class CustomError extends Error {
 }
 
 /**
- * Missing query parameter class.
+ * Clase de error de parámetro faltante.
  */
 class MissingParamError extends Error {
   /**
-   * Missing query parameter error constructor.
+   * Constructor de error de parámetro faltante.
    *
-   * @param {string[]} missedParams An array of missing parameters names.
-   * @param {string=} secondaryMessage Optional secondary message to display.
+   * @param {string[]} missedParams Un arreglo de nombres de parámetros faltantes.
+   * @param {string=} secondaryMessage Mensaje secundario opcional a mostrar.
    */
   constructor(missedParams, secondaryMessage) {
-    const msg = `Missing params ${missedParams
+    const msg = `Parámetros faltantes ${missedParams
       .map((p) => `"${p}"`)
-      .join(", ")} make sure you pass the parameters in URL`;
+      .join(", ")} asegúrate de pasar los parámetros en la URL`;
     super(msg);
     this.missedParams = missedParams;
     this.secondaryMessage = secondaryMessage;
@@ -64,10 +64,10 @@ class MissingParamError extends Error {
 }
 
 /**
- * Retrieve secondary message from an error object.
+ * Obtiene el mensaje secundario de un objeto de error.
  *
- * @param {Error} err The error object.
- * @returns {string|undefined} The secondary message if available, otherwise undefined.
+ * @param {Error} err El objeto de error.
+ * @returns {string|undefined} El mensaje secundario si está disponible, de lo contrario indefinido.
  */
 const retrieveSecondaryMessage = (err) => {
   return "secondaryMessage" in err && typeof err.secondaryMessage === "string"

@@ -5,21 +5,21 @@ import { flexLayout } from "./render.js";
 
 class Card {
   /**
-   * Creates a new card instance.
+   * Crea una nueva instancia de tarjeta.
    *
-   * @param {object} args Card arguments.
-   * @param {number=} args.width Card width.
-   * @param {number=} args.height Card height.
-   * @param {number=} args.border_radius Card border radius.
-   * @param {string=} args.customTitle Card custom title.
-   * @param {string=} args.defaultTitle Card default title.
-   * @param {string=} args.titlePrefixIcon Card title prefix icon.
-   * @param {object} [args.colors={}] Card colors arguments.
-   * @param {string=} args.colors.titleColor Card title color.
-   * @param {string=} args.colors.textColor Card text color.
-   * @param {string=} args.colors.iconColor Card icon color.
-   * @param {string|string[]=} args.colors.bgColor Card background color.
-   * @param {string=} args.colors.borderColor Card border color.
+   * @param {object} args Argumentos de la tarjeta.
+   * @param {number=} args.width Ancho de la tarjeta.
+   * @param {number=} args.height Alto de la tarjeta.
+   * @param {number=} args.border_radius Radio del borde de la tarjeta.
+   * @param {string=} args.customTitle Título personalizado de la tarjeta.
+   * @param {string=} args.defaultTitle Título predeterminado de la tarjeta.
+   * @param {string=} args.titlePrefixIcon Icono de prefijo del título de la tarjeta.
+   * @param {object} [args.colors={}] Argumentos de colores de la tarjeta.
+   * @param {string=} args.colors.titleColor Color del título de la tarjeta.
+   * @param {string=} args.colors.textColor Color del texto de la tarjeta.
+   * @param {string=} args.colors.iconColor Color del icono de la tarjeta.
+   * @param {string|string[]=} args.colors.bgColor Color de fondo de la tarjeta.
+   * @param {string=} args.colors.borderColor Color del borde de la tarjeta.
    */
   constructor({
     width = 100,
@@ -38,7 +38,7 @@ class Card {
 
     this.border_radius = border_radius;
 
-    // returns theme based colors with proper overrides and defaults
+    // retorna colores basados en tema con sobrecargas adecuadas y predeterminados
     this.colors = colors;
     this.title =
       customTitle === undefined
@@ -63,9 +63,9 @@ class Card {
   }
 
   /**
-   * @param {Object} props The props object.
-   * @param {string} props.title Accessibility title.
-   * @param {string} props.desc Accessibility description.
+   * @param {Object} props El objeto de propiedades.
+   * @param {string} props.title Título de accesibilidad.
+   * @param {string} props.desc Descripción de accesibilidad.
    * @returns {void}
    */
   setAccessibilityLabel({ title, desc }) {
@@ -74,7 +74,7 @@ class Card {
   }
 
   /**
-   * @param {string} value The CSS to add to the card.
+   * @param {string} value El CSS a agregar a la tarjeta.
    * @returns {void}
    */
   setCSS(value) {
@@ -82,7 +82,7 @@ class Card {
   }
 
   /**
-   * @param {boolean} value Whether to hide the border or not.
+   * @param {boolean} value Si se debe ocultar el borde o no.
    * @returns {void}
    */
   setHideBorder(value) {
@@ -90,7 +90,7 @@ class Card {
   }
 
   /**
-   * @param {boolean} value Whether to hide the title or not.
+   * @param {boolean} value Si se debe ocultar el título o no.
    * @returns {void}
    */
   setHideTitle(value) {
@@ -101,7 +101,7 @@ class Card {
   }
 
   /**
-   * @param {string} text The title to set.
+   * @param {string} text El título a establecer.
    * @returns {void}
    */
   setTitle(text) {
@@ -109,7 +109,7 @@ class Card {
   }
 
   /**
-   * @returns {string} The rendered card title.
+   * @returns {string} El título de la tarjeta renderizado.
    */
   renderTitle() {
     const titleText = `
@@ -148,7 +148,7 @@ class Card {
   }
 
   /**
-   * @returns {string} The rendered card gradient.
+   * @returns {string} El degradado de la tarjeta renderizado.
    */
   renderGradient() {
     if (typeof this.colors.bgColor !== "object") {
@@ -175,13 +175,13 @@ class Card {
   }
 
   /**
-   * Retrieves css animations for a card.
+   * Obtiene animaciones css para una tarjeta.
    *
-   * @returns {string} Animation css.
+   * @returns {string} CSS de animación.
    */
   getAnimations = () => {
     return `
-      /* Animations */
+      /* Animaciones */
       @keyframes scaleInAnimation {
         from {
           transform: translate(-5px, 5px) scale(0);
@@ -202,8 +202,8 @@ class Card {
   };
 
   /**
-   * @param {string} body The inner body of the card.
-   * @returns {string} The rendered card.
+   * @param {string} body El cuerpo interno de la tarjeta.
+   * @returns {string} La tarjeta renderizada.
    */
   render(body) {
     return `
@@ -225,7 +225,7 @@ class Card {
             animation: fadeInAnimation 0.8s ease-in-out forwards;
           }
           @supports(-moz-appearance: auto) {
-            /* Selector detects Firefox */
+            /* El selector detecta Firefox */
             .header { font-size: 15.5px; }
           }
           ${this.css}

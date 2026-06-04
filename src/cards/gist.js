@@ -13,12 +13,12 @@ import { encodeHTML } from "../common/html.js";
 import { icons } from "../common/icons.js";
 import { parseEmojis } from "../common/ops.js";
 
-/** Import language colors.
+/** Importa colores de lenguajes.
  *
- * @description Here we use the workaround found in
+ * @description Aquí usamos la solución encontrada en
  * https://stackoverflow.com/questions/66726365/how-should-i-import-json-in-node
- * since vercel is using v16.14.0 which does not yet support json imports without the
- * --experimental-json-modules flag.
+ * ya que vercel está utilizando v16.14.0 que aún no admite importaciones json sin el indicador
+ * --experimental-json-modules.
  */
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
@@ -34,11 +34,11 @@ const HEADER_MAX_LENGTH = 35;
  */
 
 /**
- * Render gist card.
+ * Renderiza la tarjeta de gist.
  *
- * @param {GistData} gistData Gist data.
- * @param {Partial<GistCardOptions>} options Gist card options.
- * @returns {string} Gist card.
+ * @param {GistData} gistData Datos del gist.
+ * @param {Partial<GistCardOptions>} options Opciones de tarjeta de gist.
+ * @returns {string} Tarjeta de gist.
  */
 const renderGistCard = (gistData, options = {}) => {
   const { name, nameWithOwner, description, language, starsCount, forksCount } =
@@ -55,7 +55,7 @@ const renderGistCard = (gistData, options = {}) => {
     hide_border = false,
   } = options;
 
-  // returns theme based colors with proper overrides and defaults
+  // devuelve colores basados en tema con sobrescrituras adecuadas y predeterminados
   const { titleColor, textColor, iconColor, bgColor, borderColor } =
     getCardColors({
       title_color,
@@ -68,7 +68,7 @@ const renderGistCard = (gistData, options = {}) => {
 
   const lineWidth = 59;
   const linesLimit = 10;
-  const desc = parseEmojis(description || "No description provided");
+  const desc = parseEmojis(description || "Sin descripción proporcionada");
   const multiLineDescription = wrapTextMultiline(desc, lineWidth, linesLimit);
   const descriptionLines = multiLineDescription.length;
   const descriptionSvg = multiLineDescription
@@ -94,7 +94,7 @@ const renderGistCard = (gistData, options = {}) => {
     ICON_SIZE,
   );
 
-  const languageName = language || "Unspecified";
+  const languageName = language || "No especificado";
   // @ts-ignore
   const languageColor = languageColors[languageName] || "#858585";
 

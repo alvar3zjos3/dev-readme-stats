@@ -20,11 +20,11 @@ const DESCRIPTION_LINE_WIDTH = 59;
 const DESCRIPTION_MAX_LINES = 3;
 
 /**
- * Retrieves the repository description and wraps it to fit the card width.
+ * Recupera la descripción del repositorio y la envuelve para ajustarse al ancho de la tarjeta.
  *
- * @param {string} label The repository description.
- * @param {string} textColor The color of the text.
- * @returns {string} Wrapped repo description SVG object.
+ * @param {string} label La descripción del repositorio.
+ * @param {string} textColor El color del texto.
+ * @returns {string} Objeto SVG de descripción de repo envuelto.
  */
 const getBadgeSVG = (label, textColor) => `
   <g data-testid="badge" class="badge" transform="translate(320, -18)">
@@ -47,11 +47,11 @@ const getBadgeSVG = (label, textColor) => `
  */
 
 /**
- * Renders repository card details.
+ * Renderiza los detalles de la tarjeta del repositorio.
  *
- * @param {RepositoryData} repo Repository data.
- * @param {Partial<RepoCardOptions>} options Card options.
- * @returns {string} Repository card SVG object.
+ * @param {RepositoryData} repo Datos del repositorio.
+ * @param {Partial<RepoCardOptions>} options Opciones de tarjeta.
+ * @returns {string} Objeto SVG de tarjeta de repositorio.
  */
 const renderRepoCard = (repo, options = {}) => {
   const {
@@ -80,13 +80,13 @@ const renderRepoCard = (repo, options = {}) => {
 
   const lineHeight = 10;
   const header = show_owner ? nameWithOwner : name;
-  const langName = (primaryLanguage && primaryLanguage.name) || "Unspecified";
+  const langName = (primaryLanguage && primaryLanguage.name) || "No especificado";
   const langColor = (primaryLanguage && primaryLanguage.color) || "#333";
   const descriptionMaxLines = description_lines_count
     ? clampValue(description_lines_count, 1, DESCRIPTION_MAX_LINES)
     : DESCRIPTION_MAX_LINES;
 
-  const desc = parseEmojis(description || "No description provided");
+  const desc = parseEmojis(description || "Sin descripción proporcionada");
   const multiLineDescription = wrapTextMultiline(
     desc,
     DESCRIPTION_LINE_WIDTH,
@@ -109,7 +109,7 @@ const renderRepoCard = (repo, options = {}) => {
     translations: repoCardLocales,
   });
 
-  // returns theme based colors with proper overrides and defaults
+  // devuelve colores basados en tema con sobrescrituras adecuadas y predeterminados
   const colors = getCardColors({
     title_color,
     icon_color,

@@ -4,24 +4,24 @@ import { renderError } from "./render.js";
 import { blacklist } from "./blacklist.js";
 import { whitelist, gistWhitelist } from "./envs.js";
 
-const NOT_WHITELISTED_USERNAME_MESSAGE = "This username is not whitelisted";
-const NOT_WHITELISTED_GIST_MESSAGE = "This gist ID is not whitelisted";
-const BLACKLISTED_MESSAGE = "This username is blacklisted";
+const NOT_WHITELISTED_USERNAME_MESSAGE = "Este nombre de usuario no está en la lista blanca";
+const NOT_WHITELISTED_GIST_MESSAGE = "Este ID de gist no está en la lista blanca";
+const BLACKLISTED_MESSAGE = "Este nombre de usuario está en la lista negra";
 
 /**
- * Guards access using whitelist/blacklist.
+ * Protege el acceso usando lista blanca/negra.
  *
- * @param {Object} args The parameters object.
- * @param {any} args.res The response object.
- * @param {string} args.id Resource identifier (username or gist id).
- * @param {"username"|"gist"|"wakatime"} args.type The type of identifier.
- * @param {{ title_color?: string, text_color?: string, bg_color?: string, border_color?: string, theme?: string }} args.colors Color options for the error card.
- * @returns {{ isPassed: boolean, result?: any }} The result object indicating success or failure.
+ * @param {Object} args El objeto de parámetros.
+ * @param {any} args.res El objeto de respuesta.
+ * @param {string} args.id Identificador de recurso (nombre de usuario o id de gist).
+ * @param {"username"|"gist"|"wakatime"} args.type El tipo de identificador.
+ * @param {{ title_color?: string, text_color?: string, bg_color?: string, border_color?: string, theme?: string }} args.colors Opciones de color para la tarjeta de error.
+ * @returns {{ isPassed: boolean, result?: any }} El objeto de resultado que indica éxito o fracaso.
  */
 const guardAccess = ({ res, id, type, colors }) => {
   if (!["username", "gist", "wakatime"].includes(type)) {
     throw new Error(
-      'Invalid type. Expected "username", "gist", or "wakatime".',
+      'Tipo inválido. Se esperaba "username", "gist" o "wakatime".',
     );
   }
 
@@ -35,7 +35,7 @@ const guardAccess = ({ res, id, type, colors }) => {
     const result = res.send(
       renderError({
         message: notWhitelistedMsg,
-        secondaryMessage: "Please deploy your own instance",
+        secondaryMessage: "Por favor, desplega tu propia instancia",
         renderOptions: {
           ...colors,
           show_repo_link: false,
@@ -53,7 +53,7 @@ const guardAccess = ({ res, id, type, colors }) => {
     const result = res.send(
       renderError({
         message: BLACKLISTED_MESSAGE,
-        secondaryMessage: "Please deploy your own instance",
+        secondaryMessage: "Por favor, desplega tu propia instancia",
         renderOptions: {
           ...colors,
           show_repo_link: false,

@@ -13,7 +13,7 @@ import { request } from "../common/http.js";
 
 dotenv.config();
 
-// GraphQL queries.
+// Consultas GraphQL.
 const GRAPHQL_REPOS_FIELD = `
   repositories(first: 100, ownerAffiliations: OWNER, orderBy: {direction: DESC, field: STARGAZERS}, after: $after) {
     totalCount
@@ -79,11 +79,11 @@ const GRAPHQL_STATS_QUERY = `
 `;
 
 /**
- * Stats fetcher object.
+ * Objeto recuperador de estadísticas.
  *
- * @param {object & { after: string | null }} variables Fetcher variables.
- * @param {string} token GitHub token.
- * @returns {Promise<import('axios').AxiosResponse>} Axios response.
+ * @param {object & { after: string | null }} variables Variables del recuperador.
+ * @param {string} token Token de GitHub.
+ * @returns {Promise<import('axios').AxiosResponse>} Respuesta de Axios.
  */
 const fetcher = (variables, token) => {
   const query = variables.after ? GRAPHQL_REPOS_QUERY : GRAPHQL_STATS_QUERY;
@@ -99,17 +99,17 @@ const fetcher = (variables, token) => {
 };
 
 /**
- * Fetch stats information for a given username.
+ * Obtiene información de estadísticas para un usuario dado.
  *
- * @param {object} variables Fetcher variables.
- * @param {string} variables.username GitHub username.
- * @param {boolean} variables.includeMergedPullRequests Include merged pull requests.
- * @param {boolean} variables.includeDiscussions Include discussions.
- * @param {boolean} variables.includeDiscussionsAnswers Include discussions answers.
- * @param {string|undefined} variables.startTime Time to start the count of total commits.
- * @returns {Promise<import('axios').AxiosResponse>} Axios response.
+ * @param {object} variables Variables del recuperador.
+ * @param {string} variables.username Nombre de usuario de GitHub.
+ * @param {boolean} variables.includeMergedPullRequests Incluir solicitudes de extracción fusionadas.
+ * @param {boolean} variables.includeDiscussions Incluir discusiones.
+ * @param {boolean} variables.includeDiscussionsAnswers Incluir respuestas de discusiones.
+ * @param {string|undefined} variables.startTime Hora para comenzar el conteo de confirmaciones totales.
+ * @returns {Promise<import('axios').AxiosResponse>} Respuesta de Axios.
  *
- * @description This function supports multi-page fetching if the 'FETCH_MULTI_PAGE_STARS' environment variable is set to true.
+ * @description Esta función admite obtención de múltiples páginas si la variable de entorno 'FETCH_MULTI_PAGE_STARS' está configurada como verdadera.
  */
 const statsFetcher = async ({
   username,
@@ -136,7 +136,7 @@ const statsFetcher = async ({
       return res;
     }
 
-    // Store stats data.
+    // Almacenar datos de estadísticas.
     const repoNodes = res.data.data.user.repositories.nodes;
     if (stats) {
       stats.data.data.user.repositories.nodes.push(...repoNodes);
@@ -144,7 +144,7 @@ const statsFetcher = async ({
       stats = res;
     }
 
-    // Disable multi page fetching on public Vercel instance due to rate limits.
+    // Desactivar la obtención de múltiples páginas en la instancia pública de Vercel debido a límites de velocidad.
     const repoNodesWithStars = repoNodes.filter(
       (node) => node.stargazers.totalCount !== 0,
     );
@@ -159,11 +159,11 @@ const statsFetcher = async ({
 };
 
 /**
- * Fetch total commits using the REST API.
+ * Obtiene el total de confirmaciones usando la API REST.
  *
- * @param {object} variables Fetcher variables.
- * @param {string} token GitHub token.
- * @returns {Promise<import('axios').AxiosResponse>} Axios response.
+ * @param {object} variables Variables del recuperador.
+ * @param {string} token Token de GitHub.
+ * @returns {Promise<import('axios').AxiosResponse>} Respuesta de Axios.
  *
  * @see https://developer.github.com/v3/search/#search-commits
  */
@@ -180,18 +180,18 @@ const fetchTotalCommits = (variables, token) => {
 };
 
 /**
- * Fetch all the commits for all the repositories of a given username.
+ * Obtiene todas las confirmaciones de todos los repositorios de un usuario dado.
  *
- * @param {string} username GitHub username.
- * @returns {Promise<number>} Total commits.
+ * @param {string} username Nombre de usuario de GitHub.
+ * @returns {Promise<number>} Total de confirmaciones.
  *
- * @description Done like this because the GitHub API does not provide a way to fetch all the commits. See
- * #92#issuecomment-661026467 and #211 for more information.
+ * @description Se hace de esta manera porque la API de GitHub no proporciona una forma de obtener todas las confirmaciones. Consulte
+ * #92#issuecomment-661026467 y #211 para más información.
  */
 const totalCommitsFetcher = async (username) => {
   if (!githubUsernameRegex.test(username)) {
-    logger.log("Invalid username provided.");
-    throw new Error("Invalid username provided.");
+    logger.log("Nombre de usuario no válido proporcionado.");
+    throw new Error("Nombre de usuario no válido proporcionado.");
   }
 
   let res;
@@ -205,7 +205,7 @@ const totalCommitsFetcher = async (username) => {
   const totalCount = res.data.total_count;
   if (!totalCount || isNaN(totalCount)) {
     throw new CustomError(
-      "Could not fetch total commits.",
+      "No se pudo obtener el total de confirmaciones.",
       CustomError.GITHUB_REST_API_ERROR,
     );
   }
@@ -213,16 +213,16 @@ const totalCommitsFetcher = async (username) => {
 };
 
 /**
- * Fetch stats for a given username.
+ * Obtiene estadísticas para un usuario dado.
  *
- * @param {string} username GitHub username.
- * @param {boolean} include_all_commits Include all commits.
- * @param {string[]} exclude_repo Repositories to exclude.
- * @param {boolean} include_merged_pull_requests Include merged pull requests.
- * @param {boolean} include_discussions Include discussions.
- * @param {boolean} include_discussions_answers Include discussions answers.
- * @param {number|undefined} commits_year Year to count total commits
- * @returns {Promise<import("./types").StatsData>} Stats data.
+ * @param {string} username Nombre de usuario de GitHub.
+ * @param {boolean} include_all_commits Incluir todas las confirmaciones.
+ * @param {string[]} exclude_repo Repositorios a excluir.
+ * @param {boolean} include_merged_pull_requests Incluir solicitudes de extracción fusionadas.
+ * @param {boolean} include_discussions Incluir discusiones.
+ * @param {boolean} include_discussions_answers Incluir respuestas de discusiones.
+ * @param {number|undefined} commits_year Año para contar las confirmaciones totales
+ * @returns {Promise<import("./types").StatsData>} Datos de estadísticas.
  */
 const fetchStats = async (
   username,
@@ -260,12 +260,12 @@ const fetchStats = async (
     startTime: commits_year ? `${commits_year}-01-01T00:00:00Z` : undefined,
   });
 
-  // Catch GraphQL errors.
+  // Capturar errores de GraphQL.
   if (res.data.errors) {
     logger.error(res.data.errors);
     if (res.data.errors[0].type === "NOT_FOUND") {
       throw new CustomError(
-        res.data.errors[0].message || "Could not fetch user.",
+        res.data.errors[0].message || "No se pudo obtener el usuario.",
         CustomError.USER_NOT_FOUND,
       );
     }
@@ -276,7 +276,7 @@ const fetchStats = async (
       );
     }
     throw new CustomError(
-      "Something went wrong while trying to retrieve the stats data using the GraphQL API.",
+      "Algo salió mal al intentar recuperar los datos de estadísticas usando la API de GraphQL.",
       CustomError.GRAPHQL_ERROR,
     );
   }
@@ -285,7 +285,7 @@ const fetchStats = async (
 
   stats.name = user.name || user.login;
 
-  // if include_all_commits, fetch all commits using the REST API.
+  // si include_all_commits, obtener todas las confirmaciones usando la API REST.
   if (include_all_commits) {
     stats.totalCommits = await totalCommitsFetcher(username);
   } else {
@@ -310,7 +310,7 @@ const fetchStats = async (
   }
   stats.contributedTo = user.repositoriesContributedTo.totalCount;
 
-  // Retrieve stars while filtering out repositories to be hidden.
+  // Obtener estrellas mientras se filtran los repositorios a ocultar.
   const allExcludedRepos = [...exclude_repo, ...excludeRepositories];
   let repoToHide = new Set(allExcludedRepos);
 
