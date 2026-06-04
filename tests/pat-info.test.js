@@ -235,7 +235,7 @@ describe("Test /api/status/pat-info", () => {
       "application/json",
     );
     expect(res.send).toHaveBeenCalledWith(
-      "Something went wrong: Network Error",
+      "Algo salió mal: Network Error",
     );
   });
 

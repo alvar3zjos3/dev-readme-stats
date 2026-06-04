@@ -17,7 +17,7 @@ describe("I18n", () => {
       translations: statCardLocales({ name: "Jose Alvarez", apostrophe: "s" }),
     });
     expect(() => i18n.t("statcard.title1")).toThrow(
-      "statcard.title1 Translation string not found",
+      "statcard.title1 Cadena de traducción no encontrada",
     );
   });
 
@@ -27,7 +27,7 @@ describe("I18n", () => {
       translations: statCardLocales({ name: "Jose Alvarez", apostrophe: "s" }),
     });
     expect(() => i18n.t("statcard.title")).toThrow(
-      "'statcard.title' translation not found for locale 'asdf'",
+      "'statcard.title' traducción no encontrada para el locale 'asdf'",
     );
   });
 });

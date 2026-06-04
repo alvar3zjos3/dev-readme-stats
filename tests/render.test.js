@@ -7,21 +7,21 @@ import { renderError } from "../src/common/render.js";
 
 describe("Test render.js", () => {
   it("should test renderError", () => {
-    document.body.innerHTML = renderError({ message: "Something went wrong" });
+    document.body.innerHTML = renderError({ message: "Algo salió mal" });
     expect(
       queryByTestId(document.body, "message")?.children[0],
-    ).toHaveTextContent(/Something went wrong/gim);
+    ).toHaveTextContent(/Algo salió mal/gim);
     expect(
       queryByTestId(document.body, "message")?.children[1],
     ).toBeEmptyDOMElement();
 
     // Secondary message
     document.body.innerHTML = renderError({
-      message: "Something went wrong",
-      secondaryMessage: "Secondary Message",
+      message: "Algo salió mal",
+      secondaryMessage: "Mensaje secundario",
     });
     expect(
       queryByTestId(document.body, "message")?.children[1],
-    ).toHaveTextContent(/Secondary Message/gim);
+    ).toHaveTextContent(/Mensaje secundario/gim);
   });
 });

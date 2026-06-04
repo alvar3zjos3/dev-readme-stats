@@ -26,12 +26,15 @@ const RETRIES = process.env.NODE_ENV === "test" ? 7 : PATs;
  */
 const retryer = async (fetcher, variables, retries = 0) => {
   if (!RETRIES) {
-    throw new CustomError("No se encontraron tokens de la API de GitHub", CustomError.NO_TOKENS);
+    throw new CustomError(
+      "No se encontraron tokens de la API de GitHub",
+      CustomError.NO_TOKENS,
+    );
   }
 
   if (retries > RETRIES) {
     throw new CustomError(
-      "Tiempo de inactividad debido a limitación de tasa de la API de GitHub",
+      "Tiempo de inactividad por límite de tasa de la API de GitHub",
       CustomError.MAX_RETRY,
     );
   }
@@ -47,7 +50,7 @@ const retryer = async (fetcher, variables, retries = 0) => {
     );
 
     // reacciona tanto a señales de limitación de tasa basadas en tipo como en mensaje.
-    // https://github.com/anuraghazra/github-readme-stats/issues/4425
+    // https://github.com/alvar3zjos3/dev-readme-stats/issues/4425
     const errors = response?.data?.errors;
     const errorType = errors?.[0]?.type;
     const errorMsg = errors?.[0]?.message || "";
@@ -57,7 +60,7 @@ const retryer = async (fetcher, variables, retries = 0) => {
     // si se alcanza el límite de tasa, aumenta los REINTENTOS y llama recursivamente al retryer
     // con nombre de usuario y REINTENTOS actuales
     if (isRateLimited) {
-      logger.log(`PAT_${retries + 1} Falló`);
+      logger.log(`PAT_${retries + 1} Failed`);
       retries++;
       // devuelve directamente de la función
       return retryer(fetcher, variables, retries);
@@ -82,7 +85,7 @@ const retryer = async (fetcher, variables, retries = 0) => {
       e?.response?.data?.message === "Sorry. Your account was suspended.";
 
     if (isBadCredential || isAccountSuspended) {
-      logger.log(`PAT_${retries + 1} Falló`);
+      logger.log(`PAT_${retries + 1} Failed`);
       retries++;
       // devuelve directamente de la función
       return retryer(fetcher, variables, retries);

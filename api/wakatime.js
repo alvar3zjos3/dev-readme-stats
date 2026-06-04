@@ -120,8 +120,8 @@ export default async (req, res) => {
   if (safeLocale && !isLocaleAvailable(safeLocale)) {
     return res.send(
       renderError({
-        message: "Something went wrong",
-        secondaryMessage: "Language not found",
+        message: "Algo salió mal",
+        secondaryMessage: "Lenguaje no encontrado",
         renderOptions,
       }),
     );
@@ -172,11 +172,11 @@ export default async (req, res) => {
     // Nunca reflejamos datos del error al cliente para evitar XSS
     return res.send(
       renderError({
-        message: "Something went wrong",
+        message: "Algo salió mal",
         secondaryMessage:
           err instanceof MissingParamError
-            ? "Missing required parameter"
-            : "Please try again later",
+            ? "Falta un parámetro requerido"
+            : "Por favor, intenta más tarde",
         renderOptions,
       }),
     );

@@ -165,7 +165,7 @@ describe("FetchTopLanguages", () => {
     });
 
     await expect(fetchTopLanguages("alvar3zjos3")).rejects.toThrow(
-      "Something went wrong while trying to retrieve the language data using the GraphQL API.",
+      "Algo salió mal al intentar recuperar los datos de lenguaje usando la API de GraphQL.",
     );
   });
 });

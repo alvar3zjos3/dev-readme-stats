@@ -145,7 +145,7 @@ describe("Test /api/top-langs", () => {
       renderError({
         message: error.errors[0].message,
         secondaryMessage:
-          "Make sure the provided username is not an organization",
+          "Asegúrate de que el nombre de usuario proporcionado no sea una organización",
       }),
     );
   });
@@ -168,8 +168,8 @@ describe("Test /api/top-langs", () => {
     expect(res.setHeader).toHaveBeenCalledWith("Content-Type", "image/svg+xml");
     expect(res.send).toHaveBeenCalledWith(
       renderError({
-        message: "Something went wrong",
-        secondaryMessage: "Incorrect layout input",
+        message: "Algo salió mal",
+        secondaryMessage: "Entrada de layout incorrecta",
       }),
     );
   });
@@ -191,8 +191,8 @@ describe("Test /api/top-langs", () => {
     expect(res.setHeader).toHaveBeenCalledWith("Content-Type", "image/svg+xml");
     expect(res.send).toHaveBeenCalledWith(
       renderError({
-        message: "This username is blacklisted",
-        secondaryMessage: "Please deploy your own instance",
+        message: "Este nombre de usuario está en la lista negra",
+        secondaryMessage: "Por favor, desplega tu propia instancia",
         renderOptions: { show_repo_link: false },
       }),
     );
@@ -216,8 +216,8 @@ describe("Test /api/top-langs", () => {
     expect(res.setHeader).toHaveBeenCalledWith("Content-Type", "image/svg+xml");
     expect(res.send).toHaveBeenCalledWith(
       renderError({
-        message: "Something went wrong",
-        secondaryMessage: "Locale not found",
+        message: "Algo salió mal",
+        secondaryMessage: "Lenguaje no encontrado",
       }),
     );
   });

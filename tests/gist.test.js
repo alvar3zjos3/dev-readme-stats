@@ -127,7 +127,8 @@ describe("Test /api/gist", () => {
     expect(res.setHeader).toHaveBeenCalledWith("Content-Type", "image/svg+xml");
     expect(res.send).toHaveBeenCalledWith(
       renderError({
-        message: 'Missing params "id" make sure you pass the parameters in URL',
+        message:
+          'Parámetros faltantes "id" asegúrate de pasar los parámetros en la URL',
         secondaryMessage: "/api/gist?id=GIST_ID",
         renderOptions: { show_repo_link: false },
       }),
@@ -152,7 +153,7 @@ describe("Test /api/gist", () => {
 
     expect(res.setHeader).toHaveBeenCalledWith("Content-Type", "image/svg+xml");
     expect(res.send).toHaveBeenCalledWith(
-      renderError({ message: "Gist not found" }),
+      renderError({ message: "Gist no encontrado" }),
     );
   });
 
@@ -173,8 +174,8 @@ describe("Test /api/gist", () => {
     expect(res.setHeader).toHaveBeenCalledWith("Content-Type", "image/svg+xml");
     expect(res.send).toHaveBeenCalledWith(
       renderError({
-        message: "Something went wrong",
-        secondaryMessage: "Language not found",
+        message: "Algo salió mal",
+        secondaryMessage: "Lenguaje no encontrado",
       }),
     );
   });

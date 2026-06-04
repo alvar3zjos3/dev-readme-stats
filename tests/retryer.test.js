@@ -77,7 +77,9 @@ describe("Test Retryer", () => {
     } catch (err) {
       expect(fetcherFail).toHaveBeenCalledTimes(RETRIES + 1);
       // @ts-ignore
-      expect(err.message).toBe("Downtime due to GitHub API rate limiting");
+      expect(err.message).toBe(
+        "Tiempo de inactividad por límite de tasa de la API de GitHub",
+      );
     }
   });
 });

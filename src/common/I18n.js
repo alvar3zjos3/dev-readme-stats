@@ -31,7 +31,7 @@ class I18n {
 
     if (!this.translations[str][this.locale]) {
       throw new Error(
-        `Traducción de '${str}' no encontrada para localizador '${this.locale}'`,
+        `'${str}' traducción no encontrada para el locale '${this.locale}'`,
       );
     }
 

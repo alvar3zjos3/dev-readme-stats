@@ -137,7 +137,7 @@ describe("Test /api/", () => {
       renderError({
         message: error.errors[0].message,
         secondaryMessage:
-          "Make sure the provided username is not an organization",
+          "Asegúrate de que el nombre de usuario proporcionado no sea una organización",
       }),
     );
   });
@@ -152,7 +152,7 @@ describe("Test /api/", () => {
       renderError({
         message: error.errors[0].message,
         secondaryMessage:
-          "Make sure the provided username is not an organization",
+          "Asegúrate de que el nombre de usuario proporcionado no sea una organización",
         renderOptions: { theme: "merko" },
       }),
     );
@@ -364,8 +364,8 @@ describe("Test /api/", () => {
     expect(res.setHeader).toHaveBeenCalledWith("Content-Type", "image/svg+xml");
     expect(res.send).toHaveBeenCalledWith(
       renderError({
-        message: "This username is blacklisted",
-        secondaryMessage: "Please deploy your own instance",
+        message: "Este nombre de usuario está en la lista negra",
+        secondaryMessage: "Por favor, desplega tu propia instancia",
         renderOptions: { show_repo_link: false },
       }),
     );
@@ -379,8 +379,8 @@ describe("Test /api/", () => {
     expect(res.setHeader).toHaveBeenCalledWith("Content-Type", "image/svg+xml");
     expect(res.send).toHaveBeenCalledWith(
       renderError({
-        message: "Something went wrong",
-        secondaryMessage: "Language not found",
+        message: "Algo salió mal",
+        secondaryMessage: "Lenguaje no encontrado",
       }),
     );
   });
@@ -400,8 +400,8 @@ describe("Test /api/", () => {
     expect(res.setHeader).toHaveBeenCalledWith("Content-Type", "image/svg+xml");
     expect(res.send).toHaveBeenCalledWith(
       renderError({
-        message: "Could not fetch total commits.",
-        secondaryMessage: "Please try again later",
+        message: "No se pudo obtener el total de confirmaciones.",
+        secondaryMessage: "Por favor, intenta más tarde",
       }),
     );
     // Received SVG output should not contain string "https://tiny.one/readme-stats"

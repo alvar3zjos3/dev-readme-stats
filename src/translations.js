@@ -3,14 +3,14 @@
 import { encodeHTML } from "./common/html.js";
 
 /**
- * Retrieves stat card labels in the available locales.
+ * Obtiene las etiquetas de la tarjeta de estadísticas en los locales disponibles.
  *
- * @param {object} props Function arguments.
- * @param {string} props.name The name of the locale.
- * @param {string} props.apostrophe Whether to use apostrophe or not.
- * @returns {object} The locales object.
+ * @param {object} props Argumentos de la función.
+ * @param {string} props.name El nombre del locale.
+ * @param {string} props.apostrophe Si se usa apóstrofo o no.
+ * @returns {object} El objeto de locales.
  *
- * @see https://www.andiamo.co.uk/resources/iso-language-codes/ for language codes.
+ * @see https://www.andiamo.co.uk/resources/iso-language-codes/ para códigos de idioma.
  */
 const statCardLocales = ({ name, apostrophe }) => {
   const encodedName = encodeHTML(name);
@@ -1086,10 +1086,10 @@ const wakatimeCardLocales = {
 const availableLocales = Object.keys(repoCardLocales["repocard.archived"]);
 
 /**
- * Checks whether the locale is available or not.
+ * Comprueba si el locale está disponible o no.
  *
- * @param {string} locale The locale to check.
- * @returns {boolean} Boolean specifying whether the locale is available or not.
+ * @param {string} locale El locale a comprobar.
+ * @returns {boolean} Booleano que indica si el locale está disponible o no.
  */
 const isLocaleAvailable = (locale) => {
   return availableLocales.includes(locale.toLowerCase());

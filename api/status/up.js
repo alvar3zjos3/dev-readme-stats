@@ -119,6 +119,6 @@ export default async (req, res) => {
     // Return fail boolean if something went wrong.
     logger.error(err);
     res.setHeader("Cache-Control", "no-store");
-    res.send("Something went wrong: " + err.message);
+    res.send("Algo salió mal: " + err.message);
   }
 };
