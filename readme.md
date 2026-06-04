@@ -98,7 +98,7 @@ Copia y pega esto en tu markdown, ¡y listo!
 Cambia el valor de `?username=` por tu nombre de usuario de GitHub.
 
 ```md
-[![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&locale=es&theme=onedark)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&locale=es&theme=onedark)]
 ```
 
 > [!WARNING]
@@ -379,7 +379,7 @@ Copia y pega este código en tu readme y cambia los enlaces.
 Endpoint: `api/pin?username=alvar3zjos3&repo=dev-readme-stats`
 
 ```md
-[![Tarjeta Readme](https://dev-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=dev-readme-stats&locale=es&theme=radical)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Tarjeta Readme](https://dev-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=dev-readme-stats&locale=es&theme=radical)]
 ```
 
 ### Opciones
