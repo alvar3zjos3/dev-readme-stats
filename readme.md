@@ -734,7 +734,7 @@ Dado que el endpoint público [no es fiable](#avisos-importantes), recomendamos 
 
 GitHub Actions genera SVGs estáticos y evita las llamadas a la API por solicitud. Por defecto usa `GITHUB_TOKEN` (solo estadísticas públicas); para estadísticas privadas, establece un [PAT](https://docs.github.com/es/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) como secreto y pásalo a la acción.
 
-Crea `/.github/workflows/grs.yml` en tu repositorio de perfil (`alvar3zjos3/alvar3zjos3`):
+Crea `/.github/workflows/update-stats.yml` en tu repositorio de perfil (`alvar3zjos3/alvar3zjos3`):
 
 ```yaml
 name: Generar todas las tarjetas y temas
