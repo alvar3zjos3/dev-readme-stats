@@ -1,39 +1,26 @@
-# Dev Readme Stats Security Policies and Procedures <!-- omit in toc -->
+# Políticas y Procedimientos de Seguridad de Dev Readme Stats <!-- omit in toc -->
 
-This document outlines security procedures and general policies for the
-GitHub Readme Stats project.
+Este documento describe los procedimientos de seguridad y las políticas generales para el proyecto GitHub Readme Stats.
 
-- [Reporting a Vulnerability](#reporting-a-vulnerability)
-- [Disclosure Policy](#disclosure-policy)
+- [Reporte de Vulnerabilidades](#reporte-de-vulnerabilidades)
+- [Política de Divulgación:](#política-de-divulgación)
 
-## Reporting a Vulnerability 
+## Reporte de Vulnerabilidades  
+El equipo de Dev Readme Stats y la comunidad tomamos todas las vulnerabilidades de seguridad muy en serio. ¡Gracias por mejorar la seguridad de nuestro software de código abierto! Apreciamos tus esfuerzos e informes responsables, así como los máximos esfuerzos para reconocer tu contribución.
 
-The Dev Readme Stats team and community take all security vulnerabilities
-seriously. Thank you for improving the security of our open source 
-software. We appreciate your efforts and responsible disclosure and will
-make every effort to acknowledge your contributions.
-
-Report security vulnerabilities by emailing the Dev Readme Stats team at:
+Notifícas sobre vulnerabilidad de seguridad a través del envío de correo electrónico al equipo Dev Readme Stats:
 
 ```
 ja82783643@gmail.com
-```
+```  
 
-The lead maintainer will acknowledge your email within 24 hours, and will
-send a more detailed response within 48 hours indicating the next steps in 
-handling your report. After the initial reply to your report, the security
-team will endeavor to keep you informed of the progress towards a fix and
-full announcement, and may ask for additional information or guidance.
+El administrador principal reconocerá tu correo dentro de las próximas 24 horas, y envía una respuesta más detallada en plazo de hasta 48 horas. Tras la primera respuesta a tu reporte el Equipo de Seguridad seguirá proporcionando actualizaciones sobre los avances respecto al parche y la comunicación oficial; también pueden solicitarte información o orientación adicional para mejorar el tratamiento.
 
-Report security vulnerabilities in third-party modules to the person or 
-team maintaining the module.
+Para reportar vulnerabilidades de seguridad en módulos externos, comunícate con quién mantiene ese módulo (persona o equipo responsable).  
 
-## Disclosure Policy
+## Política de Divulgación:  
+Cuando el equipo de seguridad recibe un reporte sobre una vulnerabilidad asigna a este caso un gestor que coordina todo proceso correctivo y lanzamiento posterior mediante las siguientes acciones necesarias para corregir la deficiencia comunicada:
 
-When the security team receives a security bug report, they will assign it
-to a primary handler. This person will coordinate the fix and release
-process, involving the following steps:
-
-  * Confirm the problem.
-  * Audit code to find any potential similar problems.
-  * Prepare fixes and release them as fast as possible.
+* Confirmar el problema detectado.
+* Revisar código fuente con posibles problemas afines similares al encontrado (parche en curso).
+* Preparar parches de corrección que serán lanzados lo antes posible a tiempo y fecha, junto los otros proyectos oficiales disponibles para descarga pública vía GitHub o servidores web asociados correspondientes relacionados directamente como parte del repositorio oficial mantenido por el proyecto.
