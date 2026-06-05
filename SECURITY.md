@@ -1,4 +1,4 @@
-# GitHub Readme Stats Security Policies and Procedures <!-- omit in toc -->
+# Dev Readme Stats Security Policies and Procedures <!-- omit in toc -->
 
 This document outlines security procedures and general policies for the
 GitHub Readme Stats project.
@@ -8,15 +8,15 @@ GitHub Readme Stats project.
 
 ## Reporting a Vulnerability 
 
-The GitHub Readme Stats team and community take all security vulnerabilities
+The Dev Readme Stats team and community take all security vulnerabilities
 seriously. Thank you for improving the security of our open source 
 software. We appreciate your efforts and responsible disclosure and will
 make every effort to acknowledge your contributions.
 
-Report security vulnerabilities by emailing the GitHub Readme Stats team at:
+Report security vulnerabilities by emailing the Dev Readme Stats team at:
 
 ```
-hazru.anurag@gmail.com
+ja82783643@gmail.com
 ```
 
 The lead maintainer will acknowledge your email within 24 hours, and will
