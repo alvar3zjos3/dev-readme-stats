@@ -36,7 +36,7 @@
   "author": "Jose Alvarez",
   "license": "MIT",
   "devDependencies": {
-    "@actions/core": "^2.0.1",
+    "@actions/core": "^3.0.1",
     "@actions/github": "^9.1.1",
     "@eslint/eslintrc": "^3.3.5",
     "@eslint/js": "^10.0.1",
@@ -47,22 +47,22 @@
     "color-contrast-checker": "^2.1.0",
     "eslint": "^10.4.1",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-jsdoc": "^63.0.0",
+    "eslint-plugin-jsdoc": "^63.0.2",
     "express": "^5.2.1",
     "globals": "^17.6.0",
     "hjson": "^3.2.2",
     "husky": "^9.1.7",
     "jest": "^30.4.2",
     "jest-environment-jsdom": "^30.4.1",
-    "js-yaml": "^4.1.1",
-    "lint-staged": "^17.0.6",
+    "js-yaml": "^4.2.0",
+    "lint-staged": "^17.0.7",
     "lodash.snakecase": "^4.1.1",
     "parse-diff": "^0.11.1",
-    "prettier": "^3.7.3"
+    "prettier": "^3.8.4"
   },
   "dependencies": {
-    "axios": "^1.16.1",
-    "dotenv": "^17.2.3",
+    "axios": "^1.17.0",
+    "dotenv": "^17.4.2",
     "emoji-name-map": "^2.0.3",
     "github-username-regex": "^1.0.0",
     "word-wrap": "^1.2.5"
