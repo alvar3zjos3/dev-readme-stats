@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Estad&#237;sticas de GitHub de Jose Alvarez, Rank: C</title>
-        <desc id="descId">Estrellas totales: 1, Commits totales  (El año pasado) : 101, PRs totales: 4, Issues totales: 0, Contribuciones en (el año pasado): 1</desc>
+        <desc id="descId">Estrellas totales: 1, Commits totales  (El año pasado) : 105, PRs totales: 4, Issues totales: 0, Contribuciones en (el año pasado): 1</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 236.06474874898103;
+        stroke-dashoffset: 229.58125762012972;
       }
     }
   
@@ -187,7 +187,7 @@
         x="269.01"
         y="12.5"
         data-testid="commits"
-      >101</text>
+      >105</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
