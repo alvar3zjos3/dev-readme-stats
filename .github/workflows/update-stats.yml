@@ -19,7 +19,7 @@ jobs:
 
       # --- TEMA: DEFAULT ---
       - name: stats - default
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -28,7 +28,7 @@ jobs:
           path: profile/themes/default/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - default
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -37,7 +37,7 @@ jobs:
           path: profile/themes/default/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - default
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -46,7 +46,7 @@ jobs:
           path: profile/themes/default/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - default
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -57,7 +57,7 @@ jobs:
 
       # --- TEMA: TRANSPARENT ---
       - name: stats - transparent
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -66,7 +66,7 @@ jobs:
           path: profile/themes/transparent/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - transparent
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -75,7 +75,7 @@ jobs:
           path: profile/themes/transparent/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - transparent
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -84,7 +84,7 @@ jobs:
           path: profile/themes/transparent/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - transparent
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -95,7 +95,7 @@ jobs:
 
       # --- TEMA: SHADOW_RED ---
       - name: stats - shadow_red
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -104,7 +104,7 @@ jobs:
           path: profile/themes/shadow_red/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - shadow_red
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -113,7 +113,7 @@ jobs:
           path: profile/themes/shadow_red/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - shadow_red
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -122,7 +122,7 @@ jobs:
           path: profile/themes/shadow_red/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - shadow_red
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -133,7 +133,7 @@ jobs:
 
       # --- TEMA: SHADOW_GREEN ---
       - name: stats - shadow_green
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -142,7 +142,7 @@ jobs:
           path: profile/themes/shadow_green/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - shadow_green
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -151,7 +151,7 @@ jobs:
           path: profile/themes/shadow_green/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - shadow_green
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -160,7 +160,7 @@ jobs:
           path: profile/themes/shadow_green/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - shadow_green
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -171,7 +171,7 @@ jobs:
 
       # --- TEMA: SHADOW_BLUE ---
       - name: stats - shadow_blue
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -180,7 +180,7 @@ jobs:
           path: profile/themes/shadow_blue/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - shadow_blue
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -189,7 +189,7 @@ jobs:
           path: profile/themes/shadow_blue/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - shadow_blue
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -198,7 +198,7 @@ jobs:
           path: profile/themes/shadow_blue/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - shadow_blue
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -209,7 +209,7 @@ jobs:
 
       # --- TEMA: DARK ---
       - name: stats - dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -218,7 +218,7 @@ jobs:
           path: profile/themes/dark/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -227,7 +227,7 @@ jobs:
           path: profile/themes/dark/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -236,7 +236,7 @@ jobs:
           path: profile/themes/dark/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -247,7 +247,7 @@ jobs:
 
       # --- TEMA: RADICAL ---
       - name: stats - radical
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -256,7 +256,7 @@ jobs:
           path: profile/themes/radical/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - radical
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -265,7 +265,7 @@ jobs:
           path: profile/themes/radical/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - radical
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -274,7 +274,7 @@ jobs:
           path: profile/themes/radical/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - radical
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -285,7 +285,7 @@ jobs:
 
       # --- TEMA: MERKO ---
       - name: stats - merko
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -294,7 +294,7 @@ jobs:
           path: profile/themes/merko/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - merko
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -303,7 +303,7 @@ jobs:
           path: profile/themes/merko/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - merko
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -312,7 +312,7 @@ jobs:
           path: profile/themes/merko/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - merko
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -323,7 +323,7 @@ jobs:
 
       # --- TEMA: GRUVBOX ---
       - name: stats - gruvbox
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -332,7 +332,7 @@ jobs:
           path: profile/themes/gruvbox/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - gruvbox
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -341,7 +341,7 @@ jobs:
           path: profile/themes/gruvbox/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - gruvbox
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -350,7 +350,7 @@ jobs:
           path: profile/themes/gruvbox/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - gruvbox
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -361,7 +361,7 @@ jobs:
 
       # --- TEMA: GRUVBOX_LIGHT ---
       - name: stats - gruvbox_light
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -370,7 +370,7 @@ jobs:
           path: profile/themes/gruvbox_light/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - gruvbox_light
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -379,7 +379,7 @@ jobs:
           path: profile/themes/gruvbox_light/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - gruvbox_light
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -388,7 +388,7 @@ jobs:
           path: profile/themes/gruvbox_light/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - gruvbox_light
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -399,7 +399,7 @@ jobs:
 
       # --- TEMA: TOKYONIGHT ---
       - name: stats - tokyonight
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -408,7 +408,7 @@ jobs:
           path: profile/themes/tokyonight/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - tokyonight
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -417,7 +417,7 @@ jobs:
           path: profile/themes/tokyonight/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - tokyonight
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -426,7 +426,7 @@ jobs:
           path: profile/themes/tokyonight/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - tokyonight
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -437,7 +437,7 @@ jobs:
 
       # --- TEMA: ONEDARK ---
       - name: stats - onedark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -446,7 +446,7 @@ jobs:
           path: profile/themes/onedark/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - onedark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -455,7 +455,7 @@ jobs:
           path: profile/themes/onedark/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - onedark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -464,7 +464,7 @@ jobs:
           path: profile/themes/onedark/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - onedark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -475,7 +475,7 @@ jobs:
 
       # --- TEMA: COBALT ---
       - name: stats - cobalt
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -484,7 +484,7 @@ jobs:
           path: profile/themes/cobalt/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - cobalt
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -493,7 +493,7 @@ jobs:
           path: profile/themes/cobalt/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - cobalt
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -502,7 +502,7 @@ jobs:
           path: profile/themes/cobalt/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - cobalt
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -513,7 +513,7 @@ jobs:
 
       # --- TEMA: SYNTHWAVE ---
       - name: stats - synthwave
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -522,7 +522,7 @@ jobs:
           path: profile/themes/synthwave/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - synthwave
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -531,7 +531,7 @@ jobs:
           path: profile/themes/synthwave/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - synthwave
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -540,7 +540,7 @@ jobs:
           path: profile/themes/synthwave/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - synthwave
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -551,7 +551,7 @@ jobs:
 
       # --- TEMA: HIGHCONTRAST ---
       - name: stats - highcontrast
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -560,7 +560,7 @@ jobs:
           path: profile/themes/highcontrast/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - highcontrast
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -569,7 +569,7 @@ jobs:
           path: profile/themes/highcontrast/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - highcontrast
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -578,7 +578,7 @@ jobs:
           path: profile/themes/highcontrast/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - highcontrast
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -589,7 +589,7 @@ jobs:
 
       # --- TEMA: DRACULA ---
       - name: stats - dracula
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -598,7 +598,7 @@ jobs:
           path: profile/themes/dracula/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - dracula
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -607,7 +607,7 @@ jobs:
           path: profile/themes/dracula/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - dracula
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -616,7 +616,7 @@ jobs:
           path: profile/themes/dracula/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - dracula
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -627,7 +627,7 @@ jobs:
 
       # --- TEMA: PRUSSIAN ---
       - name: stats - prussian
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -636,7 +636,7 @@ jobs:
           path: profile/themes/prussian/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - prussian
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -645,7 +645,7 @@ jobs:
           path: profile/themes/prussian/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - prussian
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -654,7 +654,7 @@ jobs:
           path: profile/themes/prussian/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - prussian
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -665,7 +665,7 @@ jobs:
 
       # --- TEMA: MONOKAI ---
       - name: stats - monokai
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -674,7 +674,7 @@ jobs:
           path: profile/themes/monokai/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - monokai
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -683,7 +683,7 @@ jobs:
           path: profile/themes/monokai/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - monokai
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -692,7 +692,7 @@ jobs:
           path: profile/themes/monokai/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - monokai
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -703,7 +703,7 @@ jobs:
 
       # --- TEMA: VUE ---
       - name: stats - vue
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -712,7 +712,7 @@ jobs:
           path: profile/themes/vue/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - vue
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -721,7 +721,7 @@ jobs:
           path: profile/themes/vue/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - vue
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -730,7 +730,7 @@ jobs:
           path: profile/themes/vue/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - vue
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -741,7 +741,7 @@ jobs:
 
       # --- TEMA: VUE-DARK ---
       - name: stats - vue-dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -750,7 +750,7 @@ jobs:
           path: profile/themes/vue-dark/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - vue-dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -759,7 +759,7 @@ jobs:
           path: profile/themes/vue-dark/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - vue-dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -768,7 +768,7 @@ jobs:
           path: profile/themes/vue-dark/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - vue-dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -779,7 +779,7 @@ jobs:
 
       # --- TEMA: SHADES-OF-PURPLE ---
       - name: stats - shades-of-purple
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -788,7 +788,7 @@ jobs:
           path: profile/themes/shades-of-purple/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - shades-of-purple
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -797,7 +797,7 @@ jobs:
           path: profile/themes/shades-of-purple/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - shades-of-purple
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -806,7 +806,7 @@ jobs:
           path: profile/themes/shades-of-purple/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - shades-of-purple
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -817,7 +817,7 @@ jobs:
 
       # --- TEMA: NIGHTOWL ---
       - name: stats - nightowl
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -826,7 +826,7 @@ jobs:
           path: profile/themes/nightowl/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - nightowl
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -835,7 +835,7 @@ jobs:
           path: profile/themes/nightowl/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - nightowl
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -844,7 +844,7 @@ jobs:
           path: profile/themes/nightowl/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - nightowl
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -855,7 +855,7 @@ jobs:
 
       # --- TEMA: BUEFY ---
       - name: stats - buefy
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -864,7 +864,7 @@ jobs:
           path: profile/themes/buefy/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - buefy
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -873,7 +873,7 @@ jobs:
           path: profile/themes/buefy/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - buefy
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -882,7 +882,7 @@ jobs:
           path: profile/themes/buefy/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - buefy
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -893,7 +893,7 @@ jobs:
 
       # --- TEMA: BLUE-GREEN ---
       - name: stats - blue-green
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -902,7 +902,7 @@ jobs:
           path: profile/themes/blue-green/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - blue-green
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -911,7 +911,7 @@ jobs:
           path: profile/themes/blue-green/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - blue-green
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -920,7 +920,7 @@ jobs:
           path: profile/themes/blue-green/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - blue-green
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -931,7 +931,7 @@ jobs:
 
       # --- TEMA: ALGOLIA ---
       - name: stats - algolia
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -940,7 +940,7 @@ jobs:
           path: profile/themes/algolia/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - algolia
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -949,7 +949,7 @@ jobs:
           path: profile/themes/algolia/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - algolia
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -958,7 +958,7 @@ jobs:
           path: profile/themes/algolia/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - algolia
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -969,7 +969,7 @@ jobs:
 
       # --- TEMA: GREAT-GATSBY ---
       - name: stats - great-gatsby
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -978,7 +978,7 @@ jobs:
           path: profile/themes/great-gatsby/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - great-gatsby
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -987,7 +987,7 @@ jobs:
           path: profile/themes/great-gatsby/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - great-gatsby
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -996,7 +996,7 @@ jobs:
           path: profile/themes/great-gatsby/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - great-gatsby
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1007,7 +1007,7 @@ jobs:
 
       # --- TEMA: DARCULA ---
       - name: stats - darcula
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1016,7 +1016,7 @@ jobs:
           path: profile/themes/darcula/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - darcula
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1025,7 +1025,7 @@ jobs:
           path: profile/themes/darcula/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - darcula
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1034,7 +1034,7 @@ jobs:
           path: profile/themes/darcula/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - darcula
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1045,7 +1045,7 @@ jobs:
 
       # --- TEMA: BEAR ---
       - name: stats - bear
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1054,7 +1054,7 @@ jobs:
           path: profile/themes/bear/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - bear
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1063,7 +1063,7 @@ jobs:
           path: profile/themes/bear/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - bear
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1072,7 +1072,7 @@ jobs:
           path: profile/themes/bear/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - bear
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1083,7 +1083,7 @@ jobs:
 
       # --- TEMA: SOLARIZED-DARK ---
       - name: stats - solarized-dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1092,7 +1092,7 @@ jobs:
           path: profile/themes/solarized-dark/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - solarized-dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1101,7 +1101,7 @@ jobs:
           path: profile/themes/solarized-dark/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - solarized-dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1110,7 +1110,7 @@ jobs:
           path: profile/themes/solarized-dark/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - solarized-dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1121,7 +1121,7 @@ jobs:
 
       # --- TEMA: SOLARIZED-LIGHT ---
       - name: stats - solarized-light
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1130,7 +1130,7 @@ jobs:
           path: profile/themes/solarized-light/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - solarized-light
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1139,7 +1139,7 @@ jobs:
           path: profile/themes/solarized-light/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - solarized-light
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1148,7 +1148,7 @@ jobs:
           path: profile/themes/solarized-light/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - solarized-light
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1159,7 +1159,7 @@ jobs:
 
       # --- TEMA: CHARTREUSE-DARK ---
       - name: stats - chartreuse-dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1168,7 +1168,7 @@ jobs:
           path: profile/themes/chartreuse-dark/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - chartreuse-dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1177,7 +1177,7 @@ jobs:
           path: profile/themes/chartreuse-dark/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - chartreuse-dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1186,7 +1186,7 @@ jobs:
           path: profile/themes/chartreuse-dark/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - chartreuse-dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1197,7 +1197,7 @@ jobs:
 
       # --- TEMA: NORD ---
       - name: stats - nord
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1206,7 +1206,7 @@ jobs:
           path: profile/themes/nord/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - nord
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1215,7 +1215,7 @@ jobs:
           path: profile/themes/nord/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - nord
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1224,7 +1224,7 @@ jobs:
           path: profile/themes/nord/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - nord
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1235,7 +1235,7 @@ jobs:
 
       # --- TEMA: GOTHAM ---
       - name: stats - gotham
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1244,7 +1244,7 @@ jobs:
           path: profile/themes/gotham/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - gotham
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1253,7 +1253,7 @@ jobs:
           path: profile/themes/gotham/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - gotham
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1262,7 +1262,7 @@ jobs:
           path: profile/themes/gotham/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - gotham
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1273,7 +1273,7 @@ jobs:
 
       # --- TEMA: MATERIAL-PALENIGHT ---
       - name: stats - material-palenight
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1282,7 +1282,7 @@ jobs:
           path: profile/themes/material-palenight/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - material-palenight
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1291,7 +1291,7 @@ jobs:
           path: profile/themes/material-palenight/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - material-palenight
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1300,7 +1300,7 @@ jobs:
           path: profile/themes/material-palenight/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - material-palenight
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1311,7 +1311,7 @@ jobs:
 
       # --- TEMA: GRAYWHITE ---
       - name: stats - graywhite
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1320,7 +1320,7 @@ jobs:
           path: profile/themes/graywhite/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - graywhite
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1329,7 +1329,7 @@ jobs:
           path: profile/themes/graywhite/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - graywhite
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1338,7 +1338,7 @@ jobs:
           path: profile/themes/graywhite/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - graywhite
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1349,7 +1349,7 @@ jobs:
 
       # --- TEMA: VISION-FRIENDLY-DARK ---
       - name: stats - vision-friendly-dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1358,7 +1358,7 @@ jobs:
           path: profile/themes/vision-friendly-dark/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - vision-friendly-dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1367,7 +1367,7 @@ jobs:
           path: profile/themes/vision-friendly-dark/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - vision-friendly-dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1376,7 +1376,7 @@ jobs:
           path: profile/themes/vision-friendly-dark/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - vision-friendly-dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1387,7 +1387,7 @@ jobs:
 
       # --- TEMA: AYU-MIRAGE ---
       - name: stats - ayu-mirage
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1396,7 +1396,7 @@ jobs:
           path: profile/themes/ayu-mirage/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - ayu-mirage
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1405,7 +1405,7 @@ jobs:
           path: profile/themes/ayu-mirage/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - ayu-mirage
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1414,7 +1414,7 @@ jobs:
           path: profile/themes/ayu-mirage/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - ayu-mirage
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1425,7 +1425,7 @@ jobs:
 
       # --- TEMA: MIDNIGHT-PURPLE ---
       - name: stats - midnight-purple
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1434,7 +1434,7 @@ jobs:
           path: profile/themes/midnight-purple/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - midnight-purple
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1443,7 +1443,7 @@ jobs:
           path: profile/themes/midnight-purple/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - midnight-purple
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1452,7 +1452,7 @@ jobs:
           path: profile/themes/midnight-purple/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - midnight-purple
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1463,7 +1463,7 @@ jobs:
 
       # --- TEMA: CALM ---
       - name: stats - calm
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1472,7 +1472,7 @@ jobs:
           path: profile/themes/calm/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - calm
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1481,7 +1481,7 @@ jobs:
           path: profile/themes/calm/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - calm
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1490,7 +1490,7 @@ jobs:
           path: profile/themes/calm/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - calm
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1501,7 +1501,7 @@ jobs:
 
       # --- TEMA: FLAG-INDIA ---
       - name: stats - flag-india
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1510,7 +1510,7 @@ jobs:
           path: profile/themes/flag-india/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - flag-india
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1519,7 +1519,7 @@ jobs:
           path: profile/themes/flag-india/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - flag-india
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1528,7 +1528,7 @@ jobs:
           path: profile/themes/flag-india/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - flag-india
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1539,7 +1539,7 @@ jobs:
 
       # --- TEMA: OMNI ---
       - name: stats - omni
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1548,7 +1548,7 @@ jobs:
           path: profile/themes/omni/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - omni
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1557,7 +1557,7 @@ jobs:
           path: profile/themes/omni/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - omni
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1566,7 +1566,7 @@ jobs:
           path: profile/themes/omni/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - omni
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1577,7 +1577,7 @@ jobs:
 
       # --- TEMA: REACT ---
       - name: stats - react
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1586,7 +1586,7 @@ jobs:
           path: profile/themes/react/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - react
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1595,7 +1595,7 @@ jobs:
           path: profile/themes/react/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - react
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1604,7 +1604,7 @@ jobs:
           path: profile/themes/react/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - react
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1615,7 +1615,7 @@ jobs:
 
       # --- TEMA: JOLLY ---
       - name: stats - jolly
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1624,7 +1624,7 @@ jobs:
           path: profile/themes/jolly/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - jolly
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1633,7 +1633,7 @@ jobs:
           path: profile/themes/jolly/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - jolly
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1642,7 +1642,7 @@ jobs:
           path: profile/themes/jolly/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - jolly
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1653,7 +1653,7 @@ jobs:
 
       # --- TEMA: MAROONGOLD ---
       - name: stats - maroongold
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1662,7 +1662,7 @@ jobs:
           path: profile/themes/maroongold/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - maroongold
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1671,7 +1671,7 @@ jobs:
           path: profile/themes/maroongold/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - maroongold
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1680,7 +1680,7 @@ jobs:
           path: profile/themes/maroongold/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - maroongold
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1691,7 +1691,7 @@ jobs:
 
       # --- TEMA: YEBLU ---
       - name: stats - yeblu
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1700,7 +1700,7 @@ jobs:
           path: profile/themes/yeblu/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - yeblu
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1709,7 +1709,7 @@ jobs:
           path: profile/themes/yeblu/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - yeblu
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1718,7 +1718,7 @@ jobs:
           path: profile/themes/yeblu/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - yeblu
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1729,7 +1729,7 @@ jobs:
 
       # --- TEMA: BLUEBERRY ---
       - name: stats - blueberry
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1738,7 +1738,7 @@ jobs:
           path: profile/themes/blueberry/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - blueberry
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1747,7 +1747,7 @@ jobs:
           path: profile/themes/blueberry/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - blueberry
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1756,7 +1756,7 @@ jobs:
           path: profile/themes/blueberry/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - blueberry
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1767,7 +1767,7 @@ jobs:
 
       # --- TEMA: SLATEORANGE ---
       - name: stats - slateorange
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1776,7 +1776,7 @@ jobs:
           path: profile/themes/slateorange/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - slateorange
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1785,7 +1785,7 @@ jobs:
           path: profile/themes/slateorange/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - slateorange
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1794,7 +1794,7 @@ jobs:
           path: profile/themes/slateorange/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - slateorange
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1805,7 +1805,7 @@ jobs:
 
       # --- TEMA: KACHO_GA ---
       - name: stats - kacho_ga
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1814,7 +1814,7 @@ jobs:
           path: profile/themes/kacho_ga/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - kacho_ga
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1823,7 +1823,7 @@ jobs:
           path: profile/themes/kacho_ga/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - kacho_ga
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1832,7 +1832,7 @@ jobs:
           path: profile/themes/kacho_ga/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - kacho_ga
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1843,7 +1843,7 @@ jobs:
 
       # --- TEMA: OUTRUN ---
       - name: stats - outrun
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1852,7 +1852,7 @@ jobs:
           path: profile/themes/outrun/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - outrun
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1861,7 +1861,7 @@ jobs:
           path: profile/themes/outrun/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - outrun
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1870,7 +1870,7 @@ jobs:
           path: profile/themes/outrun/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - outrun
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1881,7 +1881,7 @@ jobs:
 
       # --- TEMA: OCEAN_DARK ---
       - name: stats - ocean_dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1890,7 +1890,7 @@ jobs:
           path: profile/themes/ocean_dark/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - ocean_dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1899,7 +1899,7 @@ jobs:
           path: profile/themes/ocean_dark/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - ocean_dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1908,7 +1908,7 @@ jobs:
           path: profile/themes/ocean_dark/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - ocean_dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1919,7 +1919,7 @@ jobs:
 
       # --- TEMA: CITY_LIGHTS ---
       - name: stats - city_lights
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1928,7 +1928,7 @@ jobs:
           path: profile/themes/city_lights/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - city_lights
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1937,7 +1937,7 @@ jobs:
           path: profile/themes/city_lights/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - city_lights
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1946,7 +1946,7 @@ jobs:
           path: profile/themes/city_lights/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - city_lights
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1957,7 +1957,7 @@ jobs:
 
       # --- TEMA: GITHUB_DARK ---
       - name: stats - github_dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -1966,7 +1966,7 @@ jobs:
           path: profile/themes/github_dark/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - github_dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -1975,7 +1975,7 @@ jobs:
           path: profile/themes/github_dark/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - github_dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -1984,7 +1984,7 @@ jobs:
           path: profile/themes/github_dark/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - github_dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -1995,7 +1995,7 @@ jobs:
 
       # --- TEMA: GITHUB_DARK_DIMMED ---
       - name: stats - github_dark_dimmed
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2004,7 +2004,7 @@ jobs:
           path: profile/themes/github_dark_dimmed/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - github_dark_dimmed
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2013,7 +2013,7 @@ jobs:
           path: profile/themes/github_dark_dimmed/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - github_dark_dimmed
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2022,7 +2022,7 @@ jobs:
           path: profile/themes/github_dark_dimmed/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - github_dark_dimmed
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -2033,7 +2033,7 @@ jobs:
 
       # --- TEMA: DISCORD_OLD_BLURPLE ---
       - name: stats - discord_old_blurple
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2042,7 +2042,7 @@ jobs:
           path: profile/themes/discord_old_blurple/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - discord_old_blurple
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2051,7 +2051,7 @@ jobs:
           path: profile/themes/discord_old_blurple/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - discord_old_blurple
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2060,7 +2060,7 @@ jobs:
           path: profile/themes/discord_old_blurple/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - discord_old_blurple
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -2071,7 +2071,7 @@ jobs:
 
       # --- TEMA: AURA_DARK ---
       - name: stats - aura_dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2080,7 +2080,7 @@ jobs:
           path: profile/themes/aura_dark/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - aura_dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2089,7 +2089,7 @@ jobs:
           path: profile/themes/aura_dark/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - aura_dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2098,7 +2098,7 @@ jobs:
           path: profile/themes/aura_dark/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - aura_dark
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -2109,7 +2109,7 @@ jobs:
 
       # --- TEMA: PANDA ---
       - name: stats - panda
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2118,7 +2118,7 @@ jobs:
           path: profile/themes/panda/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - panda
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2127,7 +2127,7 @@ jobs:
           path: profile/themes/panda/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - panda
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2136,7 +2136,7 @@ jobs:
           path: profile/themes/panda/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - panda
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -2147,7 +2147,7 @@ jobs:
 
       # --- TEMA: NOCTIS_MINIMUS ---
       - name: stats - noctis_minimus
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2156,7 +2156,7 @@ jobs:
           path: profile/themes/noctis_minimus/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - noctis_minimus
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2165,7 +2165,7 @@ jobs:
           path: profile/themes/noctis_minimus/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - noctis_minimus
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2174,7 +2174,7 @@ jobs:
           path: profile/themes/noctis_minimus/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - noctis_minimus
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -2185,7 +2185,7 @@ jobs:
 
       # --- TEMA: COBALT2 ---
       - name: stats - cobalt2
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2194,7 +2194,7 @@ jobs:
           path: profile/themes/cobalt2/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - cobalt2
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2203,7 +2203,7 @@ jobs:
           path: profile/themes/cobalt2/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - cobalt2
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2212,7 +2212,7 @@ jobs:
           path: profile/themes/cobalt2/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - cobalt2
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -2223,7 +2223,7 @@ jobs:
 
       # --- TEMA: SWIFT ---
       - name: stats - swift
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2232,7 +2232,7 @@ jobs:
           path: profile/themes/swift/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - swift
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2241,7 +2241,7 @@ jobs:
           path: profile/themes/swift/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - swift
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2250,7 +2250,7 @@ jobs:
           path: profile/themes/swift/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - swift
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -2261,7 +2261,7 @@ jobs:
 
       # --- TEMA: AURA ---
       - name: stats - aura
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2270,7 +2270,7 @@ jobs:
           path: profile/themes/aura/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - aura
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2279,7 +2279,7 @@ jobs:
           path: profile/themes/aura/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - aura
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2288,7 +2288,7 @@ jobs:
           path: profile/themes/aura/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - aura
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -2299,7 +2299,7 @@ jobs:
 
       # --- TEMA: APPRENTICE ---
       - name: stats - apprentice
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2308,7 +2308,7 @@ jobs:
           path: profile/themes/apprentice/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - apprentice
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2317,7 +2317,7 @@ jobs:
           path: profile/themes/apprentice/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - apprentice
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2326,7 +2326,7 @@ jobs:
           path: profile/themes/apprentice/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - apprentice
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -2337,7 +2337,7 @@ jobs:
 
       # --- TEMA: MOLTACK ---
       - name: stats - moltack
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2346,7 +2346,7 @@ jobs:
           path: profile/themes/moltack/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - moltack
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2355,7 +2355,7 @@ jobs:
           path: profile/themes/moltack/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - moltack
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2364,7 +2364,7 @@ jobs:
           path: profile/themes/moltack/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - moltack
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -2375,7 +2375,7 @@ jobs:
 
       # --- TEMA: CODESTACKR ---
       - name: stats - codeSTACKr
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2384,7 +2384,7 @@ jobs:
           path: profile/themes/codeSTACKr/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - codeSTACKr
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2393,7 +2393,7 @@ jobs:
           path: profile/themes/codeSTACKr/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - codeSTACKr
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2402,7 +2402,7 @@ jobs:
           path: profile/themes/codeSTACKr/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - codeSTACKr
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -2413,7 +2413,7 @@ jobs:
 
       # --- TEMA: ROSE_PINE ---
       - name: stats - rose_pine
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2422,7 +2422,7 @@ jobs:
           path: profile/themes/rose_pine/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - rose_pine
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2431,7 +2431,7 @@ jobs:
           path: profile/themes/rose_pine/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - rose_pine
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2440,7 +2440,7 @@ jobs:
           path: profile/themes/rose_pine/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - rose_pine
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -2451,7 +2451,7 @@ jobs:
 
       # --- TEMA: CATPPUCCIN_LATTE ---
       - name: stats - catppuccin_latte
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2460,7 +2460,7 @@ jobs:
           path: profile/themes/catppuccin_latte/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - catppuccin_latte
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2469,7 +2469,7 @@ jobs:
           path: profile/themes/catppuccin_latte/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - catppuccin_latte
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2478,7 +2478,7 @@ jobs:
           path: profile/themes/catppuccin_latte/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - catppuccin_latte
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -2489,7 +2489,7 @@ jobs:
 
       # --- TEMA: CATPPUCCIN_MOCHA ---
       - name: stats - catppuccin_mocha
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2498,7 +2498,7 @@ jobs:
           path: profile/themes/catppuccin_mocha/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - catppuccin_mocha
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2507,7 +2507,7 @@ jobs:
           path: profile/themes/catppuccin_mocha/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - catppuccin_mocha
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2516,7 +2516,7 @@ jobs:
           path: profile/themes/catppuccin_mocha/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - catppuccin_mocha
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -2527,7 +2527,7 @@ jobs:
 
       # --- TEMA: DATE_NIGHT ---
       - name: stats - date_night
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2536,7 +2536,7 @@ jobs:
           path: profile/themes/date_night/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - date_night
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2545,7 +2545,7 @@ jobs:
           path: profile/themes/date_night/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - date_night
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2554,7 +2554,7 @@ jobs:
           path: profile/themes/date_night/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - date_night
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -2565,7 +2565,7 @@ jobs:
 
       # --- TEMA: ONE_DARK_PRO ---
       - name: stats - one_dark_pro
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2574,7 +2574,7 @@ jobs:
           path: profile/themes/one_dark_pro/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - one_dark_pro
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2583,7 +2583,7 @@ jobs:
           path: profile/themes/one_dark_pro/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - one_dark_pro
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2592,7 +2592,7 @@ jobs:
           path: profile/themes/one_dark_pro/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - one_dark_pro
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -2603,7 +2603,7 @@ jobs:
 
       # --- TEMA: ROSE ---
       - name: stats - rose
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2612,7 +2612,7 @@ jobs:
           path: profile/themes/rose/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - rose
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2621,7 +2621,7 @@ jobs:
           path: profile/themes/rose/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - rose
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2630,7 +2630,7 @@ jobs:
           path: profile/themes/rose/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - rose
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -2641,7 +2641,7 @@ jobs:
 
       # --- TEMA: HOLI ---
       - name: stats - holi
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2650,7 +2650,7 @@ jobs:
           path: profile/themes/holi/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - holi
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2659,7 +2659,7 @@ jobs:
           path: profile/themes/holi/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - holi
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2668,7 +2668,7 @@ jobs:
           path: profile/themes/holi/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - holi
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -2679,7 +2679,7 @@ jobs:
 
       # --- TEMA: NEON ---
       - name: stats - neon
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2688,7 +2688,7 @@ jobs:
           path: profile/themes/neon/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - neon
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2697,7 +2697,7 @@ jobs:
           path: profile/themes/neon/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - neon
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2706,7 +2706,7 @@ jobs:
           path: profile/themes/neon/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - neon
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -2717,7 +2717,7 @@ jobs:
 
       # --- TEMA: BLUE_NAVY ---
       - name: stats - blue_navy
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2726,7 +2726,7 @@ jobs:
           path: profile/themes/blue_navy/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - blue_navy
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2735,7 +2735,7 @@ jobs:
           path: profile/themes/blue_navy/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - blue_navy
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2744,7 +2744,7 @@ jobs:
           path: profile/themes/blue_navy/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - blue_navy
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -2755,7 +2755,7 @@ jobs:
 
       # --- TEMA: CALM_PINK ---
       - name: stats - calm_pink
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2764,7 +2764,7 @@ jobs:
           path: profile/themes/calm_pink/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - calm_pink
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2773,7 +2773,7 @@ jobs:
           path: profile/themes/calm_pink/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - calm_pink
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2782,7 +2782,7 @@ jobs:
           path: profile/themes/calm_pink/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - calm_pink
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
@@ -2793,7 +2793,7 @@ jobs:
 
       # --- TEMA: AMBIENT_GRADIENT ---
       - name: stats - ambient_gradient
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: stats
           options:
@@ -2802,7 +2802,7 @@ jobs:
           path: profile/themes/ambient_gradient/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - ambient_gradient
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: top-langs
           options:
@@ -2811,7 +2811,7 @@ jobs:
           path: profile/themes/ambient_gradient/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - ambient_gradient
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: pin
           options:
@@ -2820,7 +2820,7 @@ jobs:
           path: profile/themes/ambient_gradient/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - ambient_gradient
-        uses: readme-tools/github-readme-stats-action@27f3601ffd7302c6ffaefb472ba8383d2a296e3f
+        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
         with:
           card: wakatime
           options:
