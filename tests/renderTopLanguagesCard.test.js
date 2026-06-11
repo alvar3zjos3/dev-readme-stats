@@ -371,15 +371,15 @@ describe("Test renderTopLanguages", () => {
     );
     expect(queryAllByTestId(document.body, "lang-progress")[0]).toHaveAttribute(
       "width",
-      "40%",
+      "100",
     );
     expect(queryAllByTestId(document.body, "lang-progress")[1]).toHaveAttribute(
       "width",
-      "40%",
+      "100",
     );
     expect(queryAllByTestId(document.body, "lang-progress")[2]).toHaveAttribute(
       "width",
-      "20%",
+      "50",
     );
   });
 
@@ -407,7 +407,7 @@ describe("Test renderTopLanguages", () => {
 
   it("should resize the height correctly depending on langs", () => {
     document.body.innerHTML = renderTopLanguages(langs, {});
-    expect(document.querySelector("svg")).toHaveAttribute("height", "205");
+    expect(document.querySelector("svg")).toHaveAttribute("height", "140");
 
     document.body.innerHTML = renderTopLanguages(
       {
@@ -420,7 +420,7 @@ describe("Test renderTopLanguages", () => {
       },
       {},
     );
-    expect(document.querySelector("svg")).toHaveAttribute("height", "245");
+    expect(document.querySelector("svg")).toHaveAttribute("height", "140");
   });
 
   it("should render with custom width set", () => {
@@ -456,11 +456,11 @@ describe("Test renderTopLanguages", () => {
     const headerStyles = stylesObject[":host"][".header "];
     const langNameStyles = stylesObject[":host"][".lang-name "];
 
-    expect(headerStyles.fill.trim()).toBe("#2f80ed");
-    expect(langNameStyles.fill.trim()).toBe("#434d58");
+    expect(headerStyles.fill.trim()).toBe("#fff");
+    expect(langNameStyles.fill.trim()).toBe("#9f9f9f");
     expect(queryByTestId(document.body, "card-bg")).toHaveAttribute(
       "fill",
-      "#fffefe",
+      "#151515",
     );
   });
 

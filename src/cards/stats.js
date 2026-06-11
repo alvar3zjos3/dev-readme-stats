@@ -107,7 +107,7 @@ const createTextNode = ({
       }" ${labelOffset} y="12.5">${label}:</text>
       <text
         class="stat ${bold ? " bold" : "not_bold"}"
-        x="${(showIcons ? 140 : 120) + shiftValuePos}"
+        x="${(showIcons ? 200 : 180) + shiftValuePos}"
         y="12.5"
         data-testid="${id}"
       >${kValue}${unitSymbol ? ` ${unitSymbol}` : ""}</text>
@@ -271,12 +271,12 @@ const renderStatsCard = (stats, options = {}) => {
   } = stats;
   const {
     hide = [],
-    show_icons = false,
+    show_icons = true,
     hide_title = false,
     hide_border = false,
     card_width,
     hide_rank = false,
-    include_all_commits = false,
+    include_all_commits = true,
     commits_year,
     line_height = 25,
     title_color,
@@ -285,7 +285,7 @@ const renderStatsCard = (stats, options = {}) => {
     text_color,
     text_bold = true,
     bg_color,
-    theme = "default",
+    theme = "dark",
     custom_title,
     border_radius,
     border_color,

@@ -27,7 +27,7 @@ describe("Test renderRepoCard", () => {
     const [header] = document.getElementsByClassName("header");
 
     expect(header).toHaveTextContent("convoychat");
-    expect(header).not.toHaveTextContent("alvar3zjos3");
+    expect(header).not.toHaveTextContent("alvar3zjos3/convoychat");
     expect(document.getElementsByClassName("description")[0]).toHaveTextContent(
       "Help us take over the world! React + TS + GraphQL Chat App",
     );
@@ -134,12 +134,12 @@ describe("Test renderRepoCard", () => {
     const descClassStyles = stylesObject[":host"][".description "];
     const iconClassStyles = stylesObject[":host"][".icon "];
 
-    expect(headerClassStyles.fill.trim()).toBe("#2f80ed");
-    expect(descClassStyles.fill.trim()).toBe("#434d58");
-    expect(iconClassStyles.fill.trim()).toBe("#586069");
+    expect(headerClassStyles.fill.trim()).toBe("#fff");
+    expect(descClassStyles.fill.trim()).toBe("#9f9f9f");
+    expect(iconClassStyles.fill.trim()).toBe("#79ff97");
     expect(queryByTestId(document.body, "card-bg")).toHaveAttribute(
       "fill",
-      "#fffefe",
+      "#151515",
     );
   });
 

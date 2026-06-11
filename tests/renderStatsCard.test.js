@@ -128,7 +128,7 @@ describe("Test renderStatsCard", () => {
 
   it("should render with custom width set", () => {
     document.body.innerHTML = renderStatsCard(stats);
-    expect(document.querySelector("svg")).toHaveAttribute("width", "450");
+    expect(document.querySelector("svg")).toHaveAttribute("width", "467");
 
     document.body.innerHTML = renderStatsCard(stats, { card_width: 500 });
     expect(document.querySelector("svg")).toHaveAttribute("width", "500");
@@ -136,7 +136,7 @@ describe("Test renderStatsCard", () => {
 
   it("should render with custom width set and limit minimum width", () => {
     document.body.innerHTML = renderStatsCard(stats, { card_width: 1 });
-    expect(document.querySelector("svg")).toHaveAttribute("width", "420");
+    expect(document.querySelector("svg")).toHaveAttribute("width", "437");
 
     // Test default minimum card width without rank circle.
     document.body.innerHTML = renderStatsCard(stats, {
@@ -145,7 +145,7 @@ describe("Test renderStatsCard", () => {
     });
     expect(document.querySelector("svg")).toHaveAttribute(
       "width",
-      "405.902302631579",
+      "422.902302631579",
     );
 
     // Test minimum card width with rank and icons.
@@ -186,12 +186,12 @@ describe("Test renderStatsCard", () => {
     const statClassStyles = stylesObject[":host"][".stat "];
     const iconClassStyles = stylesObject[":host"][".icon "];
 
-    expect(headerClassStyles.fill.trim()).toBe("#2f80ed");
-    expect(statClassStyles.fill.trim()).toBe("#434d58");
-    expect(iconClassStyles.fill.trim()).toBe("#4c71f2");
+    expect(headerClassStyles.fill.trim()).toBe("#fff");
+    expect(statClassStyles.fill.trim()).toBe("#9f9f9f");
+    expect(iconClassStyles.fill.trim()).toBe("#79ff97");
     expect(queryByTestId(document.body, "card-bg")).toHaveAttribute(
       "fill",
-      "#fffefe",
+      "#151515",
     );
   });
 
@@ -356,7 +356,7 @@ describe("Test renderStatsCard", () => {
 
     expect(
       document.body.getElementsByTagName("svg")[0].getAttribute("width"),
-    ).toBe("405.902302631579");
+    ).toBe("422.902302631579");
   });
 
   it("should auto resize if hide_rank is true & custom_title is set", () => {
@@ -367,7 +367,7 @@ describe("Test renderStatsCard", () => {
 
     expect(
       document.body.getElementsByTagName("svg")[0].getAttribute("width"),
-    ).toBe("287");
+    ).toBe("304");
   });
 
   it("should render translations", () => {
@@ -384,7 +384,7 @@ describe("Test renderStatsCard", () => {
       document.querySelector(
         'g[transform="translate(0, 25)"]>.stagger>.stat.bold',
       ).textContent,
-    ).toMatchInlineSnapshot(`"累计提交总数 (去年):"`);
+    ).toMatchInlineSnapshot(`"累计提交总数:"`);
     expect(
       document.querySelector(
         'g[transform="translate(0, 50)"]>.stagger>.stat.bold',

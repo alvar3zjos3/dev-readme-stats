@@ -16,7 +16,7 @@ exports[`Test Render WakaTime Card should render correctly 1`] = `
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-            fill: #2f80ed;
+            fill: #fff;
             animation: fadeInAnimation 0.8s ease-in-out forwards;
           }
           @supports(-moz-appearance: auto) {
@@ -26,7 +26,7 @@ exports[`Test Render WakaTime Card should render correctly 1`] = `
           
     
     .stat {
-      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #434d58;
+      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #9f9f9f;
     }
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
@@ -55,7 +55,7 @@ exports[`Test Render WakaTime Card should render correctly 1`] = `
         width: 100%;
       }
     }
-    .lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #434d58 }
+    .lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #9f9f9f }
     #rect-mask rect{
       animation: slideInAnimation 1s ease-in-out forwards;
     }
@@ -78,7 +78,7 @@ exports[`Test Render WakaTime Card should render correctly 1`] = `
           height="99%"
           stroke="#e4e2e2"
           width="494"
-          fill="#fffefe"
+          fill="#151515"
           stroke-opacity="1"
         />
 
@@ -114,11 +114,11 @@ exports[`Test Render WakaTime Card should render correctly 1`] = `
       >19 mins</text>
       
     <svg width="220" x="110" y="4">
-      <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#434d58"></rect>
+      <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#9f9f9f"></rect>
       <svg data-testid="lang-progress" width="89.38%">
         <rect
             height="8"
-            fill="#2f80ed"
+            fill="#fff"
             rx="5" ry="5" x="0" y="0"
             class="lang-progress"
             style="animation-delay: 750ms;"
@@ -137,11 +137,11 @@ exports[`Test Render WakaTime Card should render correctly 1`] = `
       >1 min</text>
       
     <svg width="220" x="110" y="4">
-      <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#434d58"></rect>
+      <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#9f9f9f"></rect>
       <svg data-testid="lang-progress" width="6.25%">
         <rect
             height="8"
-            fill="#2f80ed"
+            fill="#fff"
             rx="5" ry="5" x="0" y="0"
             class="lang-progress"
             style="animation-delay: 900ms;"
@@ -174,7 +174,7 @@ exports[`Test Render WakaTime Card should render correctly with compact layout 1
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-            fill: #2f80ed;
+            fill: #fff;
             animation: fadeInAnimation 0.8s ease-in-out forwards;
           }
           @supports(-moz-appearance: auto) {
@@ -184,7 +184,7 @@ exports[`Test Render WakaTime Card should render correctly with compact layout 1
           
     
     .stat {
-      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #434d58;
+      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #9f9f9f;
     }
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
@@ -213,7 +213,7 @@ exports[`Test Render WakaTime Card should render correctly with compact layout 1
         width: 100%;
       }
     }
-    .lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #434d58 }
+    .lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #9f9f9f }
     #rect-mask rect{
       animation: slideInAnimation 1s ease-in-out forwards;
     }
@@ -236,7 +236,7 @@ exports[`Test Render WakaTime Card should render correctly with compact layout 1
           height="99%"
           stroke="#e4e2e2"
           width="494"
-          fill="#fffefe"
+          fill="#151515"
           stroke-opacity="1"
         />
 
@@ -326,7 +326,7 @@ exports[`Test Render WakaTime Card should render correctly with compact layout w
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-            fill: #2f80ed;
+            fill: #fff;
             animation: fadeInAnimation 0.8s ease-in-out forwards;
           }
           @supports(-moz-appearance: auto) {
@@ -336,7 +336,7 @@ exports[`Test Render WakaTime Card should render correctly with compact layout w
           
     
     .stat {
-      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #434d58;
+      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #9f9f9f;
     }
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
@@ -365,7 +365,7 @@ exports[`Test Render WakaTime Card should render correctly with compact layout w
         width: 100%;
       }
     }
-    .lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #434d58 }
+    .lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #9f9f9f }
     #rect-mask rect{
       animation: slideInAnimation 1s ease-in-out forwards;
     }
@@ -388,7 +388,7 @@ exports[`Test Render WakaTime Card should render correctly with compact layout w
           height="99%"
           stroke="#e4e2e2"
           width="494"
-          fill="#fffefe"
+          fill="#151515"
           stroke-opacity="1"
         />
 
@@ -478,7 +478,7 @@ exports[`Test Render WakaTime Card should render correctly with percent display 
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-            fill: #2f80ed;
+            fill: #fff;
             animation: fadeInAnimation 0.8s ease-in-out forwards;
           }
           @supports(-moz-appearance: auto) {
@@ -488,7 +488,7 @@ exports[`Test Render WakaTime Card should render correctly with percent display 
           
     
     .stat {
-      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #434d58;
+      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #9f9f9f;
     }
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
@@ -517,7 +517,7 @@ exports[`Test Render WakaTime Card should render correctly with percent display 
         width: 100%;
       }
     }
-    .lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #434d58 }
+    .lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #9f9f9f }
     #rect-mask rect{
       animation: slideInAnimation 1s ease-in-out forwards;
     }
@@ -540,7 +540,7 @@ exports[`Test Render WakaTime Card should render correctly with percent display 
           height="99%"
           stroke="#e4e2e2"
           width="494"
-          fill="#fffefe"
+          fill="#151515"
           stroke-opacity="1"
         />
 
@@ -576,11 +576,11 @@ exports[`Test Render WakaTime Card should render correctly with percent display 
       >47.39 %</text>
       
     <svg width="220" x="110" y="4">
-      <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#434d58"></rect>
+      <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#9f9f9f"></rect>
       <svg data-testid="lang-progress" width="47.39%">
         <rect
             height="8"
-            fill="#2f80ed"
+            fill="#fff"
             rx="5" ry="5" x="0" y="0"
             class="lang-progress"
             style="animation-delay: 750ms;"
@@ -599,11 +599,11 @@ exports[`Test Render WakaTime Card should render correctly with percent display 
       >50.48 %</text>
       
     <svg width="220" x="110" y="4">
-      <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#434d58"></rect>
+      <rect rx="5" ry="5" x="0" y="0" width="220" height="8" fill="#9f9f9f"></rect>
       <svg data-testid="lang-progress" width="50.48%">
         <rect
             height="8"
-            fill="#2f80ed"
+            fill="#fff"
             rx="5" ry="5" x="0" y="0"
             class="lang-progress"
             style="animation-delay: 900ms;"

@@ -95,7 +95,7 @@ export default async (req, res) => {
   const safeTheme =
     theme && Object.keys(themes).includes(String(theme))
       ? String(theme)
-      : "default";
+      : "dark";
 
   const renderOptions = {
     title_color: safeTitleColor,

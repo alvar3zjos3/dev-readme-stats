@@ -71,7 +71,7 @@ const renderRepoCard = (repo, options = {}) => {
     text_color,
     bg_color,
     show_owner = false,
-    theme = "default_repocard",
+    theme = "dark",
     border_radius,
     border_color,
     locale,
