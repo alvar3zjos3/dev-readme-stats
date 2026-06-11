@@ -93,7 +93,7 @@ exports[`Test Render WakaTime Card should render correctly 1`] = `
         y="0"
         class="header"
         data-testid="header"
-      >WakaTime Stats (last 7 days)</text>
+      >Estad&#237;sticas de WakaTime (&#218;ltimos 7 d&#237;as)</text>
     </g>
       </g>
     
@@ -251,7 +251,7 @@ exports[`Test Render WakaTime Card should render correctly with compact layout 1
         y="0"
         class="header"
         data-testid="header"
-      >WakaTime Stats (last 7 days)</text>
+      >Estad&#237;sticas de WakaTime (&#218;ltimos 7 d&#237;as)</text>
     </g>
       </g>
     
@@ -403,7 +403,7 @@ exports[`Test Render WakaTime Card should render correctly with compact layout w
         y="0"
         class="header"
         data-testid="header"
-      >WakaTime Stats (last 7 days)</text>
+      >Estad&#237;sticas de WakaTime (&#218;ltimos 7 d&#237;as)</text>
     </g>
       </g>
     
@@ -555,7 +555,7 @@ exports[`Test Render WakaTime Card should render correctly with percent display 
         y="0"
         class="header"
         data-testid="header"
-      >WakaTime Stats (last 7 days)</text>
+      >Estad&#237;sticas de WakaTime (&#218;ltimos 7 d&#237;as)</text>
     </g>
       </g>
     

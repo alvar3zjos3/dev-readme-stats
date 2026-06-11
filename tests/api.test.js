@@ -372,7 +372,7 @@ describe("Test /api/", () => {
   });
 
   it("should render error card when wrong locale is provided", async () => {
-    const { req, res } = faker({ locale: "asdf" }, data_stats);
+    const { req, res } = faker({ locale: "chema" }, data_stats);
 
     await api(req, res);
 

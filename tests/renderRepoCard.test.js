@@ -278,13 +278,17 @@ describe("Test renderRepoCard", () => {
       isArchived: true,
     });
 
-    expect(queryByTestId(document.body, "badge")).toHaveTextContent("Archived");
+    expect(queryByTestId(document.body, "badge")).toHaveTextContent(
+      "Archivados",
+    );
 
     document.body.innerHTML = renderRepoCard({
       ...data_repo.repository,
       isTemplate: true,
     });
-    expect(queryByTestId(document.body, "badge")).toHaveTextContent("Template");
+    expect(queryByTestId(document.body, "badge")).toHaveTextContent(
+      "Plantilla",
+    );
   });
 
   it("should not render template", () => {

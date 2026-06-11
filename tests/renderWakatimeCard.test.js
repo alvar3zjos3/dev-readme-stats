@@ -64,7 +64,7 @@ describe("Test Render WakaTime Card", () => {
       {},
     );
     expect(document.querySelector(".stat").textContent).toBe(
-      "No coding activity this week",
+      "No hay actividad de codificación esta semana",
     );
   });
 
@@ -79,7 +79,7 @@ describe("Test Render WakaTime Card", () => {
       },
     );
     expect(document.querySelector(".stat").textContent).toBe(
-      "No coding activity this week",
+      "No hay actividad de codificación esta semana",
     );
   });
 

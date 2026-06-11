@@ -55,7 +55,7 @@ const error = {
       type: "NOT_FOUND",
       path: ["user"],
       locations: [],
-      message: "Could not resolve to a User with the login of 'noname'.",
+      message: "No se pudo resolver el usuario con el login de 'noname'.",
     },
   ],
 };
@@ -145,7 +145,7 @@ describe("FetchTopLanguages", () => {
     mock.onPost("https://api.github.com/graphql").reply(200, error);
 
     await expect(fetchTopLanguages("alvar3zjos3")).rejects.toThrow(
-      "Could not resolve to a User with the login of 'noname'.",
+      "No se pudo resolver el usuario con el login de 'noname'.",
     );
   });
 

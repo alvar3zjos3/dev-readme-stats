@@ -175,7 +175,7 @@ describe("Test /api/pin", () => {
       query: {
         username: "alvar3zjos3",
         repo: "convoychat",
-        locale: "asdf",
+        locale: "chema",
       },
     };
     const res = {

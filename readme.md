@@ -98,7 +98,7 @@ Copia y pega esto en tu markdown, ¡y listo!
 Cambia el valor de `?username=` por tu nombre de usuario de GitHub.
 
 ```md
-[![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&theme=onedark&locale=es)]
+[![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&theme=onedark)]
 ```
 
 > [!WARNING]
@@ -114,7 +114,7 @@ Puedes pasar el parámetro `&hide=` para ocultar estadísticas específicas con 
 > Opciones: `&hide=stars,commits,prs,issues,contribs`
 
 ```md
-![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=stars,prs,issues,contribs&theme=onedark&locale=es)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=stars,prs,issues,contribs&theme=onedark)
 ```
 
 ### Mostrar estadísticas adicionales
@@ -124,7 +124,7 @@ Puedes pasar el parámetro `&show=` para mostrar estadísticas adicionales con v
 > Opciones: `&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage`
 
 ```md
-![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&theme=onedark&locale=es)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&theme=onedark)
 ```
 
 ### Mostrar iconos
@@ -132,7 +132,7 @@ Puedes pasar el parámetro `&show=` para mostrar estadísticas adicionales con v
 Para activar los iconos, pasa `&show_icons=true` en el parámetro de consulta:
 
 ```md
-![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&show_icons=true&theme=onedark&locale=es)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&show_icons=true&theme=onedark)
 ```
 
 ### Mostrar commits de un año específico
@@ -140,7 +140,7 @@ Para activar los iconos, pasa `&show_icons=true` en el parámetro de consulta:
 Puedes especificar un año y obtener solo los commits realizados ese año pasando `&commits_year=AAAA`:
 
 ```md
-![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&commits_year=2025&theme=onedark&locale=es)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&commits_year=2025&theme=onedark)
 ```
 
 ### Temas
@@ -150,7 +150,7 @@ Con los temas integrados puedes personalizar el aspecto de la tarjeta sin hacer 
 Usa el parámetro `&theme=NOMBRE_TEMA`:
 
 ```md
-![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=shadow_red&locale=es)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=shadow_red)
 ```
 
 #### Todos los temas integrados
@@ -161,8 +161,8 @@ Puedes ver una vista previa de [todos los temas disponibles](themes/README.md) o
 
 #### Tema Responsivo
 
-[![Estadísticas GitHub de Alvarez - Oscuro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=dark&locale=es)](https://github.com/alvar3zjos3/dev-readme-stats)
-[![Estadísticas GitHub de Alvarez - Claro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=default&locale=es)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Estadísticas GitHub de Alvarez - Oscuro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=dark)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Estadísticas GitHub de Alvarez - Claro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=default)](https://github.com/alvar3zjos3/dev-readme-stats)
 
 Como GitHub re-sube las tarjetas y las sirve desde su [CDN](https://docs.github.com/es/authentication/keeping-your-account-and-data-secure/about-anonymized-urls), no podemos inferir el tema del navegador en el lado del servidor. Sin embargo, hay cuatro métodos para crear temas dinámicos en el lado del cliente.
 
@@ -171,13 +171,13 @@ Como GitHub re-sube las tarjetas y las sirve desde su [CDN](https://docs.github.
 Hemos incluido un tema `transparent` con fondo transparente, optimizado para verse bien tanto en el tema oscuro como en el claro de GitHub:
 
 ```md
-![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=transparent&locale=es)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=transparent)
 ```
 
 <details>
 <summary>:eyes: Ver ejemplo</summary>
 
-![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=transparent&locale=es)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=transparent)
 
 </details>
 
@@ -186,13 +186,13 @@ Hemos incluido un tema `transparent` con fondo transparente, optimizado para ver
 Puedes usar el parámetro `bg_color` para hacer cualquier tema transparente estableciendo el color con un canal alfa transparente (p. ej. `bg_color=00000000`):
 
 ```md
-![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&bg_color=00000000&theme=onedark&locale=es)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&bg_color=00000000&theme=onedark)
 ```
 
 <details>
 <summary>:eyes: Ver ejemplo</summary>
 
-![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&bg_color=00000000&theme=onedark&locale=es)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&bg_color=00000000&theme=onedark)
 
 </details>
 
@@ -201,15 +201,15 @@ Puedes usar el parámetro `bg_color` para hacer cualquier tema transparente esta
 Puedes usar las [etiquetas de contexto de tema de GitHub](https://github.blog/changelog/2021-11-24-specify-theme-context-for-images-in-markdown/) añadiendo `#gh-dark-mode-only` o `#gh-light-mode-only` al final de la URL de la imagen:
 
 ```md
-[![Estadísticas GitHub de Alvarez - Oscuro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=dark&locale=es)]
-[![Estadísticas GitHub de Alvarez - Claro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=default&locale=es)]
+[![Estadísticas GitHub de Alvarez - Oscuro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=dark)]
+[![Estadísticas GitHub de Alvarez - Claro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=default)]
 ```
 
 <details>
 <summary>:eyes: Ver ejemplo</summary>
 
-[![Estadísticas GitHub de Alvarez - Oscuro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=dark&locale=es)](https://github.com/alvar3zjos3/dev-readme-stats)
-[![Estadísticas GitHub de Alvarez - Claro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=default&locale=es)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Estadísticas GitHub de Alvarez - Oscuro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=dark)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Estadísticas GitHub de Alvarez - Claro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=default)](https://github.com/alvar3zjos3/dev-readme-stats)
 
 </details>
 
@@ -220,14 +220,14 @@ Puedes usar la [nueva función de medios de GitHub](https://github.blog/changelo
 ```html
 <picture>
   <source
-    srcset="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=dark&locale=es"
+    srcset="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=dark"
     media="(prefers-color-scheme: dark)"
   />
   <source
-    srcset="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=default&locale=es"
+    srcset="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=default"
     media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
   />
-  <img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&locale=es" />
+  <img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true" />
 </picture>
 ```
 
@@ -236,14 +236,14 @@ Puedes usar la [nueva función de medios de GitHub](https://github.blog/changelo
 
 <picture>
   <source
-    srcset="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=dark&locale=es"
+    srcset="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=dark"
     media="(prefers-color-scheme: dark)"
   />
   <source
-    srcset="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=default&locale=es"
+    srcset="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=default"
     media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
   />
-  <img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&locale=es" />
+  <img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true" />
 </picture>
 
 </details>
@@ -379,7 +379,7 @@ Copia y pega este código en tu readme y cambia los enlaces.
 Endpoint: `api/pin?username=alvar3zjos3&repo=dev-readme-stats`
 
 ```md
-[![Tarjeta Readme](https://dev-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=dev-readme-stats&theme=radical&locale=es)]
+[![Tarjeta Readme](https://dev-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=dev-readme-stats&theme=radical)]
 ```
 
 ### Opciones
@@ -448,7 +448,7 @@ Copia y pega este código en tu readme y cambia los enlaces.
 Endpoint: `api/top-langs?username=alvar3zjos3`
 
 ```md
-[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&layout=compact&card_width=320&theme=tokyonight&locale=es)]
+[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&layout=compact&card_width=320&theme=tokyonight)]
 ```
 
 ### Opciones
@@ -481,90 +481,90 @@ ranking_index = (byte_count ^ size_weight) * (repo_count ^ count_weight)
 *   `&size_weight=0&count_weight=1` - Ordena por recuento de repositorios.
 
 ```md
-![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&size_weight=0.5&count_weight=0.5&layout=compact&card_width=320&theme=tokyonight&locale=es)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&size_weight=0.5&count_weight=0.5&layout=compact&card_width=320&theme=tokyonight)
 ```
 
 ### Excluir repositorios individuales
 
 ```md
-![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&exclude_repo=dev-readme-stats,alvar3zjos3.github.io&layout=compact&card_width=320&theme=tokyonight&locale=es)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&exclude_repo=dev-readme-stats,alvar3zjos3.github.io&layout=compact&card_width=320&theme=tokyonight)
 ```
 
 ### Ocultar lenguajes individuales
 
 ```md
-![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&hide=javascript,c,html&layout=compact&card_width=320&theme=tokyonight&locale=es)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&hide=javascript,c,html&layout=compact&card_width=320&theme=tokyonight)
 ```
 
 ### Mostrar más lenguajes
 
 ```md
-![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&langs_count=8&layout=compact&card_width=320&theme=tokyonight&locale=es)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&langs_count=8&layout=compact&card_width=320&theme=tokyonight)
 ```
 
 ### Diseño compacto
 
 ```md
-![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=compact&theme=tokyonight&locale=es)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=compact&theme=tokyonight)
 ```
 
 ### Diseño de gráfico de dona
 
 ```md
-[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=donut&theme=tokyonight&locale=es)]
+[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=donut&theme=tokyonight)]
 ```
 
 ### Diseño de gráfico de dona vertical
 
 ```md
-[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=donut-vertical&theme=tokyonight&locale=es)]
+[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=donut-vertical&theme=tokyonight)]
 ```
 
 ### Diseño de gráfico de tarta
 
 ```md
-[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=pie&theme=tokyonight&locale=es)]
+[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=pie&theme=tokyonight)]
 ```
 
 ### Ocultar barras de progreso
 
 ```md
-![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&hide_progress=true&theme=tokyonight&locale=es)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&hide_progress=true&theme=tokyonight)
 ```
 
 ### Cambiar formato de estadísticas
 
 ```md
-![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&stats_format=bytes&theme=tokyonight&locale=es)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&stats_format=bytes&theme=tokyonight)
 ```
 
 ### Demo
 
-![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&hide_title=false&layout=compact&card_width=320&langs_count=11&hide_border=false&order=2&theme=tokyonight&locale=es)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&hide_title=false&layout=compact&card_width=320&langs_count=11&hide_border=false&order=2&theme=tokyonight)
 
 *   Diseño compacto
 
-![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=compact&theme=tokyonight&locale=es)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=compact&theme=tokyonight)
 
 *   Diseño de gráfico de dona
 
-[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=donut&theme=tokyonight&locale=es)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=donut&theme=tokyonight)](https://github.com/alvar3zjos3/dev-readme-stats)
 
 *   Diseño de gráfico de dona vertical
 
-[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=donut-vertical&theme=tokyonight&locale=es)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=donut-vertical&theme=tokyonight)](https://github.com/alvar3zjos3/dev-readme-stats)
 
 *   Diseño de gráfico de tarta
 
-[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=pie&theme=tokyonight&locale=es)](https://github.com/alvar3zjos3/dev-readme-stats)
+[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=pie&theme=tokyonight)](https://github.com/alvar3zjos3/dev-readme-stats)
 
 *   Barras de progreso ocultas
 
-![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&hide_progress=true&theme=tokyonight&locale=es)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&hide_progress=true&theme=tokyonight)
 
 *   Mostrar bytes en lugar de porcentaje
 
-![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&stats_format=bytes&theme=tokyonight&locale=es)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&stats_format=bytes&theme=tokyonight)
 
 # Tarjeta de Estadísticas WakaTime
 
@@ -577,7 +577,7 @@ ranking_index = (byte_count ^ size_weight) * (repo_count ^ count_weight)
 Cambia el valor de `?username=` por tu nombre de usuario de [WakaTime](https://wakatime.com).
 
 ```md
-[![Estadísticas WakaTime de Alvarez](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&theme=dracula&locale=es)]
+[![Estadísticas WakaTime de Alvarez](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&theme=dracula)]
 ```
 
 ### Opciones
@@ -598,13 +598,13 @@ Cambia el valor de `?username=` por tu nombre de usuario de [WakaTime](https://w
 
 ### Demo
 
-![Estadísticas WakaTime de Alvarez](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&theme=dracula&locale=es)
+![Estadísticas WakaTime de Alvarez](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&theme=dracula)
 
-![Estadísticas WakaTime de Alvarez](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&hide_progress=true&theme=dracula&locale=es)
+![Estadísticas WakaTime de Alvarez](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&hide_progress=true&theme=dracula)
 
 *   Diseño compacto
 
-![Estadísticas WakaTime de Alvarez](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&layout=compact&theme=dracula&locale=es)
+![Estadísticas WakaTime de Alvarez](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&layout=compact&theme=dracula)
 
 ***
 
@@ -612,53 +612,53 @@ Cambia el valor de `?username=` por tu nombre de usuario de [WakaTime](https://w
 
 *   Por defecto
 
-![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=onedark&locale=es)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=onedark)
 
 *   Ocultar estadísticas específicas
 
-![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=contribs,issues&theme=onedark&locale=es)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=contribs,issues&theme=onedark)
 
 *   Mostrar estadísticas adicionales
 
-![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&show_icons=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&theme=onedark&locale=es)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&show_icons=true&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage&theme=onedark)
 
 *   Mostrar iconos
 
-![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=onedark&locale=es)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=onedark)
 
 *   Mostrar logo de GitHub en lugar del nivel de rango
 
-![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&rank_icon=github&theme=onedark&locale=es)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&rank_icon=github&theme=onedark)
 
 *   Mostrar percentil de rango del usuario
 
-![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&rank_icon=percentile&theme=onedark&locale=es)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&rank_icon=percentile&theme=onedark)
 
 *   Personalizar color del borde
 
-![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&border_color=ff0000&theme=onedark&locale=es)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&border_color=ff0000&theme=onedark)
 
 *   Incluir todos los commits
 
-![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&theme=onedark&locale=es)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&theme=onedark)
 
 *   Temas
 
 Elige entre cualquiera de los [temas por defecto](#temas)
 
-![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=radical&locale=es)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&theme=radical)
 
 *   Degradado
 
-![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&bg_color=30,e96443,904e95&title_color=fff&text_color=fff&theme=onedark&locale=es)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&include_all_commits=true&hide=issues&bg_color=30,e96443,904e95&title_color=fff&text_color=fff&theme=onedark)
 
 *   Personalizar tarjeta de estadísticas
 
-![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api/?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&title_color=fff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515&theme=onedark&locale=es)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api/?username=alvar3zjos3&include_all_commits=true&hide=issues&show_icons=true&title_color=fff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515&theme=onedark)
 
 *   Establecer idioma de la tarjeta
 
-![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api/?username=alvar3zjos3&include_all_commits=true&hide=issues&theme=onedark&locale=es)
+![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api/?username=alvar3zjos3&include_all_commits=true&hide=issues&theme=onedark)
 
 *   Personalizar tarjeta de repositorio
 
@@ -674,11 +674,11 @@ Elige entre cualquiera de los [temas por defecto](#temas)
 
 *   Lenguajes principales
 
-![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&layout=compact&card_width=320&langs_count=11&theme=tokyonight&locale=es)
+![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&layout=compact&card_width=320&langs_count=11&theme=tokyonight)
 
 *   Tarjeta WakaTime
 
-![Estadísticas WakaTime de Alvarez](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&theme=dracula&locale=es)
+![Estadísticas WakaTime de Alvarez](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&theme=dracula)
 
 ***
 
@@ -690,10 +690,10 @@ Por defecto, GitHub no coloca las tarjetas lado a lado. Para hacerlo, puedes usa
 
 ```html
 <a href="https://github.com/alvar3zjos3/dev-readme-stats">
-  <img height=200 align="center" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&include_all_commits=true&count_private=true&theme=onedark&locale=es" />
+  <img height=200 align="center" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&include_all_commits=true&count_private=true&theme=onedark" />
 </a>
 <a href="https://github.com/alvar3zjos3/dev-readme-stats">
-  <img height=200 align="center" src="https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&layout=compact&card_width=320&langs_count=11&theme=tokyonight&locale=es" />
+  <img height=200 align="center" src="https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&layout=compact&card_width=320&langs_count=11&theme=tokyonight" />
 </a>
 ```
 
@@ -701,10 +701,10 @@ Por defecto, GitHub no coloca las tarjetas lado a lado. Para hacerlo, puedes usa
 <summary>:eyes: Ver ejemplo</summary>
 
 <a href="https://github.com/alvar3zjos3/dev-readme-stats">
-  <img height=200 align="center" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&include_all_commits=true&count_private=true&theme=onedark&locale=es" />
+  <img height=200 align="center" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true&include_all_commits=true&count_private=true&theme=onedark" />
 </a>
 <a href="https://github.com/alvar3zjos3/dev-readme-stats">
-  <img height=200 align="center" src="https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&layout=compact&card_width=320&langs_count=11&theme=tokyonight&locale=es" />
+  <img height=200 align="center" src="https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&layout=compact&card_width=320&langs_count=11&theme=tokyonight" />
 </a>
 
 </details>
@@ -763,7 +763,7 @@ jobs:
           card: stats
           options:
             username=${{ github.repository_owner
-            }}&show_icons=true&locale=es&theme=default
+            }}&show_icons=true&theme=default
           path: profile/themes/default/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs - default
@@ -772,7 +772,7 @@ jobs:
           card: top-langs
           options:
             username=${{ github.repository_owner
-            }}&layout=compact&locale=es&theme=default
+            }}&layout=compact&theme=default
           path: profile/themes/default/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - default
@@ -781,7 +781,7 @@ jobs:
           card: pin
           options:
             username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&locale=es&theme=default
+            }}&repo=dev-readme-stats&show_owner=true&theme=default
           path: profile/themes/default/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime - default
@@ -790,7 +790,7 @@ jobs:
           card: wakatime
           options:
             username=${{ github.repository_owner
-            }}&layout=compact&locale=es&theme=default
+            }}&layout=compact&theme=default
           path: profile/themes/default/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 

@@ -202,7 +202,7 @@ describe("Test /api/top-langs", () => {
     const req = {
       query: {
         username: "alvar3zjos3",
-        locale: "asdf",
+        locale: "chema",
       },
     };
     const res = {

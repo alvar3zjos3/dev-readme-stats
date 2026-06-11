@@ -30,7 +30,7 @@ describe("Test renderStatsCard", () => {
     document.body.innerHTML = renderStatsCard(stats);
 
     expect(document.getElementsByClassName("header")[0].textContent).toBe(
-      "Jose Alvarez's GitHub Stats",
+      "Estadísticas de GitHub de Jose Alvarez",
     );
 
     expect(
@@ -62,13 +62,13 @@ describe("Test renderStatsCard", () => {
     document.body.innerHTML = renderStatsCard({ ...stats, name: "Anil Das" });
 
     expect(document.getElementsByClassName("header")[0].textContent).toBe(
-      "Anil Das' GitHub Stats",
+      "Estadísticas de GitHub de Anil Das",
     );
 
     document.body.innerHTML = renderStatsCard({ ...stats, name: "Felix" });
 
     expect(document.getElementsByClassName("header")[0].textContent).toBe(
-      "Felix's GitHub Stats",
+      "Estadísticas de GitHub de Felix",
     );
   });
 
@@ -143,7 +143,10 @@ describe("Test renderStatsCard", () => {
       card_width: 1,
       hide_rank: true,
     });
-    expect(document.querySelector("svg")).toHaveAttribute("width", "296.96875");
+    expect(document.querySelector("svg")).toHaveAttribute(
+      "width",
+      "405.902302631579",
+    );
 
     // Test minimum card width with rank and icons.
     document.body.innerHTML = renderStatsCard(stats, {
@@ -151,7 +154,10 @@ describe("Test renderStatsCard", () => {
       hide_rank: true,
       show_icons: true,
     });
-    expect(document.querySelector("svg")).toHaveAttribute("width", "313.96875");
+    expect(document.querySelector("svg")).toHaveAttribute(
+      "width",
+      "422.902302631579",
+    );
 
     // Test minimum card width with icons but without rank.
     document.body.innerHTML = renderStatsCard(stats, {
@@ -350,7 +356,7 @@ describe("Test renderStatsCard", () => {
 
     expect(
       document.body.getElementsByTagName("svg")[0].getAttribute("width"),
-    ).toBe("296.96875");
+    ).toBe("405.902302631579");
   });
 
   it("should auto resize if hide_rank is true & custom_title is set", () => {

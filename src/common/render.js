@@ -176,7 +176,7 @@ const renderError = ({
     <text x="25" y="45" class="text">¡Algo salió mal!${
       UPSTREAM_API_ERRORS.includes(secondaryMessage) || !show_repo_link
         ? ""
-        : " presenta un problema en https://tiny.one/readme-stats"
+        : " presente el problema en https://github.com/alvar3zjos3/dev-readme-stats"
     }</text>
     <text data-testid="message" x="25" y="55" class="text small">
       <tspan x="25" dy="18">${encodeHTML(message)}</tspan>

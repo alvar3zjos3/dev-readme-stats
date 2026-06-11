@@ -5,15 +5,17 @@ import { statCardLocales } from "../src/translations.js";
 describe("I18n", () => {
   it("should return translated string", () => {
     const i18n = new I18n({
-      locale: "en",
+      locale: "es",
       translations: statCardLocales({ name: "Jose Alvarez", apostrophe: "s" }),
     });
-    expect(i18n.t("statcard.title")).toBe("Jose Alvarez's GitHub Stats");
+    expect(i18n.t("statcard.title")).toBe(
+      "Estadísticas de GitHub de Jose Alvarez",
+    );
   });
 
   it("should throw error if translation string not found", () => {
     const i18n = new I18n({
-      locale: "en",
+      locale: "es",
       translations: statCardLocales({ name: "Jose Alvarez", apostrophe: "s" }),
     });
     expect(() => i18n.t("statcard.title1")).toThrow(
@@ -23,11 +25,11 @@ describe("I18n", () => {
 
   it("should throw error if translation not found for locale", () => {
     const i18n = new I18n({
-      locale: "asdf",
+      locale: "chema",
       translations: statCardLocales({ name: "Jose Alvarez", apostrophe: "s" }),
     });
     expect(() => i18n.t("statcard.title")).toThrow(
-      "'statcard.title' traducción no encontrada para el locale 'asdf'",
+      "'statcard.title' traducción no encontrada para el locale 'chema'",
     );
   });
 });

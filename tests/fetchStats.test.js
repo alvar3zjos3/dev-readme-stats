@@ -96,7 +96,7 @@ const error = {
       type: "NOT_FOUND",
       path: ["user"],
       locations: [],
-      message: "Could not resolve to a User with the login of 'noname'.",
+      message: "No se pudo resolver el usuario con el login de 'noname'.",
     },
   ],
 };
@@ -197,7 +197,7 @@ describe("Test fetchStats", () => {
     mock.onPost("https://api.github.com/graphql").reply(200, error);
 
     await expect(fetchStats("alvar3zjos3")).rejects.toThrow(
-      "Could not resolve to a User with the login of 'noname'.",
+      "No se pudo resolver el usuario con el login de 'noname'.",
     );
   });
 
@@ -235,7 +235,7 @@ describe("Test fetchStats", () => {
   });
 
   it("should throw specific error when include_all_commits true and invalid username", async () => {
-    await expect(fetchStats("asdf///---", true)).rejects.toThrow(
+    await expect(fetchStats("chema///---", true)).rejects.toThrow(
       new Error("Nombre de usuario no válido proporcionado."),
     );
   });

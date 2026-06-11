@@ -1,6 +1,6 @@
 // @ts-check
 
-const FALLBACK_LOCALE = "en";
+const FALLBACK_LOCALE = "es";
 
 /**
  * Clase de traducción i18n.

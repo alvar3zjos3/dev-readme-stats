@@ -161,7 +161,7 @@ describe("Test /api/gist", () => {
     const req = {
       query: {
         id: "bbfce31e0217a3689c8d961a356cb10d",
-        locale: "asdf",
+        locale: "chema",
       },
     };
     const res = {

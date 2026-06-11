@@ -357,7 +357,7 @@ describe("Test renderTopLanguages", () => {
     document.body.innerHTML = renderTopLanguages(langs);
 
     expect(queryByTestId(document.body, "header")).toHaveTextContent(
-      "Most Used Languages",
+      "Lenguajes más usados",
     );
 
     expect(queryAllByTestId(document.body, "lang-name")[0]).toHaveTextContent(
@@ -534,7 +534,7 @@ describe("Test renderTopLanguages", () => {
     document.body.innerHTML = renderTopLanguages(langs, { layout: "compact" });
 
     expect(queryByTestId(document.body, "header")).toHaveTextContent(
-      "Most Used Languages",
+      "Lenguajes más usados",
     );
 
     expect(queryAllByTestId(document.body, "lang-name")[0]).toHaveTextContent(
@@ -566,7 +566,7 @@ describe("Test renderTopLanguages", () => {
     document.body.innerHTML = renderTopLanguages(langs, { layout: "donut" });
 
     expect(queryByTestId(document.body, "header")).toHaveTextContent(
-      "Most Used Languages",
+      "Lenguajes más usados",
     );
 
     expect(queryAllByTestId(document.body, "lang-name")[0]).toHaveTextContent(
@@ -641,7 +641,7 @@ describe("Test renderTopLanguages", () => {
     });
 
     expect(queryByTestId(document.body, "header")).toHaveTextContent(
-      "Most Used Languages",
+      "Lenguajes más usados",
     );
 
     expect(queryAllByTestId(document.body, "lang-name")[0]).toHaveTextContent(
@@ -736,7 +736,7 @@ describe("Test renderTopLanguages", () => {
     document.body.innerHTML = renderTopLanguages(langs, { layout: "pie" });
 
     expect(queryByTestId(document.body, "header")).toHaveTextContent(
-      "Most Used Languages",
+      "Lenguajes más usados",
     );
 
     expect(queryAllByTestId(document.body, "lang-name")[0]).toHaveTextContent(
@@ -844,7 +844,7 @@ describe("Test renderTopLanguages", () => {
   it('should show "No languages data." message instead of empty card when nothing to show', () => {
     document.body.innerHTML = renderTopLanguages({});
     expect(document.querySelector(".stat").textContent).toBe(
-      "No languages data.",
+      "Sin datos de idiomas.",
     );
   });
 
