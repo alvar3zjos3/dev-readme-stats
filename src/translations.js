@@ -316,7 +316,7 @@ const statCardLocales = ({ name, apostrophe }) => {
       ur: "پچھلے سال میں تعاون کیا",
       bg: "Приноси (за изминалата година)",
       bn: "অবদান (গত বছর)",
-      es: "Contribuciones en (el año pasado)",
+      es: "Contribuyó (el año pasado)",
       fa: "مشارکت در (سال گذشته)",
       fi: "Osallistunut (viime vuonna)",
       fr: "Contribué à (l'année dernière)",
