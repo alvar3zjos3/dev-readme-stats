@@ -24,7 +24,7 @@ jobs:
       discussions: read
       packages: read
       pages: read
-      pull-requests: read
+      pull-requests: write
       repository-projects: read
       security-events: read
       statuses: read
@@ -42,7 +42,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: npm
 
-      # Fix the unsafe repo error which was introduced by the CVE-2022-24765 git patches.
       - name: Fix unsafe repo error
         run: git config --global --add safe.directory ${{ github.workspace }}
 
@@ -53,11 +52,41 @@ jobs:
         env:
           CI: true
 
-      - name: Run Script
-        uses: skx/github-action-tester@e29768ff4ff67be9d1fdbccd8836ab83233bebb1 # v0.10.0
-        with:
-          script: ./scripts/push-theme-readme.sh
+      - name: Commit cambios en rama temporal
+        run: |
+          git config --global user.email "no-reply@devreadmestats.com"
+          git config --global user.name "Dev Readme Stats Bot"
+          git checkout -b updated-theme-readme || git checkout updated-theme-readme
+          git add themes/README.md
+          git diff --cached --quiet && echo "Sin cambios, nada que hacer." && exit 0
+          git commit --no-verify --message "docs(theme): auto update theme readme"
+          git push --force origin updated-theme-readme
         env:
-          CI: true
-          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-          GH_REPO: ${{ github.repository }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Crear Pull Request
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { data: prs } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              head: `${context.repo.owner}:updated-theme-readme`,
+              base: "master",
+              state: "open",
+            });
+
+            if (prs.length > 0) {
+              console.log(`PR ya existe: ${prs[0].html_url}`);
+            } else {
+              const { data: pr } = await github.rest.pulls.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: "docs(theme): auto update theme readme",
+                head: "updated-theme-readme",
+                base: "master",
+                body: "Actualización automática del README de temas generada por el bot.",
+              });
+              console.log(`PR creada: ${pr.html_url}`);
+            }
