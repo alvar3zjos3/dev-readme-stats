@@ -256,11 +256,11 @@ Puedes personalizar el aspecto de todas tus tarjetas con parámetros de URL.
 
 | Nombre          | Descripción                                                                   | Tipo                                                           | Valor por defecto |
 | --------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------- | ----------------- |
-| `title_color`   | Color del título de la tarjeta.                                               | string (color hex)                                             | `2f80ed`          |
-| `text_color`    | Color del texto del cuerpo.                                                   | string (color hex)                                             | `434d58`          |
-| `icon_color`    | Color de los iconos si están disponibles.                                     | string (color hex)                                             | `4c71f2`          |
+| `title_color`   | Color del título de la tarjeta.                                               | string (color hex)                                             | `fff`          |
+| `text_color`    | Color del texto del cuerpo.                                                   | string (color hex)                                             | `9f9f9f`          |
+| `icon_color`    | Color de los iconos si están disponibles.                                     | string (color hex)                                             | `79ff97`          |
 | `border_color`  | Color del borde de la tarjeta. No aplica cuando `hide_border` está activado.  | string (color hex)                                             | `e4e2e2`          |
-| `bg_color`      | Color de fondo de la tarjeta.                                                 | string (color hex o gradiente en forma de *ángulo,inicio,fin*) | `fffefe`          |
+| `bg_color`      | Color de fondo de la tarjeta.                                                 | string (color hex o gradiente en forma de *ángulo,inicio,fin*) | `151515`          |
 | `hide_border`   | Oculta el borde de la tarjeta.                                                | boolean                                                        | `false`           |
 | `theme`         | Nombre del tema, elige entre [todos los temas disponibles](themes/README.md). | enum                                                           | `default`         |
 | `cache_seconds` | Establece manualmente la cabecera de caché (mín: 21600, máx: 86400).          | integer                                                        | `21600`           |
@@ -354,8 +354,8 @@ Lista de todos los idiomas disponibles:
 | `card_width`          | Establece el ancho de la tarjeta manualmente.                                                 | number                               | `500px (aprox.)`         |
 | `hide_rank`           | Oculta el rango y redimensiona automáticamente el ancho de la tarjeta.                        | boolean                              | `false`                  |
 | `rank_icon`           | Muestra un icono de rango alternativo (`github`, `percentile` o `default`).                   | enum                                 | `default`                |
-| `show_icons`          | Muestra iconos junto a todas las estadísticas.                                                | boolean                              | `false`                  |
-| `include_all_commits` | Cuenta el total de commits en lugar de solo los del año actual.                               | boolean                              | `false`                  |
+| `show_icons`          | Muestra iconos junto a todas las estadísticas.                                                | boolean                              | `true`                  |
+| `include_all_commits` | Cuenta el total de commits en lugar de solo los del año actual.                               | boolean                              | `true`                  |
 | `line_height`         | Establece el alto de línea entre el texto.                                                    | integer                              | `25`                     |
 | `exclude_repo`        | Excluye repositorios específicos.                                                             | string (valores separados por comas) | `null`                   |
 | `custom_title`        | Establece un título personalizado para la tarjeta.                                            | string                               | `<usuario> GitHub Stats` |
