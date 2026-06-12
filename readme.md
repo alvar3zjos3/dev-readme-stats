@@ -262,7 +262,7 @@ Puedes personalizar el aspecto de todas tus tarjetas con parámetros de URL.
 | `border_color`  | Color del borde de la tarjeta. No aplica cuando `hide_border` está activado.  | string (color hex)                                             | `e4e2e2`          |
 | `bg_color`      | Color de fondo de la tarjeta.                                                 | string (color hex o gradiente en forma de *ángulo,inicio,fin*) | `151515`          |
 | `hide_border`   | Oculta el borde de la tarjeta.                                                | boolean                                                        | `false`           |
-| `theme`         | Nombre del tema, elige entre [todos los temas disponibles](themes/README.md). | enum                                                           | `default`         |
+| `theme`         | Nombre del tema, elige entre [todos los temas disponibles](themes/README.md). | enum                                                           | `dark`         |
 | `cache_seconds` | Establece manualmente la cabecera de caché (mín: 21600, máx: 86400).          | integer                                                        | `21600`           |
 | `locale`        | Establece el idioma de la tarjeta.                                            | enum                                                           | `es`              |
 | `border_radius` | Radio de las esquinas de la tarjeta.                                          | number                                                         | `4.5`             |
