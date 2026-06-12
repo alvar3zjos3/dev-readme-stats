@@ -598,7 +598,7 @@ Cambia el valor de `?username=` por tu nombre de usuario de [WakaTime](https://w
 
 ### Demo
 
-![Estadísticas WakaTime de Alvarez](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3)
+![Estadísticas WakaTime de Alvarez](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&theme=dracula)
 
 ![Estadísticas WakaTime de Alvarez](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&hide_progress=true&theme=dracula)
 
