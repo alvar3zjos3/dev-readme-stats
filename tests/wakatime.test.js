@@ -104,8 +104,8 @@ afterEach(() => {
   mock.reset();
 });
 
-describe("Test /api/wakatime", () => {
-  it("should test the request", async () => {
+describe("Prueba de /api/wakatime", () => {
+  it("debe procesar la solicitud", async () => {
     const username = "alvar3zjos3";
     const req = { query: { username } };
     const res = { setHeader: jest.fn(), send: jest.fn() };
@@ -123,7 +123,7 @@ describe("Test /api/wakatime", () => {
     );
   });
 
-  it("should have proper cache", async () => {
+  it("debe tener proper cache", async () => {
     const username = "alvar3zjos3";
     const req = { query: { username } };
     const res = { setHeader: jest.fn(), send: jest.fn() };

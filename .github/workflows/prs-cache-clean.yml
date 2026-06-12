@@ -1,4 +1,4 @@
-name: Cleanup closed pull requests cache
+name: Limpiar caché de PRs cerrados
 on:
   pull_request:
     types:

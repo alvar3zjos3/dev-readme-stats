@@ -115,8 +115,8 @@ afterEach(() => {
   mock.reset();
 });
 
-describe("Test /api/", () => {
-  it("should test the request", async () => {
+describe("Prueba de /api/", () => {
+  it("debe procesar la solicitud", async () => {
     const { req, res } = faker({}, data_stats);
 
     await api(req, res);
@@ -127,7 +127,7 @@ describe("Test /api/", () => {
     );
   });
 
-  it("should render error card on error", async () => {
+  it("debe renderizar error card on error", async () => {
     const { req, res } = faker({}, error);
 
     await api(req, res);
@@ -142,7 +142,7 @@ describe("Test /api/", () => {
     );
   });
 
-  it("should render error card in same theme as requested card", async () => {
+  it("debe renderizar error card in same theme as requested card", async () => {
     const { req, res } = faker({ theme: "merko" }, error);
 
     await api(req, res);
@@ -158,7 +158,7 @@ describe("Test /api/", () => {
     );
   });
 
-  it("should get the query options", async () => {
+  it("debe obtener the query options", async () => {
     const { req, res } = faker(
       {
         username: "alvar3zjos3",
@@ -191,7 +191,7 @@ describe("Test /api/", () => {
     );
   });
 
-  it("should have proper cache", async () => {
+  it("debe tener proper cache", async () => {
     const { req, res } = faker({}, data_stats);
 
     await api(req, res);
@@ -207,7 +207,7 @@ describe("Test /api/", () => {
     ]);
   });
 
-  it("should set proper cache", async () => {
+  it("debe establecer proper cache", async () => {
     const cache_seconds = DURATIONS.TWELVE_HOURS;
     const { req, res } = faker({ cache_seconds }, data_stats);
     await api(req, res);
@@ -223,7 +223,7 @@ describe("Test /api/", () => {
     ]);
   });
 
-  it("should set shorter cache when error", async () => {
+  it("debe establecer shorter cache when error", async () => {
     const { req, res } = faker({}, error);
     await api(req, res);
 
@@ -238,7 +238,7 @@ describe("Test /api/", () => {
     ]);
   });
 
-  it("should properly set cache using CACHE_SECONDS env variable", async () => {
+  it("debe correctamente set cache using CACHE_SECONDS env variable", async () => {
     const cacheSeconds = "10000";
     process.env.CACHE_SECONDS = cacheSeconds;
 
@@ -256,7 +256,7 @@ describe("Test /api/", () => {
     ]);
   });
 
-  it("should disable cache when CACHE_SECONDS is set to 0", async () => {
+  it("debe desactivar cache when CACHE_SECONDS is set to 0", async () => {
     process.env.CACHE_SECONDS = "0";
 
     const { req, res } = faker({}, data_stats);
@@ -273,7 +273,7 @@ describe("Test /api/", () => {
     ]);
   });
 
-  it("should set proper cache with clamped values", async () => {
+  it("debe establecer proper cache with clamped values", async () => {
     {
       let { req, res } = faker({ cache_seconds: 200_000 }, data_stats);
       await api(req, res);
@@ -321,7 +321,7 @@ describe("Test /api/", () => {
     }
   });
 
-  it("should allow changing ring_color", async () => {
+  it("debe permitir changing ring_color", async () => {
     const { req, res } = faker(
       {
         username: "alvar3zjos3",
@@ -356,7 +356,7 @@ describe("Test /api/", () => {
     );
   });
 
-  it("should render error card if username in blacklist", async () => {
+  it("debe renderizar error card if username in blacklist", async () => {
     const { req, res } = faker({ username: "renovate-bot" }, data_stats);
 
     await api(req, res);
@@ -371,7 +371,7 @@ describe("Test /api/", () => {
     );
   });
 
-  it("should render error card when wrong locale is provided", async () => {
+  it("debe renderizar error card when wrong locale is provided", async () => {
     const { req, res } = faker({ locale: "chema" }, data_stats);
 
     await api(req, res);
@@ -385,7 +385,7 @@ describe("Test /api/", () => {
     );
   });
 
-  it("should render error card when include_all_commits true and upstream API fails", async () => {
+  it("debe renderizar error card when include_all_commits true and upstream API fails", async () => {
     mock
       .onGet("https://api.github.com/search/commits?q=author:alvar3zjos3")
       .reply(200, { error: "Some test error message" });

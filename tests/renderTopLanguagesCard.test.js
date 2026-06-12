@@ -113,7 +113,7 @@ const langPercentFromPieLayoutSvg = (d, centerX, centerY) => {
   return ((endAngle - startAngle) / 360) * 100;
 };
 
-describe("Test renderTopLanguages helper functions", () => {
+describe("Prueba de renderTopLanguages helper functions", () => {
   it("getLongestLang", () => {
     const langArray = Object.values(langs);
     expect(getLongestLang(langArray)).toBe(langs.javascript);
@@ -352,8 +352,8 @@ describe("Test renderTopLanguages helper functions", () => {
   });
 });
 
-describe("Test renderTopLanguages", () => {
-  it("should render correctly", () => {
+describe("Prueba de renderTopLanguages", () => {
+  it("debe renderizar correctly", () => {
     document.body.innerHTML = renderTopLanguages(langs);
 
     expect(queryByTestId(document.body, "header")).toHaveTextContent(
@@ -383,7 +383,7 @@ describe("Test renderTopLanguages", () => {
     );
   });
 
-  it("should hide languages when hide is passed", () => {
+  it("debe ocultar languages when hide is passed", () => {
     document.body.innerHTML = renderTopLanguages(langs, {
       hide: ["HTML"],
     });
@@ -405,7 +405,7 @@ describe("Test renderTopLanguages", () => {
     expect(queryAllByTestId(document.body, "lang-name")[1]).not.toBeDefined();
   });
 
-  it("should resize the height correctly depending on langs", () => {
+  it("debe resize the height correctly depending on langs", () => {
     document.body.innerHTML = renderTopLanguages(langs, {});
     expect(document.querySelector("svg")).toHaveAttribute("height", "140");
 
@@ -423,7 +423,7 @@ describe("Test renderTopLanguages", () => {
     expect(document.querySelector("svg")).toHaveAttribute("height", "140");
   });
 
-  it("should render with custom width set", () => {
+  it("debe renderizar with custom width set", () => {
     document.body.innerHTML = renderTopLanguages(langs, {});
 
     expect(document.querySelector("svg")).toHaveAttribute("width", "300");
@@ -432,7 +432,7 @@ describe("Test renderTopLanguages", () => {
     expect(document.querySelector("svg")).toHaveAttribute("width", "400");
   });
 
-  it("should render with min width", () => {
+  it("debe renderizar with min width", () => {
     document.body.innerHTML = renderTopLanguages(langs, { card_width: 190 });
 
     expect(document.querySelector("svg")).toHaveAttribute(
@@ -447,7 +447,7 @@ describe("Test renderTopLanguages", () => {
     );
   });
 
-  it("should render default colors properly", () => {
+  it("debe renderizar default colors properly", () => {
     document.body.innerHTML = renderTopLanguages(langs);
 
     const styleTag = document.querySelector("style");
@@ -464,7 +464,7 @@ describe("Test renderTopLanguages", () => {
     );
   });
 
-  it("should render custom colors properly", () => {
+  it("debe renderizar custom colors properly", () => {
     const customColors = {
       title_color: "5a0",
       icon_color: "1b998b",
@@ -488,7 +488,7 @@ describe("Test renderTopLanguages", () => {
     );
   });
 
-  it("should render custom colors with themes", () => {
+  it("debe renderizar custom colors with themes", () => {
     document.body.innerHTML = renderTopLanguages(langs, {
       title_color: "5a0",
       theme: "radical",
@@ -508,7 +508,7 @@ describe("Test renderTopLanguages", () => {
     );
   });
 
-  it("should render with all the themes", () => {
+  it("debe renderizar with all the themes", () => {
     Object.keys(themes).forEach((name) => {
       document.body.innerHTML = renderTopLanguages(langs, {
         theme: name,
@@ -530,7 +530,7 @@ describe("Test renderTopLanguages", () => {
     });
   });
 
-  it("should render with layout compact", () => {
+  it("debe renderizar with layout compact", () => {
     document.body.innerHTML = renderTopLanguages(langs, { layout: "compact" });
 
     expect(queryByTestId(document.body, "header")).toHaveTextContent(
@@ -562,7 +562,7 @@ describe("Test renderTopLanguages", () => {
     );
   });
 
-  it("should render with layout donut", () => {
+  it("debe renderizar with layout donut", () => {
     document.body.innerHTML = renderTopLanguages(langs, { layout: "donut" });
 
     expect(queryByTestId(document.body, "header")).toHaveTextContent(
@@ -635,7 +635,7 @@ describe("Test renderTopLanguages", () => {
     );
   });
 
-  it("should render with layout donut vertical", () => {
+  it("debe renderizar with layout donut vertical", () => {
     document.body.innerHTML = renderTopLanguages(langs, {
       layout: "donut-vertical",
     });
@@ -705,7 +705,7 @@ describe("Test renderTopLanguages", () => {
     expect(HTMLLangPercent + javascriptLangPercent + cssLangPercent).toBe(100);
   });
 
-  it("should render with layout donut vertical full donut circle of one language is 100%", () => {
+  it("debe renderizar with layout donut vertical full donut circle of one language is 100%", () => {
     document.body.innerHTML = renderTopLanguages(
       { HTML: langs.HTML },
       { layout: "donut-vertical" },
@@ -732,7 +732,7 @@ describe("Test renderTopLanguages", () => {
     expect(HTMLLangPercent).toBeCloseTo(100);
   });
 
-  it("should render with layout pie", () => {
+  it("debe renderizar with layout pie", () => {
     document.body.innerHTML = renderTopLanguages(langs, { layout: "pie" });
 
     expect(queryByTestId(document.body, "header")).toHaveTextContent(
@@ -806,21 +806,21 @@ describe("Test renderTopLanguages", () => {
     );
   });
 
-  it("should render a translated title", () => {
+  it("debe renderizar a translated title", () => {
     document.body.innerHTML = renderTopLanguages(langs, { locale: "cn" });
     expect(document.getElementsByClassName("header")[0].textContent).toBe(
       "最常用的语言",
     );
   });
 
-  it("should render without rounding", () => {
+  it("debe renderizar without rounding", () => {
     document.body.innerHTML = renderTopLanguages(langs, { border_radius: "0" });
     expect(document.querySelector("rect")).toHaveAttribute("rx", "0");
     document.body.innerHTML = renderTopLanguages(langs, {});
     expect(document.querySelector("rect")).toHaveAttribute("rx", "4.5");
   });
 
-  it("should render langs with specified langs_count", () => {
+  it("debe renderizar langs with specified langs_count", () => {
     const options = {
       langs_count: 1,
     };
@@ -830,7 +830,7 @@ describe("Test renderTopLanguages", () => {
     );
   });
 
-  it("should render langs with specified langs_count even when hide is set", () => {
+  it("debe renderizar langs with specified langs_count even when hide is set", () => {
     const options = {
       hide: ["HTML"],
       langs_count: 2,
@@ -848,7 +848,7 @@ describe("Test renderTopLanguages", () => {
     );
   });
 
-  it("should show proper stats format", () => {
+  it("debe mostrar proper stats format", () => {
     document.body.innerHTML = renderTopLanguages(langs, {
       layout: "compact",
       stats_format: "percentages",

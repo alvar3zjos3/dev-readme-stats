@@ -104,7 +104,7 @@ const GIST_DATA = {
 
 const CACHE_BURST_STRING = `v=${new Date().getTime()}`;
 
-describe("Fetch Cards", () => {
+describe("Obtener tarjetas", () => {
   let VERCEL_PREVIEW_URL;
 
   beforeAll(() => {
@@ -112,7 +112,7 @@ describe("Fetch Cards", () => {
     VERCEL_PREVIEW_URL = process.env.VERCEL_PREVIEW_URL;
   });
 
-  test("retrieve stats card", async () => {
+  test("obtiene la tarjeta de estadísticas", async () => {
     expect(VERCEL_PREVIEW_URL).toBeDefined();
 
     // Check if the Vercel preview instance stats card function is up and running.
@@ -134,7 +134,7 @@ describe("Fetch Cards", () => {
     expect(serverStatsSvg.data).toEqual(localStatsCardSVG);
   }, 15000);
 
-  test("retrieve language card", async () => {
+  test("obtiene la tarjeta de lenguajes", async () => {
     expect(VERCEL_PREVIEW_URL).toBeDefined();
 
     // Check if the Vercel preview instance language card function is up and running.
@@ -159,7 +159,7 @@ describe("Fetch Cards", () => {
     expect(severLanguageSVG.data).toEqual(localLanguageCardSVG);
   }, 15000);
 
-  test("retrieve WakaTime card", async () => {
+  test("obtiene la tarjeta de WakaTime", async () => {
     expect(VERCEL_PREVIEW_URL).toBeDefined();
 
     // Check if the Vercel preview instance WakaTime function is up and running.
@@ -179,7 +179,7 @@ describe("Fetch Cards", () => {
     expect(serverWakaTimeSvg.data).toEqual(localWakaCardSVG);
   }, 15000);
 
-  test("retrieve repo card", async () => {
+  test("obtiene la tarjeta de repositorio", async () => {
     expect(VERCEL_PREVIEW_URL).toBeDefined();
 
     // Check if the Vercel preview instance Repo function is up and running.
@@ -201,7 +201,7 @@ describe("Fetch Cards", () => {
     expect(serverRepoSvg.data).toEqual(localRepoCardSVG);
   }, 15000);
 
-  test("retrieve gist card", async () => {
+  test("obtiene la tarjeta de gist", async () => {
     expect(VERCEL_PREVIEW_URL).toBeDefined();
 
     // Check if the Vercel preview instance Gist function is up and running.

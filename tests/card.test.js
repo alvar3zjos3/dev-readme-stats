@@ -7,7 +7,7 @@ import { icons } from "../src/common/icons.js";
 import { getCardColors } from "../src/common/color.js";
 
 describe("Card", () => {
-  it("should hide border", () => {
+  it("debe ocultar border", () => {
     const card = new Card({});
     card.setHideBorder(true);
 
@@ -18,7 +18,7 @@ describe("Card", () => {
     );
   });
 
-  it("should not hide border", () => {
+  it("debe not hide border", () => {
     const card = new Card({});
     card.setHideBorder(false);
 
@@ -29,7 +29,7 @@ describe("Card", () => {
     );
   });
 
-  it("should have a custom title", () => {
+  it("debe tener a custom title", () => {
     const card = new Card({
       customTitle: "custom title",
       defaultTitle: "default title",
@@ -41,7 +41,7 @@ describe("Card", () => {
     );
   });
 
-  it("should set custom title", () => {
+  it("debe establecer custom title", () => {
     const card = new Card({});
     card.setTitle("custom title");
 
@@ -51,7 +51,7 @@ describe("Card", () => {
     );
   });
 
-  it("should hide title", () => {
+  it("debe ocultar title", () => {
     const card = new Card({});
     card.setHideTitle(true);
 
@@ -59,7 +59,7 @@ describe("Card", () => {
     expect(queryByTestId(document.body, "card-title")).toBeNull();
   });
 
-  it("should not hide title", () => {
+  it("debe not hide title", () => {
     const card = new Card({});
     card.setHideTitle(false);
 
@@ -81,7 +81,7 @@ describe("Card", () => {
     expect(document.getElementsByClassName("icon")[0]).toBeUndefined();
   });
 
-  it("should have proper height, width", () => {
+  it("debe tener proper height, width", () => {
     const card = new Card({ height: 200, width: 200, title: "ok" });
     document.body.innerHTML = card.render(``);
     expect(document.getElementsByTagName("svg")[0]).toHaveAttribute(
@@ -94,7 +94,7 @@ describe("Card", () => {
     );
   });
 
-  it("should have less height after title is hidden", () => {
+  it("debe tener less height after title is hidden", () => {
     const card = new Card({ height: 200, title: "ok" });
     card.setHideTitle(true);
 
@@ -125,7 +125,7 @@ describe("Card", () => {
     );
   });
 
-  it("should render with correct colors", () => {
+  it("debe renderizar with correct colors", () => {
     // returns theme based colors with proper overrides and defaults
     const { titleColor, textColor, iconColor, bgColor } = getCardColors({
       title_color: "f00",
@@ -156,7 +156,7 @@ describe("Card", () => {
       "#fff",
     );
   });
-  it("should render gradient backgrounds", () => {
+  it("debe renderizar gradient backgrounds", () => {
     const { titleColor, textColor, iconColor, bgColor } = getCardColors({
       title_color: "f00",
       icon_color: "0f0",

@@ -1,4 +1,4 @@
-name: Theme Pull Requests Closer
+name: Cerrar pull requests de temas obsoletos
 
 on:
   - pull_request_target

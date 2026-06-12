@@ -38,8 +38,8 @@ afterEach(() => {
   mock.reset();
 });
 
-describe("Test fetchRepo", () => {
-  it("should fetch correct user repo", async () => {
+describe("Prueba de fetchRepo", () => {
+  it("debe obtener correct user repo", async () => {
     mock.onPost("https://api.github.com/graphql").reply(200, data_user);
 
     let repo = await fetchRepo("alvar3zjos3", "convoychat");
@@ -50,7 +50,7 @@ describe("Test fetchRepo", () => {
     });
   });
 
-  it("should fetch correct org repo", async () => {
+  it("debe obtener correct org repo", async () => {
     mock.onPost("https://api.github.com/graphql").reply(200, data_org);
 
     let repo = await fetchRepo("alvar3zjos3", "convoychat");
@@ -60,7 +60,7 @@ describe("Test fetchRepo", () => {
     });
   });
 
-  it("should throw error if user is found but repo is null", async () => {
+  it("debe lanzar un error if user is found but repo is null", async () => {
     mock
       .onPost("https://api.github.com/graphql")
       .reply(200, { data: { user: { repository: null }, organization: null } });
@@ -70,7 +70,7 @@ describe("Test fetchRepo", () => {
     );
   });
 
-  it("should throw error if org is found but repo is null", async () => {
+  it("debe lanzar un error if org is found but repo is null", async () => {
     mock
       .onPost("https://api.github.com/graphql")
       .reply(200, { data: { user: null, organization: { repository: null } } });
@@ -80,7 +80,7 @@ describe("Test fetchRepo", () => {
     );
   });
 
-  it("should throw error if both user & org data not found", async () => {
+  it("debe lanzar un error if both user & org data not found", async () => {
     mock
       .onPost("https://api.github.com/graphql")
       .reply(200, { data: { user: null, organization: null } });
@@ -90,7 +90,7 @@ describe("Test fetchRepo", () => {
     );
   });
 
-  it("should throw error if repository is private", async () => {
+  it("debe lanzar un error if repository is private", async () => {
     mock.onPost("https://api.github.com/graphql").reply(200, {
       data: {
         user: { repository: { ...data_repo, isPrivate: true } },

@@ -70,7 +70,7 @@ afterEach(() => {
   mock.reset();
 });
 
-describe("Test /api/status/pat-info", () => {
+describe("Prueba de /api/status/pat-info", () => {
   beforeAll(() => {
     // reset patenv first so that dotenv doesn't populate them with local envs
     process.env = {};
@@ -80,7 +80,7 @@ describe("Test /api/status/pat-info", () => {
     process.env.PAT_4 = "testPAT4";
   });
 
-  it("should return only 'validPATs' if all PATs are valid", async () => {
+  it("debe devolver only 'validPATs' if all PATs are valid", async () => {
     mock
       .onPost("https://api.github.com/graphql")
       .replyOnce(200, rate_limit_error)
@@ -128,7 +128,7 @@ describe("Test /api/status/pat-info", () => {
     );
   });
 
-  it("should return `errorPATs` if a PAT causes an error to be thrown", async () => {
+  it("debe devolver `errorPATs` if a PAT causes an error to be thrown", async () => {
     mock
       .onPost("https://api.github.com/graphql")
       .replyOnce(200, other_error)
@@ -178,7 +178,7 @@ describe("Test /api/status/pat-info", () => {
     );
   });
 
-  it("should return `expiredPaths` if a PAT returns a 'Bad credentials' error", async () => {
+  it("debe devolver `expiredPaths` if a PAT returns a 'Bad credentials' error", async () => {
     mock
       .onPost("https://api.github.com/graphql")
       .replyOnce(404, bad_credentials_error)
@@ -224,7 +224,7 @@ describe("Test /api/status/pat-info", () => {
     );
   });
 
-  it("should throw an error if something goes wrong", async () => {
+  it("debe lanzar an error if something goes wrong", async () => {
     mock.onPost("https://api.github.com/graphql").networkError();
 
     const { req, res } = faker({}, {});
@@ -237,7 +237,7 @@ describe("Test /api/status/pat-info", () => {
     expect(res.send).toHaveBeenCalledWith("Algo salió mal: Network Error");
   });
 
-  it("should have proper cache when no error is thrown", async () => {
+  it("debe tener proper cache when no error is thrown", async () => {
     mock.onPost("https://api.github.com/graphql").reply(200, successData);
 
     const { req, res } = faker({}, {});
@@ -249,7 +249,7 @@ describe("Test /api/status/pat-info", () => {
     ]);
   });
 
-  it("should have proper cache when error is thrown", async () => {
+  it("debe tener proper cache when error is thrown", async () => {
     mock.reset();
     mock.onPost("https://api.github.com/graphql").networkError();
 

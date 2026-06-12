@@ -22,7 +22,7 @@ const SECONDARY_ERROR_MESSAGES = {
 };
 
 /**
- * Clase de error personalizado para manejar errores de GRS personalizados.
+ * Clase de error personalizado para manejar errores de Dev Readme Stats.
  */
 class CustomError extends Error {
   /**

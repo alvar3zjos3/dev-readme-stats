@@ -1,4 +1,4 @@
-name: Update supported languages
+name: Actualizar idiomas soportados
 on:
   schedule:
     #        ┌───────────── minute (0 - 59)
@@ -18,7 +18,7 @@ permissions:
 jobs:
   updateLanguages:
     if: github.repository == 'alvar3zjos3/dev-readme-stats'
-    name: Update supported languages
+    name: Actualizar idiomas soportados
     runs-on: ubuntu-latest
 
     permissions:

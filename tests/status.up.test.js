@@ -41,14 +41,14 @@ const bad_credentials_error = {
 
 const shields_up = {
   schemaVersion: 1,
-  label: "Public Instance",
+  label: "Instancia pública",
   isError: true,
   message: "up",
   color: "brightgreen",
 };
 const shields_down = {
   schemaVersion: 1,
-  label: "Public Instance",
+  label: "Instancia pública",
   isError: true,
   message: "down",
   color: "red",
@@ -58,8 +58,8 @@ afterEach(() => {
   mock.reset();
 });
 
-describe("Test /api/status/up", () => {
-  it("should return `true` if request was successful", async () => {
+describe("Prueba de /api/status/up", () => {
+  it("debe devolver `true` if request was successful", async () => {
     mock.onPost("https://api.github.com/graphql").replyOnce(200, successData);
 
     const { req, res } = faker({}, {});
@@ -72,7 +72,7 @@ describe("Test /api/status/up", () => {
     expect(res.send).toHaveBeenCalledWith(true);
   });
 
-  it("should return `false` if all PATs are rate limited", async () => {
+  it("debe devolver `false` if all PATs are rate limited", async () => {
     mock.onPost("https://api.github.com/graphql").reply(200, rate_limit_error);
 
     const { req, res } = faker({}, {});
@@ -85,7 +85,7 @@ describe("Test /api/status/up", () => {
     expect(res.send).toHaveBeenCalledWith(false);
   });
 
-  it("should return JSON `true` if request was successful and type='json'", async () => {
+  it("debe devolver JSON `true` if request was successful and type='json'", async () => {
     mock.onPost("https://api.github.com/graphql").replyOnce(200, successData);
 
     const { req, res } = faker({ type: "json" }, {});
@@ -98,7 +98,7 @@ describe("Test /api/status/up", () => {
     expect(res.send).toHaveBeenCalledWith({ up: true });
   });
 
-  it("should return JSON `false` if all PATs are rate limited and type='json'", async () => {
+  it("debe devolver JSON `false` if all PATs are rate limited and type='json'", async () => {
     mock.onPost("https://api.github.com/graphql").reply(200, rate_limit_error);
 
     const { req, res } = faker({ type: "json" }, {});
@@ -111,7 +111,7 @@ describe("Test /api/status/up", () => {
     expect(res.send).toHaveBeenCalledWith({ up: false });
   });
 
-  it("should return UP shields.io config if request was successful and type='shields'", async () => {
+  it("debe devolver UP shields.io config if request was successful and type='shields'", async () => {
     mock.onPost("https://api.github.com/graphql").replyOnce(200, successData);
 
     const { req, res } = faker({ type: "shields" }, {});
@@ -124,7 +124,7 @@ describe("Test /api/status/up", () => {
     expect(res.send).toHaveBeenCalledWith(shields_up);
   });
 
-  it("should return DOWN shields.io config if all PATs are rate limited and type='shields'", async () => {
+  it("debe devolver DOWN shields.io config if all PATs are rate limited and type='shields'", async () => {
     mock.onPost("https://api.github.com/graphql").reply(200, rate_limit_error);
 
     const { req, res } = faker({ type: "shields" }, {});
@@ -137,7 +137,7 @@ describe("Test /api/status/up", () => {
     expect(res.send).toHaveBeenCalledWith(shields_down);
   });
 
-  it("should return `true` if the first PAT is rate limited but the second PATs works", async () => {
+  it("debe devolver `true` if the first PAT is rate limited but the second PATs works", async () => {
     mock
       .onPost("https://api.github.com/graphql")
       .replyOnce(200, rate_limit_error)
@@ -154,7 +154,7 @@ describe("Test /api/status/up", () => {
     expect(res.send).toHaveBeenCalledWith(true);
   });
 
-  it("should return `true` if the first PAT has 'Bad credentials' but the second PAT works", async () => {
+  it("debe devolver `true` if the first PAT has 'Bad credentials' but the second PAT works", async () => {
     mock
       .onPost("https://api.github.com/graphql")
       .replyOnce(404, bad_credentials_error)
@@ -171,7 +171,7 @@ describe("Test /api/status/up", () => {
     expect(res.send).toHaveBeenCalledWith(true);
   });
 
-  it("should return `false` if all pats have 'Bad credentials'", async () => {
+  it("debe devolver `false` if all pats have 'Bad credentials'", async () => {
     mock
       .onPost("https://api.github.com/graphql")
       .reply(404, bad_credentials_error);
@@ -186,7 +186,7 @@ describe("Test /api/status/up", () => {
     expect(res.send).toHaveBeenCalledWith(false);
   });
 
-  it("should throw an error if the request fails", async () => {
+  it("debe lanzar an error if the request fails", async () => {
     mock.onPost("https://api.github.com/graphql").networkError();
 
     const { req, res } = faker({}, {});
@@ -199,7 +199,7 @@ describe("Test /api/status/up", () => {
     expect(res.send).toHaveBeenCalledWith(false);
   });
 
-  it("should have proper cache when no error is thrown", async () => {
+  it("debe tener proper cache when no error is thrown", async () => {
     mock.onPost("https://api.github.com/graphql").replyOnce(200, successData);
 
     const { req, res } = faker({}, {});
@@ -211,7 +211,7 @@ describe("Test /api/status/up", () => {
     ]);
   });
 
-  it("should have proper cache when error is thrown", async () => {
+  it("debe tener proper cache when error is thrown", async () => {
     mock.onPost("https://api.github.com/graphql").networkError();
 
     const { req, res } = faker({}, {});

@@ -59,7 +59,7 @@ const uptimeFetcher = (variables, token) => {
 const shieldsUptimeBadge = (up) => {
   const schemaVersion = 1;
   const isError = true;
-  const label = "Public Instance";
+  const label = "Instancia pública";
   const message = up ? "up" : "down";
   const color = up ? "brightgreen" : "red";
   return {

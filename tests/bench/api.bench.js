@@ -69,7 +69,7 @@ const faker = (query, data) => {
   return { req, res };
 };
 
-it("test /api", async () => {
+it("probar /api", async () => {
   await runAndLogStats("test /api", async () => {
     const { req, res } = faker({}, data_stats);
 

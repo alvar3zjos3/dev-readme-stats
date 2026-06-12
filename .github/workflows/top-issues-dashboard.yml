@@ -1,4 +1,4 @@
-name: Update top issues dashboard
+name: Actualizar panel de issues principales
 on:
   schedule:
     #        ┌───────────── minute (0 - 59)

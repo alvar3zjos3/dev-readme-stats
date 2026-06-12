@@ -103,7 +103,7 @@ const wakaTimeData = {
 };
 
 describe("WakaTime fetcher", () => {
-  it("should fetch correct WakaTime data", async () => {
+  it("debe obtener correct WakaTime data", async () => {
     const username = "alvar3zjos3";
     mock
       .onGet(
@@ -115,7 +115,7 @@ describe("WakaTime fetcher", () => {
     expect(repo).toStrictEqual(wakaTimeData.data);
   });
 
-  it("should throw error if username param missing", async () => {
+  it("debe lanzar un error if username param missing", async () => {
     mock.onGet(/\/https:\/\/wakatime\.com\/api/).reply(404, wakaTimeData);
 
     await expect(fetchWakatimeStats("noone")).rejects.toThrow(
@@ -123,7 +123,7 @@ describe("WakaTime fetcher", () => {
     );
   });
 
-  it("should throw error if username is not found", async () => {
+  it("debe lanzar un error if username is not found", async () => {
     mock.onGet(/\/https:\/\/wakatime\.com\/api/).reply(404, wakaTimeData);
 
     await expect(fetchWakatimeStats({ username: "noone" })).rejects.toThrow(

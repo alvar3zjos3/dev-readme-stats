@@ -61,7 +61,7 @@ const error = {
 };
 
 describe("FetchTopLanguages", () => {
-  it("should fetch correct language data while using the new calculation", async () => {
+  it("debe obtener correct language data while using the new calculation", async () => {
     mock.onPost("https://api.github.com/graphql").reply(200, data_langs);
 
     let repo = await fetchTopLanguages("alvar3zjos3", [], 0.5, 0.5);
@@ -81,7 +81,7 @@ describe("FetchTopLanguages", () => {
     });
   });
 
-  it("should fetch correct language data while excluding the 'test-repo-1' repository", async () => {
+  it("debe obtener correct language data while excluding the 'test-repo-1' repository", async () => {
     mock.onPost("https://api.github.com/graphql").reply(200, data_langs);
 
     let repo = await fetchTopLanguages("alvar3zjos3", ["test-repo-1"]);
@@ -101,7 +101,7 @@ describe("FetchTopLanguages", () => {
     });
   });
 
-  it("should fetch correct language data while using the old calculation", async () => {
+  it("debe obtener correct language data while using the old calculation", async () => {
     mock.onPost("https://api.github.com/graphql").reply(200, data_langs);
 
     let repo = await fetchTopLanguages("alvar3zjos3", [], 1, 0);
@@ -121,7 +121,7 @@ describe("FetchTopLanguages", () => {
     });
   });
 
-  it("should rank languages by the number of repositories they appear in", async () => {
+  it("debe rank languages by the number of repositories they appear in", async () => {
     mock.onPost("https://api.github.com/graphql").reply(200, data_langs);
 
     let repo = await fetchTopLanguages("alvar3zjos3", [], 0, 1);
@@ -141,7 +141,7 @@ describe("FetchTopLanguages", () => {
     });
   });
 
-  it("should throw specific error when user not found", async () => {
+  it("debe lanzar un error específico error when user not found", async () => {
     mock.onPost("https://api.github.com/graphql").reply(200, error);
 
     await expect(fetchTopLanguages("alvar3zjos3")).rejects.toThrow(
@@ -149,7 +149,7 @@ describe("FetchTopLanguages", () => {
     );
   });
 
-  it("should throw other errors with their message", async () => {
+  it("debe lanzar other errors with their message", async () => {
     mock.onPost("https://api.github.com/graphql").reply(200, {
       errors: [{ message: "Some test GraphQL error" }],
     });
@@ -159,7 +159,7 @@ describe("FetchTopLanguages", () => {
     );
   });
 
-  it("should throw error with specific message when error does not contain message property", async () => {
+  it("debe lanzar un error with specific message when error does not contain message property", async () => {
     mock.onPost("https://api.github.com/graphql").reply(200, {
       errors: [{ type: "TEST" }],
     });

@@ -49,29 +49,29 @@ const fetcherFailWithMessageBasedRateLimitErr = jest.fn(
   },
 );
 
-describe("Test Retryer", () => {
-  it("retryer should return value and have zero retries on first try", async () => {
+describe("Prueba de Retryer", () => {
+  it("el reintentador debe devolver value and have zero retries on first try", async () => {
     let res = await retryer(fetcher, {});
 
     expect(fetcher).toHaveBeenCalledTimes(1);
     expect(res).toStrictEqual({ data: "ok" });
   });
 
-  it("retryer should return value and have 2 retries", async () => {
+  it("el reintentador debe devolver value and have 2 retries", async () => {
     let res = await retryer(fetcherFailOnSecondTry, {});
 
     expect(fetcherFailOnSecondTry).toHaveBeenCalledTimes(2);
     expect(res).toStrictEqual({ data: "ok" });
   });
 
-  it("retryer should return value and have 2 retries with message based rate limit error", async () => {
+  it("el reintentador debe devolver value and have 2 retries with message based rate limit error", async () => {
     let res = await retryer(fetcherFailWithMessageBasedRateLimitErr, {});
 
     expect(fetcherFailWithMessageBasedRateLimitErr).toHaveBeenCalledTimes(2);
     expect(res).toStrictEqual({ data: "ok" });
   });
 
-  it("retryer should throw specific error if maximum retries reached", async () => {
+  it("el reintentador debe lanzar un error específico error if maximum retries reached", async () => {
     try {
       await retryer(fetcherFail, {});
     } catch (err) {

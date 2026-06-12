@@ -34,7 +34,7 @@ const gist_data = {
 const mock = new MockAdapter(axios);
 mock.onPost("https://api.github.com/graphql").reply(200, gist_data);
 
-it("test /api/gist", async () => {
+it("probar /api/gist", async () => {
   await runAndLogStats("test /api/gist", async () => {
     const req = {
       query: {

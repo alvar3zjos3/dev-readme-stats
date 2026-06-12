@@ -1,4 +1,4 @@
-name: Generate Theme Readme
+name: Generar documentación de temas
 on:
   push:
     branches:

@@ -9,8 +9,8 @@ import {
   dateDiff,
 } from "../src/common/ops.js";
 
-describe("Test ops.js", () => {
-  it("should test parseBoolean", () => {
+describe("Prueba de ops.js", () => {
+  it("debe probar parseBoolean", () => {
     expect(parseBoolean(true)).toBe(true);
     expect(parseBoolean(false)).toBe(false);
 
@@ -28,7 +28,7 @@ describe("Test ops.js", () => {
     expect(parseBoolean(undefined)).toBe(undefined);
   });
 
-  it("should test parseArray", () => {
+  it("debe probar parseArray", () => {
     expect(parseArray("a,b,c")).toEqual(["a", "b", "c"]);
     expect(parseArray("a, b, c")).toEqual(["a", " b", " c"]); // preserves spaces
     expect(parseArray("")).toEqual([]);
@@ -36,7 +36,7 @@ describe("Test ops.js", () => {
     expect(parseArray(undefined)).toEqual([]);
   });
 
-  it("should test clampValue", () => {
+  it("debe probar clampValue", () => {
     expect(clampValue(5, 1, 10)).toBe(5);
     expect(clampValue(0, 1, 10)).toBe(1);
     expect(clampValue(15, 1, 10)).toBe(10);
@@ -51,18 +51,18 @@ describe("Test ops.js", () => {
     expect(clampValue(NaN, 2, 5)).toBe(2);
   });
 
-  it("should test lowercaseTrim", () => {
+  it("debe probar lowercaseTrim", () => {
     expect(lowercaseTrim("  Hello World  ")).toBe("hello world");
     expect(lowercaseTrim("already lower")).toBe("already lower");
   });
 
-  it("should test chunkArray", () => {
+  it("debe probar chunkArray", () => {
     expect(chunkArray([1, 2, 3, 4, 5], 2)).toEqual([[1, 2], [3, 4], [5]]);
     expect(chunkArray([1, 2, 3, 4, 5], 1)).toEqual([[1], [2], [3], [4], [5]]);
     expect(chunkArray([1, 2, 3, 4, 5], 10)).toEqual([[1, 2, 3, 4, 5]]);
   });
 
-  it("should test parseEmojis", () => {
+  it("debe probar parseEmojis", () => {
     // unknown emoji name is stripped
     expect(parseEmojis("Hello :nonexistent:")).toBe("Hello ");
     // common emoji names should be replaced (at least token removed)
@@ -76,7 +76,7 @@ describe("Test ops.js", () => {
     expect(() => parseEmojis()).toThrow(/parseEmoji/);
   });
 
-  it("should test dateDiff", () => {
+  it("debe probar dateDiff", () => {
     const a = new Date("2020-01-01T00:10:00Z");
     const b = new Date("2020-01-01T00:00:00Z");
     expect(dateDiff(a, b)).toBe(10);

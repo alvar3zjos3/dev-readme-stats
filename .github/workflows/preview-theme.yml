@@ -1,4 +1,4 @@
-name: Theme preview
+name: Vista previa de temas
 on:
   # Temporary disabled due to paused themes addition.
   # See: https://github.com/alvar3zjos3/dev-readme-stats/issues/3404

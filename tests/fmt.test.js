@@ -5,8 +5,8 @@ import {
   wrapTextMultiline,
 } from "../src/common/fmt.js";
 
-describe("Test fmt.js", () => {
-  it("kFormatter: should format numbers correctly by default", () => {
+describe("Prueba de fmt.js", () => {
+  it("kFormatter: debe formatear numbers correctly by default", () => {
     expect(kFormatter(1)).toBe(1);
     expect(kFormatter(-1)).toBe(-1);
     expect(kFormatter(500)).toBe(500);
@@ -18,7 +18,7 @@ describe("Test fmt.js", () => {
     expect(kFormatter(9900000)).toBe("9900k");
   });
 
-  it("kFormatter: should format numbers correctly with 0 decimal precision", () => {
+  it("kFormatter: debe formatear numbers correctly with 0 decimal precision", () => {
     expect(kFormatter(1, 0)).toBe("0k");
     expect(kFormatter(-1, 0)).toBe("-0k");
     expect(kFormatter(500, 0)).toBe("1k");
@@ -31,7 +31,7 @@ describe("Test fmt.js", () => {
     expect(kFormatter(9900000, 0)).toBe("9900k");
   });
 
-  it("kFormatter: should format numbers correctly with 1 decimal precision", () => {
+  it("kFormatter: debe formatear numbers correctly with 1 decimal precision", () => {
     expect(kFormatter(1, 1)).toBe("0.0k");
     expect(kFormatter(-1, 1)).toBe("-0.0k");
     expect(kFormatter(500, 1)).toBe("0.5k");
@@ -43,7 +43,7 @@ describe("Test fmt.js", () => {
     expect(kFormatter(9900000, 1)).toBe("9900.0k");
   });
 
-  it("kFormatter: should format numbers correctly with 2 decimal precision", () => {
+  it("kFormatter: debe formatear numbers correctly with 2 decimal precision", () => {
     expect(kFormatter(1, 2)).toBe("0.00k");
     expect(kFormatter(-1, 2)).toBe("-0.00k");
     expect(kFormatter(500, 2)).toBe("0.50k");
@@ -55,7 +55,7 @@ describe("Test fmt.js", () => {
     expect(kFormatter(9900000, 2)).toBe("9900.00k");
   });
 
-  it("formatBytes: should return expected values", () => {
+  it("formatBytes: debe devolver expected values", () => {
     expect(formatBytes(0)).toBe("0 B");
     expect(formatBytes(100)).toBe("100.0 B");
     expect(formatBytes(1024)).toBe("1.0 KB");
@@ -69,14 +69,14 @@ describe("Test fmt.js", () => {
     expect(formatBytes(123.4 * 1024)).toBe("123.4 KB");
   });
 
-  it("wrapTextMultiline: should not wrap small texts", () => {
+  it("wrapTextMultiline: debe no envolver small texts", () => {
     {
       let multiLineText = wrapTextMultiline("Small text should not wrap");
       expect(multiLineText).toEqual(["Small text should not wrap"]);
     }
   });
 
-  it("wrapTextMultiline: should wrap large texts", () => {
+  it("wrapTextMultiline: debe envolver large texts", () => {
     let multiLineText = wrapTextMultiline(
       "Hello world long long long text",
       20,
@@ -85,7 +85,7 @@ describe("Test fmt.js", () => {
     expect(multiLineText).toEqual(["Hello world long", "long long text"]);
   });
 
-  it("wrapTextMultiline: should wrap large texts and limit max lines", () => {
+  it("wrapTextMultiline: debe envolver large texts and limit max lines", () => {
     let multiLineText = wrapTextMultiline(
       "Hello world long long long text",
       10,
@@ -94,7 +94,7 @@ describe("Test fmt.js", () => {
     expect(multiLineText).toEqual(["Hello", "world long..."]);
   });
 
-  it("wrapTextMultiline: should wrap chinese by punctuation", () => {
+  it("wrapTextMultiline: debe envolver chinese by punctuation", () => {
     let multiLineText = wrapTextMultiline(
       "专门为刚开始刷题的同学准备的算法基地，没有最细只有更细，立志用动画将晦涩难懂的算法说的通俗易懂！",
     );

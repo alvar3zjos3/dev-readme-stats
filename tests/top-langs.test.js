@@ -74,8 +74,8 @@ afterEach(() => {
   mock.reset();
 });
 
-describe("Test /api/top-langs", () => {
-  it("should test the request", async () => {
+describe("Prueba de /api/top-langs", () => {
+  it("debe procesar la solicitud", async () => {
     const req = {
       query: {
         username: "alvar3zjos3",
@@ -93,7 +93,7 @@ describe("Test /api/top-langs", () => {
     expect(res.send).toHaveBeenCalledWith(renderTopLanguages(langs));
   });
 
-  it("should work with the query options", async () => {
+  it("debe funcionar con the query options", async () => {
     const req = {
       query: {
         username: "alvar3zjos3",
@@ -126,7 +126,7 @@ describe("Test /api/top-langs", () => {
     );
   });
 
-  it("should render error card on user data fetch error", async () => {
+  it("debe renderizar error card on user data fetch error", async () => {
     const req = {
       query: {
         username: "alvar3zjos3",
@@ -150,7 +150,7 @@ describe("Test /api/top-langs", () => {
     );
   });
 
-  it("should render error card on incorrect layout input", async () => {
+  it("debe renderizar error card on incorrect layout input", async () => {
     const req = {
       query: {
         username: "alvar3zjos3",
@@ -174,7 +174,7 @@ describe("Test /api/top-langs", () => {
     );
   });
 
-  it("should render error card if username in blacklist", async () => {
+  it("debe renderizar error card if username in blacklist", async () => {
     const req = {
       query: {
         username: "renovate-bot",
@@ -198,7 +198,7 @@ describe("Test /api/top-langs", () => {
     );
   });
 
-  it("should render error card if wrong locale provided", async () => {
+  it("debe renderizar error card if wrong locale provided", async () => {
     const req = {
       query: {
         username: "alvar3zjos3",
@@ -222,7 +222,7 @@ describe("Test /api/top-langs", () => {
     );
   });
 
-  it("should have proper cache", async () => {
+  it("debe tener proper cache", async () => {
     const req = {
       query: {
         username: "alvar3zjos3",

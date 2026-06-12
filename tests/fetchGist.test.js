@@ -74,8 +74,8 @@ afterEach(() => {
   mock.reset();
 });
 
-describe("Test fetchGist", () => {
-  it("should fetch gist correctly", async () => {
+describe("Prueba de fetchGist", () => {
+  it("debe obtener gist correctly", async () => {
     mock.onPost("https://api.github.com/graphql").reply(200, gist_data);
 
     let gist = await fetchGist("bbfce31e0217a3689c8d961a356cb10d");
@@ -91,7 +91,7 @@ describe("Test fetchGist", () => {
     });
   });
 
-  it("should throw correct error if gist not found", async () => {
+  it("debe lanzar el error correcto error if gist not found", async () => {
     mock
       .onPost("https://api.github.com/graphql")
       .reply(200, gist_not_found_data);
@@ -101,7 +101,7 @@ describe("Test fetchGist", () => {
     );
   });
 
-  it("should throw error if reaponse contains them", async () => {
+  it("debe lanzar un error if reaponse contains them", async () => {
     mock.onPost("https://api.github.com/graphql").reply(200, gist_errors_data);
 
     await expect(fetchGist("bbfce31e0217a3689c8d961a356cb10d")).rejects.toThrow(
@@ -109,7 +109,7 @@ describe("Test fetchGist", () => {
     );
   });
 
-  it("should throw error if id is not provided", async () => {
+  it("debe lanzar un error if id is not provided", async () => {
     await expect(fetchGist()).rejects.toThrow(
       'Parámetros faltantes "id" asegúrate de pasar los parámetros en la URL',
     );

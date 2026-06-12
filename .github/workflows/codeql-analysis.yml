@@ -1,4 +1,4 @@
-name: "Static code analysis workflow (CodeQL)"
+name: Análisis estático de código (CodeQL)
 
 on:
   push:

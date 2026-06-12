@@ -1,5 +1,5 @@
 {
-    "name": "GitHub Readme Stats Dev",
+    "name": "Dev Readme Stats",
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
         "ghcr.io/devcontainers/features/node:2": { "version": "22" }
@@ -10,13 +10,9 @@
     },
     "appPort": [],
 
-    // Use 'postCreateCommand' to run commands after the container is created.
     "postCreateCommand": "npm install -g vercel",
-
-    // Use 'postStartCommand' to run commands after the container is started.
     "postStartCommand": "hostname dev && npm install",
 
-    // Configure tool-specific properties.
     "customizations": {
         "vscode": {
             "extensions": [

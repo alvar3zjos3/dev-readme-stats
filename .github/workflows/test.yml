@@ -1,4 +1,4 @@
-name: Test
+name: Pruebas
 on:
   push:
     branches:
@@ -11,7 +11,7 @@ permissions: read-all
 
 jobs:
   build:
-    name: Perform tests
+    name: Ejecutar pruebas
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -20,28 +20,28 @@ jobs:
     steps:
       - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
 
-      - name: Setup Node
+      - name: Configurar Node.js
         uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
 
-      - name: Install & Test
+      - name: Instalar y probar
         run: |
           npm ci
           npm run test
 
-      - name: Run ESLint
+      - name: Ejecutar ESLint
         run: |
           npm run lint
 
-      - name: Run bench tests
+      - name: Ejecutar pruebas de rendimiento
         run: |
           npm run bench
 
-      - name: Run Prettier
+      - name: Ejecutar Prettier
         run: |
           npm run format:check
 
-      - name: Code Coverage
+      - name: Cobertura de código
         uses: codecov/codecov-action@e79a6962e0d4c0c17b229090214935d2e33f8354 # v6.0.1

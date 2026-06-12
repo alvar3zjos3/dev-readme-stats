@@ -10,8 +10,8 @@ import { RequestError } from "@octokit/request-error";
 import { getGithubToken, getRepoInfo } from "./helpers.js";
 
 const CLOSING_COMMENT = `
-	\rThis theme PR has been automatically closed due to inactivity. Please reopen it if you want to continue working on it.\
-	\rThank you for your contributions.
+	\rEste PR de tema se ha cerrado automáticamente por inactividad. Reábrelo si deseas continuar trabajando en él.\
+	\rGracias por tus contribuciones.
 `;
 const REVIEWER = "github-actions[bot]";
 
@@ -80,7 +80,9 @@ export const fetchOpenPRs = async (octokit, user, repo, reviewer) => {
       endCursor = repository.open_prs.pageInfo.endCursor;
     } catch (error) {
       if (error instanceof RequestError) {
-        setFailed(`Could not retrieve top PRs using GraphQl: ${error.message}`);
+        setFailed(
+          `No se pudieron recuperar los PRs con GraphQL: ${error.message}`,
+        );
       }
       throw error;
     }

@@ -5,8 +5,8 @@ import { queryByTestId } from "@testing-library/dom";
 import "@testing-library/jest-dom/jest-globals";
 import { renderError } from "../src/common/render.js";
 
-describe("Test render.js", () => {
-  it("should test renderError", () => {
+describe("Prueba de render.js", () => {
+  it("debe probar renderError", () => {
     document.body.innerHTML = renderError({ message: "Algo salió mal" });
     expect(
       queryByTestId(document.body, "message")?.children[0],

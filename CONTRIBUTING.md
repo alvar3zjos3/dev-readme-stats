@@ -1,94 +1,99 @@
-# Contribuyendo a [dev-readme-stats](https://github.com/alvar3zjos3/dev-readme-stats)
+# Contribuir a [dev-readme-stats](https://github.com/alvar3zjos3/dev-readme-stats)
 
-¡Amamos tu aporte! Queremos hacer que contribuir a este proyecto sea tan fácil y transparente como posible, ya sea:
+¡Agradecemos tu aporte! Queremos que contribuir a este proyecto sea lo más sencillo y transparente posible, ya sea:
 
--   Reportando [un problema](https://github.com/https://github.com/alvar3zjos3/dev-readme-stats/issues/new?assignees=&labels=bug&template=bug_report.yml).
--   [Discutiendo](https://github.com/https://github.com/alvar3zjos3/dev-readme-stats/discussions) el estado actual del código.
--   Enviando [una corrección](https://github.com/https://github.com/alvar3zjos3/dev-readme-stats/compare).
--   Proponiendo [nuevas funciones](https://github.com/https://github.com/alvar3zjos3/dev-readme-stats/issues/new?assignees=&labels=enhancement&template=feature_request.yml).
--   Volviéndose un mantenedor.
-
-## Todos los Cambios Ocurren a Través de Pull Requests
-
-Los pull requests son la mejor manera de proponer cambios. Activamente damos la bienvenida a tus pull requests:
-
-1.  Haz fork del repositorio y crea tu rama desde `master`.
-2.  Si has agregado código que debe ser probado, agrega algunas pruebas de ejemplo.
-3.  Si has cambiado APIs, actualiza la documentación.
-4.  ¡Envía ese pull request!
-
-## Desarrollo Local
-
-Para ejecutar & probar github-readme-stats, necesitas seguir unos pocos pasos simples:-
-_(asegúrate de que ya tengas una cuenta [Vercel](https://vercel.com/))_
-
-1.  Instala [Vercel CLI](https://vercel.com/download).
-2.  Haz fork del repositorio y clona el código a tu máquina local.
-3.  Ejecuta `npm install` en la raíz del repositorio.
-4.  Ejecuta el comando `vercel` en la raíz y sigue los pasos allí.
-5.  Ejecuta el comando `vercel dev` para iniciar un servidor de desarrollo en <http://localhost:3000>.
-6.  Crea un archivo `.env` en la raíz y agrega la siguiente línea `NODE_ENV=development`, esto deshabilitará la caché para el desarrollo local.
-7.  Las tarjetas estarán disponibles desde este punto final local (es decir, `http://localhost:3000/api?username=alvar3zjos3`).
+- Reportando [un problema](https://github.com/alvar3zjos3/dev-readme-stats/issues/new?assignees=&labels=bug&template=bug_report.yml).
+- [Discutiendo](https://github.com/alvar3zjos3/dev-readme-stats/discussions) el estado actual del código.
+- Enviando [una corrección](https://github.com/alvar3zjos3/dev-readme-stats/compare).
+- Proponiendo [nuevas funciones](https://github.com/alvar3zjos3/dev-readme-stats/issues/new?assignees=&labels=enhancement&template=feature_request.yml).
+- Convirtiéndote en mantenedor.
 
 > [!NOTE]
-> Puedes depurar el código del paquete en [Vscode](https://code.visualstudio.com/) usando la opción de depuración [Node.js: Attach to process](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_setting-up-an-attach-configuration). También puedes depurar cualquier prueba usando la [extensión VSCode Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest). Para más información, ve https://github.com/jest-community/vscode-jest/issues/912.
+> Este proyecto es un fork localizado de [github-readme-stats](https://github.com/anuraghazra/github-readme-stats). Consulta el archivo [LICENSE](./LICENSE) para la atribución correspondiente.
 
-## Contribución de Temas
+## Todos los cambios se realizan mediante pull requests
 
-Actualmente hemos pausado la adición de nuevos temas para disminuir los esfuerzos de mantenimiento. Todos los pull requests relacionados con nuevos temas serán cerrados.
+Los pull requests son la mejor forma de proponer cambios. Damos la bienvenida a tus PR:
+
+1. Haz fork del repositorio y crea tu rama desde `master`.
+2. Si añades código que debe probarse, incluye pruebas de ejemplo.
+3. Si cambias las APIs, actualiza la documentación.
+4. Envía el pull request.
+
+## Desarrollo local
+
+Para ejecutar y probar **dev-readme-stats**, sigue estos pasos (asegúrate de tener una cuenta en [Vercel](https://vercel.com/)):
+
+1. Instala [Vercel CLI](https://vercel.com/download).
+2. Haz fork del repositorio y clona el código en tu máquina local.
+3. Ejecuta `npm install` en la raíz del repositorio.
+4. Ejecuta `vercel` en la raíz y sigue los pasos del asistente.
+5. Ejecuta `vercel dev` para iniciar el servidor de desarrollo en <http://localhost:3000>.
+6. Crea un archivo `.env` en la raíz con `NODE_ENV=development` para desactivar la caché en local.
+7. Las tarjetas estarán disponibles en `http://localhost:3000/api?username=alvar3zjos3`.
+
+**Alternativa con Express:**
+
+```bash
+npm install
+node express.js
+```
+
+Las tarjetas estarán en `http://localhost:9000/api?username=alvar3zjos3`.
 
 > [!NOTE]
-> Si estás considerando contribuir tu tema solo porque lo usas personalmente, entonces en lugar de agregarlo a nuestra colección de temas, puedes usar las opciones de [personalización](./readme.md#customization) de la tarjeta.
+> Puedes depurar el código en [VS Code](https://code.visualstudio.com/) con [Node.js: Attach to process](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_setting-up-an-attach-configuration) o depurar pruebas con la [extensión Jest para VS Code](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest).
 
-## Contribución de Traducciones
+## Contribución de temas
 
-Dev Readme Stats soporta múltiples idiomas, si nos falta tu idioma, ¡puedes contribuir! Puedes verificar los idiomas actualmente soportados [aquí](./readme.md#available-locales).
+Actualmente hemos pausado la adición de nuevos temas para reducir el esfuerzo de mantenimiento. Los pull requests que añadan temas nuevos serán cerrados.
 
-Para contribuir con tu idioma necesitas editar el archivo [src/translations.js](./src/translations.js) y agregar nueva propiedad a cada objeto donde la clave es el código de lenguaje en [estándar ISO 639-1](https://www.andiamo.co.uk/resources/iso-language-codes/) y el valor es la cadena traducida.
+> [!NOTE]
+> Si solo necesitas un tema para uso personal, usa las opciones de [personalización](./readme.md#personalización) en lugar de añadirlo a la colección del proyecto.
 
-## Cualquier contribución que hagas estará bajo la Licencia MIT de Software
+## Contribución de traducciones
 
-En resumen, cuando envías cambios, se entiende que tus aportes están bajo la misma [Licencia MIT](https://choosealicense.com/licenses/mit/) que cubre el proyecto. No dudes en contactar a los mantenedores si eso es una preocupación.
+Dev Readme Stats soporta múltiples idiomas. Si falta el tuyo, puedes contribuir. Consulta los idiomas soportados en la [documentación](./readme.md#idiomas-disponibles).
 
-## Reporta problemas/bugs usando GitHub's [issues](https://github.com/https://github.com/alvar3zjos3/dev-readme-stats/issues)
+Para añadir un idioma, edita [src/translations.js](./src/translations.js) y agrega una propiedad en cada objeto, usando el código ISO 639-1 como clave y la cadena traducida como valor.
 
-Usamos issues de GitHub para rastrear bugs públicos. Reporta un bug abriendo [un nuevo issue](https://github.com/https://github.com/alvar3zjos3/dev-readme-stats/issues/new/choose); ¡es tan fácil!
+## Licencia de las contribuciones
 
-## Preguntas Frecuentes (FAQs)
+Al enviar cambios, aceptas que tus aportes quedan bajo la misma [Licencia MIT](https://choosealicense.com/licenses/mit/) del proyecto. Contacta a los mantenedores si tienes dudas al respecto.
+
+## Reportar problemas con GitHub Issues
+
+Usamos GitHub Issues para rastrear errores públicos. Abre [un nuevo issue](https://github.com/alvar3zjos3/dev-readme-stats/issues/new/choose) para reportar un bug.
+
+## Preguntas frecuentes
 
 **P:** ¿Cómo ocultar Jupyter Notebook?
 
-> **R:** &hide=jupyter%20notebook
+> **R:** `&hide=jupyter%20notebook`
 
-**P:** No pude averiguar cómo desplegar en mi propia instancia de Vercel
+**P:** No logré desplegar mi propia instancia en Vercel
 
-> **R:**
->
-> -   docs: <https://github.com/alvar3zjos3/dev-readme-stats?tab=readme-ov-file#auto-alojado-vercelotro>
+> **R:** Consulta la guía de [auto-alojamiento](./readme.md#auto-alojado-vercelotro).
 
 **P:** ¿Cómo contar estadísticas privadas?
 
-> **R:** Solo podemos contar commits públicos & no podemos acceder a ninguna otra información privada de ningún usuario, por lo que no es posible. La única manera de contar tus estadísticas personales privadas es desplegar en tu propia instancia y usar tu propio PAT (Personal Access Token)
+> **R:** Solo podemos contar commits privados; no tenemos acceso a otra información privada de los usuarios. La única forma es desplegar tu propia instancia y usar tu propio PAT (Personal Access Token).
 
-### Reportes de Bugs
+### Informes de errores
 
-**Grandes Reportes de Bugs** tienden a tener:
+Un buen informe de error suele incluir:
 
--   Un resumen rápido y/o antecedentes
--   Pasos para reproducir
-    -   ¡Sé específico!
-    -   Comparte la captura, si es posible.
-    -   Enlace en vivo de GitHub Readme Stats
--   Lo que realmente sucede
--   Lo que esperabas que sucediera
--   Notas (posiblemente incluyendo por qué crees que esto podría estar ocurriendo o cosas que probaste que no funcionaron)
+- Un resumen breve y contexto
+- Pasos para reproducir (sé específico)
+- Capturas o enlace en vivo de la tarjeta de Dev Readme Stats
+- Qué ocurre realmente
+- Qué esperabas que ocurriera
+- Notas adicionales (hipótesis, pruebas que ya hiciste)
 
-La gente _ama_ los informes detallados de bugs. No estoy ni bromeando.
+### Solicitudes de funcionalidad
 
-### Solicitud de Funcionalidad
+Una buena solicitud de funcionalidad suele incluir:
 
-**Grandes Solicitudes de Funcionalidades** tienden a tener:
-
--   Un resumen rápido de la idea
--   Qué y por qué quieres agregar la funcionalidad específica
--   Contexto adicional como imágenes, enlaces a recursos para implementar la función, etc.
+- Un resumen breve de la idea
+- Qué quieres añadir y por qué
+- Contexto adicional (imágenes, enlaces, referencias de implementación)

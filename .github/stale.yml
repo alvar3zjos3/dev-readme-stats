@@ -1,20 +1,19 @@
-# Number of days of inactivity before an issue becomes stale
+# Días de inactividad antes de marcar un issue como obsoleto
 daysUntilStale: 30
-# Number of days of inactivity before a stale issue is closed
+# Días de inactividad antes de cerrar un issue obsoleto
 daysUntilClose: 7
-# Issues with these labels will never be considered stale
+# Issues con estas etiquetas nunca se considerarán obsoletos
 exemptLabels:
   - feature
   - enhancement
   - help wanted
   - bug
 
-# Label to use when marking an issue as stale
+# Etiqueta al marcar un issue como obsoleto
 staleLabel: stale
-# Comment to post when marking an issue as stale. Set to `false` to disable
+# Comentario al marcar un issue como obsoleto. Usa `false` para desactivarlo
 markComment: >
-  This issue has been automatically marked as stale because it has not had
-  recent activity. It will be closed if no further activity occurs. Thank you
-  for your contributions.
-# Comment to post when closing a stale issue. Set to `false` to disable
+  Este issue se ha marcado automáticamente como obsoleto por falta de actividad
+  reciente. Se cerrará si no hay más actividad. Gracias por tus contribuciones.
+# Comentario al cerrar un issue obsoleto. Usa `false` para desactivarlo
 closeComment: false

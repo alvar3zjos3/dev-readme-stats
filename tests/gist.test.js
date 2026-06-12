@@ -50,8 +50,8 @@ afterEach(() => {
   mock.reset();
 });
 
-describe("Test /api/gist", () => {
-  it("should test the request", async () => {
+describe("Prueba de /api/gist", () => {
+  it("debe procesar la solicitud", async () => {
     const req = {
       query: {
         id: "bbfce31e0217a3689c8d961a356cb10d",
@@ -78,7 +78,7 @@ describe("Test /api/gist", () => {
     );
   });
 
-  it("should get the query options", async () => {
+  it("debe obtener the query options", async () => {
     const req = {
       query: {
         id: "bbfce31e0217a3689c8d961a356cb10d",
@@ -113,7 +113,7 @@ describe("Test /api/gist", () => {
     );
   });
 
-  it("should render error if id is not provided", async () => {
+  it("debe renderizar error if id is not provided", async () => {
     const req = {
       query: {},
     };
@@ -135,7 +135,7 @@ describe("Test /api/gist", () => {
     );
   });
 
-  it("should render error if gist is not found", async () => {
+  it("debe renderizar error if gist is not found", async () => {
     const req = {
       query: {
         id: "bbfce31e0217a3689c8d961a356cb10d",
@@ -157,7 +157,7 @@ describe("Test /api/gist", () => {
     );
   });
 
-  it("should render error if wrong locale is provided", async () => {
+  it("debe renderizar error if wrong locale is provided", async () => {
     const req = {
       query: {
         id: "bbfce31e0217a3689c8d961a356cb10d",
@@ -180,7 +180,7 @@ describe("Test /api/gist", () => {
     );
   });
 
-  it("should have proper cache", async () => {
+  it("debe tener proper cache", async () => {
     const req = {
       query: {
         id: "bbfce31e0217a3689c8d961a356cb10d",

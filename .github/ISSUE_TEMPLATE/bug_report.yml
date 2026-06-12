@@ -1,53 +1,53 @@
-name: Bug report
-description: Create a report to help us improve.
+name: Reporte de error
+description: Crea un informe para ayudarnos a mejorar.
 labels:
   - "bug"
 body:
   - type: markdown
     attributes:
       value: |
-        :warning: PLEASE FIRST READ THE FAQ [(#1770)](https://github.com/alvar3zjos3/dev-readme-stats/discussions/1770) AND COMMON ERROR CODES [(#1772)](https://github.com/alvar3zjos3/dev-readme-stats/issues/1772)!!!
+        :warning: LEE PRIMERO LAS PREGUNTAS FRECUENTES [(#1770)](https://github.com/alvar3zjos3/dev-readme-stats/discussions/1770) Y LOS CÓDIGOS DE ERROR COMUNES [(#1772)](https://github.com/alvar3zjos3/dev-readme-stats/issues/1772).
   - type: textarea
     attributes:
-      label: Describe the bug
-      description: A clear and concise description of what the bug is.
+      label: Describe el error
+      description: Una descripción clara y concisa del problema.
     validations:
       required: true
   - type: textarea
     attributes:
-      label: Expected behavior
+      label: Comportamiento esperado
       description:
-        A clear and concise description of what you expected to happen.
+        Una descripción clara y concisa de lo que esperabas que ocurriera.
   - type: textarea
     attributes:
-      label: Screenshots / Live demo link
-      description: If applicable, add screenshots to help explain your problem.
-      placeholder: Paste the github-readme-stats link as markdown image
+      label: Capturas / enlace de demostración
+      description: Si aplica, añade capturas para explicar el problema.
+      placeholder: Pega el enlace de dev-readme-stats como imagen markdown
   - type: textarea
     attributes:
-      label: Additional context
-      description: Add any other context about the problem here.
+      label: Contexto adicional
+      description: Cualquier otro contexto relevante sobre el problema.
   - type: markdown
     attributes:
       value: |
         ---
-        ### FAQ (Snippet)
+        ### Preguntas frecuentes (extracto)
 
-        Below are some questions that are found in the FAQ. The full FAQ can be found in [#1770](https://github.com/alvar3zjos3/dev-readme-stats/discussions/1770).
+        Algunas preguntas habituales del FAQ. La versión completa está en [#1770](https://github.com/alvar3zjos3/dev-readme-stats/discussions/1770).
 
-        #### Q: My card displays an error
+        #### P: Mi tarjeta muestra un error
 
-        **Ans:** First, check the common error codes (i.e. https://github.com/alvar3zjos3/dev-readme-stats/issues/1772) and existing issues before creating a new one. 
+        **R:** Revisa primero los [códigos de error comunes](https://github.com/alvar3zjos3/dev-readme-stats/issues/1772) y los issues existentes antes de abrir uno nuevo.
 
-        #### Q: How to hide jupyter Notebook?
+        #### P: ¿Cómo ocultar Jupyter Notebook?
 
-        **Ans:** `&hide=jupyter%20notebook`.
+        **R:** `&hide=jupyter%20notebook`.
 
-        #### Q: I could not figure out how to deploy on my own vercel instance
+        #### P: No logré desplegar mi propia instancia en Vercel
 
-        **Ans:** Please check:
-          - Docs: https://github.com/alvar3zjos3/dev-readme-stats/#deploy-on-your-own-vercel-instance
+        **R:** Consulta la documentación:
+          - [Auto-alojamiento en Vercel](https://github.com/alvar3zjos3/dev-readme-stats#auto-alojado-vercelotro)
 
-        #### Q: How to count private stats?
+        #### P: ¿Cómo contar estadísticas privadas?
 
-        **Ans:** We can only count private commits & we cannot access any other private info of any users, so it's impossible. The only way is to deploy on your own instance & use your own PAT (Personal Access Token).
+        **R:** Solo podemos contar commits privados y no tenemos acceso a otra información privada de los usuarios. La única forma es desplegar tu propia instancia y usar tu propio PAT (Personal Access Token).

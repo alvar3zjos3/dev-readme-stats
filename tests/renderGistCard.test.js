@@ -17,8 +17,8 @@ const data = {
   forksCount: 19,
 };
 
-describe("test renderGistCard", () => {
-  it("should render correctly", () => {
+describe("Prueba de renderGistCard", () => {
+  it("debe renderizar correctly", () => {
     document.body.innerHTML = renderGistCard(data);
 
     const [header] = document.getElementsByClassName("header");
@@ -39,13 +39,13 @@ describe("test renderGistCard", () => {
     );
   });
 
-  it("should display username in title if show_owner is true", () => {
+  it("debe display username in title if show_owner is true", () => {
     document.body.innerHTML = renderGistCard(data, { show_owner: true });
     const [header] = document.getElementsByClassName("header");
     expect(header).toHaveTextContent("alvar3zjos3/test");
   });
 
-  it("should trim header if name is too long", () => {
+  it("debe trim header if name is too long", () => {
     document.body.innerHTML = renderGistCard({
       ...data,
       name: "some-really-long-repo-name-for-test-purposes",
@@ -54,7 +54,7 @@ describe("test renderGistCard", () => {
     expect(header).toHaveTextContent("some-really-long-repo-name-for-test...");
   });
 
-  it("should trim description if description os too long", () => {
+  it("debe trim description if description os too long", () => {
     document.body.innerHTML = renderGistCard({
       ...data,
       description:
@@ -69,7 +69,7 @@ describe("test renderGistCard", () => {
     ).toBe("English-language pangram—a sentence that contains all");
   });
 
-  it("should not trim description if it is short", () => {
+  it("debe not trim description if it is short", () => {
     document.body.innerHTML = renderGistCard({
       ...data,
       description: "Small text should not trim",
@@ -79,7 +79,7 @@ describe("test renderGistCard", () => {
     );
   });
 
-  it("should render emojis in description", () => {
+  it("debe renderizar emojis in description", () => {
     document.body.innerHTML = renderGistCard({
       ...data,
       description: "This is a test gist description with :heart: emoji.",
@@ -89,7 +89,7 @@ describe("test renderGistCard", () => {
     );
   });
 
-  it("should render custom colors properly", () => {
+  it("debe renderizar custom colors properly", () => {
     const customColors = {
       title_color: "5a0",
       icon_color: "1b998b",
@@ -117,7 +117,7 @@ describe("test renderGistCard", () => {
     );
   });
 
-  it("should render with all the themes", () => {
+  it("debe renderizar with all the themes", () => {
     Object.keys(themes).forEach((name) => {
       document.body.innerHTML = renderGistCard(data, {
         theme: name,
@@ -143,7 +143,7 @@ describe("test renderGistCard", () => {
     });
   });
 
-  it("should render custom colors with themes", () => {
+  it("debe renderizar custom colors with themes", () => {
     document.body.innerHTML = renderGistCard(data, {
       title_color: "5a0",
       theme: "radical",
@@ -165,7 +165,7 @@ describe("test renderGistCard", () => {
     );
   });
 
-  it("should render custom colors with themes and fallback to default colors if invalid", () => {
+  it("debe renderizar custom colors with themes and fallback to default colors if invalid", () => {
     document.body.innerHTML = renderGistCard(data, {
       title_color: "invalid color",
       text_color: "invalid color",
@@ -190,7 +190,7 @@ describe("test renderGistCard", () => {
     );
   });
 
-  it("should not render star count or fork count if either of the are zero", () => {
+  it("debe not render star count or fork count if either of the are zero", () => {
     document.body.innerHTML = renderGistCard({
       ...data,
       starsCount: 0,
@@ -218,7 +218,7 @@ describe("test renderGistCard", () => {
     expect(queryByTestId(document.body, "forksCount")).toBeNull();
   });
 
-  it("should render without rounding", () => {
+  it("debe renderizar without rounding", () => {
     document.body.innerHTML = renderGistCard(data, {
       border_radius: "0",
     });
@@ -227,7 +227,7 @@ describe("test renderGistCard", () => {
     expect(document.querySelector("rect")).toHaveAttribute("rx", "4.5");
   });
 
-  it("should fallback to default description", () => {
+  it("debe fallback to default description", () => {
     document.body.innerHTML = renderGistCard({
       ...data,
       description: undefined,

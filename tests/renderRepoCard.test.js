@@ -20,8 +20,8 @@ const data_repo = {
   },
 };
 
-describe("Test renderRepoCard", () => {
-  it("should render correctly", () => {
+describe("Prueba de renderRepoCard", () => {
+  it("debe renderizar correctly", () => {
     document.body.innerHTML = renderRepoCard(data_repo.repository);
 
     const [header] = document.getElementsByClassName("header");
@@ -42,7 +42,7 @@ describe("Test renderRepoCard", () => {
     );
   });
 
-  it("should display username in title (full repo name)", () => {
+  it("debe display username in title (full repo name)", () => {
     document.body.innerHTML = renderRepoCard(data_repo.repository, {
       show_owner: true,
     });
@@ -51,7 +51,7 @@ describe("Test renderRepoCard", () => {
     );
   });
 
-  it("should trim header", () => {
+  it("debe trim header", () => {
     document.body.innerHTML = renderRepoCard({
       ...data_repo.repository,
       name: "some-really-long-repo-name-for-test-purposes",
@@ -62,7 +62,7 @@ describe("Test renderRepoCard", () => {
     );
   });
 
-  it("should trim description", () => {
+  it("debe trim description", () => {
     document.body.innerHTML = renderRepoCard({
       ...data_repo.repository,
       description:
@@ -88,7 +88,7 @@ describe("Test renderRepoCard", () => {
     );
   });
 
-  it("should render emojis", () => {
+  it("debe renderizar emojis", () => {
     document.body.innerHTML = renderRepoCard({
       ...data_repo.repository,
       description: "This is a text with a :poop: poo emoji",
@@ -100,7 +100,7 @@ describe("Test renderRepoCard", () => {
     );
   });
 
-  it("should hide language if primaryLanguage is null & fallback to correct values", () => {
+  it("debe ocultar language if primaryLanguage is null & fallback to correct values", () => {
     document.body.innerHTML = renderRepoCard({
       ...data_repo.repository,
       primaryLanguage: null,
@@ -124,7 +124,7 @@ describe("Test renderRepoCard", () => {
     );
   });
 
-  it("should render default colors properly", () => {
+  it("debe renderizar default colors properly", () => {
     document.body.innerHTML = renderRepoCard(data_repo.repository);
 
     const styleTag = document.querySelector("style");
@@ -143,7 +143,7 @@ describe("Test renderRepoCard", () => {
     );
   });
 
-  it("should render custom colors properly", () => {
+  it("debe renderizar custom colors properly", () => {
     const customColors = {
       title_color: "5a0",
       icon_color: "1b998b",
@@ -171,7 +171,7 @@ describe("Test renderRepoCard", () => {
     );
   });
 
-  it("should render with all the themes", () => {
+  it("debe renderizar with all the themes", () => {
     Object.keys(themes).forEach((name) => {
       document.body.innerHTML = renderRepoCard(data_repo.repository, {
         theme: name,
@@ -197,7 +197,7 @@ describe("Test renderRepoCard", () => {
     });
   });
 
-  it("should render custom colors with themes", () => {
+  it("debe renderizar custom colors with themes", () => {
     document.body.innerHTML = renderRepoCard(data_repo.repository, {
       title_color: "5a0",
       theme: "radical",
@@ -219,7 +219,7 @@ describe("Test renderRepoCard", () => {
     );
   });
 
-  it("should render custom colors with themes and fallback to default colors if invalid", () => {
+  it("debe renderizar custom colors with themes and fallback to default colors if invalid", () => {
     document.body.innerHTML = renderRepoCard(data_repo.repository, {
       title_color: "invalid color",
       text_color: "invalid color",
@@ -244,7 +244,7 @@ describe("Test renderRepoCard", () => {
     );
   });
 
-  it("should not render star count or fork count if either of the are zero", () => {
+  it("debe not render star count or fork count if either of the are zero", () => {
     document.body.innerHTML = renderRepoCard({
       ...data_repo.repository,
       starCount: 0,
@@ -272,7 +272,7 @@ describe("Test renderRepoCard", () => {
     expect(queryByTestId(document.body, "forkcount")).toBeNull();
   });
 
-  it("should render badges", () => {
+  it("debe renderizar badges", () => {
     document.body.innerHTML = renderRepoCard({
       ...data_repo.repository,
       isArchived: true,
@@ -291,14 +291,14 @@ describe("Test renderRepoCard", () => {
     );
   });
 
-  it("should not render template", () => {
+  it("debe not render template", () => {
     document.body.innerHTML = renderRepoCard({
       ...data_repo.repository,
     });
     expect(queryByTestId(document.body, "badge")).toBeNull();
   });
 
-  it("should render translated badges", () => {
+  it("debe renderizar translated badges", () => {
     document.body.innerHTML = renderRepoCard(
       {
         ...data_repo.repository,
@@ -323,7 +323,7 @@ describe("Test renderRepoCard", () => {
     expect(queryByTestId(document.body, "badge")).toHaveTextContent("模板");
   });
 
-  it("should render without rounding", () => {
+  it("debe renderizar without rounding", () => {
     document.body.innerHTML = renderRepoCard(data_repo.repository, {
       border_radius: "0",
     });
@@ -332,7 +332,7 @@ describe("Test renderRepoCard", () => {
     expect(document.querySelector("rect")).toHaveAttribute("rx", "4.5");
   });
 
-  it("should fallback to default description", () => {
+  it("debe fallback to default description", () => {
     document.body.innerHTML = renderRepoCard({
       ...data_repo.repository,
       description: undefined,
@@ -343,7 +343,7 @@ describe("Test renderRepoCard", () => {
     );
   });
 
-  it("should have correct height with specified `description_lines_count` parameter", () => {
+  it("debe tener correct height with specified `description_lines_count` parameter", () => {
     // Testing short description
     document.body.innerHTML = renderRepoCard(data_repo.repository, {
       description_lines_count: 1,

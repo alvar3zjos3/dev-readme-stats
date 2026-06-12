@@ -1,5 +1,5 @@
 /**
- * @file This script is used to preview the theme on theme PRs.
+ * @file Script para previsualizar temas en PRs de temas.
  */
 import * as dotenv from "dotenv";
 dotenv.config();
@@ -18,25 +18,25 @@ import { getGithubToken, getRepoInfo } from "./helpers.js";
 
 const COMMENTER = "github-actions[bot]";
 
-const COMMENT_TITLE = "Automated Theme Preview";
-const THEME_PR_FAIL_TEXT = ":x: Theme PR does not adhere to our guidelines.";
+const COMMENT_TITLE = "Vista previa automática del tema";
+const THEME_PR_FAIL_TEXT = ":x: El PR de tema no cumple nuestras directrices.";
 const THEME_PR_SUCCESS_TEXT =
-  ":heavy_check_mark: Theme PR does adhere to our guidelines.";
+  ":heavy_check_mark: El PR de tema cumple nuestras directrices.";
 const FAIL_TEXT = `
-  \rUnfortunately, your theme PR contains an error or does not adhere to our [theme guidelines](https://github.com/alvar3zjos3/dev-readme-stats/blob/master/CONTRIBUTING.md#themes-contribution). Please fix the issues below, and we will review your\
-  \r PR again. This pull request will **automatically close in 20 days** if no changes are made. After this time, you must re-open the PR for it to be reviewed.
+  \rLamentablemente, tu PR de tema contiene un error o no cumple nuestras [directrices de temas](https://github.com/alvar3zjos3/dev-readme-stats/blob/master/CONTRIBUTING.md#contribución-de-temas). Corrige los problemas indicados abajo y revisaremos\
+  \r tu PR de nuevo. Este pull request se **cerrará automáticamente en 20 días** si no hay cambios. Después de ese plazo, deberás reabrir el PR para que sea revisado.
 `;
 const THEME_CONTRIB_GUIDELINES = `
-  \rHi, thanks for the theme contribution. Please read our theme [contribution guidelines](https://github.com/alvar3zjos3/dev-readme-stats/blob/master/CONTRIBUTING.md#themes-contribution).
+  \rHola, gracias por contribuir un tema. Lee nuestras [directrices de contribución de temas](https://github.com/alvar3zjos3/dev-readme-stats/blob/master/CONTRIBUTING.md#contribución-de-temas).
 
   \r> [!WARNING]\
-  \r> Keep in mind that we already have a vast collection of different themes. To keep their number manageable, we began to add only themes supported by the community. Your pull request with theme addition will be merged once we get enough positive feedback from the community in the form of thumbs up :+1: emojis (see [#1935](https://github.com/alvar3zjos3/dev-readme-stats/issues/1935#top-themes-prs)). We expect to see at least 10-15 thumbs up before making a decision to merge your pull request into the master branch. Remember that you can also support themes of other contributors that you liked to speed up their merge.
+  \r> Ten en cuenta que ya tenemos una amplia colección de temas. Para mantener un número manejable, solo añadimos temas con apoyo de la comunidad. Tu pull request se fusionará cuando recibamos suficiente feedback positivo en forma de emojis :+1: (consulta [#1935](https://github.com/alvar3zjos3/dev-readme-stats/issues/1935#top-themes-prs)). Esperamos ver al menos 10-15 :+1: antes de decidir fusionar tu PR en la rama master. También puedes apoyar temas de otros contribuidores que te gusten para acelerar su fusión.
 
   \r> [!WARNING]\
-  \r> Please do not submit a pull request with a batch of themes, since it will be hard to judge how the community will react to each of them. We will only merge one theme per pull request. If you have several themes, please submit a separate pull request for each of them. Situations when you have several versions of the same theme (e.g. light and dark) are an exception to this rule.
+  \r> No envíes un pull request con varios temas a la vez, ya que será difícil evaluar la reacción de la comunidad a cada uno. Solo fusionamos un tema por pull request. Si tienes varios temas, envía un PR separado para cada uno. Las variantes del mismo tema (p. ej. claro y oscuro) son una excepción a esta regla.
 
   \r> [!NOTE]\
-  \r> Also, note that if this theme is exclusively for your personal use, then instead of adding it to our theme collection, you can use card [customization options](https://github.com/alvar3zjos3/dev-readme-stats#customization).
+  \r> Si el tema es solo para tu uso personal, en lugar de añadirlo a nuestra colección puedes usar las [opciones de personalización](https://github.com/alvar3zjos3/dev-readme-stats#personalización) de la tarjeta.
 `;
 const COLOR_PROPS = {
   title_color: 6,
@@ -48,7 +48,7 @@ const COLOR_PROPS = {
 const ACCEPTED_COLOR_PROPS = Object.keys(COLOR_PROPS);
 const REQUIRED_COLOR_PROPS = ACCEPTED_COLOR_PROPS.slice(0, 4);
 const INVALID_REVIEW_COMMENT = (commentUrl) =>
-  `Some themes are invalid. See the [Automated Theme Preview](${commentUrl}) comment above for more information.`;
+  `Algunos temas no son válidos. Consulta el comentario de [Vista previa automática del tema](${commentUrl}) arriba para más información.`;
 var OCTOKIT;
 var OWNER;
 var REPO;
@@ -84,7 +84,7 @@ const getPrNumber = () => {
 
   const pullRequest = github.context.payload.pull_request;
   if (!pullRequest) {
-    throw Error("Could not get pull request number from context");
+    throw Error("No se pudo obtener el número del pull request del contexto");
   }
   return pullRequest.number;
 };
@@ -360,7 +360,7 @@ const parseJSON = (json) => {
       return Hjson.parse(parsedJson);
     } catch (error) {
       throw new IncorrectJsonFormatError(
-        `Theme JSON file could not be parsed: ${error.message}`,
+        `No se pudo analizar el archivo JSON del tema: ${error.message}`,
       );
     }
   }
@@ -442,7 +442,7 @@ export const run = async () => {
         (key) => typeof themeObject[key] !== "object",
       )
     ) {
-      throw new Error("PR diff is not a valid theme JSON object.");
+      throw new Error("El diff del PR no es un objeto JSON de tema válido.");
     }
 
     // Loop through themes and create theme preview body.
@@ -461,11 +461,11 @@ export const run = async () => {
       // Check if the theme name is valid.
       debug("Theme preview body: Check if the theme name is valid...");
       if (themeNameAlreadyExists(themeName)) {
-        warnings.push("Theme name already taken");
+        warnings.push("El nombre del tema ya está en uso");
         themeValid[theme] = false;
       }
       if (themeName !== snakeCase(themeName)) {
-        warnings.push("Theme name isn't in snake_case");
+        warnings.push("El nombre del tema no está en snake_case");
         themeValid[theme] = false;
       }
 
@@ -481,12 +481,14 @@ export const run = async () => {
         );
         if (missingKeys.length > 0 || extraKeys.length > 0) {
           for (const missingKey of missingKeys) {
-            errors.push(`Theme color properties \`${missingKey}\` are missing`);
+            errors.push(
+              `Faltan las propiedades de color del tema \`${missingKey}\``,
+            );
           }
 
           for (const extraKey of extraKeys) {
             warnings.push(
-              `Theme color properties \`${extraKey}\` is not supported`,
+              `La propiedad de color del tema \`${extraKey}\` no está soportada`,
             );
           }
           invalidColors = true;
@@ -494,12 +496,12 @@ export const run = async () => {
           for (const [colorKey, colorValue] of Object.entries(colors)) {
             if (colorValue[0] === "#") {
               errors.push(
-                `Theme color property \`${colorKey}\` should not start with '#'`,
+                `La propiedad de color \`${colorKey}\` no debe empezar con '#'`,
               );
               invalidColors = true;
             } else if (colorValue.length > COLOR_PROPS[colorKey]) {
               errors.push(
-                `Theme color property \`${colorKey}\` can not be longer than \`${COLOR_PROPS[colorKey]}\` characters`,
+                `La propiedad de color \`${colorKey}\` no puede tener más de \`${COLOR_PROPS[colorKey]}\` caracteres`,
               );
               invalidColors = true;
             } else if (
@@ -508,14 +510,14 @@ export const run = async () => {
                 : isValidHexColor(colorValue))
             ) {
               errors.push(
-                `Theme color property \`${colorKey}\` is not a valid hex color: <code>${colorValue}</code>`,
+                `La propiedad de color \`${colorKey}\` no es un color hex válido: <code>${colorValue}</code>`,
               );
               invalidColors = true;
             }
           }
         }
       } else {
-        warnings.push("Theme colors are missing");
+        warnings.push("Faltan los colores del tema");
         invalidColors = true;
       }
       if (invalidColors) {
@@ -528,7 +530,7 @@ export const run = async () => {
           \r${warnings.map((warning) => `- :warning: ${warning}.\n`).join("")}
           \r${errors.map((error) => `- :x: ${error}.\n`).join("")}
 
-          \r>:x: Cannot create theme preview.
+          \r>:x: No se puede crear la vista previa del tema.
         `;
         continue;
       }
@@ -558,7 +560,7 @@ export const run = async () => {
         if (!ccc.isLevelAA(`#${color1}`, `#${color2}`)) {
           const permalink = getWebAimLink(color1, color2);
           warnings.push(
-            `\`${item}\` does not pass [AA contrast ratio](${permalink})`,
+            `\`${item}\` no cumple la [relación de contraste AA](${permalink})`,
           );
           themeValid[theme] = false;
         }
@@ -577,7 +579,7 @@ export const run = async () => {
           borderColor ? ` | border_color: <code>#${borderColor}</code>` : ""
         }
 
-        \r[Preview Link](${url})
+        \r[Enlace de vista previa](${url})
 
         \r[![](${url})](${url})
       `;
@@ -591,7 +593,7 @@ export const run = async () => {
           ? THEME_PR_SUCCESS_TEXT
           : THEME_PR_FAIL_TEXT
       }
-      \r## Test results
+      \r## Resultados de las pruebas
       \r${Object.entries(themeValid)
         .map(
           ([key, value]) => `- ${value ? ":heavy_check_mark:" : ":x:"} ${key}`,
@@ -600,11 +602,11 @@ export const run = async () => {
 
       \r${
         Object.values(themeValid).every((value) => value)
-          ? "**Result:** :heavy_check_mark: All themes are valid."
-          : "**Result:** :x: Some themes are invalid.\n\n" + FAIL_TEXT
+          ? "**Resultado:** :heavy_check_mark: Todos los temas son válidos."
+          : "**Resultado:** :x: Algunos temas no son válidos.\n\n" + FAIL_TEXT
       }
       
-      \r## Details
+      \r## Detalles
       \r${previewBody}
     `;
 
@@ -667,7 +669,7 @@ export const run = async () => {
         OWNER,
         REPO,
         "REQUEST_CHANGES",
-        "**Something went wrong in the theme preview action:** `" +
+        "**Algo salió mal en la acción de vista previa del tema:** `" +
           error.message +
           "`",
       );

@@ -1,28 +1,28 @@
-name: Feature request
-description: Suggest an idea for this project.
+name: Solicitud de función
+description: Sugiere una idea para este proyecto.
 labels:
   - "enhancement"
 body:
   - type: textarea
     attributes:
-      label: Is your feature request related to a problem? Please describe.
+      label: ¿Tu solicitud está relacionada con un problema? Descríbelo.
       description:
-        A clear and concise description of what the problem is. Ex. I'm always
-        frustrated when [...]
+        Una descripción clara y concisa del problema. Ej. Me frustra cuando
+        [...]
     validations:
       required: true
   - type: textarea
     attributes:
-      label: Describe the solution you'd like
-      description: A clear and concise description of what you want to happen.
+      label: Describe la solución que te gustaría
+      description: Una descripción clara y concisa de lo que quieres que ocurra.
   - type: textarea
     attributes:
-      label: Describe alternatives you've considered
+      label: Describe alternativas que hayas considerado
       description:
-        A clear and concise description of any alternative solutions or features
-        you've considered.
+        Una descripción clara y concisa de otras soluciones o funciones que
+        hayas evaluado.
   - type: textarea
     attributes:
-      label: Additional context
+      label: Contexto adicional
       description:
-        Add any other context or screenshots about the feature request here.
+        Cualquier otro contexto o capturas sobre la solicitud de función.

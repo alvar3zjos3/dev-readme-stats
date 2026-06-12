@@ -1,7 +1,7 @@
 import { getCardColors } from "../src/common/color";
 import { describe, expect, it } from "@jest/globals";
 
-describe("Test color.js", () => {
+describe("Prueba de color.js", () => {
   it("getCardColors: should return expected values", () => {
     let colors = getCardColors({
       title_color: "f00",

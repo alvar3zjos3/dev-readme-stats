@@ -1,4 +1,4 @@
-name: OSSF Scorecard analysis workflow
+name: Análisis OSSF Scorecard
 on:
   push:
     branches:

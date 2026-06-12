@@ -4,19 +4,19 @@ import "@testing-library/jest-dom";
 import { renderWakatimeCard } from "../src/cards/wakatime.js";
 import { wakaTimeData } from "./fetchWakatime.test.js";
 
-describe("Test Render WakaTime Card", () => {
-  it("should render correctly", () => {
+describe("Prueba de renderWakatimeCard", () => {
+  it("debe renderizar correctamente", () => {
     const card = renderWakatimeCard(wakaTimeData.data);
     expect(card).toMatchSnapshot();
   });
 
-  it("should render correctly with compact layout", () => {
+  it("debe renderizar correctamente con diseño compacto", () => {
     const card = renderWakatimeCard(wakaTimeData.data, { layout: "compact" });
 
     expect(card).toMatchSnapshot();
   });
 
-  it("should render correctly with compact layout when langs_count is set", () => {
+  it("debe renderizar correctamente con diseño compacto y langs_count", () => {
     const card = renderWakatimeCard(wakaTimeData.data, {
       layout: "compact",
       langs_count: 2,
@@ -25,7 +25,7 @@ describe("Test Render WakaTime Card", () => {
     expect(card).toMatchSnapshot();
   });
 
-  it("should hide languages when hide is passed", () => {
+  it("debe ocultar lenguajes cuando se pasa hide", () => {
     document.body.innerHTML = renderWakatimeCard(wakaTimeData.data, {
       hide: ["YAML", "Other"],
     });
@@ -35,7 +35,7 @@ describe("Test Render WakaTime Card", () => {
     expect(queryByTestId(document.body, /TypeScript/i)).not.toBeNull();
   });
 
-  it("should render translations", () => {
+  it("debe renderizar traducciones", () => {
     document.body.innerHTML = renderWakatimeCard({}, { locale: "cn" });
     expect(document.getElementsByClassName("header")[0].textContent).toBe(
       "WakaTime 周统计",
@@ -46,7 +46,7 @@ describe("Test Render WakaTime Card", () => {
     ).toBe("WakaTime 用户个人资料未公开");
   });
 
-  it("should render without rounding", () => {
+  it("debe renderizar sin bordes redondeados", () => {
     document.body.innerHTML = renderWakatimeCard(wakaTimeData.data, {
       border_radius: "0",
     });
@@ -55,7 +55,7 @@ describe("Test Render WakaTime Card", () => {
     expect(document.querySelector("rect")).toHaveAttribute("rx", "4.5");
   });
 
-  it('should show "no coding activity this week" message when there has not been activity', () => {
+  it('debe mostrar el mensaje "no hay actividad de codificación esta semana"', () => {
     document.body.innerHTML = renderWakatimeCard(
       {
         ...wakaTimeData.data,
@@ -68,7 +68,7 @@ describe("Test Render WakaTime Card", () => {
     );
   });
 
-  it('should show "no coding activity this week" message when using compact layout and there has not been activity', () => {
+  it("debe mostrar el mensaje de inactividad con diseño compacto", () => {
     document.body.innerHTML = renderWakatimeCard(
       {
         ...wakaTimeData.data,
@@ -83,7 +83,7 @@ describe("Test Render WakaTime Card", () => {
     );
   });
 
-  it("should render correctly with percent display format", () => {
+  it("debe renderizar correctamente con formato de porcentaje", () => {
     const card = renderWakatimeCard(wakaTimeData.data, {
       display_format: "percent",
     });

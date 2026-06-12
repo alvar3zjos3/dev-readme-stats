@@ -1,26 +1,28 @@
-# Políticas y Procedimientos de Seguridad de Dev Readme Stats <!-- omit in toc -->
+# Políticas y procedimientos de seguridad de Dev Readme Stats <!-- omit in toc -->
 
-Este documento describe los procedimientos de seguridad y las políticas generales para el proyecto GitHub Readme Stats.
+Este documento describe los procedimientos de seguridad y las políticas generales del proyecto Dev Readme Stats.
 
-- [Reporte de Vulnerabilidades](#reporte-de-vulnerabilidades)
-- [Política de Divulgación:](#política-de-divulgación)
+- [Reporte de vulnerabilidades](#reporte-de-vulnerabilidades)
+- [Política de divulgación](#política-de-divulgación)
 
-## Reporte de Vulnerabilidades  
-El equipo de Dev Readme Stats y la comunidad tomamos todas las vulnerabilidades de seguridad muy en serio. ¡Gracias por mejorar la seguridad de nuestro software de código abierto! Apreciamos tus esfuerzos e informes responsables, así como los máximos esfuerzos para reconocer tu contribución.
+## Reporte de vulnerabilidades
 
-Notifícas sobre vulnerabilidad de seguridad a través del envío de correo electrónico al equipo Dev Readme Stats:
+El equipo de Dev Readme Stats y la comunidad tomamos todas las vulnerabilidades de seguridad muy en serio. Gracias por mejorar la seguridad de nuestro software de código abierto. Agradecemos los informes responsables y haremos todo lo posible por reconocer tu contribución.
+
+Notifica vulnerabilidades de seguridad enviando un correo al equipo de Dev Readme Stats:
 
 ```
 ja82783643@gmail.com
-```  
+```
 
-El administrador principal reconocerá tu correo dentro de las próximas 24 horas, y envía una respuesta más detallada en plazo de hasta 48 horas. Tras la primera respuesta a tu reporte el Equipo de Seguridad seguirá proporcionando actualizaciones sobre los avances respecto al parche y la comunicación oficial; también pueden solicitarte información o orientación adicional para mejorar el tratamiento.
+El administrador principal confirmará la recepción en un plazo de 24 horas y enviará una respuesta más detallada en un máximo de 48 horas. Tras la primera respuesta, el equipo de seguridad proporcionará actualizaciones sobre el parche y la comunicación oficial, y puede solicitar información adicional para mejorar el tratamiento del caso.
 
-Para reportar vulnerabilidades de seguridad en módulos externos, comunícate con quién mantiene ese módulo (persona o equipo responsable).  
+Para reportar vulnerabilidades en módulos externos, contacta con quien mantenga ese módulo (persona o equipo responsable).
 
-## Política de Divulgación:  
-Cuando el equipo de seguridad recibe un reporte sobre una vulnerabilidad asigna a este caso un gestor que coordina todo proceso correctivo y lanzamiento posterior mediante las siguientes acciones necesarias para corregir la deficiencia comunicada:
+## Política de divulgación
 
-* Confirmar el problema detectado.
-* Revisar código fuente con posibles problemas afines similares al encontrado (parche en curso).
-* Preparar parches de corrección que serán lanzados lo antes posible a tiempo y fecha, junto los otros proyectos oficiales disponibles para descarga pública vía GitHub o servidores web asociados correspondientes relacionados directamente como parte del repositorio oficial mantenido por el proyecto.
+Cuando el equipo de seguridad recibe un reporte de vulnerabilidad, asigna un responsable que coordina la corrección y el lanzamiento del parche mediante las siguientes acciones:
+
+- Confirmar el problema detectado.
+- Revisar el código en busca de problemas similares.
+- Preparar parches de corrección para publicarlos lo antes posible en el repositorio oficial y en los canales de distribución asociados.

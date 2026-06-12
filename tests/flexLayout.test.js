@@ -2,7 +2,7 @@ import { describe, expect, it } from "@jest/globals";
 import { flexLayout } from "../src/common/render.js";
 
 describe("flexLayout", () => {
-  it("should work with row & col layouts", () => {
+  it("debe funcionar con row & col layouts", () => {
     const layout = flexLayout({
       items: ["<text>1</text>", "<text>2</text>"],
       gap: 60,
@@ -25,7 +25,7 @@ describe("flexLayout", () => {
     ]);
   });
 
-  it("should work with sizes", () => {
+  it("debe funcionar con sizes", () => {
     const layout = flexLayout({
       items: [
         "<text>1</text>",

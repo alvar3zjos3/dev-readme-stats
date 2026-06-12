@@ -1,4 +1,4 @@
-name: Close stale theme pull requests that have the 'invalid' label.
+name: Cerrar PRs de temas obsoletos con etiqueta invalid
 on:
   # Temporary disabled due to paused themes addition.
   # See: https://github.com/alvar3zjos3/dev-readme-stats/issues/3404

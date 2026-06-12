@@ -40,8 +40,8 @@ afterEach(() => {
   mock.reset();
 });
 
-describe("Test /api/pin", () => {
-  it("should test the request", async () => {
+describe("Prueba de /api/pin", () => {
+  it("debe procesar la solicitud", async () => {
     const req = {
       query: {
         username: "alvar3zjos3",
@@ -66,7 +66,7 @@ describe("Test /api/pin", () => {
     );
   });
 
-  it("should get the query options", async () => {
+  it("debe obtener the query options", async () => {
     const req = {
       query: {
         username: "alvar3zjos3",
@@ -99,7 +99,7 @@ describe("Test /api/pin", () => {
     );
   });
 
-  it("should render error card if user repo not found", async () => {
+  it("debe renderizar error card if user repo not found", async () => {
     const req = {
       query: {
         username: "alvar3zjos3",
@@ -122,7 +122,7 @@ describe("Test /api/pin", () => {
     );
   });
 
-  it("should render error card if org repo not found", async () => {
+  it("debe renderizar error card if org repo not found", async () => {
     const req = {
       query: {
         username: "alvar3zjos3",
@@ -145,7 +145,7 @@ describe("Test /api/pin", () => {
     );
   });
 
-  it("should render error card if username in blacklist", async () => {
+  it("debe renderizar error card if username in blacklist", async () => {
     const req = {
       query: {
         username: "renovate-bot",
@@ -170,7 +170,7 @@ describe("Test /api/pin", () => {
     );
   });
 
-  it("should render error card if wrong locale provided", async () => {
+  it("debe renderizar error card if wrong locale provided", async () => {
     const req = {
       query: {
         username: "alvar3zjos3",
@@ -195,7 +195,7 @@ describe("Test /api/pin", () => {
     );
   });
 
-  it("should render error card if missing required parameters", async () => {
+  it("debe renderizar error card if missing required parameters", async () => {
     const req = {
       query: {},
     };
@@ -217,7 +217,7 @@ describe("Test /api/pin", () => {
     );
   });
 
-  it("should have proper cache", async () => {
+  it("debe tener proper cache", async () => {
     const req = {
       query: {
         username: "alvar3zjos3",

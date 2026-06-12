@@ -25,8 +25,8 @@ const stats = {
   rank: { level: "A+", percentile: 40 },
 };
 
-describe("Test renderStatsCard", () => {
-  it("should render correctly", () => {
+describe("Prueba de renderStatsCard", () => {
+  it("debe renderizar correctly", () => {
     document.body.innerHTML = renderStatsCard(stats);
 
     expect(document.getElementsByClassName("header")[0].textContent).toBe(
@@ -58,7 +58,7 @@ describe("Test renderStatsCard", () => {
     ).not.toBeInTheDocument();
   });
 
-  it("should have proper name apostrophe", () => {
+  it("debe tener proper name apostrophe", () => {
     document.body.innerHTML = renderStatsCard({ ...stats, name: "Anil Das" });
 
     expect(document.getElementsByClassName("header")[0].textContent).toBe(
@@ -72,7 +72,7 @@ describe("Test renderStatsCard", () => {
     );
   });
 
-  it("should hide individual stats", () => {
+  it("debe ocultar individual stats", () => {
     document.body.innerHTML = renderStatsCard(stats, {
       hide: ["issues", "prs", "contribs"],
     });
@@ -93,7 +93,7 @@ describe("Test renderStatsCard", () => {
     expect(queryByTestId(document.body, "prs_merged_percentage")).toBeNull();
   });
 
-  it("should show additional stats", () => {
+  it("debe mostrar additional stats", () => {
     document.body.innerHTML = renderStatsCard(stats, {
       show: [
         "reviews",
@@ -120,13 +120,13 @@ describe("Test renderStatsCard", () => {
     expect(queryByTestId(document.body, "prs_merged_percentage")).toBeDefined();
   });
 
-  it("should hide_rank", () => {
+  it("debe ocultar_rank", () => {
     document.body.innerHTML = renderStatsCard(stats, { hide_rank: true });
 
     expect(queryByTestId(document.body, "rank-circle")).not.toBeInTheDocument();
   });
 
-  it("should render with custom width set", () => {
+  it("debe renderizar with custom width set", () => {
     document.body.innerHTML = renderStatsCard(stats);
     expect(document.querySelector("svg")).toHaveAttribute("width", "467");
 
@@ -134,7 +134,7 @@ describe("Test renderStatsCard", () => {
     expect(document.querySelector("svg")).toHaveAttribute("width", "500");
   });
 
-  it("should render with custom width set and limit minimum width", () => {
+  it("debe renderizar with custom width set and limit minimum width", () => {
     document.body.innerHTML = renderStatsCard(stats, { card_width: 1 });
     expect(document.querySelector("svg")).toHaveAttribute("width", "437");
 
@@ -176,7 +176,7 @@ describe("Test renderStatsCard", () => {
     expect(document.querySelector("svg")).toHaveAttribute("width", "420");
   });
 
-  it("should render default colors properly", () => {
+  it("debe renderizar default colors properly", () => {
     document.body.innerHTML = renderStatsCard(stats);
 
     const styleTag = document.querySelector("style");
@@ -195,7 +195,7 @@ describe("Test renderStatsCard", () => {
     );
   });
 
-  it("should render custom colors properly", () => {
+  it("debe renderizar custom colors properly", () => {
     const customColors = {
       title_color: "5a0",
       icon_color: "1b998b",
@@ -221,7 +221,7 @@ describe("Test renderStatsCard", () => {
     );
   });
 
-  it("should render custom colors with themes", () => {
+  it("debe renderizar custom colors with themes", () => {
     document.body.innerHTML = renderStatsCard(stats, {
       title_color: "5a0",
       theme: "radical",
@@ -243,7 +243,7 @@ describe("Test renderStatsCard", () => {
     );
   });
 
-  it("should render with all the themes", () => {
+  it("debe renderizar with all the themes", () => {
     Object.keys(themes).forEach((name) => {
       document.body.innerHTML = renderStatsCard(stats, {
         theme: name,
@@ -269,7 +269,7 @@ describe("Test renderStatsCard", () => {
     });
   });
 
-  it("should render custom colors with themes and fallback to default colors if invalid", () => {
+  it("debe renderizar custom colors with themes and fallback to default colors if invalid", () => {
     document.body.innerHTML = renderStatsCard(stats, {
       title_color: "invalid color",
       text_color: "invalid color",
@@ -294,7 +294,7 @@ describe("Test renderStatsCard", () => {
     );
   });
 
-  it("should render custom ring_color properly", () => {
+  it("debe renderizar custom ring_color properly", () => {
     const customColors = {
       title_color: "5a0",
       ring_color: "0000ff",
@@ -327,7 +327,7 @@ describe("Test renderStatsCard", () => {
     );
   });
 
-  it("should render icons correctly", () => {
+  it("debe renderizar icons correctly", () => {
     document.body.innerHTML = renderStatsCard(stats, {
       show_icons: true,
     });
@@ -339,7 +339,7 @@ describe("Test renderStatsCard", () => {
     ).toHaveAttribute("x", "25");
   });
 
-  it("should not have icons if show_icons is false", () => {
+  it("debe not have icons if show_icons is false", () => {
     document.body.innerHTML = renderStatsCard(stats, { show_icons: false });
 
     expect(queryAllByTestId(document.body, "icon")[0]).not.toBeDefined();
@@ -349,7 +349,7 @@ describe("Test renderStatsCard", () => {
     ).not.toHaveAttribute("x");
   });
 
-  it("should auto resize if hide_rank is true", () => {
+  it("debe auto resize if hide_rank is true", () => {
     document.body.innerHTML = renderStatsCard(stats, {
       hide_rank: true,
     });
@@ -359,7 +359,7 @@ describe("Test renderStatsCard", () => {
     ).toBe("422.902302631579");
   });
 
-  it("should auto resize if hide_rank is true & custom_title is set", () => {
+  it("debe auto resize if hide_rank is true & custom_title is set", () => {
     document.body.innerHTML = renderStatsCard(stats, {
       hide_rank: true,
       custom_title: "Hello world",
@@ -370,7 +370,7 @@ describe("Test renderStatsCard", () => {
     ).toBe("304");
   });
 
-  it("should render translations", () => {
+  it("debe renderizar translations", () => {
     document.body.innerHTML = renderStatsCard(stats, { locale: "cn" });
     expect(document.getElementsByClassName("header")[0].textContent).toBe(
       "Jose Alvarez 的 GitHub 统计数据",
@@ -402,14 +402,14 @@ describe("Test renderStatsCard", () => {
     ).toMatchInlineSnapshot(`"贡献的项目数（去年）:"`);
   });
 
-  it("should render without rounding", () => {
+  it("debe renderizar without rounding", () => {
     document.body.innerHTML = renderStatsCard(stats, { border_radius: "0" });
     expect(document.querySelector("rect")).toHaveAttribute("rx", "0");
     document.body.innerHTML = renderStatsCard(stats, {});
     expect(document.querySelector("rect")).toHaveAttribute("rx", "4.5");
   });
 
-  it("should shorten values", () => {
+  it("debe shorten values", () => {
     stats["totalCommits"] = 1999;
 
     document.body.innerHTML = renderStatsCard(stats);
@@ -425,7 +425,7 @@ describe("Test renderStatsCard", () => {
     expect(getByTestId(document.body, "commits").textContent).toBe("1999");
   });
 
-  it("should render default rank icon with level A+", () => {
+  it("debe renderizar default rank icon with level A+", () => {
     document.body.innerHTML = renderStatsCard(stats, {
       rank_icon: "default",
     });
@@ -435,14 +435,14 @@ describe("Test renderStatsCard", () => {
     ).toBe("A+");
   });
 
-  it("should render github rank icon", () => {
+  it("debe renderizar github rank icon", () => {
     document.body.innerHTML = renderStatsCard(stats, {
       rank_icon: "github",
     });
     expect(queryByTestId(document.body, "github-rank-icon")).toBeDefined();
   });
 
-  it("should show the rank percentile", () => {
+  it("debe mostrar the rank percentile", () => {
     document.body.innerHTML = renderStatsCard(stats, {
       rank_icon: "percentile",
     });
@@ -456,7 +456,7 @@ describe("Test renderStatsCard", () => {
     ).toBe(stats.rank.percentile.toFixed(1) + "%");
   });
 
-  it("should throw error if all stats and rank icon are hidden", () => {
+  it("debe lanzar un error if all stats and rank icon are hidden", () => {
     expect(() =>
       renderStatsCard(stats, {
         hide: ["stars", "commits", "prs", "issues", "contribs"],
