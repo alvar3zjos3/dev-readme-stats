@@ -113,20 +113,22 @@ const generateTable = ({ exclude, suffix }) => {
 
 // ─── Build README ─────────────────────────────────────────────────────────────
 
+const EXCLUDED_THEMES = ["default", "default_repocard"];
+
 const buildReadme = () => {
   return THEME_TEMPLATE.split("\n")
     .map((line) => {
       if (line.includes(STAT_CARD_TABLE_FLAG)) {
-        return generateTable({ exclude: "dracula", suffix: "" });
+        return generateTable({ exclude: EXCLUDED_THEMES, suffix: "" });
       }
       if (line.includes(REPO_CARD_TABLE_FLAG)) {
-        return generateTable({ exclude: "dark", suffix: "_repo" });
+        return generateTable({ exclude: EXCLUDED_THEMES, suffix: "_repo" });
       }
       if (line.includes(LANG_CARD_TABLE_FLAG)) {
-        return generateTable({ exclude: "dracula", suffix: "_lang" });
+        return generateTable({ exclude: EXCLUDED_THEMES, suffix: "_lang" });
       }
       if (line.includes(WAKA_CARD_TABLE_FLAG)) {
-        return generateTable({ exclude: "dracula", suffix: "_waka" });
+        return generateTable({ exclude: EXCLUDED_THEMES, suffix: "_waka" });
       }
       if (line.includes(STAT_CARD_LINKS_FLAG)) {
         return generateLinks(createStatMdLink);
