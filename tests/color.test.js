@@ -32,14 +32,14 @@ describe("Prueba de color.js", () => {
       theme: "dark",
     });
     expect(colors).toStrictEqual({
-      titleColor: "#2f80ed",
+      titleColor: "#fff",
       textColor: "#0f0",
       iconColor: "#00f",
-      ringColor: "#2f80ed",
       bgColor: "#fff",
       borderColor: "#e4e2e2",
+      ringColor: "#fff",
     });
-  });
+  }); // <-- FALTABA ESTO
 
   it("getCardColors: should fallback to specified theme colors if is not defined", () => {
     let colors = getCardColors({
@@ -53,7 +53,7 @@ describe("Prueba de color.js", () => {
       bgColor: "#151515",
       borderColor: "#e4e2e2",
     });
-  });
+  }); // <-- FALTABA ESTO
 
   it("getCardColors: should return ring color equal to title color if not ring color is defined", () => {
     let colors = getCardColors({

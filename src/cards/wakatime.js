@@ -255,7 +255,7 @@ const renderWakatimeCard = (stats = {}, options = { hide: [] }) => {
     icon_color,
     text_color,
     bg_color,
-    theme = "dark",
+    theme = "default",
     hide_progress,
     custom_title,
     locale,

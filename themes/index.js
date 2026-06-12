@@ -1,5 +1,12 @@
 export const themes = {
   default: {
+    title_color: "fff",
+    icon_color: "79ff97",
+    text_color: "9f9f9f",
+    bg_color: "151515",
+    border_color: "e4e2e2",
+  },
+  white: {
     title_color: "2f80ed",
     icon_color: "4c71f2",
     text_color: "434d58",
@@ -7,10 +14,11 @@ export const themes = {
     border_color: "e4e2e2",
   },
   default_repocard: {
-    title_color: "2f80ed",
-    icon_color: "586069", // icon color is different
-    text_color: "434d58",
-    bg_color: "fffefe",
+    title_color: "fff",
+    icon_color: "79ff97",
+    text_color: "9f9f9f",
+    bg_color: "151515",
+    border_color: "e4e2e2",
   },
   transparent: {
     title_color: "006AFF",

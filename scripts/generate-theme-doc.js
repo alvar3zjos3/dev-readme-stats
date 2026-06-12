@@ -23,7 +23,7 @@ Con los temas incorporados, puedes personalizar el aspecto de la tarjeta sin hac
 Usa los parámetros \`?theme=NOMBRE_DEL_TEMA\` de esta forma:
 
 \`\`\`md
-![Estadísticas de GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=shadow_red)
+[Estadísticas de GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=shadow_red)
 \`\`\`
 
 ## Estadísticas
@@ -66,6 +66,11 @@ ${LANG_CARD_LINKS_FLAG}
 
 ${WAKA_CARD_LINKS_FLAG}
 `;
+
+const EXCLUDED_FROM_STATS = ["default_repocard"];
+const EXCLUDED_FROM_REPO = ["white"];
+const EXCLUDED_FROM_LANGS = ["default_repocard"];
+const EXCLUDED_FROM_WAKA = ["default_repocard"];
 
 // ─── Link generators ─────────────────────────────────────────────────────────
 
@@ -115,22 +120,20 @@ const generateTable = ({ exclude = [], suffix }) => {
 
 // ─── Build README ─────────────────────────────────────────────────────────────
 
-const EXCLUDED_THEMES = ["default", "default_repocard"];
-
 const buildReadme = () => {
   return THEME_TEMPLATE.split("\n")
     .map((line) => {
       if (line.includes(STAT_CARD_TABLE_FLAG)) {
-        return generateTable({ exclude: EXCLUDED_THEMES, suffix: "" });
+        return generateTable({ exclude: EXCLUDED_FROM_STATS, suffix: "" });
       }
       if (line.includes(REPO_CARD_TABLE_FLAG)) {
-        return generateTable({ exclude: EXCLUDED_THEMES, suffix: "_repo" });
+        return generateTable({ exclude: EXCLUDED_FROM_REPO, suffix: "_repo" });
       }
       if (line.includes(LANG_CARD_TABLE_FLAG)) {
-        return generateTable({ exclude: EXCLUDED_THEMES, suffix: "_lang" });
+        return generateTable({ exclude: EXCLUDED_FROM_LANGS, suffix: "_lang" });
       }
       if (line.includes(WAKA_CARD_TABLE_FLAG)) {
-        return generateTable({ exclude: EXCLUDED_THEMES, suffix: "_waka" });
+        return generateTable({ exclude: EXCLUDED_FROM_WAKA, suffix: "_waka" });
       }
       if (line.includes(STAT_CARD_LINKS_FLAG)) {
         return generateLinks(createStatMdLink);

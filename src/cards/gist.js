@@ -48,7 +48,7 @@ const renderGistCard = (gistData, options = {}) => {
     icon_color,
     text_color,
     bg_color,
-    theme = "dark",
+    theme = "default",
     border_radius,
     border_color,
     show_owner = false,

@@ -285,7 +285,7 @@ const renderStatsCard = (stats, options = {}) => {
     text_color,
     text_bold = true,
     bg_color,
-    theme = "dark",
+    theme = "default",
     custom_title,
     border_radius,
     border_color,

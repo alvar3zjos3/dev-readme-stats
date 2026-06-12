@@ -789,7 +789,7 @@ const renderTopLanguages = (topLangs, options = {}) => {
     bg_color,
     hide,
     hide_progress,
-    theme = "dark",
+    theme = "default",
     layout = "compact",
     custom_title,
     locale,
