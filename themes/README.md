@@ -7,7 +7,7 @@ Con los temas incorporados, puedes personalizar el aspecto de la tarjeta sin hac
 Usa los parámetros `?theme=NOMBRE_DEL_TEMA` de esta forma:
 
 ```md
-![Estadísticas de GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=shadow_red)
+[Estadísticas de GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=shadow_red)
 ```
 
 ## Estadísticas
@@ -16,31 +16,31 @@ Usa los parámetros `?theme=NOMBRE_DEL_TEMA` de esta forma:
 
 | | | |
 | :--: | :--: | :--: |
-| `transparent` ![transparent][transparent] | `shadow_red` ![shadow_red][shadow_red] | `shadow_green` ![shadow_green][shadow_green] |
-| `shadow_blue` ![shadow_blue][shadow_blue] | `dark` ![dark][dark] | `radical` ![radical][radical] |
-| `merko` ![merko][merko] | `gruvbox` ![gruvbox][gruvbox] | `gruvbox_light` ![gruvbox_light][gruvbox_light] |
-| `tokyonight` ![tokyonight][tokyonight] | `onedark` ![onedark][onedark] | `cobalt` ![cobalt][cobalt] |
-| `synthwave` ![synthwave][synthwave] | `highcontrast` ![highcontrast][highcontrast] | `dracula` ![dracula][dracula] |
-| `prussian` ![prussian][prussian] | `monokai` ![monokai][monokai] | `vue` ![vue][vue] |
-| `vue-dark` ![vue-dark][vue-dark] | `shades-of-purple` ![shades-of-purple][shades-of-purple] | `nightowl` ![nightowl][nightowl] |
-| `buefy` ![buefy][buefy] | `blue-green` ![blue-green][blue-green] | `algolia` ![algolia][algolia] |
-| `great-gatsby` ![great-gatsby][great-gatsby] | `darcula` ![darcula][darcula] | `bear` ![bear][bear] |
-| `solarized-dark` ![solarized-dark][solarized-dark] | `solarized-light` ![solarized-light][solarized-light] | `chartreuse-dark` ![chartreuse-dark][chartreuse-dark] |
-| `nord` ![nord][nord] | `gotham` ![gotham][gotham] | `material-palenight` ![material-palenight][material-palenight] |
-| `graywhite` ![graywhite][graywhite] | `vision-friendly-dark` ![vision-friendly-dark][vision-friendly-dark] | `ayu-mirage` ![ayu-mirage][ayu-mirage] |
-| `midnight-purple` ![midnight-purple][midnight-purple] | `calm` ![calm][calm] | `flag-india` ![flag-india][flag-india] |
-| `omni` ![omni][omni] | `react` ![react][react] | `jolly` ![jolly][jolly] |
-| `maroongold` ![maroongold][maroongold] | `yeblu` ![yeblu][yeblu] | `blueberry` ![blueberry][blueberry] |
-| `slateorange` ![slateorange][slateorange] | `kacho_ga` ![kacho_ga][kacho_ga] | `outrun` ![outrun][outrun] |
-| `ocean_dark` ![ocean_dark][ocean_dark] | `city_lights` ![city_lights][city_lights] | `github_dark` ![github_dark][github_dark] |
-| `github_dark_dimmed` ![github_dark_dimmed][github_dark_dimmed] | `discord_old_blurple` ![discord_old_blurple][discord_old_blurple] | `aura_dark` ![aura_dark][aura_dark] |
-| `panda` ![panda][panda] | `noctis_minimus` ![noctis_minimus][noctis_minimus] | `cobalt2` ![cobalt2][cobalt2] |
-| `swift` ![swift][swift] | `aura` ![aura][aura] | `apprentice` ![apprentice][apprentice] |
-| `moltack` ![moltack][moltack] | `codeSTACKr` ![codeSTACKr][codeSTACKr] | `rose_pine` ![rose_pine][rose_pine] |
-| `catppuccin_latte` ![catppuccin_latte][catppuccin_latte] | `catppuccin_mocha` ![catppuccin_mocha][catppuccin_mocha] | `date_night` ![date_night][date_night] |
-| `one_dark_pro` ![one_dark_pro][one_dark_pro] | `rose` ![rose][rose] | `holi` ![holi][holi] |
-| `neon` ![neon][neon] | `blue_navy` ![blue_navy][blue_navy] | `calm_pink` ![calm_pink][calm_pink] |
-| `ambient_gradient` ![ambient_gradient][ambient_gradient] |  |  |
+| `default` ![default][default] | `white` ![white][white] | `transparent` ![transparent][transparent] |
+| `shadow_red` ![shadow_red][shadow_red] | `shadow_green` ![shadow_green][shadow_green] | `shadow_blue` ![shadow_blue][shadow_blue] |
+| `dark` ![dark][dark] | `radical` ![radical][radical] | `merko` ![merko][merko] |
+| `gruvbox` ![gruvbox][gruvbox] | `gruvbox_light` ![gruvbox_light][gruvbox_light] | `tokyonight` ![tokyonight][tokyonight] |
+| `onedark` ![onedark][onedark] | `cobalt` ![cobalt][cobalt] | `synthwave` ![synthwave][synthwave] |
+| `highcontrast` ![highcontrast][highcontrast] | `dracula` ![dracula][dracula] | `prussian` ![prussian][prussian] |
+| `monokai` ![monokai][monokai] | `vue` ![vue][vue] | `vue-dark` ![vue-dark][vue-dark] |
+| `shades-of-purple` ![shades-of-purple][shades-of-purple] | `nightowl` ![nightowl][nightowl] | `buefy` ![buefy][buefy] |
+| `blue-green` ![blue-green][blue-green] | `algolia` ![algolia][algolia] | `great-gatsby` ![great-gatsby][great-gatsby] |
+| `darcula` ![darcula][darcula] | `bear` ![bear][bear] | `solarized-dark` ![solarized-dark][solarized-dark] |
+| `solarized-light` ![solarized-light][solarized-light] | `chartreuse-dark` ![chartreuse-dark][chartreuse-dark] | `nord` ![nord][nord] |
+| `gotham` ![gotham][gotham] | `material-palenight` ![material-palenight][material-palenight] | `graywhite` ![graywhite][graywhite] |
+| `vision-friendly-dark` ![vision-friendly-dark][vision-friendly-dark] | `ayu-mirage` ![ayu-mirage][ayu-mirage] | `midnight-purple` ![midnight-purple][midnight-purple] |
+| `calm` ![calm][calm] | `flag-india` ![flag-india][flag-india] | `omni` ![omni][omni] |
+| `react` ![react][react] | `jolly` ![jolly][jolly] | `maroongold` ![maroongold][maroongold] |
+| `yeblu` ![yeblu][yeblu] | `blueberry` ![blueberry][blueberry] | `slateorange` ![slateorange][slateorange] |
+| `kacho_ga` ![kacho_ga][kacho_ga] | `outrun` ![outrun][outrun] | `ocean_dark` ![ocean_dark][ocean_dark] |
+| `city_lights` ![city_lights][city_lights] | `github_dark` ![github_dark][github_dark] | `github_dark_dimmed` ![github_dark_dimmed][github_dark_dimmed] |
+| `discord_old_blurple` ![discord_old_blurple][discord_old_blurple] | `aura_dark` ![aura_dark][aura_dark] | `panda` ![panda][panda] |
+| `noctis_minimus` ![noctis_minimus][noctis_minimus] | `cobalt2` ![cobalt2][cobalt2] | `swift` ![swift][swift] |
+| `aura` ![aura][aura] | `apprentice` ![apprentice][apprentice] | `moltack` ![moltack][moltack] |
+| `codeSTACKr` ![codeSTACKr][codeSTACKr] | `rose_pine` ![rose_pine][rose_pine] | `catppuccin_latte` ![catppuccin_latte][catppuccin_latte] |
+| `catppuccin_mocha` ![catppuccin_mocha][catppuccin_mocha] | `date_night` ![date_night][date_night] | `one_dark_pro` ![one_dark_pro][one_dark_pro] |
+| `rose` ![rose][rose] | `holi` ![holi][holi] | `neon` ![neon][neon] |
+| `blue_navy` ![blue_navy][blue_navy] | `calm_pink` ![calm_pink][calm_pink] | `ambient_gradient` ![ambient_gradient][ambient_gradient] |
 
 ## Tarjeta de Repositorio
 
@@ -48,31 +48,31 @@ Usa los parámetros `?theme=NOMBRE_DEL_TEMA` de esta forma:
 
 | | | |
 | :--: | :--: | :--: |
-| `transparent` ![transparent][transparent_repo] | `shadow_red` ![shadow_red][shadow_red_repo] | `shadow_green` ![shadow_green][shadow_green_repo] |
-| `shadow_blue` ![shadow_blue][shadow_blue_repo] | `dark` ![dark][dark_repo] | `radical` ![radical][radical_repo] |
-| `merko` ![merko][merko_repo] | `gruvbox` ![gruvbox][gruvbox_repo] | `gruvbox_light` ![gruvbox_light][gruvbox_light_repo] |
-| `tokyonight` ![tokyonight][tokyonight_repo] | `onedark` ![onedark][onedark_repo] | `cobalt` ![cobalt][cobalt_repo] |
-| `synthwave` ![synthwave][synthwave_repo] | `highcontrast` ![highcontrast][highcontrast_repo] | `dracula` ![dracula][dracula_repo] |
-| `prussian` ![prussian][prussian_repo] | `monokai` ![monokai][monokai_repo] | `vue` ![vue][vue_repo] |
-| `vue-dark` ![vue-dark][vue-dark_repo] | `shades-of-purple` ![shades-of-purple][shades-of-purple_repo] | `nightowl` ![nightowl][nightowl_repo] |
-| `buefy` ![buefy][buefy_repo] | `blue-green` ![blue-green][blue-green_repo] | `algolia` ![algolia][algolia_repo] |
-| `great-gatsby` ![great-gatsby][great-gatsby_repo] | `darcula` ![darcula][darcula_repo] | `bear` ![bear][bear_repo] |
-| `solarized-dark` ![solarized-dark][solarized-dark_repo] | `solarized-light` ![solarized-light][solarized-light_repo] | `chartreuse-dark` ![chartreuse-dark][chartreuse-dark_repo] |
-| `nord` ![nord][nord_repo] | `gotham` ![gotham][gotham_repo] | `material-palenight` ![material-palenight][material-palenight_repo] |
-| `graywhite` ![graywhite][graywhite_repo] | `vision-friendly-dark` ![vision-friendly-dark][vision-friendly-dark_repo] | `ayu-mirage` ![ayu-mirage][ayu-mirage_repo] |
-| `midnight-purple` ![midnight-purple][midnight-purple_repo] | `calm` ![calm][calm_repo] | `flag-india` ![flag-india][flag-india_repo] |
-| `omni` ![omni][omni_repo] | `react` ![react][react_repo] | `jolly` ![jolly][jolly_repo] |
-| `maroongold` ![maroongold][maroongold_repo] | `yeblu` ![yeblu][yeblu_repo] | `blueberry` ![blueberry][blueberry_repo] |
-| `slateorange` ![slateorange][slateorange_repo] | `kacho_ga` ![kacho_ga][kacho_ga_repo] | `outrun` ![outrun][outrun_repo] |
-| `ocean_dark` ![ocean_dark][ocean_dark_repo] | `city_lights` ![city_lights][city_lights_repo] | `github_dark` ![github_dark][github_dark_repo] |
-| `github_dark_dimmed` ![github_dark_dimmed][github_dark_dimmed_repo] | `discord_old_blurple` ![discord_old_blurple][discord_old_blurple_repo] | `aura_dark` ![aura_dark][aura_dark_repo] |
-| `panda` ![panda][panda_repo] | `noctis_minimus` ![noctis_minimus][noctis_minimus_repo] | `cobalt2` ![cobalt2][cobalt2_repo] |
-| `swift` ![swift][swift_repo] | `aura` ![aura][aura_repo] | `apprentice` ![apprentice][apprentice_repo] |
-| `moltack` ![moltack][moltack_repo] | `codeSTACKr` ![codeSTACKr][codeSTACKr_repo] | `rose_pine` ![rose_pine][rose_pine_repo] |
-| `catppuccin_latte` ![catppuccin_latte][catppuccin_latte_repo] | `catppuccin_mocha` ![catppuccin_mocha][catppuccin_mocha_repo] | `date_night` ![date_night][date_night_repo] |
-| `one_dark_pro` ![one_dark_pro][one_dark_pro_repo] | `rose` ![rose][rose_repo] | `holi` ![holi][holi_repo] |
-| `neon` ![neon][neon_repo] | `blue_navy` ![blue_navy][blue_navy_repo] | `calm_pink` ![calm_pink][calm_pink_repo] |
-| `ambient_gradient` ![ambient_gradient][ambient_gradient_repo] |  |  |
+| `default` ![default][default_repo] | `default_repocard` ![default_repocard][default_repocard_repo] | `transparent` ![transparent][transparent_repo] |
+| `shadow_red` ![shadow_red][shadow_red_repo] | `shadow_green` ![shadow_green][shadow_green_repo] | `shadow_blue` ![shadow_blue][shadow_blue_repo] |
+| `dark` ![dark][dark_repo] | `radical` ![radical][radical_repo] | `merko` ![merko][merko_repo] |
+| `gruvbox` ![gruvbox][gruvbox_repo] | `gruvbox_light` ![gruvbox_light][gruvbox_light_repo] | `tokyonight` ![tokyonight][tokyonight_repo] |
+| `onedark` ![onedark][onedark_repo] | `cobalt` ![cobalt][cobalt_repo] | `synthwave` ![synthwave][synthwave_repo] |
+| `highcontrast` ![highcontrast][highcontrast_repo] | `dracula` ![dracula][dracula_repo] | `prussian` ![prussian][prussian_repo] |
+| `monokai` ![monokai][monokai_repo] | `vue` ![vue][vue_repo] | `vue-dark` ![vue-dark][vue-dark_repo] |
+| `shades-of-purple` ![shades-of-purple][shades-of-purple_repo] | `nightowl` ![nightowl][nightowl_repo] | `buefy` ![buefy][buefy_repo] |
+| `blue-green` ![blue-green][blue-green_repo] | `algolia` ![algolia][algolia_repo] | `great-gatsby` ![great-gatsby][great-gatsby_repo] |
+| `darcula` ![darcula][darcula_repo] | `bear` ![bear][bear_repo] | `solarized-dark` ![solarized-dark][solarized-dark_repo] |
+| `solarized-light` ![solarized-light][solarized-light_repo] | `chartreuse-dark` ![chartreuse-dark][chartreuse-dark_repo] | `nord` ![nord][nord_repo] |
+| `gotham` ![gotham][gotham_repo] | `material-palenight` ![material-palenight][material-palenight_repo] | `graywhite` ![graywhite][graywhite_repo] |
+| `vision-friendly-dark` ![vision-friendly-dark][vision-friendly-dark_repo] | `ayu-mirage` ![ayu-mirage][ayu-mirage_repo] | `midnight-purple` ![midnight-purple][midnight-purple_repo] |
+| `calm` ![calm][calm_repo] | `flag-india` ![flag-india][flag-india_repo] | `omni` ![omni][omni_repo] |
+| `react` ![react][react_repo] | `jolly` ![jolly][jolly_repo] | `maroongold` ![maroongold][maroongold_repo] |
+| `yeblu` ![yeblu][yeblu_repo] | `blueberry` ![blueberry][blueberry_repo] | `slateorange` ![slateorange][slateorange_repo] |
+| `kacho_ga` ![kacho_ga][kacho_ga_repo] | `outrun` ![outrun][outrun_repo] | `ocean_dark` ![ocean_dark][ocean_dark_repo] |
+| `city_lights` ![city_lights][city_lights_repo] | `github_dark` ![github_dark][github_dark_repo] | `github_dark_dimmed` ![github_dark_dimmed][github_dark_dimmed_repo] |
+| `discord_old_blurple` ![discord_old_blurple][discord_old_blurple_repo] | `aura_dark` ![aura_dark][aura_dark_repo] | `panda` ![panda][panda_repo] |
+| `noctis_minimus` ![noctis_minimus][noctis_minimus_repo] | `cobalt2` ![cobalt2][cobalt2_repo] | `swift` ![swift][swift_repo] |
+| `aura` ![aura][aura_repo] | `apprentice` ![apprentice][apprentice_repo] | `moltack` ![moltack][moltack_repo] |
+| `codeSTACKr` ![codeSTACKr][codeSTACKr_repo] | `rose_pine` ![rose_pine][rose_pine_repo] | `catppuccin_latte` ![catppuccin_latte][catppuccin_latte_repo] |
+| `catppuccin_mocha` ![catppuccin_mocha][catppuccin_mocha_repo] | `date_night` ![date_night][date_night_repo] | `one_dark_pro` ![one_dark_pro][one_dark_pro_repo] |
+| `rose` ![rose][rose_repo] | `holi` ![holi][holi_repo] | `neon` ![neon][neon_repo] |
+| `blue_navy` ![blue_navy][blue_navy_repo] | `calm_pink` ![calm_pink][calm_pink_repo] | `ambient_gradient` ![ambient_gradient][ambient_gradient_repo] |
 
 ## Lenguajes Principales
 
@@ -80,31 +80,31 @@ Usa los parámetros `?theme=NOMBRE_DEL_TEMA` de esta forma:
 
 | | | |
 | :--: | :--: | :--: |
-| `transparent` ![transparent][transparent_lang] | `shadow_red` ![shadow_red][shadow_red_lang] | `shadow_green` ![shadow_green][shadow_green_lang] |
-| `shadow_blue` ![shadow_blue][shadow_blue_lang] | `dark` ![dark][dark_lang] | `radical` ![radical][radical_lang] |
-| `merko` ![merko][merko_lang] | `gruvbox` ![gruvbox][gruvbox_lang] | `gruvbox_light` ![gruvbox_light][gruvbox_light_lang] |
-| `tokyonight` ![tokyonight][tokyonight_lang] | `onedark` ![onedark][onedark_lang] | `cobalt` ![cobalt][cobalt_lang] |
-| `synthwave` ![synthwave][synthwave_lang] | `highcontrast` ![highcontrast][highcontrast_lang] | `dracula` ![dracula][dracula_lang] |
-| `prussian` ![prussian][prussian_lang] | `monokai` ![monokai][monokai_lang] | `vue` ![vue][vue_lang] |
-| `vue-dark` ![vue-dark][vue-dark_lang] | `shades-of-purple` ![shades-of-purple][shades-of-purple_lang] | `nightowl` ![nightowl][nightowl_lang] |
-| `buefy` ![buefy][buefy_lang] | `blue-green` ![blue-green][blue-green_lang] | `algolia` ![algolia][algolia_lang] |
-| `great-gatsby` ![great-gatsby][great-gatsby_lang] | `darcula` ![darcula][darcula_lang] | `bear` ![bear][bear_lang] |
-| `solarized-dark` ![solarized-dark][solarized-dark_lang] | `solarized-light` ![solarized-light][solarized-light_lang] | `chartreuse-dark` ![chartreuse-dark][chartreuse-dark_lang] |
-| `nord` ![nord][nord_lang] | `gotham` ![gotham][gotham_lang] | `material-palenight` ![material-palenight][material-palenight_lang] |
-| `graywhite` ![graywhite][graywhite_lang] | `vision-friendly-dark` ![vision-friendly-dark][vision-friendly-dark_lang] | `ayu-mirage` ![ayu-mirage][ayu-mirage_lang] |
-| `midnight-purple` ![midnight-purple][midnight-purple_lang] | `calm` ![calm][calm_lang] | `flag-india` ![flag-india][flag-india_lang] |
-| `omni` ![omni][omni_lang] | `react` ![react][react_lang] | `jolly` ![jolly][jolly_lang] |
-| `maroongold` ![maroongold][maroongold_lang] | `yeblu` ![yeblu][yeblu_lang] | `blueberry` ![blueberry][blueberry_lang] |
-| `slateorange` ![slateorange][slateorange_lang] | `kacho_ga` ![kacho_ga][kacho_ga_lang] | `outrun` ![outrun][outrun_lang] |
-| `ocean_dark` ![ocean_dark][ocean_dark_lang] | `city_lights` ![city_lights][city_lights_lang] | `github_dark` ![github_dark][github_dark_lang] |
-| `github_dark_dimmed` ![github_dark_dimmed][github_dark_dimmed_lang] | `discord_old_blurple` ![discord_old_blurple][discord_old_blurple_lang] | `aura_dark` ![aura_dark][aura_dark_lang] |
-| `panda` ![panda][panda_lang] | `noctis_minimus` ![noctis_minimus][noctis_minimus_lang] | `cobalt2` ![cobalt2][cobalt2_lang] |
-| `swift` ![swift][swift_lang] | `aura` ![aura][aura_lang] | `apprentice` ![apprentice][apprentice_lang] |
-| `moltack` ![moltack][moltack_lang] | `codeSTACKr` ![codeSTACKr][codeSTACKr_lang] | `rose_pine` ![rose_pine][rose_pine_lang] |
-| `catppuccin_latte` ![catppuccin_latte][catppuccin_latte_lang] | `catppuccin_mocha` ![catppuccin_mocha][catppuccin_mocha_lang] | `date_night` ![date_night][date_night_lang] |
-| `one_dark_pro` ![one_dark_pro][one_dark_pro_lang] | `rose` ![rose][rose_lang] | `holi` ![holi][holi_lang] |
-| `neon` ![neon][neon_lang] | `blue_navy` ![blue_navy][blue_navy_lang] | `calm_pink` ![calm_pink][calm_pink_lang] |
-| `ambient_gradient` ![ambient_gradient][ambient_gradient_lang] |  |  |
+| `default` ![default][default_lang] | `white` ![white][white_lang] | `transparent` ![transparent][transparent_lang] |
+| `shadow_red` ![shadow_red][shadow_red_lang] | `shadow_green` ![shadow_green][shadow_green_lang] | `shadow_blue` ![shadow_blue][shadow_blue_lang] |
+| `dark` ![dark][dark_lang] | `radical` ![radical][radical_lang] | `merko` ![merko][merko_lang] |
+| `gruvbox` ![gruvbox][gruvbox_lang] | `gruvbox_light` ![gruvbox_light][gruvbox_light_lang] | `tokyonight` ![tokyonight][tokyonight_lang] |
+| `onedark` ![onedark][onedark_lang] | `cobalt` ![cobalt][cobalt_lang] | `synthwave` ![synthwave][synthwave_lang] |
+| `highcontrast` ![highcontrast][highcontrast_lang] | `dracula` ![dracula][dracula_lang] | `prussian` ![prussian][prussian_lang] |
+| `monokai` ![monokai][monokai_lang] | `vue` ![vue][vue_lang] | `vue-dark` ![vue-dark][vue-dark_lang] |
+| `shades-of-purple` ![shades-of-purple][shades-of-purple_lang] | `nightowl` ![nightowl][nightowl_lang] | `buefy` ![buefy][buefy_lang] |
+| `blue-green` ![blue-green][blue-green_lang] | `algolia` ![algolia][algolia_lang] | `great-gatsby` ![great-gatsby][great-gatsby_lang] |
+| `darcula` ![darcula][darcula_lang] | `bear` ![bear][bear_lang] | `solarized-dark` ![solarized-dark][solarized-dark_lang] |
+| `solarized-light` ![solarized-light][solarized-light_lang] | `chartreuse-dark` ![chartreuse-dark][chartreuse-dark_lang] | `nord` ![nord][nord_lang] |
+| `gotham` ![gotham][gotham_lang] | `material-palenight` ![material-palenight][material-palenight_lang] | `graywhite` ![graywhite][graywhite_lang] |
+| `vision-friendly-dark` ![vision-friendly-dark][vision-friendly-dark_lang] | `ayu-mirage` ![ayu-mirage][ayu-mirage_lang] | `midnight-purple` ![midnight-purple][midnight-purple_lang] |
+| `calm` ![calm][calm_lang] | `flag-india` ![flag-india][flag-india_lang] | `omni` ![omni][omni_lang] |
+| `react` ![react][react_lang] | `jolly` ![jolly][jolly_lang] | `maroongold` ![maroongold][maroongold_lang] |
+| `yeblu` ![yeblu][yeblu_lang] | `blueberry` ![blueberry][blueberry_lang] | `slateorange` ![slateorange][slateorange_lang] |
+| `kacho_ga` ![kacho_ga][kacho_ga_lang] | `outrun` ![outrun][outrun_lang] | `ocean_dark` ![ocean_dark][ocean_dark_lang] |
+| `city_lights` ![city_lights][city_lights_lang] | `github_dark` ![github_dark][github_dark_lang] | `github_dark_dimmed` ![github_dark_dimmed][github_dark_dimmed_lang] |
+| `discord_old_blurple` ![discord_old_blurple][discord_old_blurple_lang] | `aura_dark` ![aura_dark][aura_dark_lang] | `panda` ![panda][panda_lang] |
+| `noctis_minimus` ![noctis_minimus][noctis_minimus_lang] | `cobalt2` ![cobalt2][cobalt2_lang] | `swift` ![swift][swift_lang] |
+| `aura` ![aura][aura_lang] | `apprentice` ![apprentice][apprentice_lang] | `moltack` ![moltack][moltack_lang] |
+| `codeSTACKr` ![codeSTACKr][codeSTACKr_lang] | `rose_pine` ![rose_pine][rose_pine_lang] | `catppuccin_latte` ![catppuccin_latte][catppuccin_latte_lang] |
+| `catppuccin_mocha` ![catppuccin_mocha][catppuccin_mocha_lang] | `date_night` ![date_night][date_night_lang] | `one_dark_pro` ![one_dark_pro][one_dark_pro_lang] |
+| `rose` ![rose][rose_lang] | `holi` ![holi][holi_lang] | `neon` ![neon][neon_lang] |
+| `blue_navy` ![blue_navy][blue_navy_lang] | `calm_pink` ![calm_pink][calm_pink_lang] | `ambient_gradient` ![ambient_gradient][ambient_gradient_lang] |
 
 ## WakaTime
 
@@ -112,34 +112,35 @@ Usa los parámetros `?theme=NOMBRE_DEL_TEMA` de esta forma:
 
 | | | |
 | :--: | :--: | :--: |
-| `transparent` ![transparent][transparent_waka] | `shadow_red` ![shadow_red][shadow_red_waka] | `shadow_green` ![shadow_green][shadow_green_waka] |
-| `shadow_blue` ![shadow_blue][shadow_blue_waka] | `dark` ![dark][dark_waka] | `radical` ![radical][radical_waka] |
-| `merko` ![merko][merko_waka] | `gruvbox` ![gruvbox][gruvbox_waka] | `gruvbox_light` ![gruvbox_light][gruvbox_light_waka] |
-| `tokyonight` ![tokyonight][tokyonight_waka] | `onedark` ![onedark][onedark_waka] | `cobalt` ![cobalt][cobalt_waka] |
-| `synthwave` ![synthwave][synthwave_waka] | `highcontrast` ![highcontrast][highcontrast_waka] | `dracula` ![dracula][dracula_waka] |
-| `prussian` ![prussian][prussian_waka] | `monokai` ![monokai][monokai_waka] | `vue` ![vue][vue_waka] |
-| `vue-dark` ![vue-dark][vue-dark_waka] | `shades-of-purple` ![shades-of-purple][shades-of-purple_waka] | `nightowl` ![nightowl][nightowl_waka] |
-| `buefy` ![buefy][buefy_waka] | `blue-green` ![blue-green][blue-green_waka] | `algolia` ![algolia][algolia_waka] |
-| `great-gatsby` ![great-gatsby][great-gatsby_waka] | `darcula` ![darcula][darcula_waka] | `bear` ![bear][bear_waka] |
-| `solarized-dark` ![solarized-dark][solarized-dark_waka] | `solarized-light` ![solarized-light][solarized-light_waka] | `chartreuse-dark` ![chartreuse-dark][chartreuse-dark_waka] |
-| `nord` ![nord][nord_waka] | `gotham` ![gotham][gotham_waka] | `material-palenight` ![material-palenight][material-palenight_waka] |
-| `graywhite` ![graywhite][graywhite_waka] | `vision-friendly-dark` ![vision-friendly-dark][vision-friendly-dark_waka] | `ayu-mirage` ![ayu-mirage][ayu-mirage_waka] |
-| `midnight-purple` ![midnight-purple][midnight-purple_waka] | `calm` ![calm][calm_waka] | `flag-india` ![flag-india][flag-india_waka] |
-| `omni` ![omni][omni_waka] | `react` ![react][react_waka] | `jolly` ![jolly][jolly_waka] |
-| `maroongold` ![maroongold][maroongold_waka] | `yeblu` ![yeblu][yeblu_waka] | `blueberry` ![blueberry][blueberry_waka] |
-| `slateorange` ![slateorange][slateorange_waka] | `kacho_ga` ![kacho_ga][kacho_ga_waka] | `outrun` ![outrun][outrun_waka] |
-| `ocean_dark` ![ocean_dark][ocean_dark_waka] | `city_lights` ![city_lights][city_lights_waka] | `github_dark` ![github_dark][github_dark_waka] |
-| `github_dark_dimmed` ![github_dark_dimmed][github_dark_dimmed_waka] | `discord_old_blurple` ![discord_old_blurple][discord_old_blurple_waka] | `aura_dark` ![aura_dark][aura_dark_waka] |
-| `panda` ![panda][panda_waka] | `noctis_minimus` ![noctis_minimus][noctis_minimus_waka] | `cobalt2` ![cobalt2][cobalt2_waka] |
-| `swift` ![swift][swift_waka] | `aura` ![aura][aura_waka] | `apprentice` ![apprentice][apprentice_waka] |
-| `moltack` ![moltack][moltack_waka] | `codeSTACKr` ![codeSTACKr][codeSTACKr_waka] | `rose_pine` ![rose_pine][rose_pine_waka] |
-| `catppuccin_latte` ![catppuccin_latte][catppuccin_latte_waka] | `catppuccin_mocha` ![catppuccin_mocha][catppuccin_mocha_waka] | `date_night` ![date_night][date_night_waka] |
-| `one_dark_pro` ![one_dark_pro][one_dark_pro_waka] | `rose` ![rose][rose_waka] | `holi` ![holi][holi_waka] |
-| `neon` ![neon][neon_waka] | `blue_navy` ![blue_navy][blue_navy_waka] | `calm_pink` ![calm_pink][calm_pink_waka] |
-| `ambient_gradient` ![ambient_gradient][ambient_gradient_waka] |  |  |
+| `default` ![default][default_waka] | `white` ![white][white_waka] | `transparent` ![transparent][transparent_waka] |
+| `shadow_red` ![shadow_red][shadow_red_waka] | `shadow_green` ![shadow_green][shadow_green_waka] | `shadow_blue` ![shadow_blue][shadow_blue_waka] |
+| `dark` ![dark][dark_waka] | `radical` ![radical][radical_waka] | `merko` ![merko][merko_waka] |
+| `gruvbox` ![gruvbox][gruvbox_waka] | `gruvbox_light` ![gruvbox_light][gruvbox_light_waka] | `tokyonight` ![tokyonight][tokyonight_waka] |
+| `onedark` ![onedark][onedark_waka] | `cobalt` ![cobalt][cobalt_waka] | `synthwave` ![synthwave][synthwave_waka] |
+| `highcontrast` ![highcontrast][highcontrast_waka] | `dracula` ![dracula][dracula_waka] | `prussian` ![prussian][prussian_waka] |
+| `monokai` ![monokai][monokai_waka] | `vue` ![vue][vue_waka] | `vue-dark` ![vue-dark][vue-dark_waka] |
+| `shades-of-purple` ![shades-of-purple][shades-of-purple_waka] | `nightowl` ![nightowl][nightowl_waka] | `buefy` ![buefy][buefy_waka] |
+| `blue-green` ![blue-green][blue-green_waka] | `algolia` ![algolia][algolia_waka] | `great-gatsby` ![great-gatsby][great-gatsby_waka] |
+| `darcula` ![darcula][darcula_waka] | `bear` ![bear][bear_waka] | `solarized-dark` ![solarized-dark][solarized-dark_waka] |
+| `solarized-light` ![solarized-light][solarized-light_waka] | `chartreuse-dark` ![chartreuse-dark][chartreuse-dark_waka] | `nord` ![nord][nord_waka] |
+| `gotham` ![gotham][gotham_waka] | `material-palenight` ![material-palenight][material-palenight_waka] | `graywhite` ![graywhite][graywhite_waka] |
+| `vision-friendly-dark` ![vision-friendly-dark][vision-friendly-dark_waka] | `ayu-mirage` ![ayu-mirage][ayu-mirage_waka] | `midnight-purple` ![midnight-purple][midnight-purple_waka] |
+| `calm` ![calm][calm_waka] | `flag-india` ![flag-india][flag-india_waka] | `omni` ![omni][omni_waka] |
+| `react` ![react][react_waka] | `jolly` ![jolly][jolly_waka] | `maroongold` ![maroongold][maroongold_waka] |
+| `yeblu` ![yeblu][yeblu_waka] | `blueberry` ![blueberry][blueberry_waka] | `slateorange` ![slateorange][slateorange_waka] |
+| `kacho_ga` ![kacho_ga][kacho_ga_waka] | `outrun` ![outrun][outrun_waka] | `ocean_dark` ![ocean_dark][ocean_dark_waka] |
+| `city_lights` ![city_lights][city_lights_waka] | `github_dark` ![github_dark][github_dark_waka] | `github_dark_dimmed` ![github_dark_dimmed][github_dark_dimmed_waka] |
+| `discord_old_blurple` ![discord_old_blurple][discord_old_blurple_waka] | `aura_dark` ![aura_dark][aura_dark_waka] | `panda` ![panda][panda_waka] |
+| `noctis_minimus` ![noctis_minimus][noctis_minimus_waka] | `cobalt2` ![cobalt2][cobalt2_waka] | `swift` ![swift][swift_waka] |
+| `aura` ![aura][aura_waka] | `apprentice` ![apprentice][apprentice_waka] | `moltack` ![moltack][moltack_waka] |
+| `codeSTACKr` ![codeSTACKr][codeSTACKr_waka] | `rose_pine` ![rose_pine][rose_pine_waka] | `catppuccin_latte` ![catppuccin_latte][catppuccin_latte_waka] |
+| `catppuccin_mocha` ![catppuccin_mocha][catppuccin_mocha_waka] | `date_night` ![date_night][date_night_waka] | `one_dark_pro` ![one_dark_pro][one_dark_pro_waka] |
+| `rose` ![rose][rose_waka] | `holi` ![holi][holi_waka] | `neon` ![neon][neon_waka] |
+| `blue_navy` ![blue_navy][blue_navy_waka] | `calm_pink` ![calm_pink][calm_pink_waka] | `ambient_gradient` ![ambient_gradient][ambient_gradient_waka] |
 
 
 [default]: https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues,prs&cache_seconds=86400&theme=default
+[white]: https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues,prs&cache_seconds=86400&theme=white
 [default_repocard]: https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues,prs&cache_seconds=86400&theme=default_repocard
 [transparent]: https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues,prs&cache_seconds=86400&theme=transparent
 [shadow_red]: https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues,prs&cache_seconds=86400&theme=shadow_red
@@ -217,6 +218,7 @@ Usa los parámetros `?theme=NOMBRE_DEL_TEMA` de esta forma:
 
 
 [default_repo]: https://dev-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=dev-readme-stats&cache_seconds=86400&theme=default
+[white_repo]: https://dev-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=dev-readme-stats&cache_seconds=86400&theme=white
 [default_repocard_repo]: https://dev-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=dev-readme-stats&cache_seconds=86400&theme=default_repocard
 [transparent_repo]: https://dev-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=dev-readme-stats&cache_seconds=86400&theme=transparent
 [shadow_red_repo]: https://dev-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=dev-readme-stats&cache_seconds=86400&theme=shadow_red
@@ -294,6 +296,7 @@ Usa los parámetros `?theme=NOMBRE_DEL_TEMA` de esta forma:
 
 
 [default_lang]: https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=compact&cache_seconds=86400&theme=default
+[white_lang]: https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=compact&cache_seconds=86400&theme=white
 [default_repocard_lang]: https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=compact&cache_seconds=86400&theme=default_repocard
 [transparent_lang]: https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=compact&cache_seconds=86400&theme=transparent
 [shadow_red_lang]: https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=compact&cache_seconds=86400&theme=shadow_red
@@ -371,6 +374,7 @@ Usa los parámetros `?theme=NOMBRE_DEL_TEMA` de esta forma:
 
 
 [default_waka]: https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&cache_seconds=86400&theme=default
+[white_waka]: https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&cache_seconds=86400&theme=white
 [default_repocard_waka]: https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&cache_seconds=86400&theme=default_repocard
 [transparent_waka]: https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&cache_seconds=86400&theme=transparent
 [shadow_red_waka]: https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&cache_seconds=86400&theme=shadow_red
