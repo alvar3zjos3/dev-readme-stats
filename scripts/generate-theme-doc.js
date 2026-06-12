@@ -95,9 +95,11 @@ const createTableItem = ({ link, label, suffix }) => {
   return `\`${label}\` ![${link}][${link}${suffix}]`;
 };
 
-const generateTable = ({ exclude, suffix }) => {
+const generateTable = ({ exclude = [], suffix }) => {
   const rows = [];
-  const themesFiltered = Object.keys(themes).filter((name) => name !== exclude);
+  const themesFiltered = Object.keys(themes).filter(
+    (name) => !exclude.includes(name),
+  );
 
   for (let i = 0; i < themesFiltered.length; i += 3) {
     const [one, two, three] = themesFiltered.slice(i, i + 3);
