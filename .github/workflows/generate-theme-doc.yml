@@ -60,4 +60,4 @@ jobs:
         env:
           CI: true
           PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-          GH_REPO: ${{ secrets.GH_REPO }}
+          GH_REPO: ${{ github.repository }}
