@@ -15,7 +15,6 @@ const CARD_DEFAULT_WIDTH = 287;
 const RANK_CARD_MIN_WIDTH = 420;
 const RANK_CARD_DEFAULT_WIDTH = 450;
 const RANK_ONLY_CARD_MIN_WIDTH = 290;
-const RANK_ONLY_CARD_DEFAULT_WIDTH = 290;
 
 /**
  * Localizadores largos que necesitan más espacio para el texto. Manténgase ordenado alfabéticamente.
@@ -471,41 +470,32 @@ const renderStatsCard = (stats, options = {}) => {
   };
 
   /*
-    NUEVA LÓGICA:
-    En lugar de forzar truncado, nos aseguramos de que `minCardWidth` considere 
-    siempre el ancho real del título (`calculateTextWidth()`), incluso si el rango es visible.
+    Cuando hide_rank=true, el ancho mínimo de la tarjeta es 270 px + la longitud del título y relleno.
+    Cuando hide_rank=false, el ancho mínimo de card_width es 340 px + ancho del icono (si show_icons=true).
+    Los números se seleccionan mirando las dimensiones existentes en la producción.
   */
   const iconWidth = show_icons && statItems.length ? 16 + /* padding */ 1 : 0;
 
-  // Base width requerida para el título
-  const titleWidthRequired =
-    50 /* padding izquierdo/derecho */ + calculateTextWidth() * 1.5;
-  // Espacio que requiere el círculo si está activo
-  const rankCircleSpace = hide_rank ? 0 : 120;
+  // Si solo se muestra el rank, el ancho debe adaptarse al título
+  const rankOnlyWidth = clampValue(
+    50 + calculateTextWidth() * 2,
+    RANK_ONLY_CARD_MIN_WIDTH,
+    Infinity,
+  );
 
   const minCardWidth =
-    Math.max(
-      hide_rank
-        ? CARD_MIN_WIDTH
-        : statItems.length
-          ? RANK_CARD_MIN_WIDTH
-          : RANK_ONLY_CARD_MIN_WIDTH,
-      titleWidthRequired + rankCircleSpace,
-    ) + iconWidth;
+    (hide_rank
+      ? clampValue(50 + calculateTextWidth() * 2, CARD_MIN_WIDTH, Infinity)
+      : statItems.length
+        ? RANK_CARD_MIN_WIDTH
+        : rankOnlyWidth) + iconWidth;
 
   const defaultCardWidth =
     (hide_rank
-      ? Math.max(CARD_DEFAULT_WIDTH, titleWidthRequired)
+      ? CARD_DEFAULT_WIDTH
       : statItems.length
-        ? Math.max(
-            RANK_CARD_DEFAULT_WIDTH,
-            titleWidthRequired + rankCircleSpace,
-          )
-        : Math.max(
-            RANK_ONLY_CARD_DEFAULT_WIDTH,
-            titleWidthRequired + rankCircleSpace,
-          )) + iconWidth;
-
+        ? RANK_CARD_DEFAULT_WIDTH
+        : rankOnlyWidth) + iconWidth;
   let width = card_width
     ? isNaN(card_width)
       ? defaultCardWidth
@@ -552,14 +542,6 @@ const renderStatsCard = (stats, options = {}) => {
    * @returns {number} - Valor de traducción del círculo de rango.
    */
   const calculateRankXTranslation = () => {
-    // Si la tarjeta se expandió mucho (ej. nombre de usuario muy largo), anclamos el rango a la derecha
-    if (
-      width >
-      Math.max(RANK_CARD_DEFAULT_WIDTH, titleWidthRequired + rankCircleSpace)
-    ) {
-      return width - 110;
-    }
-
     if (statItems.length) {
       const minXTranslation = RANK_CARD_MIN_WIDTH + iconWidth - 70;
       if (width > RANK_CARD_DEFAULT_WIDTH) {
