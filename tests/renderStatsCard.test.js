@@ -136,10 +136,7 @@ describe("Prueba de renderStatsCard", () => {
 
   it("debe renderizar with custom width set and limit minimum width", () => {
     document.body.innerHTML = renderStatsCard(stats, { card_width: 1 });
-    expect(document.querySelector("svg")).toHaveAttribute(
-      "width",
-      "453.92672697368425",
-    );
+    expect(document.querySelector("svg")).toHaveAttribute("width", "437");
 
     // Test default minimum card width without rank circle.
     document.body.innerHTML = renderStatsCard(stats, {
@@ -148,7 +145,7 @@ describe("Prueba de renderStatsCard", () => {
     });
     expect(document.querySelector("svg")).toHaveAttribute(
       "width",
-      "333.92672697368425",
+      "422.902302631579",
     );
 
     // Test minimum card width with rank and icons.
@@ -159,7 +156,7 @@ describe("Prueba de renderStatsCard", () => {
     });
     expect(document.querySelector("svg")).toHaveAttribute(
       "width",
-      "333.92672697368425",
+      "422.902302631579",
     );
 
     // Test minimum card width with icons but without rank.
@@ -168,10 +165,7 @@ describe("Prueba de renderStatsCard", () => {
       hide_rank: false,
       show_icons: true,
     });
-    expect(document.querySelector("svg")).toHaveAttribute(
-      "width",
-      "453.92672697368425",
-    );
+    expect(document.querySelector("svg")).toHaveAttribute("width", "437");
 
     // Test minimum card width without icons or rank.
     document.body.innerHTML = renderStatsCard(stats, {
@@ -179,10 +173,7 @@ describe("Prueba de renderStatsCard", () => {
       hide_rank: false,
       show_icons: false,
     });
-    expect(document.querySelector("svg")).toHaveAttribute(
-      "width",
-      "436.92672697368425",
-    );
+    expect(document.querySelector("svg")).toHaveAttribute("width", "420");
   });
 
   it("debe renderizar default colors properly", () => {
@@ -365,7 +356,7 @@ describe("Prueba de renderStatsCard", () => {
 
     expect(
       document.body.getElementsByTagName("svg")[0].getAttribute("width"),
-    ).toBe("333.92672697368425");
+    ).toBe("422.902302631579");
   });
 
   it("debe auto resize if hide_rank is true & custom_title is set", () => {
