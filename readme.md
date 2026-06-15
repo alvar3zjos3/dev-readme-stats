@@ -143,12 +143,12 @@ Muestra tus métricas principales: estrellas totales, commits, pull requests, is
 **Endpoint:** `api?username=TU_USUARIO`
 
 ```md
-![Estadísticas GitHub](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3)
+[Estadísticas GitHub](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3)
 ```
 
 **Resultado:**
 
-[![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3)](https://github.com/alvar3zjos3/dev-readme-stats)
+<img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues"/>
 
 > [!WARNING]
 > Por defecto solo se muestran estadísticas de repositorios **públicos**. Para incluir datos privados debes [desplegar tu propia instancia](#-desplegar-tu-propia-instancia) con tu propio PAT.
@@ -166,10 +166,10 @@ Usa `&hide=` con valores separados por comas para ocultar campos específicos de
 | `contribs` | Repositorios contribuidos (el año pasado) |
 
 ```md
-![Estadísticas GitHub](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=stars,prs,issues,contribs)
+[Estadísticas GitHub](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=stars,commits,prs,issues,contribs)
 ```
 
-[![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=stars,prs,issues,contribs)](https://github.com/alvar3zjos3/dev-readme-stats)
+<img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=stars,commits,prs,issues,contribs">
 
 ### Mostrar estadísticas adicionales
 
@@ -184,17 +184,17 @@ Usa `&show=` para mostrar métricas extra que no aparecen por defecto:
 | `prs_merged_percentage` | Porcentaje de PRs mergeados sobre el total |
 
 ```md
-![Estadísticas GitHub](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)
+[Estadísticas GitHub](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)
 ```
 
-[![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage)](https://github.com/alvar3zjos3/dev-readme-stats)
+<img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage">
 
 ### Mostrar iconos
 
 Los iconos están activados por defecto. Puedes forzar activarlos explícitamente con `&show_icons=true`:
 
 ```md
-![Estadísticas GitHub](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true)
+[Estadísticas GitHub](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&show_icons=true)
 ```
 
 ### Mostrar commits de un año específico
@@ -202,10 +202,10 @@ Los iconos están activados por defecto. Puedes forzar activarlos explícitament
 Filtra los commits a un año concreto con `&commits_year=AAAA`:
 
 ```md
-![Estadísticas GitHub](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&commits_year=2025)
+[Estadísticas GitHub](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&commits_year=2025)
 ```
 
-[![Estadísticas GitHub de Alvarez](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&commits_year=2025)](https://github.com/alvar3zjos3/dev-readme-stats)
+<img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&commits_year=2025&hide=stars,prs,issues,contribs">
 
 ### Sistema de rangos
 
@@ -227,9 +227,16 @@ El círculo animado alrededor del rango muestra `100 - percentil_global`. Puedes
 
 <table>
 <tr>
-<td align="center"><b>rank_icon=default</b><br><a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=stars,commits,prs,issues,contribs&rank_icon=default" /></a></td>
-<td align="center"><b>rank_icon=github</b><br><a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=stars,commits,prs,issues,contribs&rank_icon=github" /></a></td>
-<td align="center"><b>rank_icon=percentile</b><br><a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=stars,commits,prs,issues,contribs&rank_icon=percentile" /></a></td>
+<td align="center"><b>rank_icon=default</b><br>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=stars,commits,prs,issues,contribs&rank_icon=default" /></a>
+</td>
+<td align="center"><b>rank_icon=github</b><br>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=stars,commits,prs,issues,contribs&rank_icon=github" /></a>
+</td>
+<td align="center"><b>rank_icon=percentile</b><br>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=stars,commits,prs,issues,contribs&rank_icon=percentile" /></a>
+
+</td>
 </tr>
 </table>
 
@@ -260,31 +267,31 @@ El círculo animado alrededor del rango muestra `100 - percentil_global`. Puedes
 <tr>
 <td align="center">
 <b>Por defecto</b><br>
-<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img height="180" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3" /></a>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img height="180" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&theme=default" /></a>
 </td>
 <td align="center">
 <b>Tema radical</b><br>
-<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img height="180" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=radical" /></a>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img height="180" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&theme=radical" /></a>
 </td>
 </tr>
 <tr>
 <td align="center">
 <b>Tema tokyonight</b><br>
-<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img height="180" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=tokyonight" /></a>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img height="180" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&theme=tokyonight" /></a>
 </td>
 <td align="center">
 <b>Tema dracula</b><br>
-<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img height="180" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=dracula" /></a>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img height="180" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&theme=dracula" /></a>
 </td>
 </tr>
 <tr>
 <td align="center">
 <b>Con degradado</b><br>
-<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img height="180" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&bg_color=30,e96443,904e95&title_color=fff&text_color=fff" /></a>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img height="180" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&bg_color=30,e96443,904e95&title_color=fff&text_color=fff" /></a>
 </td>
 <td align="center">
 <b>Sin borde + rank oculto</b><br>
-<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img height="180" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide_border=true&hide_rank=true&theme=tokyonight" /></a>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img height="180" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&hide_border=true&hide_rank=true&theme=tokyonight" /></a>
 </td>
 </tr>
 </table>
@@ -304,12 +311,12 @@ Muestra los lenguajes de programación más presentes en tus repositorios públi
 > Solo muestra datos de repositorios **públicos**. Para incluir lenguajes de repos privados, necesitas [tu propia instancia](#-desplegar-tu-propia-instancia).
 
 ```md
-![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&theme=tokyonight)
+[Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&theme=highcontrast)
 ```
 
 **Resultado:**
 
-[![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&card_width=320&langs_count=8&theme=tokyonight)](https://github.com/alvar3zjos3/dev-readme-stats)
+<img src="https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&theme=highcontrast">
 
 ### Algoritmo de estadísticas de lenguajes
 
@@ -327,7 +334,7 @@ ranking_index = (byte_count ^ size_weight) * (repo_count ^ count_weight)
 
 ```md
 <!-- Algoritmo combinado (recomendado) -->
-![Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&size_weight=0.5&count_weight=0.5)
+[Lenguajes Principales](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&size_weight=0.5&count_weight=0.5)
 ```
 
 ### Diseños disponibles
@@ -338,36 +345,36 @@ Cambia el diseño con `&layout=NOMBRE`:
 <tr>
 <td align="center">
 <b>compact (por defecto)</b><br>
-<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=compact&card_width=320&theme=tokyonight" /></a><br>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=compact&theme=highcontrast" /></a><br>
 <code>&layout=compact</code>
 </td>
 <td align="center">
 <b>normal</b><br>
-<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=normal&card_width=320&theme=tokyonight" /></a><br>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=normal&theme=highcontrast" /></a><br>
 <code>&layout=normal</code>
 </td>
 </tr>
 <tr>
 <td align="center">
 <b>donut</b><br>
-<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=donut&theme=tokyonight" /></a><br>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=donut&theme=highcontrast" /></a><br>
 <code>&layout=donut</code>
 </td>
 <td align="center">
 <b>donut-vertical</b><br>
-<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=donut-vertical&theme=tokyonight" /></a><br>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=donut-vertical&theme=highcontrast" /></a><br>
 <code>&layout=donut-vertical</code>
 </td>
 </tr>
 <tr>
 <td align="center">
 <b>pie</b><br>
-<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=pie&theme=tokyonight" /></a><br>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&layout=pie&theme=highcontrast" /></a><br>
 <code>&layout=pie</code>
 </td>
 <td align="center">
 <b>hide_progress=true</b><br>
-<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&hide_progress=true&card_width=320&theme=tokyonight" /></a><br>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&hide_progress=true&theme=highcontrast" /></a><br>
 <code>&hide_progress=true</code>
 </td>
 </tr>
@@ -394,22 +401,22 @@ Cambia el diseño con `&layout=NOMBRE`:
 
 ```md
 <!-- Excluir repositorios -->
-![Lenguajes](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&exclude_repo=dev-readme-stats,alvar3zjos3.github.io)
+[Lenguajes](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&exclude_repo=dev-readme-stats,alvar3zjos3.github.io)
 
 <!-- Ocultar lenguajes específicos -->
-![Lenguajes](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&hide=javascript,html)
+[Lenguajes](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&hide=javascript,html)
 
 <!-- Mostrar más lenguajes (hasta 20) -->
-![Lenguajes](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&langs_count=10)
+[Lenguajes](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&langs_count=20)
 
 <!-- Mostrar bytes en lugar de porcentaje -->
-![Lenguajes](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&stats_format=bytes)
+[Lenguajes](https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&stats_format=bytes)
 ```
 
 <table>
 <tr>
-<td align="center"><b>stats_format=bytes</b><br><a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&stats_format=bytes&card_width=320&theme=tokyonight" /></a></td>
-<td align="center"><b>langs_count=10</b><br><a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&langs_count=10&card_width=320&theme=tokyonight" /></a></td>
+<td align="center"><b>stats_format=bytes</b><br><a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&stats_format=bytes&theme=highcontrast" /></a></td>
+<td align="center"><b>langs_count=10</b><br><a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/top-langs/?username=alvar3zjos3&langs_count=10&theme=highcontrast" /></a></td>
 </tr>
 </table>
 
@@ -428,12 +435,12 @@ Muestra el tiempo de codificación y desglose de lenguajes registrado en tu cuen
 > Si acabas de crear tu cuenta de WakaTime, pueden pasar hasta **24 horas** hasta que los datos aparezcan en la tarjeta.
 
 ```md
-![WakaTime Stats](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&theme=dracula)
+[WakaTime Stats](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&theme=cobalt)
 ```
 
 **Resultado:**
 
-[![Estadísticas WakaTime de Alvarez](https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&theme=dracula)](https://github.com/alvar3zjos3/dev-readme-stats)
+<img src="https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&theme=cobalt">
 
 ### Opciones exclusivas de WakaTime
 
@@ -457,21 +464,21 @@ Muestra el tiempo de codificación y desglose de lenguajes registrado en tu cuen
 <tr>
 <td align="center">
 <b>Layout default</b><br>
-<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&theme=dracula" /></a>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&theme=cobalt" /></a>
 </td>
 <td align="center">
 <b>Layout compact</b><br>
-<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&layout=compact&theme=dracula" /></a>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&layout=compact&theme=cobalt" /></a>
 </td>
 </tr>
 <tr>
 <td align="center">
 <b>hide_progress=true</b><br>
-<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&hide_progress=true&theme=dracula" /></a>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&hide_progress=true&theme=cobalt" /></a>
 </td>
 <td align="center">
 <b>display_format=percent</b><br>
-<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&display_format=percent&theme=dracula" /></a>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&display_format=percent&theme=cobalt" /></a>
 </td>
 </tr>
 </table>
@@ -487,7 +494,7 @@ Permite pinear más de 6 repositorios en tu perfil superando el límite nativo d
 **Endpoint:** `api/pin/?username=TU_USUARIO&repo=NOMBRE_REPO`
 
 ```md
-![Pin Repositorio](https://dev-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=dev-readme-stats&theme=radical)
+[Pin Repositorio](https://dev-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=dev-readme-stats&theme=radical)
 ```
 
 **Resultado:**
@@ -506,7 +513,7 @@ Permite pinear más de 6 repositorios en tu perfil superando el límite nativo d
 Con `show_owner=true`:
 
 ```md
-![Pin Repositorio](https://dev-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=dev-readme-stats&show_owner=true&theme=radical)
+[Pin Repositorio](https://dev-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=dev-readme-stats&show_owner=true&theme=radical)
 ```
 
 <a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api/pin/?username=alvar3zjos3&repo=dev-readme-stats&show_owner=true&theme=radical" /></a>
@@ -521,7 +528,7 @@ Permite pinear gists de GitHub directamente en tu perfil.
 > El ID del gist está en su URL: `https://gist.github.com/usuario/ID_DEL_GIST`
 
 ```md
-![Pin Gist](https://dev-readme-stats.vercel.app/api/gist?id=bbfce31e0217a3689c8d961a356cb10d&theme=synthwave)
+[Pin Gist](https://dev-readme-stats.vercel.app/api/gist?id=bbfce31e0217a3689c8d961a356cb10d&theme=synthwave)
 ```
 
 **Resultado:**
@@ -582,7 +589,7 @@ Algunos de los temas más populares:
 
 <table>
 <tr>
-<td align="center"><b>default</b><br><a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=stars,commits,prs,issues,contribs&theme=default" /></a></td>
+<td align="center"><b>default</b><br><a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=stars,commits,prs,issues,contribs" /></a></td>
 <td align="center"><b>white</b><br><a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=stars,commits,prs,issues,contribs&theme=white" /></a></td>
 <td align="center"><b>dark</b><br><a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=stars,commits,prs,issues,contribs&theme=dark" /></a></td>
 </tr>
@@ -614,26 +621,26 @@ Como GitHub sirve las imágenes desde su CDN, no puede detectar el modo oscuro/c
 El fondo desaparece y hereda el color del README, funcionando en ambos modos:
 
 ```md
-![Estadísticas GitHub](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=transparent)
+[Estadísticas GitHub](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=transparent)
 ```
 
 <details>
 <summary>👁️ Ver ejemplo</summary>
 
-[![Estadísticas GitHub](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=transparent)](https://github.com/alvar3zjos3/dev-readme-stats)
+<img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&theme=transparent">
 
 </details>
 
 #### 2. Canal alfa transparente en `bg_color`
 
 ```md
-![Estadísticas GitHub](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&bg_color=00000000)
+[Estadísticas GitHub](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&bg_color=00000000)
 ```
 
 <details>
 <summary>👁️ Ver ejemplo</summary>
 
-[![Estadísticas GitHub](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&bg_color=00000000)](https://github.com/alvar3zjos3/dev-readme-stats)
+<img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&bg_color=00000000">
 
 </details>
 
@@ -642,15 +649,15 @@ El fondo desaparece y hereda el color del README, funcionando en ambos modos:
 GitHub muestra u oculta imágenes según el modo activo del usuario con los sufijos `#gh-dark-mode-only` y `#gh-light-mode-only`:
 
 ```md
-![Estadísticas - Oscuro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=default#gh-dark-mode-only)
-![Estadísticas - Claro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=white#gh-light-mode-only)
+[Estadísticas - Oscuro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=default#gh-dark-mode-only)
+[Estadísticas - Claro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=white#gh-light-mode-only)
 ```
 
 <details>
 <summary>👁️ Ver ejemplo</summary>
 
-[![Estadísticas - Oscuro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=default)](https://github.com/alvar3zjos3/dev-readme-stats)
-[![Estadísticas - Claro](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=white)](https://github.com/alvar3zjos3/dev-readme-stats)
+<img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&theme=default#gh-dark-mode-only">
+<img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&theme=white#gh-light-mode-only">
 
 </details>
 
@@ -661,14 +668,14 @@ La forma más estándar y compatible con todos los navegadores:
 ```html
 <picture>
   <source
-    srcset="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=default"
+    srcset="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&theme=default"
     media="(prefers-color-scheme: dark)"
   />
   <source
-    srcset="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=white"
+    srcset="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&theme=white"
     media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
   />
-  <img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=default" />
+  <img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3" />
 </picture>
 ```
 
@@ -676,9 +683,9 @@ La forma más estándar y compatible con todos los navegadores:
 <summary>👁️ Ver ejemplo</summary>
 
 <picture>
-  <source srcset="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=default" media="(prefers-color-scheme: dark)" />
-  <source srcset="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=white" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
-  <img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=default" />
+  <source srcset="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&theme=default" media="(prefers-color-scheme: dark)" />
+  <source srcset="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&theme=white" media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
+  <img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3" />
 </picture>
 
 </details>
@@ -693,19 +700,26 @@ Pasa múltiples colores separados por comas para un fondo degradado. El primer v
 
 ```md
 <!-- Degradado de naranja a morado -->
-![Estadísticas](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&bg_color=30,e96443,904e95&title_color=fff&text_color=fff)
+![Estadísticas](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&bg_color=30,e96443,904e95&title_color=fff&text_color=fff)
 
 <!-- Degradado de azul a verde -->
-![Estadísticas](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&bg_color=90,0f2027,203a43,2c5364&title_color=fff&text_color=9fb8c0)
+![Estadísticas](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&bg_color=90,0f2027,203a43,2c5364&title_color=fff&text_color=9fb8c0)
 
 <!-- Degradado arcoíris -->
-![Estadísticas](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&bg_color=0,ff6b6b,feca57,48dbfb,ff9ff3&title_color=fff&text_color=fff&hide_border=true)
+![Estadísticas](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&bg_color=0,ff6b6b,feca57,48dbfb,ff9ff3&title_color=fff&text_color=fff&hide_border=true)
 ```
 
 <table>
 <tr>
-<td align="center"><a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&bg_color=30,e96443,904e95&title_color=fff&text_color=fff" /></a></td>
-<td align="center"><a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&bg_color=90,0f2027,203a43,2c5364&title_color=fff&text_color=9fb8c0" /></a></td>
+<td align="center">
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&bg_color=30,e96443,904e95&title_color=fff&text_color=fff" /></a>
+</td>
+<td align="center">
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&bg_color=90,0f2027,203a43,2c5364&title_color=fff&text_color=9fb8c0" /></a>
+</td>
+<td align="center">
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&bg_color=0,ff6b6b,feca57,48dbfb,ff9ff3&title_color=fff&text_color=fff&hide_border=true" /></a>
+</td>
 </tr>
 </table>
 
@@ -790,17 +804,17 @@ Por defecto GitHub pone las imágenes una debajo de otra. Usa etiquetas `<img>` 
 
 ```html
 <a href="https://github.com/alvar3zjos3/dev-readme-stats">
-  <img height="200" align="center" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3" />
+  <img height="200" align="center" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues" />
 </a>
 <a href="https://github.com/alvar3zjos3/dev-readme-stats">
-  <img height="200" align="center" src="https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&layout=compact&card_width=320&langs_count=8&theme=tokyonight" />
+  <img height="200" align="center" src="https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&layout=compact&card_width=320&langs_count=8&theme=highcontrast" />
 </a>
 ```
 
 **Resultado:**
 
-<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img height="200" align="center" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3" /></a>
-<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img height="200" align="center" src="https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&layout=compact&card_width=320&langs_count=8&theme=tokyonight" /></a>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img height="200" align="center" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues" /></a>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img height="200" align="center" src="https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&layout=compact&card_width=320&langs_count=8&theme=highcontrast" /></a>
 
 ### Dos pins de repositorio
 
@@ -821,48 +835,57 @@ Por defecto GitHub pone las imágenes una debajo de otra. Usa etiquetas `<img>` 
 ### Stats + Lenguajes + WakaTime (3 columnas)
 
 ```html
-<a href="https://github.com/alvar3zjos3"><img height="180" align="center" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=tokyonight" /></a>
-<a href="https://github.com/alvar3zjos3"><img height="180" align="center" src="https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&layout=compact&card_width=220&theme=tokyonight" /></a>
-<a href="https://github.com/alvar3zjos3"><img height="180" align="center" src="https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&layout=compact&theme=tokyonight" /></a>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats">
+  <img height="180" align="center" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&theme=highcontrast" /></a>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats">
+  <img height="180" align="center" src="https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&layout=compact&card_width=220&theme=highcontrast" /></a>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats">
+  <img height="180" align="center" src="https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&layout=compact&theme=highcontrast" /></a>
 ```
 
 **Resultado:**
 
-<a href="https://github.com/alvar3zjos3/dev-readme-stats"><img height="180" align="center" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&theme=tokyonight" /></a> <a href="https://github.com/alvar3zjos3/dev-readme-stats"><img height="180" align="center" src="https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&layout=compact&card_width=220&theme=tokyonight" /></a> <a href="https://github.com/alvar3zjos3/dev-readme-stats"><img height="180" align="center" src="https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&layout=compact&theme=tokyonight" /></a>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats">
+  <img height="180" align="center" src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&theme=highcontrast" /></a>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats">
+  <img height="180" align="center" src="https://dev-readme-stats.vercel.app/api/top-langs?username=alvar3zjos3&layout=compact&card_width=220&theme=highcontrast" /></a>
+<a href="https://github.com/alvar3zjos3/dev-readme-stats">
+  <img height="180" align="center" src="https://dev-readme-stats.vercel.app/api/wakatime?username=alvar3zjos3&layout=compact&theme=highcontrast" /></a>
 
 ## Combinaciones de ejemplo
 
 ### Personalizar colores manualmente
 
 ```md
-![Estadísticas Personalizada](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&title_color=fff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515)
+[Estadísticas Personalizada](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&title_color=f05e&icon_color=ff0000&text_color=12fe59&bg_color=42aef1)
 ```
 
-[![Estadísticas Personalizada](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&title_color=fff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515)](https://github.com/alvar3zjos3/dev-readme-stats)
+<img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&title_color=f05e&icon_color=ff0000&text_color=12fe59&bg_color=42aef1"/>
 
 ### Borde personalizado + esquinas redondeadas
 
 ```md
-![Estadísticas](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&border_color=79ff97&border_radius=15&theme=tokyonight)
+[Estadísticas](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&border_color=79ff97&border_radius=15&theme=tokyonight)
 ```
 
-[![Estadísticas](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&border_color=79ff97&border_radius=15&theme=tokyonight)](https://github.com/alvar3zjos3/dev-readme-stats)
+<img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&border_color=79ff97&border_radius=15&theme=tokyonight"/>
+
 
 ### Sin borde
 
 ```md
-![Estadísticas](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide_border=true&theme=radical)
+[Estadísticas](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&hide_border=true&theme=radical)
 ```
 
-[![Estadísticas](https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide_border=true&theme=radical)](https://github.com/alvar3zjos3/dev-readme-stats)
+<img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&hide_border=true&theme=radical"/>
 
 ### Pin de repositorio personalizado
 
 ```md
-![Pin](https://dev-readme-stats.vercel.app/api/pin?username=alvar3zjos3&repo=dev-readme-stats&title_color=fff&icon_color=f9f9f9&text_color=9f9f9f&bg_color=151515)
+[Pin](https://dev-readme-stats.vercel.app/api/pin?username=alvar3zjos3&repo=dev-readme-stats&title_color=f05e&icon_color=ff0000&text_color=12fe59&bg_color=42aef1)
 ```
 
-[![Pin](https://dev-readme-stats.vercel.app/api/pin?username=alvar3zjos3&repo=dev-readme-stats&title_color=fff&icon_color=f9f9f9&text_color=9f9f9f&bg_color=151515)](https://github.com/alvar3zjos3/dev-readme-stats)
+<img src="https://dev-readme-stats.vercel.app/api/pin?username=alvar3zjos3&repo=dev-readme-stats&title_color=f05e&icon_color=ff0000&text_color=12fe59&bg_color=42aef1"/>
 
 ### Lenguajes — todas las combinaciones rápidas
 
