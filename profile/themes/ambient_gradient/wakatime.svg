@@ -118,7 +118,7 @@
         y="0"
         class="header"
         data-testid="header"
-      >Estad&#237;sticas de WakaTime</text>
+      >WakaTime Stats</text>
     </g>
       </g>
     
@@ -139,7 +139,7 @@
             data-testid="lang-progress"
             x="0"
             y="0"
-            width="212.226"
+            width="203.85600000000002"
             height="8"
             fill="#083fa1"
           />
@@ -147,9 +147,9 @@
           <rect
             mask="url(#rect-mask)"
             data-testid="lang-progress"
-            x="212.226"
+            x="203.85600000000002"
             y="0"
-            width="195.3465"
+            width="203.71650000000002"
             height="8"
             fill="#f1e05a"
           />
@@ -157,9 +157,9 @@
           <rect
             mask="url(#rect-mask)"
             data-testid="lang-progress"
-            x="407.5725"
+            x="407.57250000000005"
             y="0"
-            width="49.0575"
+            width="50.4525"
             height="8"
             fill="#cb171e"
           />
@@ -167,9 +167,9 @@
           <rect
             mask="url(#rect-mask)"
             data-testid="lang-progress"
-            x="456.63"
+            x="458.02500000000003"
             y="0"
-            width="4.6035"
+            width="3.72"
             height="8"
             fill="#858585"
           />
@@ -177,9 +177,9 @@
           <rect
             mask="url(#rect-mask)"
             data-testid="lang-progress"
-            x="461.2335"
+            x="461.74500000000006"
             y="0"
-            width="2.325"
+            width="2.046"
             height="8"
             fill="#292929"
           />
@@ -187,9 +187,9 @@
           <rect
             mask="url(#rect-mask)"
             data-testid="lang-progress"
-            x="463.5585"
+            x="463.79100000000005"
             y="0"
-            width="0.8835"
+            width="0.7905000000000001"
             height="8"
             fill="#858585"
           />
@@ -198,21 +198,21 @@
     <g transform="translate(25, 25)">
       <circle cx="5" cy="6" r="5" fill="#083fa1" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Markdown - 7 hrs 54 mins
+        Markdown - 9 hrs 49 mins
       </text>
     </g>
   
     <g transform="translate(230, 25)">
       <circle cx="5" cy="6" r="5" fill="#f1e05a" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        JavaScript - 7 hrs 16 mins
+        JavaScript - 9 hrs 49 mins
       </text>
     </g>
   
     <g transform="translate(25, 50)">
       <circle cx="5" cy="6" r="5" fill="#cb171e" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        YAML - 1 hr 49 mins
+        YAML - 2 hrs 25 mins
       </text>
     </g>
   
@@ -233,7 +233,7 @@
     <g transform="translate(230, 75)">
       <circle cx="5" cy="6" r="5" fill="#858585" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        Bash - 1 min
+        Bash - 2 mins
       </text>
     </g>
   
