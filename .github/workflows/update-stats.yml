@@ -28,8 +28,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=default
+          options: username=${{ github.repository_owner }}&theme=default
           path: profile/themes/default/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - default
@@ -45,8 +44,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=default
+          options: username=${{ github.repository_owner }}&theme=default
           path: profile/themes/default/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: ALGOLIA ---
@@ -61,8 +59,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=algolia
+          options: username=${{ github.repository_owner }}&theme=algolia
           path: profile/themes/algolia/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - algolia
@@ -78,8 +75,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=algolia
+          options: username=${{ github.repository_owner }}&theme=algolia
           path: profile/themes/algolia/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: AMBIENT_GRADIENT ---
@@ -96,8 +92,7 @@ jobs:
         with:
           card: top-langs
           options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=ambient_gradient
+            username=${{ github.repository_owner }}&theme=ambient_gradient
           path: profile/themes/ambient_gradient/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - ambient_gradient
@@ -114,8 +109,7 @@ jobs:
         with:
           card: wakatime
           options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=ambient_gradient
+            username=${{ github.repository_owner }}&theme=ambient_gradient
           path: profile/themes/ambient_gradient/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: APPRENTICE ---
@@ -130,9 +124,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=apprentice
+          options: username=${{ github.repository_owner }}&theme=apprentice
           path: profile/themes/apprentice/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - apprentice
@@ -148,9 +140,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=apprentice
+          options: username=${{ github.repository_owner }}&theme=apprentice
           path: profile/themes/apprentice/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: AURA ---
@@ -165,8 +155,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=aura
+          options: username=${{ github.repository_owner }}&theme=aura
           path: profile/themes/aura/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - aura
@@ -182,8 +171,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=aura
+          options: username=${{ github.repository_owner }}&theme=aura
           path: profile/themes/aura/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: AURA_DARK ---
@@ -198,9 +186,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=aura_dark
+          options: username=${{ github.repository_owner }}&theme=aura_dark
           path: profile/themes/aura_dark/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - aura_dark
@@ -216,9 +202,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=aura_dark
+          options: username=${{ github.repository_owner }}&theme=aura_dark
           path: profile/themes/aura_dark/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: AYU-MIRAGE ---
@@ -233,9 +217,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=ayu-mirage
+          options: username=${{ github.repository_owner }}&theme=ayu-mirage
           path: profile/themes/ayu-mirage/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - ayu-mirage
@@ -251,9 +233,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=ayu-mirage
+          options: username=${{ github.repository_owner }}&theme=ayu-mirage
           path: profile/themes/ayu-mirage/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: BEAR ---
@@ -268,8 +248,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=bear
+          options: username=${{ github.repository_owner }}&theme=bear
           path: profile/themes/bear/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - bear
@@ -285,8 +264,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=bear
+          options: username=${{ github.repository_owner }}&theme=bear
           path: profile/themes/bear/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: BLUE-GREEN ---
@@ -301,9 +279,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=blue-green
+          options: username=${{ github.repository_owner }}&theme=blue-green
           path: profile/themes/blue-green/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - blue-green
@@ -319,9 +295,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=blue-green
+          options: username=${{ github.repository_owner }}&theme=blue-green
           path: profile/themes/blue-green/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: BLUE_NAVY ---
@@ -336,9 +310,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=blue_navy
+          options: username=${{ github.repository_owner }}&theme=blue_navy
           path: profile/themes/blue_navy/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - blue_navy
@@ -354,9 +326,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=blue_navy
+          options: username=${{ github.repository_owner }}&theme=blue_navy
           path: profile/themes/blue_navy/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: BLUEBERRY ---
@@ -371,9 +341,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=blueberry
+          options: username=${{ github.repository_owner }}&theme=blueberry
           path: profile/themes/blueberry/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - blueberry
@@ -389,9 +357,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=blueberry
+          options: username=${{ github.repository_owner }}&theme=blueberry
           path: profile/themes/blueberry/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: BUEFY ---
@@ -406,8 +372,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=buefy
+          options: username=${{ github.repository_owner }}&theme=buefy
           path: profile/themes/buefy/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - buefy
@@ -423,8 +388,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=buefy
+          options: username=${{ github.repository_owner }}&theme=buefy
           path: profile/themes/buefy/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: CALM ---
@@ -439,8 +403,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=calm
+          options: username=${{ github.repository_owner }}&theme=calm
           path: profile/themes/calm/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - calm
@@ -456,8 +419,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=calm
+          options: username=${{ github.repository_owner }}&theme=calm
           path: profile/themes/calm/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: CALM_PINK ---
@@ -472,9 +434,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=calm_pink
+          options: username=${{ github.repository_owner }}&theme=calm_pink
           path: profile/themes/calm_pink/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - calm_pink
@@ -490,9 +450,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=calm_pink
+          options: username=${{ github.repository_owner }}&theme=calm_pink
           path: profile/themes/calm_pink/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: CATPPUCCIN_LATTE ---
@@ -509,8 +467,7 @@ jobs:
         with:
           card: top-langs
           options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=catppuccin_latte
+            username=${{ github.repository_owner }}&theme=catppuccin_latte
           path: profile/themes/catppuccin_latte/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - catppuccin_latte
@@ -527,8 +484,7 @@ jobs:
         with:
           card: wakatime
           options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=catppuccin_latte
+            username=${{ github.repository_owner }}&theme=catppuccin_latte
           path: profile/themes/catppuccin_latte/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: CATPPUCCIN_MOCHA ---
@@ -545,8 +501,7 @@ jobs:
         with:
           card: top-langs
           options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=catppuccin_mocha
+            username=${{ github.repository_owner }}&theme=catppuccin_mocha
           path: profile/themes/catppuccin_mocha/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - catppuccin_mocha
@@ -563,8 +518,7 @@ jobs:
         with:
           card: wakatime
           options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=catppuccin_mocha
+            username=${{ github.repository_owner }}&theme=catppuccin_mocha
           path: profile/themes/catppuccin_mocha/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: CHARTREUSE-DARK ---
@@ -579,9 +533,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=chartreuse-dark
+          options: username=${{ github.repository_owner }}&theme=chartreuse-dark
           path: profile/themes/chartreuse-dark/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - chartreuse-dark
@@ -597,9 +549,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=chartreuse-dark
+          options: username=${{ github.repository_owner }}&theme=chartreuse-dark
           path: profile/themes/chartreuse-dark/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: CITY_LIGHTS ---
@@ -614,9 +564,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=city_lights
+          options: username=${{ github.repository_owner }}&theme=city_lights
           path: profile/themes/city_lights/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - city_lights
@@ -632,9 +580,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=city_lights
+          options: username=${{ github.repository_owner }}&theme=city_lights
           path: profile/themes/city_lights/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: COBALT ---
@@ -649,8 +595,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=cobalt
+          options: username=${{ github.repository_owner }}&theme=cobalt
           path: profile/themes/cobalt/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - cobalt
@@ -666,8 +611,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=cobalt
+          options: username=${{ github.repository_owner }}&theme=cobalt
           path: profile/themes/cobalt/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: COBALT2 ---
@@ -682,8 +626,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=cobalt2
+          options: username=${{ github.repository_owner }}&theme=cobalt2
           path: profile/themes/cobalt2/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - cobalt2
@@ -699,8 +642,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=cobalt2
+          options: username=${{ github.repository_owner }}&theme=cobalt2
           path: profile/themes/cobalt2/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: CODESTACKR ---
@@ -715,9 +657,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=codeSTACKr
+          options: username=${{ github.repository_owner }}&theme=codeSTACKr
           path: profile/themes/codeSTACKr/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - codeSTACKr
@@ -733,9 +673,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=codeSTACKr
+          options: username=${{ github.repository_owner }}&theme=codeSTACKr
           path: profile/themes/codeSTACKr/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: DARCULA ---
@@ -750,8 +688,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=darcula
+          options: username=${{ github.repository_owner }}&theme=darcula
           path: profile/themes/darcula/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - darcula
@@ -767,8 +704,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=darcula
+          options: username=${{ github.repository_owner }}&theme=darcula
           path: profile/themes/darcula/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: DARK ---
@@ -783,8 +719,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=dark
+          options: username=${{ github.repository_owner }}&theme=dark
           path: profile/themes/dark/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - dark
@@ -800,8 +735,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=dark
+          options: username=${{ github.repository_owner }}&theme=dark
           path: profile/themes/dark/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: DATE_NIGHT ---
@@ -816,9 +750,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=date_night
+          options: username=${{ github.repository_owner }}&theme=date_night
           path: profile/themes/date_night/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - date_night
@@ -834,9 +766,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=date_night
+          options: username=${{ github.repository_owner }}&theme=date_night
           path: profile/themes/date_night/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: DISCORD_OLD_BLURPLE ---
@@ -853,8 +783,7 @@ jobs:
         with:
           card: top-langs
           options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=discord_old_blurple
+            username=${{ github.repository_owner }}&theme=discord_old_blurple
           path: profile/themes/discord_old_blurple/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - discord_old_blurple
@@ -871,8 +800,7 @@ jobs:
         with:
           card: wakatime
           options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=discord_old_blurple
+            username=${{ github.repository_owner }}&theme=discord_old_blurple
           path: profile/themes/discord_old_blurple/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: DRACULA ---
@@ -887,8 +815,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=dracula
+          options: username=${{ github.repository_owner }}&theme=dracula
           path: profile/themes/dracula/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - dracula
@@ -904,8 +831,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=dracula
+          options: username=${{ github.repository_owner }}&theme=dracula
           path: profile/themes/dracula/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: FLAG-INDIA ---
@@ -920,9 +846,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=flag-india
+          options: username=${{ github.repository_owner }}&theme=flag-india
           path: profile/themes/flag-india/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - flag-india
@@ -938,9 +862,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=flag-india
+          options: username=${{ github.repository_owner }}&theme=flag-india
           path: profile/themes/flag-india/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: GITHUB_DARK ---
@@ -955,9 +877,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=github_dark
+          options: username=${{ github.repository_owner }}&theme=github_dark
           path: profile/themes/github_dark/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - github_dark
@@ -973,9 +893,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=github_dark
+          options: username=${{ github.repository_owner }}&theme=github_dark
           path: profile/themes/github_dark/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: GITHUB_DARK_DIMMED ---
@@ -992,8 +910,7 @@ jobs:
         with:
           card: top-langs
           options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=github_dark_dimmed
+            username=${{ github.repository_owner }}&theme=github_dark_dimmed
           path: profile/themes/github_dark_dimmed/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - github_dark_dimmed
@@ -1010,8 +927,7 @@ jobs:
         with:
           card: wakatime
           options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=github_dark_dimmed
+            username=${{ github.repository_owner }}&theme=github_dark_dimmed
           path: profile/themes/github_dark_dimmed/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: GOTHAM ---
@@ -1026,8 +942,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=gotham
+          options: username=${{ github.repository_owner }}&theme=gotham
           path: profile/themes/gotham/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - gotham
@@ -1043,8 +958,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=gotham
+          options: username=${{ github.repository_owner }}&theme=gotham
           path: profile/themes/gotham/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: GRAYWHITE ---
@@ -1059,9 +973,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=graywhite
+          options: username=${{ github.repository_owner }}&theme=graywhite
           path: profile/themes/graywhite/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - graywhite
@@ -1077,9 +989,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=graywhite
+          options: username=${{ github.repository_owner }}&theme=graywhite
           path: profile/themes/graywhite/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: GREAT-GATSBY ---
@@ -1094,9 +1004,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=great-gatsby
+          options: username=${{ github.repository_owner }}&theme=great-gatsby
           path: profile/themes/great-gatsby/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - great-gatsby
@@ -1112,9 +1020,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=great-gatsby
+          options: username=${{ github.repository_owner }}&theme=great-gatsby
           path: profile/themes/great-gatsby/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: GRUVBOX ---
@@ -1129,8 +1035,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=gruvbox
+          options: username=${{ github.repository_owner }}&theme=gruvbox
           path: profile/themes/gruvbox/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - gruvbox
@@ -1146,8 +1051,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=gruvbox
+          options: username=${{ github.repository_owner }}&theme=gruvbox
           path: profile/themes/gruvbox/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: GRUVBOX_LIGHT ---
@@ -1162,9 +1066,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=gruvbox_light
+          options: username=${{ github.repository_owner }}&theme=gruvbox_light
           path: profile/themes/gruvbox_light/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - gruvbox_light
@@ -1180,9 +1082,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=gruvbox_light
+          options: username=${{ github.repository_owner }}&theme=gruvbox_light
           path: profile/themes/gruvbox_light/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: HIGHCONTRAST ---
@@ -1197,9 +1097,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=highcontrast
+          options: username=${{ github.repository_owner }}&theme=highcontrast
           path: profile/themes/highcontrast/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - highcontrast
@@ -1215,9 +1113,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=highcontrast
+          options: username=${{ github.repository_owner }}&theme=highcontrast
           path: profile/themes/highcontrast/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: HOLI ---
@@ -1232,8 +1128,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=holi
+          options: username=${{ github.repository_owner }}&theme=holi
           path: profile/themes/holi/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - holi
@@ -1249,8 +1144,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=holi
+          options: username=${{ github.repository_owner }}&theme=holi
           path: profile/themes/holi/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: JOLLY ---
@@ -1265,8 +1159,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=jolly
+          options: username=${{ github.repository_owner }}&theme=jolly
           path: profile/themes/jolly/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - jolly
@@ -1282,8 +1175,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=jolly
+          options: username=${{ github.repository_owner }}&theme=jolly
           path: profile/themes/jolly/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: KACHO_GA ---
@@ -1298,9 +1190,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=kacho_ga
+          options: username=${{ github.repository_owner }}&theme=kacho_ga
           path: profile/themes/kacho_ga/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - kacho_ga
@@ -1316,9 +1206,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=kacho_ga
+          options: username=${{ github.repository_owner }}&theme=kacho_ga
           path: profile/themes/kacho_ga/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: MAROONGOLD ---
@@ -1333,9 +1221,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=maroongold
+          options: username=${{ github.repository_owner }}&theme=maroongold
           path: profile/themes/maroongold/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - maroongold
@@ -1351,9 +1237,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=maroongold
+          options: username=${{ github.repository_owner }}&theme=maroongold
           path: profile/themes/maroongold/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: MATERIAL-PALENIGHT ---
@@ -1370,8 +1254,7 @@ jobs:
         with:
           card: top-langs
           options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=material-palenight
+            username=${{ github.repository_owner }}&theme=material-palenight
           path: profile/themes/material-palenight/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - material-palenight
@@ -1388,8 +1271,7 @@ jobs:
         with:
           card: wakatime
           options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=material-palenight
+            username=${{ github.repository_owner }}&theme=material-palenight
           path: profile/themes/material-palenight/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: MERKO ---
@@ -1404,8 +1286,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=merko
+          options: username=${{ github.repository_owner }}&theme=merko
           path: profile/themes/merko/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - merko
@@ -1421,8 +1302,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=merko
+          options: username=${{ github.repository_owner }}&theme=merko
           path: profile/themes/merko/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: MIDNIGHT-PURPLE ---
@@ -1437,9 +1317,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=midnight-purple
+          options: username=${{ github.repository_owner }}&theme=midnight-purple
           path: profile/themes/midnight-purple/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - midnight-purple
@@ -1455,9 +1333,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=midnight-purple
+          options: username=${{ github.repository_owner }}&theme=midnight-purple
           path: profile/themes/midnight-purple/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: MOLTACK ---
@@ -1472,8 +1348,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=moltack
+          options: username=${{ github.repository_owner }}&theme=moltack
           path: profile/themes/moltack/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - moltack
@@ -1489,8 +1364,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=moltack
+          options: username=${{ github.repository_owner }}&theme=moltack
           path: profile/themes/moltack/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: MONOKAI ---
@@ -1505,8 +1379,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=monokai
+          options: username=${{ github.repository_owner }}&theme=monokai
           path: profile/themes/monokai/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - monokai
@@ -1522,8 +1395,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=monokai
+          options: username=${{ github.repository_owner }}&theme=monokai
           path: profile/themes/monokai/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: NEON ---
@@ -1538,8 +1410,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=neon
+          options: username=${{ github.repository_owner }}&theme=neon
           path: profile/themes/neon/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - neon
@@ -1555,8 +1426,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=neon
+          options: username=${{ github.repository_owner }}&theme=neon
           path: profile/themes/neon/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: NIGHTOWL ---
@@ -1571,9 +1441,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=nightowl
+          options: username=${{ github.repository_owner }}&theme=nightowl
           path: profile/themes/nightowl/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - nightowl
@@ -1589,9 +1457,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=nightowl
+          options: username=${{ github.repository_owner }}&theme=nightowl
           path: profile/themes/nightowl/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: NOCTIS_MINIMUS ---
@@ -1606,9 +1472,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=noctis_minimus
+          options: username=${{ github.repository_owner }}&theme=noctis_minimus
           path: profile/themes/noctis_minimus/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - noctis_minimus
@@ -1624,9 +1488,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=noctis_minimus
+          options: username=${{ github.repository_owner }}&theme=noctis_minimus
           path: profile/themes/noctis_minimus/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: NORD ---
@@ -1641,8 +1503,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=nord
+          options: username=${{ github.repository_owner }}&theme=nord
           path: profile/themes/nord/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - nord
@@ -1658,8 +1519,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=nord
+          options: username=${{ github.repository_owner }}&theme=nord
           path: profile/themes/nord/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: OCEAN_DARK ---
@@ -1674,9 +1534,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=ocean_dark
+          options: username=${{ github.repository_owner }}&theme=ocean_dark
           path: profile/themes/ocean_dark/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - ocean_dark
@@ -1692,9 +1550,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=ocean_dark
+          options: username=${{ github.repository_owner }}&theme=ocean_dark
           path: profile/themes/ocean_dark/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: OMNI ---
@@ -1709,8 +1565,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=omni
+          options: username=${{ github.repository_owner }}&theme=omni
           path: profile/themes/omni/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - omni
@@ -1726,8 +1581,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=omni
+          options: username=${{ github.repository_owner }}&theme=omni
           path: profile/themes/omni/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: ONE_DARK_PRO ---
@@ -1742,9 +1596,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=one_dark_pro
+          options: username=${{ github.repository_owner }}&theme=one_dark_pro
           path: profile/themes/one_dark_pro/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - one_dark_pro
@@ -1760,9 +1612,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=one_dark_pro
+          options: username=${{ github.repository_owner }}&theme=one_dark_pro
           path: profile/themes/one_dark_pro/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: ONEDARK ---
@@ -1777,8 +1627,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=onedark
+          options: username=${{ github.repository_owner }}&theme=onedark
           path: profile/themes/onedark/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - onedark
@@ -1794,8 +1643,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=onedark
+          options: username=${{ github.repository_owner }}&theme=onedark
           path: profile/themes/onedark/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: OUTRUN ---
@@ -1810,8 +1658,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=outrun
+          options: username=${{ github.repository_owner }}&theme=outrun
           path: profile/themes/outrun/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - outrun
@@ -1827,8 +1674,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=outrun
+          options: username=${{ github.repository_owner }}&theme=outrun
           path: profile/themes/outrun/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: PANDA ---
@@ -1843,8 +1689,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=panda
+          options: username=${{ github.repository_owner }}&theme=panda
           path: profile/themes/panda/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - panda
@@ -1860,8 +1705,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=panda
+          options: username=${{ github.repository_owner }}&theme=panda
           path: profile/themes/panda/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: PRUSSIAN ---
@@ -1876,9 +1720,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=prussian
+          options: username=${{ github.repository_owner }}&theme=prussian
           path: profile/themes/prussian/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - prussian
@@ -1894,9 +1736,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=prussian
+          options: username=${{ github.repository_owner }}&theme=prussian
           path: profile/themes/prussian/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: RADICAL ---
@@ -1911,8 +1751,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=radical
+          options: username=${{ github.repository_owner }}&theme=radical
           path: profile/themes/radical/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - radical
@@ -1928,8 +1767,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=radical
+          options: username=${{ github.repository_owner }}&theme=radical
           path: profile/themes/radical/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: REACT ---
@@ -1944,8 +1782,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=react
+          options: username=${{ github.repository_owner }}&theme=react
           path: profile/themes/react/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - react
@@ -1961,8 +1798,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=react
+          options: username=${{ github.repository_owner }}&theme=react
           path: profile/themes/react/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: ROSE ---
@@ -1977,8 +1813,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=rose
+          options: username=${{ github.repository_owner }}&theme=rose
           path: profile/themes/rose/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - rose
@@ -1994,8 +1829,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=rose
+          options: username=${{ github.repository_owner }}&theme=rose
           path: profile/themes/rose/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: ROSE_PINE ---
@@ -2010,9 +1844,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=rose_pine
+          options: username=${{ github.repository_owner }}&theme=rose_pine
           path: profile/themes/rose_pine/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - rose_pine
@@ -2028,9 +1860,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=rose_pine
+          options: username=${{ github.repository_owner }}&theme=rose_pine
           path: profile/themes/rose_pine/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: SHADES-OF-PURPLE ---
@@ -2047,8 +1877,7 @@ jobs:
         with:
           card: top-langs
           options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=shades-of-purple
+            username=${{ github.repository_owner }}&theme=shades-of-purple
           path: profile/themes/shades-of-purple/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - shades-of-purple
@@ -2065,8 +1894,7 @@ jobs:
         with:
           card: wakatime
           options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=shades-of-purple
+            username=${{ github.repository_owner }}&theme=shades-of-purple
           path: profile/themes/shades-of-purple/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: SHADOW_BLUE ---
@@ -2081,9 +1909,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=shadow_blue
+          options: username=${{ github.repository_owner }}&theme=shadow_blue
           path: profile/themes/shadow_blue/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - shadow_blue
@@ -2099,9 +1925,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=shadow_blue
+          options: username=${{ github.repository_owner }}&theme=shadow_blue
           path: profile/themes/shadow_blue/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: SHADOW_GREEN ---
@@ -2116,9 +1940,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=shadow_green
+          options: username=${{ github.repository_owner }}&theme=shadow_green
           path: profile/themes/shadow_green/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - shadow_green
@@ -2134,9 +1956,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=shadow_green
+          options: username=${{ github.repository_owner }}&theme=shadow_green
           path: profile/themes/shadow_green/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: SHADOW_RED ---
@@ -2151,9 +1971,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=shadow_red
+          options: username=${{ github.repository_owner }}&theme=shadow_red
           path: profile/themes/shadow_red/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - shadow_red
@@ -2169,9 +1987,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=shadow_red
+          options: username=${{ github.repository_owner }}&theme=shadow_red
           path: profile/themes/shadow_red/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: SLATEORANGE ---
@@ -2186,9 +2002,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=slateorange
+          options: username=${{ github.repository_owner }}&theme=slateorange
           path: profile/themes/slateorange/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - slateorange
@@ -2204,9 +2018,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=slateorange
+          options: username=${{ github.repository_owner }}&theme=slateorange
           path: profile/themes/slateorange/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: SOLARIZED-DARK ---
@@ -2221,9 +2033,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=solarized-dark
+          options: username=${{ github.repository_owner }}&theme=solarized-dark
           path: profile/themes/solarized-dark/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - solarized-dark
@@ -2239,9 +2049,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=solarized-dark
+          options: username=${{ github.repository_owner }}&theme=solarized-dark
           path: profile/themes/solarized-dark/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: SOLARIZED-LIGHT ---
@@ -2256,9 +2064,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=solarized-light
+          options: username=${{ github.repository_owner }}&theme=solarized-light
           path: profile/themes/solarized-light/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - solarized-light
@@ -2274,9 +2080,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=solarized-light
+          options: username=${{ github.repository_owner }}&theme=solarized-light
           path: profile/themes/solarized-light/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: SWIFT ---
@@ -2291,8 +2095,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=swift
+          options: username=${{ github.repository_owner }}&theme=swift
           path: profile/themes/swift/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - swift
@@ -2308,8 +2111,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=swift
+          options: username=${{ github.repository_owner }}&theme=swift
           path: profile/themes/swift/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: SYNTHWAVE ---
@@ -2324,9 +2126,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=synthwave
+          options: username=${{ github.repository_owner }}&theme=synthwave
           path: profile/themes/synthwave/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - synthwave
@@ -2342,9 +2142,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=synthwave
+          options: username=${{ github.repository_owner }}&theme=synthwave
           path: profile/themes/synthwave/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: TOKYONIGHT ---
@@ -2359,9 +2157,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=tokyonight
+          options: username=${{ github.repository_owner }}&theme=tokyonight
           path: profile/themes/tokyonight/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - tokyonight
@@ -2377,9 +2173,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=tokyonight
+          options: username=${{ github.repository_owner }}&theme=tokyonight
           path: profile/themes/tokyonight/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: TRANSPARENT ---
@@ -2394,9 +2188,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=transparent
+          options: username=${{ github.repository_owner }}&theme=transparent
           path: profile/themes/transparent/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - transparent
@@ -2412,9 +2204,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=transparent
+          options: username=${{ github.repository_owner }}&theme=transparent
           path: profile/themes/transparent/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: VISION-FRIENDLY-DARK ---
@@ -2431,8 +2221,7 @@ jobs:
         with:
           card: top-langs
           options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=vision-friendly-dark
+            username=${{ github.repository_owner }}&theme=vision-friendly-dark
           path: profile/themes/vision-friendly-dark/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - vision-friendly-dark
@@ -2449,8 +2238,7 @@ jobs:
         with:
           card: wakatime
           options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=vision-friendly-dark
+            username=${{ github.repository_owner }}&theme=vision-friendly-dark
           path: profile/themes/vision-friendly-dark/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: VUE ---
@@ -2465,8 +2253,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=vue
+          options: username=${{ github.repository_owner }}&theme=vue
           path: profile/themes/vue/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - vue
@@ -2482,8 +2269,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=vue
+          options: username=${{ github.repository_owner }}&theme=vue
           path: profile/themes/vue/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: VUE-DARK ---
@@ -2498,9 +2284,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=vue-dark
+          options: username=${{ github.repository_owner }}&theme=vue-dark
           path: profile/themes/vue-dark/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - vue-dark
@@ -2516,9 +2300,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner
-            }}&layout=compact&theme=vue-dark
+          options: username=${{ github.repository_owner }}&theme=vue-dark
           path: profile/themes/vue-dark/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: WHITE ---
@@ -2533,8 +2315,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=white
+          options: username=${{ github.repository_owner }}&theme=white
           path: profile/themes/white/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - white
@@ -2550,8 +2331,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=white
+          options: username=${{ github.repository_owner }}&theme=white
           path: profile/themes/white/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       # --- TEMA: YEBLU ---
@@ -2566,8 +2346,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: top-langs
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=yeblu
+          options: username=${{ github.repository_owner }}&theme=yeblu
           path: profile/themes/yeblu/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin - yeblu
@@ -2583,8 +2362,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@8614f3a61601854731381d853f8566867754a5ca
         with:
           card: wakatime
-          options:
-            username=${{ github.repository_owner }}&layout=compact&theme=yeblu
+          options: username=${{ github.repository_owner }}&theme=yeblu
           path: profile/themes/yeblu/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
