@@ -17,7 +17,7 @@
             animation: fadeInAnimation 0.8s ease-in-out forwards;
           }
           @supports(-moz-appearance: auto) {
-            /* Selector detects Firefox */
+            /* El selector detecta Firefox */
             .header { font-size: 15.5px; }
           }
           
@@ -62,7 +62,7 @@
     
 
           
-      /* Animations */
+      /* Animaciones */
       @keyframes scaleInAnimation {
         from {
           transform: translate(-5px, 5px) scale(0);
@@ -108,7 +108,7 @@
         y="0"
         class="header"
         data-testid="header"
-      >Most Used Languages</text>
+      >Lenguajes m&#225;s usados</text>
     </g>
       </g>
     
@@ -130,7 +130,7 @@
           data-testid="lang-progress"
           x="0"
           y="0"
-          width="231.48"
+          width="231.21"
           height="8"
           fill="#f34b7d"
         />
@@ -138,9 +138,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="231.48"
+          x="231.21"
           y="0"
-          width="14.02"
+          width="14.3"
           height="8"
           fill="#f1e05a"
         />
@@ -148,9 +148,9 @@
         <rect
           mask="url(#rect-mask)"
           data-testid="lang-progress"
-          x="245.5"
+          x="245.51000000000002"
           y="0"
-          width="12.65"
+          width="12.64"
           height="8"
           fill="#555555"
         />
@@ -191,14 +191,14 @@
     <g class="stagger" style="animation-delay: 450ms">
       <circle cx="5" cy="6" r="5" fill="#f34b7d" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        C++ 92.59%
+        C++ 92.48%
       </text>
     </g>
   </g><g transform="translate(0, 25)">
     <g class="stagger" style="animation-delay: 600ms">
       <circle cx="5" cy="6" r="5" fill="#f1e05a" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        JavaScript 5.61%
+        JavaScript 5.72%
       </text>
     </g>
   </g><g transform="translate(0, 50)">
