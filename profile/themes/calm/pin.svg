@@ -17,33 +17,19 @@
             animation: fadeInAnimation 0.8s ease-in-out forwards;
           }
           @supports(-moz-appearance: auto) {
-            /* Selector detects Firefox */
+            /* El selector detecta Firefox */
             .header { font-size: 15.5px; }
           }
           
-    .description {
-      font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif;fill: #ebcfb2;
-      
-    }
+    .description { font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ebcfb2 }
     .gray { font: 400 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ebcfb2 }
+    .icon { fill: #edae49 }
     .badge { font: 600 11px 'Segoe UI', Ubuntu, Sans-Serif; }
     .badge rect { opacity: 0.2 }
-
-    .stat { font: 400 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ebcfb2 }
-    .stagger {
-      opacity: 0;
-      animation: fadeInAnimation 0.3s ease-in-out forwards;
-    }
-    .not_bold { font-weight: 400 }
-    .bold { font-weight: 700 }
-    .icon {
-      fill: #edae49;
-      display: block;
-    }
   
 
           
-      /* Animations */
+      /* Animaciones */
       @keyframes scaleInAnimation {
         from {
           transform: translate(-5px, 5px) scale(0);
@@ -113,8 +99,8 @@
           
     
 
-    <text class="description" x="25" y="-5"> 
-      <tspan dy="1.2em" x="25">Genera tarjetas din&#225;micas con m&#233;tricas de commits,</tspan><tspan dy="1.2em" x="25">repositorios y lenguajes para integrarlas en archivos</tspan><tspan dy="1.2em" x="25">README!</tspan>
+    <text class="description" x="25" y="-5">
+      <tspan dy="1.2em" x="25">Genera tarjetas din&#225;micas con m&#233;tricas de</tspan><tspan dy="1.2em" x="25">commits, repositorios y lenguajes para integrarlas en</tspan><tspan dy="1.2em" x="25">archivos README!</tspan>
     </text>
 
     <g transform="translate(30, 75)">
@@ -123,7 +109,7 @@
       <circle data-testid="lang-color" cx="0" cy="-5" r="6" fill="#f1e05a" />
       <text data-testid="lang-name" class="gray" x="15">JavaScript</text>
     </g>
-    </g><g transform="translate(77.34000043869018, 0)"><g transform="translate(0, 0)">
+    </g><g transform="translate(80.93125, 0)"><g transform="translate(0, 0)">
       <svg
         class="icon"
         y="-12"
@@ -136,11 +122,6 @@
       </svg>
     </g><g transform="translate(20, 0)"><text data-testid="stargazers" class="gray">1</text></g></g>
     </g>
-    
-  <svg x="0" y="0"><g transform="translate(-3, 98)">
-      
-    </g></svg>
-    
   
         </g>
       </svg>
