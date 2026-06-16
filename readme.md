@@ -970,37 +970,34 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10
-
-      # --- TARJETA DE ESTADÍSTICAS ---
+      
+      # --- TEMA: DEFAULT ---
       - name: stats - default
-        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
+        uses: alvar3zjos3/dev-readme-stats-action@main
         with:
           card: stats
           options: username=${{ github.repository_owner }}&theme=default
           path: profile/themes/default/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-
-      # --- TARJETA DE LENGUAJES ---
+          
       - name: top-langs - default
-        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
+        uses: alvar3zjos3/dev-readme-stats-action@main
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&theme=default
+          options: username=${{ github.repository_owner }}&theme=default
           path: profile/themes/default/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-
-      # --- PIN DE REPOSITORIO ---
+          
       - name: pin - default
-        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
+        uses: alvar3zjos3/dev-readme-stats-action@main
         with:
           card: pin
           options: username=${{ github.repository_owner }}&repo=dev-readme-stats&show_owner=true&theme=default
           path: profile/themes/default/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-
-      # --- TARJETA WAKATIME ---
+          
       - name: wakatime - default
-        uses: readme-tools/github-readme-stats-action@d82657a0e215a28ec48bfc9b3987999a279f93be
+        uses: alvar3zjos3/dev-readme-stats-action@main
         with:
           card: wakatime
           options: username=${{ github.repository_owner }}&theme=default
@@ -1024,6 +1021,7 @@ Luego referencia los SVGs generados en tu README de perfil:
 ```md
 ![Estadísticas](./profile/themes/default/stats.svg)
 ![Lenguajes](./profile/themes/default/top-langs.svg)
+![Pin](./profile/themes/default/pin.svg)
 ![WakaTime](./profile/themes/default/wakatime.svg)
 ```
 
