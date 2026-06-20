@@ -163,16 +163,21 @@ const renderError = ({
     theme,
   });
 
+  const safeTitleColor = encodeHTML(String(titleColor));
+  const safeTextColor = encodeHTML(String(textColor));
+  const safeBgColor = encodeHTML(String(bgColor));
+  const safeBorderColor = encodeHTML(String(borderColor));
+
   return `
-    <svg width="${ERROR_CARD_LENGTH}"  height="120" viewBox="0 0 ${ERROR_CARD_LENGTH} 120" fill="${bgColor}" xmlns="http://www.w3.org/2000/svg">
+    <svg width="${ERROR_CARD_LENGTH}"  height="120" viewBox="0 0 ${ERROR_CARD_LENGTH} 120" fill="${safeBgColor}" xmlns="http://www.w3.org/2000/svg">
     <style>
-    .text { font: 600 16px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${titleColor} }
-    .small { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${textColor} }
+    .text { font: 600 16px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${safeTitleColor} }
+    .small { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${safeTextColor} }
     .gray { fill: #858585 }
     </style>
     <rect x="0.5" y="0.5" width="${
       ERROR_CARD_LENGTH - 1
-    }" height="99%" rx="4.5" fill="${bgColor}" stroke="${borderColor}"/>
+    }" height="99%" rx="4.5" fill="${safeBgColor}" stroke="${safeBorderColor}"/>
     <text x="25" y="45" class="text">¡Algo salió mal!${
       UPSTREAM_API_ERRORS.includes(secondaryMessage) || !show_repo_link
         ? ""
