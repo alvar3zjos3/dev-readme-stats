@@ -10,11 +10,11 @@ permissions:
   pull-requests: write
 
 jobs:
-  generate_svgs:
+  generate_svgs_1:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      max-parallel: 20 # Limitamos para no saturar los runners de GitHub
+      max-parallel: 15
       matrix:
         theme:
           [
@@ -150,6 +150,60 @@ jobs:
             "ocean_violet",
             "stellar_onyx",
             "forest_violet",
+          ]
+    steps:
+      - name: Harden the runner
+        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411
+        with:
+          egress-policy: audit
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+      - name: stats
+        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
+        with:
+          card: stats
+          options:
+            username=${{ github.repository_owner }}&theme=${{ matrix.theme }}
+          path: profile/themes/${{ matrix.theme }}/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: top-langs
+        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
+        with:
+          card: top-langs
+          options:
+            username=${{ github.repository_owner }}&theme=${{ matrix.theme }}
+          path: profile/themes/${{ matrix.theme }}/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: pin
+        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
+        with:
+          card: pin
+          options:
+            username=${{ github.repository_owner
+            }}&repo=dev-readme-stats&show_owner=true&theme=${{ matrix.theme }}
+          path: profile/themes/${{ matrix.theme }}/pin.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: wakatime
+        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
+        with:
+          card: wakatime
+          options:
+            username=${{ github.repository_owner }}&theme=${{ matrix.theme }}
+          path: profile/themes/${{ matrix.theme }}/wakatime.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.theme }}
+          path: profile/themes/${{ matrix.theme }}/
+
+  generate_svgs_2:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 15
+      matrix:
+        theme:
+          [
             "twilight_violet",
             "cosmic_bronze",
             "dusk_pearl",
@@ -283,16 +337,13 @@ jobs:
             "twilight_ruby",
             "ocean_titanium",
           ]
-
     steps:
       - name: Harden the runner
         uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411
         with:
           egress-policy: audit
-
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
-
-      - name: stats - ${{ matrix.theme }}
+      - name: stats
         uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
         with:
           card: stats
@@ -300,8 +351,7 @@ jobs:
             username=${{ github.repository_owner }}&theme=${{ matrix.theme }}
           path: profile/themes/${{ matrix.theme }}/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: top-langs - ${{ matrix.theme }}
+      - name: top-langs
         uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
         with:
           card: top-langs
@@ -309,8 +359,7 @@ jobs:
             username=${{ github.repository_owner }}&theme=${{ matrix.theme }}
           path: profile/themes/${{ matrix.theme }}/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: pin - ${{ matrix.theme }}
+      - name: pin
         uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
         with:
           card: pin
@@ -319,8 +368,7 @@ jobs:
             }}&repo=dev-readme-stats&show_owner=true&theme=${{ matrix.theme }}
           path: profile/themes/${{ matrix.theme }}/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: wakatime - ${{ matrix.theme }}
+      - name: wakatime
         uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
         with:
           card: wakatime
@@ -328,28 +376,21 @@ jobs:
             username=${{ github.repository_owner }}&theme=${{ matrix.theme }}
           path: profile/themes/${{ matrix.theme }}/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-
-      # Guardamos los SVGs generados por este runner como un artefacto temporal
-      - name: Upload theme artifacts
+      - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.theme }}
           path: profile/themes/${{ matrix.theme }}/
 
-  # Un trabajo final para recolectar todos los artefactos y hacer el PR
   create_pr:
-    needs: generate_svgs
+    needs: [generate_svgs_1, generate_svgs_2]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
-
-      # Descarga todos los artefactos de la matriz en la carpeta themes
-      # actions/download-artifact@v4 automáticamente creará las subcarpetas usando el nombre del artefacto (ej. profile/themes/default/)
       - name: Download all theme SVGs
         uses: actions/download-artifact@v4
         with:
           path: profile/themes/
-
       - name: Create Pull Request with updated stats
         uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
@@ -358,7 +399,5 @@ jobs:
           branch: "update-stats/patch"
           delete-branch: true
           title: "Actualizar combinaciones de tarjetas y temas"
-          body:
-            "Actualización automática usando estrategia Matrix. Se generaron
-            imágenes para todos los temas."
+          body: "Actualización automática usando estrategia Matrix."
           labels: "ci, stats-update"
