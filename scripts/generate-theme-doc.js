@@ -68,7 +68,7 @@ ${WAKA_CARD_LINKS_FLAG}
 `;
 
 const EXCLUDED_FROM_STATS = ["default_repocard"];
-const EXCLUDED_FROM_REPO = ["white"];
+const EXCLUDED_FROM_REPO = ["default, white"];
 const EXCLUDED_FROM_LANGS = ["default_repocard"];
 const EXCLUDED_FROM_WAKA = ["default_repocard"];
 

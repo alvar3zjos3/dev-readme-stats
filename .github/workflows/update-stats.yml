@@ -1,4 +1,4 @@
-name: Generar todas las tarjetas y temas
+name: Generar todas las tarjetas y temas (Matrix)
 
 on:
   schedule:
@@ -6,2378 +6,359 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
 
 jobs:
-  build:
+  generate_svgs:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
+    strategy:
+      fail-fast: false
+      max-parallel: 20 # Limitamos para no saturar los runners de GitHub
+      matrix:
+        theme:
+          [
+            "default",
+            "white",
+            "default_repocard",
+            "transparent",
+            "shadow_red",
+            "shadow_green",
+            "shadow_blue",
+            "dark",
+            "radical",
+            "merko",
+            "gruvbox",
+            "gruvbox_light",
+            "tokyonight",
+            "onedark",
+            "cobalt",
+            "synthwave",
+            "highcontrast",
+            "dracula",
+            "prussian",
+            "monokai",
+            "vue",
+            "nightowl",
+            "buefy",
+            "algolia",
+            "darcula",
+            "bear",
+            "nord",
+            "gotham",
+            "graywhite",
+            "calm",
+            "omni",
+            "react",
+            "jolly",
+            "maroongold",
+            "yeblu",
+            "blueberry",
+            "slateorange",
+            "kacho_ga",
+            "outrun",
+            "ocean_dark",
+            "city_lights",
+            "github_dark",
+            "github_dark_dimmed",
+            "discord_old_blurple",
+            "aura_dark",
+            "panda",
+            "noctis_minimus",
+            "cobalt2",
+            "swift",
+            "aura",
+            "apprentice",
+            "moltack",
+            "codeSTACKr",
+            "rose_pine",
+            "catppuccin_latte",
+            "catppuccin_mocha",
+            "date_night",
+            "one_dark_pro",
+            "rose",
+            "holi",
+            "neon",
+            "blue_navy",
+            "calm_pink",
+            "ambient_gradient",
+            "neon_emerald",
+            "sonic_platinum",
+            "stellar_titanium",
+            "solar_coral",
+            "twilight_silver",
+            "stellar_crimson",
+            "pastel_bronze",
+            "quantum_copper",
+            "stellar_amber",
+            "cosmic_titanium",
+            "stellar_platinum",
+            "retro_coral",
+            "retro_platinum",
+            "sonic_topaz",
+            "velvet_amethyst",
+            "velvet_silver",
+            "cosmic_onyx",
+            "retro_amethyst",
+            "forest_topaz",
+            "stellar_pearl",
+            "solar_quartz",
+            "pastel_topaz",
+            "twilight_pearl",
+            "cyber_platinum",
+            "retro_amber",
+            "solar_onyx",
+            "retro_topaz",
+            "velvet_bronze",
+            "electric_titanium",
+            "stellar_quartz",
+            "midnight_bronze",
+            "pastel_onyx",
+            "dawn_emerald",
+            "dusk_sapphire",
+            "dawn_jade",
+            "stellar_bronze",
+            "forest_copper",
+            "solar_bronze",
+            "lunar_onyx",
+            "electric_amber",
+            "retro_copper",
+            "crystal_jade",
+            "dusk_onyx",
+            "lunar_coral",
+            "dusk_platinum",
+            "pastel_coral",
+            "solar_indigo",
+            "dawn_crimson",
+            "quantum_bronze",
+            "cosmic_coral",
+            "twilight_bronze",
+            "stellar_indigo",
+            "ocean_onyx",
+            "lunar_pearl",
+            "electric_jade",
+            "dawn_platinum",
+            "sonic_violet",
+            "cosmic_jade",
+            "neon_platinum",
+            "solar_platinum",
+            "electric_crimson",
+            "midnight_jade",
+            "pastel_jade",
+            "electric_quartz",
+            "crystal_bronze",
+            "ocean_violet",
+            "stellar_onyx",
+            "forest_violet",
+            "twilight_violet",
+            "cosmic_bronze",
+            "dusk_pearl",
+            "desert_jade",
+            "stellar_jade",
+            "dawn_indigo",
+            "twilight_coral",
+            "dawn_gold",
+            "quantum_gold",
+            "cyber_sapphire",
+            "retro_violet",
+            "pastel_emerald",
+            "cosmic_crimson",
+            "crystal_emerald",
+            "cyber_silver",
+            "crystal_titanium",
+            "midnight_ruby",
+            "cyber_jade",
+            "twilight_copper",
+            "cosmic_pearl",
+            "lunar_sapphire",
+            "retro_sapphire",
+            "velvet_topaz",
+            "velvet_pearl",
+            "electric_indigo",
+            "electric_gold",
+            "forest_ruby",
+            "cosmic_platinum",
+            "dawn_coral",
+            "neon_jade",
+            "lunar_crimson",
+            "forest_indigo",
+            "twilight_topaz",
+            "ocean_gold",
+            "ocean_quartz",
+            "crystal_platinum",
+            "lunar_bronze",
+            "retro_ruby",
+            "retro_indigo",
+            "crystal_sapphire",
+            "sonic_sapphire",
+            "sonic_jade",
+            "twilight_sapphire",
+            "cosmic_amber",
+            "lunar_copper",
+            "cosmic_violet",
+            "cyber_emerald",
+            "velvet_ruby",
+            "stellar_silver",
+            "forest_jade",
+            "cosmic_emerald",
+            "dusk_silver",
+            "forest_sapphire",
+            "midnight_indigo",
+            "desert_onyx",
+            "desert_amethyst",
+            "dawn_onyx",
+            "ocean_bronze",
+            "quantum_silver",
+            "midnight_titanium",
+            "ocean_indigo",
+            "electric_platinum",
+            "velvet_copper",
+            "neon_indigo",
+            "sonic_quartz",
+            "velvet_jade",
+            "dusk_crimson",
+            "dusk_violet",
+            "velvet_indigo",
+            "twilight_platinum",
+            "pastel_platinum",
+            "twilight_onyx",
+            "neon_violet",
+            "dawn_sapphire",
+            "forest_emerald",
+            "forest_crimson",
+            "crystal_pearl",
+            "ocean_crimson",
+            "sonic_onyx",
+            "sonic_copper",
+            "electric_emerald",
+            "ocean_amethyst",
+            "forest_coral",
+            "quantum_platinum",
+            "velvet_sapphire",
+            "twilight_quartz",
+            "retro_onyx",
+            "dusk_gold",
+            "neon_bronze",
+            "cyber_amethyst",
+            "stellar_ruby",
+            "cyber_ruby",
+            "stellar_gold",
+            "cosmic_topaz",
+            "desert_amber",
+            "electric_sapphire",
+            "ocean_emerald",
+            "dusk_bronze",
+            "cyber_indigo",
+            "desert_silver",
+            "lunar_platinum",
+            "twilight_jade",
+            "sonic_emerald",
+            "ocean_coral",
+            "cyber_quartz",
+            "dawn_amber",
+            "electric_violet",
+            "dawn_ruby",
+            "dusk_quartz",
+            "crystal_crimson",
+            "midnight_sapphire",
+            "forest_platinum",
+            "neon_crimson",
+            "velvet_emerald",
+            "dawn_silver",
+            "lunar_jade",
+            "solar_silver",
+            "stellar_coral",
+            "retro_gold",
+            "cosmic_copper",
+            "crystal_onyx",
+            "electric_coral",
+            "desert_gold",
+            "pastel_ruby",
+            "pastel_amber",
+            "cosmic_sapphire",
+            "neon_pearl",
+            "cyber_topaz",
+            "lunar_emerald",
+            "retro_silver",
+            "twilight_ruby",
+            "ocean_titanium",
+          ]
+
     steps:
-      - name: Harden the runner (Audit all outbound calls)
-        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411 # v2.19.4
+      - name: Harden the runner
+        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411
         with:
           egress-policy: audit
 
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
-      # --- TEMA: DEFAULT ---
-      - name: stats - default
+
+      - name: stats - ${{ matrix.theme }}
         uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&theme=default
-          path: profile/themes/default/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - default
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=default
-          path: profile/themes/default/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - default
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=default
-          path: profile/themes/default/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - default
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=default
-          path: profile/themes/default/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: ALGOLIA ---
-      - name: stats - algolia
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=algolia
-          path: profile/themes/algolia/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - algolia
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=algolia
-          path: profile/themes/algolia/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - algolia
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=algolia
-          path: profile/themes/algolia/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - algolia
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=algolia
-          path: profile/themes/algolia/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: AMBIENT_GRADIENT ---
-      - name: stats - ambient_gradient
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options:
-            username=${{ github.repository_owner }}&theme=ambient_gradient
-          path: profile/themes/ambient_gradient/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - ambient_gradient
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options:
-            username=${{ github.repository_owner }}&theme=ambient_gradient
-          path: profile/themes/ambient_gradient/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - ambient_gradient
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=ambient_gradient
-          path: profile/themes/ambient_gradient/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - ambient_gradient
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options:
-            username=${{ github.repository_owner }}&theme=ambient_gradient
-          path: profile/themes/ambient_gradient/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: APPRENTICE ---
-      - name: stats - apprentice
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=apprentice
-          path: profile/themes/apprentice/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - apprentice
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=apprentice
-          path: profile/themes/apprentice/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - apprentice
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=apprentice
-          path: profile/themes/apprentice/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - apprentice
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=apprentice
-          path: profile/themes/apprentice/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: AURA ---
-      - name: stats - aura
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=aura
-          path: profile/themes/aura/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - aura
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=aura
-          path: profile/themes/aura/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - aura
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=aura
-          path: profile/themes/aura/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - aura
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=aura
-          path: profile/themes/aura/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: AURA_DARK ---
-      - name: stats - aura_dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=aura_dark
-          path: profile/themes/aura_dark/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - aura_dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=aura_dark
-          path: profile/themes/aura_dark/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - aura_dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=aura_dark
-          path: profile/themes/aura_dark/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - aura_dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=aura_dark
-          path: profile/themes/aura_dark/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: AYU-MIRAGE ---
-      - name: stats - ayu-mirage
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=ayu-mirage
-          path: profile/themes/ayu-mirage/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - ayu-mirage
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=ayu-mirage
-          path: profile/themes/ayu-mirage/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - ayu-mirage
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=ayu-mirage
-          path: profile/themes/ayu-mirage/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - ayu-mirage
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=ayu-mirage
-          path: profile/themes/ayu-mirage/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: BEAR ---
-      - name: stats - bear
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=bear
-          path: profile/themes/bear/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - bear
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=bear
-          path: profile/themes/bear/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - bear
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=bear
-          path: profile/themes/bear/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - bear
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=bear
-          path: profile/themes/bear/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: BLUE-GREEN ---
-      - name: stats - blue-green
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=blue-green
-          path: profile/themes/blue-green/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - blue-green
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=blue-green
-          path: profile/themes/blue-green/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - blue-green
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=blue-green
-          path: profile/themes/blue-green/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - blue-green
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=blue-green
-          path: profile/themes/blue-green/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: BLUE_NAVY ---
-      - name: stats - blue_navy
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=blue_navy
-          path: profile/themes/blue_navy/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - blue_navy
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=blue_navy
-          path: profile/themes/blue_navy/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - blue_navy
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=blue_navy
-          path: profile/themes/blue_navy/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - blue_navy
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=blue_navy
-          path: profile/themes/blue_navy/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: BLUEBERRY ---
-      - name: stats - blueberry
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=blueberry
-          path: profile/themes/blueberry/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - blueberry
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=blueberry
-          path: profile/themes/blueberry/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - blueberry
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=blueberry
-          path: profile/themes/blueberry/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - blueberry
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=blueberry
-          path: profile/themes/blueberry/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: BUEFY ---
-      - name: stats - buefy
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=buefy
-          path: profile/themes/buefy/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - buefy
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=buefy
-          path: profile/themes/buefy/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - buefy
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=buefy
-          path: profile/themes/buefy/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - buefy
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=buefy
-          path: profile/themes/buefy/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: CALM ---
-      - name: stats - calm
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=calm
-          path: profile/themes/calm/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - calm
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=calm
-          path: profile/themes/calm/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - calm
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=calm
-          path: profile/themes/calm/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - calm
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=calm
-          path: profile/themes/calm/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: CALM_PINK ---
-      - name: stats - calm_pink
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=calm_pink
-          path: profile/themes/calm_pink/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - calm_pink
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=calm_pink
-          path: profile/themes/calm_pink/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - calm_pink
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=calm_pink
-          path: profile/themes/calm_pink/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - calm_pink
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=calm_pink
-          path: profile/themes/calm_pink/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: CATPPUCCIN_LATTE ---
-      - name: stats - catppuccin_latte
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options:
-            username=${{ github.repository_owner }}&theme=catppuccin_latte
-          path: profile/themes/catppuccin_latte/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - catppuccin_latte
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options:
-            username=${{ github.repository_owner }}&theme=catppuccin_latte
-          path: profile/themes/catppuccin_latte/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - catppuccin_latte
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=catppuccin_latte
-          path: profile/themes/catppuccin_latte/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - catppuccin_latte
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options:
-            username=${{ github.repository_owner }}&theme=catppuccin_latte
-          path: profile/themes/catppuccin_latte/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: CATPPUCCIN_MOCHA ---
-      - name: stats - catppuccin_mocha
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options:
-            username=${{ github.repository_owner }}&theme=catppuccin_mocha
-          path: profile/themes/catppuccin_mocha/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - catppuccin_mocha
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options:
-            username=${{ github.repository_owner }}&theme=catppuccin_mocha
-          path: profile/themes/catppuccin_mocha/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - catppuccin_mocha
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=catppuccin_mocha
-          path: profile/themes/catppuccin_mocha/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - catppuccin_mocha
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options:
-            username=${{ github.repository_owner }}&theme=catppuccin_mocha
-          path: profile/themes/catppuccin_mocha/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: CHARTREUSE-DARK ---
-      - name: stats - chartreuse-dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=chartreuse-dark
-          path: profile/themes/chartreuse-dark/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - chartreuse-dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=chartreuse-dark
-          path: profile/themes/chartreuse-dark/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - chartreuse-dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=chartreuse-dark
-          path: profile/themes/chartreuse-dark/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - chartreuse-dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=chartreuse-dark
-          path: profile/themes/chartreuse-dark/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: CITY_LIGHTS ---
-      - name: stats - city_lights
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=city_lights
-          path: profile/themes/city_lights/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - city_lights
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=city_lights
-          path: profile/themes/city_lights/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - city_lights
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=city_lights
-          path: profile/themes/city_lights/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - city_lights
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=city_lights
-          path: profile/themes/city_lights/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: COBALT ---
-      - name: stats - cobalt
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=cobalt
-          path: profile/themes/cobalt/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - cobalt
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=cobalt
-          path: profile/themes/cobalt/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - cobalt
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=cobalt
-          path: profile/themes/cobalt/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - cobalt
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=cobalt
-          path: profile/themes/cobalt/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: COBALT2 ---
-      - name: stats - cobalt2
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=cobalt2
-          path: profile/themes/cobalt2/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - cobalt2
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=cobalt2
-          path: profile/themes/cobalt2/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - cobalt2
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=cobalt2
-          path: profile/themes/cobalt2/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - cobalt2
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=cobalt2
-          path: profile/themes/cobalt2/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: CODESTACKR ---
-      - name: stats - codeSTACKr
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=codeSTACKr
-          path: profile/themes/codeSTACKr/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - codeSTACKr
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=codeSTACKr
-          path: profile/themes/codeSTACKr/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - codeSTACKr
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=codeSTACKr
-          path: profile/themes/codeSTACKr/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - codeSTACKr
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=codeSTACKr
-          path: profile/themes/codeSTACKr/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: DARCULA ---
-      - name: stats - darcula
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=darcula
-          path: profile/themes/darcula/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - darcula
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=darcula
-          path: profile/themes/darcula/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - darcula
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=darcula
-          path: profile/themes/darcula/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - darcula
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=darcula
-          path: profile/themes/darcula/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: DARK ---
-      - name: stats - dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=dark
-          path: profile/themes/dark/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=dark
-          path: profile/themes/dark/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=dark
-          path: profile/themes/dark/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=dark
-          path: profile/themes/dark/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: DATE_NIGHT ---
-      - name: stats - date_night
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=date_night
-          path: profile/themes/date_night/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - date_night
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=date_night
-          path: profile/themes/date_night/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - date_night
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=date_night
-          path: profile/themes/date_night/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - date_night
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=date_night
-          path: profile/themes/date_night/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: DISCORD_OLD_BLURPLE ---
-      - name: stats - discord_old_blurple
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options:
-            username=${{ github.repository_owner }}&theme=discord_old_blurple
-          path: profile/themes/discord_old_blurple/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - discord_old_blurple
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options:
-            username=${{ github.repository_owner }}&theme=discord_old_blurple
-          path: profile/themes/discord_old_blurple/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - discord_old_blurple
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=discord_old_blurple
-          path: profile/themes/discord_old_blurple/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - discord_old_blurple
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options:
-            username=${{ github.repository_owner }}&theme=discord_old_blurple
-          path: profile/themes/discord_old_blurple/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: DRACULA ---
-      - name: stats - dracula
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=dracula
-          path: profile/themes/dracula/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - dracula
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=dracula
-          path: profile/themes/dracula/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - dracula
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=dracula
-          path: profile/themes/dracula/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - dracula
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=dracula
-          path: profile/themes/dracula/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: FLAG-INDIA ---
-      - name: stats - flag-india
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=flag-india
-          path: profile/themes/flag-india/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - flag-india
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=flag-india
-          path: profile/themes/flag-india/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - flag-india
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=flag-india
-          path: profile/themes/flag-india/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - flag-india
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=flag-india
-          path: profile/themes/flag-india/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: GITHUB_DARK ---
-      - name: stats - github_dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=github_dark
-          path: profile/themes/github_dark/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - github_dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=github_dark
-          path: profile/themes/github_dark/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - github_dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=github_dark
-          path: profile/themes/github_dark/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - github_dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=github_dark
-          path: profile/themes/github_dark/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: GITHUB_DARK_DIMMED ---
-      - name: stats - github_dark_dimmed
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options:
-            username=${{ github.repository_owner }}&theme=github_dark_dimmed
-          path: profile/themes/github_dark_dimmed/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - github_dark_dimmed
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options:
-            username=${{ github.repository_owner }}&theme=github_dark_dimmed
-          path: profile/themes/github_dark_dimmed/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - github_dark_dimmed
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=github_dark_dimmed
-          path: profile/themes/github_dark_dimmed/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - github_dark_dimmed
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options:
-            username=${{ github.repository_owner }}&theme=github_dark_dimmed
-          path: profile/themes/github_dark_dimmed/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: GOTHAM ---
-      - name: stats - gotham
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=gotham
-          path: profile/themes/gotham/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - gotham
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=gotham
-          path: profile/themes/gotham/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - gotham
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=gotham
-          path: profile/themes/gotham/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - gotham
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=gotham
-          path: profile/themes/gotham/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: GRAYWHITE ---
-      - name: stats - graywhite
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=graywhite
-          path: profile/themes/graywhite/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - graywhite
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=graywhite
-          path: profile/themes/graywhite/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - graywhite
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=graywhite
-          path: profile/themes/graywhite/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - graywhite
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=graywhite
-          path: profile/themes/graywhite/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: GREAT-GATSBY ---
-      - name: stats - great-gatsby
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=great-gatsby
-          path: profile/themes/great-gatsby/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - great-gatsby
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=great-gatsby
-          path: profile/themes/great-gatsby/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - great-gatsby
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=great-gatsby
-          path: profile/themes/great-gatsby/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - great-gatsby
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=great-gatsby
-          path: profile/themes/great-gatsby/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: GRUVBOX ---
-      - name: stats - gruvbox
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=gruvbox
-          path: profile/themes/gruvbox/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - gruvbox
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=gruvbox
-          path: profile/themes/gruvbox/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - gruvbox
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=gruvbox
-          path: profile/themes/gruvbox/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - gruvbox
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=gruvbox
-          path: profile/themes/gruvbox/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: GRUVBOX_LIGHT ---
-      - name: stats - gruvbox_light
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=gruvbox_light
-          path: profile/themes/gruvbox_light/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - gruvbox_light
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=gruvbox_light
-          path: profile/themes/gruvbox_light/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - gruvbox_light
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=gruvbox_light
-          path: profile/themes/gruvbox_light/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - gruvbox_light
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=gruvbox_light
-          path: profile/themes/gruvbox_light/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: HIGHCONTRAST ---
-      - name: stats - highcontrast
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=highcontrast
-          path: profile/themes/highcontrast/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - highcontrast
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=highcontrast
-          path: profile/themes/highcontrast/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - highcontrast
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=highcontrast
-          path: profile/themes/highcontrast/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - highcontrast
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=highcontrast
-          path: profile/themes/highcontrast/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: HOLI ---
-      - name: stats - holi
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=holi
-          path: profile/themes/holi/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - holi
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=holi
-          path: profile/themes/holi/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - holi
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=holi
-          path: profile/themes/holi/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - holi
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=holi
-          path: profile/themes/holi/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: JOLLY ---
-      - name: stats - jolly
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=jolly
-          path: profile/themes/jolly/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - jolly
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=jolly
-          path: profile/themes/jolly/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - jolly
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=jolly
-          path: profile/themes/jolly/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - jolly
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=jolly
-          path: profile/themes/jolly/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: KACHO_GA ---
-      - name: stats - kacho_ga
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=kacho_ga
-          path: profile/themes/kacho_ga/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - kacho_ga
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=kacho_ga
-          path: profile/themes/kacho_ga/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - kacho_ga
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=kacho_ga
-          path: profile/themes/kacho_ga/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - kacho_ga
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=kacho_ga
-          path: profile/themes/kacho_ga/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: MAROONGOLD ---
-      - name: stats - maroongold
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=maroongold
-          path: profile/themes/maroongold/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - maroongold
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=maroongold
-          path: profile/themes/maroongold/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - maroongold
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=maroongold
-          path: profile/themes/maroongold/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - maroongold
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=maroongold
-          path: profile/themes/maroongold/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: MATERIAL-PALENIGHT ---
-      - name: stats - material-palenight
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options:
-            username=${{ github.repository_owner }}&theme=material-palenight
-          path: profile/themes/material-palenight/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - material-palenight
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options:
-            username=${{ github.repository_owner }}&theme=material-palenight
-          path: profile/themes/material-palenight/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - material-palenight
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=material-palenight
-          path: profile/themes/material-palenight/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - material-palenight
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options:
-            username=${{ github.repository_owner }}&theme=material-palenight
-          path: profile/themes/material-palenight/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: MERKO ---
-      - name: stats - merko
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=merko
-          path: profile/themes/merko/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - merko
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=merko
-          path: profile/themes/merko/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - merko
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=merko
-          path: profile/themes/merko/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - merko
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=merko
-          path: profile/themes/merko/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: MIDNIGHT-PURPLE ---
-      - name: stats - midnight-purple
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=midnight-purple
-          path: profile/themes/midnight-purple/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - midnight-purple
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=midnight-purple
-          path: profile/themes/midnight-purple/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - midnight-purple
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=midnight-purple
-          path: profile/themes/midnight-purple/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - midnight-purple
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=midnight-purple
-          path: profile/themes/midnight-purple/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: MOLTACK ---
-      - name: stats - moltack
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=moltack
-          path: profile/themes/moltack/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - moltack
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=moltack
-          path: profile/themes/moltack/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - moltack
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=moltack
-          path: profile/themes/moltack/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - moltack
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=moltack
-          path: profile/themes/moltack/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: MONOKAI ---
-      - name: stats - monokai
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=monokai
-          path: profile/themes/monokai/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - monokai
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=monokai
-          path: profile/themes/monokai/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - monokai
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=monokai
-          path: profile/themes/monokai/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - monokai
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=monokai
-          path: profile/themes/monokai/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: NEON ---
-      - name: stats - neon
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=neon
-          path: profile/themes/neon/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - neon
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=neon
-          path: profile/themes/neon/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - neon
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=neon
-          path: profile/themes/neon/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - neon
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=neon
-          path: profile/themes/neon/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: NIGHTOWL ---
-      - name: stats - nightowl
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=nightowl
-          path: profile/themes/nightowl/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - nightowl
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=nightowl
-          path: profile/themes/nightowl/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - nightowl
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=nightowl
-          path: profile/themes/nightowl/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - nightowl
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=nightowl
-          path: profile/themes/nightowl/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: NOCTIS_MINIMUS ---
-      - name: stats - noctis_minimus
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=noctis_minimus
-          path: profile/themes/noctis_minimus/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - noctis_minimus
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=noctis_minimus
-          path: profile/themes/noctis_minimus/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - noctis_minimus
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=noctis_minimus
-          path: profile/themes/noctis_minimus/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - noctis_minimus
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=noctis_minimus
-          path: profile/themes/noctis_minimus/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: NORD ---
-      - name: stats - nord
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=nord
-          path: profile/themes/nord/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - nord
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=nord
-          path: profile/themes/nord/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - nord
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=nord
-          path: profile/themes/nord/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - nord
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=nord
-          path: profile/themes/nord/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: OCEAN_DARK ---
-      - name: stats - ocean_dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=ocean_dark
-          path: profile/themes/ocean_dark/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - ocean_dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=ocean_dark
-          path: profile/themes/ocean_dark/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - ocean_dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=ocean_dark
-          path: profile/themes/ocean_dark/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - ocean_dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=ocean_dark
-          path: profile/themes/ocean_dark/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: OMNI ---
-      - name: stats - omni
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=omni
-          path: profile/themes/omni/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - omni
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=omni
-          path: profile/themes/omni/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - omni
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=omni
-          path: profile/themes/omni/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - omni
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=omni
-          path: profile/themes/omni/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: ONE_DARK_PRO ---
-      - name: stats - one_dark_pro
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=one_dark_pro
-          path: profile/themes/one_dark_pro/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - one_dark_pro
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=one_dark_pro
-          path: profile/themes/one_dark_pro/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - one_dark_pro
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=one_dark_pro
-          path: profile/themes/one_dark_pro/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - one_dark_pro
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=one_dark_pro
-          path: profile/themes/one_dark_pro/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: ONEDARK ---
-      - name: stats - onedark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=onedark
-          path: profile/themes/onedark/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - onedark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=onedark
-          path: profile/themes/onedark/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - onedark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=onedark
-          path: profile/themes/onedark/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - onedark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=onedark
-          path: profile/themes/onedark/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: OUTRUN ---
-      - name: stats - outrun
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=outrun
-          path: profile/themes/outrun/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - outrun
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=outrun
-          path: profile/themes/outrun/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - outrun
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=outrun
-          path: profile/themes/outrun/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - outrun
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=outrun
-          path: profile/themes/outrun/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: PANDA ---
-      - name: stats - panda
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=panda
-          path: profile/themes/panda/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - panda
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=panda
-          path: profile/themes/panda/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - panda
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=panda
-          path: profile/themes/panda/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - panda
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=panda
-          path: profile/themes/panda/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: PRUSSIAN ---
-      - name: stats - prussian
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=prussian
-          path: profile/themes/prussian/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - prussian
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=prussian
-          path: profile/themes/prussian/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - prussian
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=prussian
-          path: profile/themes/prussian/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - prussian
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=prussian
-          path: profile/themes/prussian/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: RADICAL ---
-      - name: stats - radical
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=radical
-          path: profile/themes/radical/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - radical
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=radical
-          path: profile/themes/radical/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - radical
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=radical
-          path: profile/themes/radical/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - radical
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=radical
-          path: profile/themes/radical/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: REACT ---
-      - name: stats - react
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=react
-          path: profile/themes/react/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - react
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=react
-          path: profile/themes/react/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - react
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=react
-          path: profile/themes/react/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - react
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=react
-          path: profile/themes/react/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: ROSE ---
-      - name: stats - rose
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=rose
-          path: profile/themes/rose/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - rose
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=rose
-          path: profile/themes/rose/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - rose
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=rose
-          path: profile/themes/rose/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - rose
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=rose
-          path: profile/themes/rose/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: ROSE_PINE ---
-      - name: stats - rose_pine
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=rose_pine
-          path: profile/themes/rose_pine/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - rose_pine
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=rose_pine
-          path: profile/themes/rose_pine/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - rose_pine
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=rose_pine
-          path: profile/themes/rose_pine/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - rose_pine
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=rose_pine
-          path: profile/themes/rose_pine/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: SHADES-OF-PURPLE ---
-      - name: stats - shades-of-purple
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options:
-            username=${{ github.repository_owner }}&theme=shades-of-purple
-          path: profile/themes/shades-of-purple/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - shades-of-purple
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options:
-            username=${{ github.repository_owner }}&theme=shades-of-purple
-          path: profile/themes/shades-of-purple/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - shades-of-purple
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=shades-of-purple
-          path: profile/themes/shades-of-purple/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - shades-of-purple
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options:
-            username=${{ github.repository_owner }}&theme=shades-of-purple
-          path: profile/themes/shades-of-purple/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: SHADOW_BLUE ---
-      - name: stats - shadow_blue
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=shadow_blue
-          path: profile/themes/shadow_blue/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - shadow_blue
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=shadow_blue
-          path: profile/themes/shadow_blue/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - shadow_blue
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=shadow_blue
-          path: profile/themes/shadow_blue/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - shadow_blue
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=shadow_blue
-          path: profile/themes/shadow_blue/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: SHADOW_GREEN ---
-      - name: stats - shadow_green
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=shadow_green
-          path: profile/themes/shadow_green/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - shadow_green
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=shadow_green
-          path: profile/themes/shadow_green/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - shadow_green
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=shadow_green
-          path: profile/themes/shadow_green/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - shadow_green
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=shadow_green
-          path: profile/themes/shadow_green/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: SHADOW_RED ---
-      - name: stats - shadow_red
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=shadow_red
-          path: profile/themes/shadow_red/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - shadow_red
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=shadow_red
-          path: profile/themes/shadow_red/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - shadow_red
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=shadow_red
-          path: profile/themes/shadow_red/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - shadow_red
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=shadow_red
-          path: profile/themes/shadow_red/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: SLATEORANGE ---
-      - name: stats - slateorange
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=slateorange
-          path: profile/themes/slateorange/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - slateorange
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=slateorange
-          path: profile/themes/slateorange/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - slateorange
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=slateorange
-          path: profile/themes/slateorange/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - slateorange
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=slateorange
-          path: profile/themes/slateorange/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: SOLARIZED-DARK ---
-      - name: stats - solarized-dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=solarized-dark
-          path: profile/themes/solarized-dark/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - solarized-dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=solarized-dark
-          path: profile/themes/solarized-dark/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - solarized-dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=solarized-dark
-          path: profile/themes/solarized-dark/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - solarized-dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=solarized-dark
-          path: profile/themes/solarized-dark/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: SOLARIZED-LIGHT ---
-      - name: stats - solarized-light
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=solarized-light
-          path: profile/themes/solarized-light/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - solarized-light
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=solarized-light
-          path: profile/themes/solarized-light/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - solarized-light
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=solarized-light
-          path: profile/themes/solarized-light/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - solarized-light
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=solarized-light
-          path: profile/themes/solarized-light/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: SWIFT ---
-      - name: stats - swift
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=swift
-          path: profile/themes/swift/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - swift
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=swift
-          path: profile/themes/swift/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - swift
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=swift
-          path: profile/themes/swift/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - swift
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=swift
-          path: profile/themes/swift/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: SYNTHWAVE ---
-      - name: stats - synthwave
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=synthwave
-          path: profile/themes/synthwave/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - synthwave
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=synthwave
-          path: profile/themes/synthwave/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - synthwave
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=synthwave
-          path: profile/themes/synthwave/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - synthwave
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=synthwave
-          path: profile/themes/synthwave/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: TOKYONIGHT ---
-      - name: stats - tokyonight
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=tokyonight
-          path: profile/themes/tokyonight/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - tokyonight
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=tokyonight
-          path: profile/themes/tokyonight/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - tokyonight
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=tokyonight
-          path: profile/themes/tokyonight/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - tokyonight
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=tokyonight
-          path: profile/themes/tokyonight/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: TRANSPARENT ---
-      - name: stats - transparent
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=transparent
-          path: profile/themes/transparent/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - transparent
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=transparent
-          path: profile/themes/transparent/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - transparent
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=transparent
-          path: profile/themes/transparent/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - transparent
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=transparent
-          path: profile/themes/transparent/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: VISION-FRIENDLY-DARK ---
-      - name: stats - vision-friendly-dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options:
-            username=${{ github.repository_owner }}&theme=vision-friendly-dark
-          path: profile/themes/vision-friendly-dark/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - vision-friendly-dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
           options:
-            username=${{ github.repository_owner }}&theme=vision-friendly-dark
-          path: profile/themes/vision-friendly-dark/top-langs.svg
+            username=${{ github.repository_owner }}&theme=${{ matrix.theme }}
+          path: profile/themes/${{ matrix.theme }}/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - vision-friendly-dark
+
+      - name: top-langs - ${{ matrix.theme }}
         uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
         with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=vision-friendly-dark
-          path: profile/themes/vision-friendly-dark/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - vision-friendly-dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options:
-            username=${{ github.repository_owner }}&theme=vision-friendly-dark
-          path: profile/themes/vision-friendly-dark/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: VUE ---
-      - name: stats - vue
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=vue
-          path: profile/themes/vue/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - vue
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&theme=vue
-          path: profile/themes/vue/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - vue
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
           options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=vue
-          path: profile/themes/vue/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - vue
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=vue
-          path: profile/themes/vue/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: VUE-DARK ---
-      - name: stats - vue-dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=vue-dark
-          path: profile/themes/vue-dark/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - vue-dark
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=vue-dark
-          path: profile/themes/vue-dark/top-langs.svg
+            username=${{ github.repository_owner }}&theme=${{ matrix.theme }}
+          path: profile/themes/${{ matrix.theme }}/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - vue-dark
+
+      - name: pin - ${{ matrix.theme }}
         uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
         with:
           card: pin
           options:
             username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=vue-dark
-          path: profile/themes/vue-dark/pin.svg
+            }}&repo=dev-readme-stats&show_owner=true&theme=${{ matrix.theme }}
+          path: profile/themes/${{ matrix.theme }}/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - vue-dark
+
+      - name: wakatime - ${{ matrix.theme }}
         uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
         with:
           card: wakatime
-          options: username=${{ github.repository_owner }}&theme=vue-dark
-          path: profile/themes/vue-dark/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: WHITE ---
-      - name: stats - white
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=white
-          path: profile/themes/white/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - white
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=white
-          path: profile/themes/white/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - white
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: pin
           options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=white
-          path: profile/themes/white/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - white
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=white
-          path: profile/themes/white/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      # --- TEMA: YEBLU ---
-      - name: stats - yeblu
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=yeblu
-          path: profile/themes/yeblu/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: top-langs - yeblu
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=yeblu
-          path: profile/themes/yeblu/top-langs.svg
+            username=${{ github.repository_owner }}&theme=${{ matrix.theme }}
+          path: profile/themes/${{ matrix.theme }}/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: pin - yeblu
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
+
+      # Guardamos los SVGs generados por este runner como un artefacto temporal
+      - name: Upload theme artifacts
+        uses: actions/upload-artifact@v4
         with:
-          card: pin
-          options:
-            username=${{ github.repository_owner
-            }}&repo=dev-readme-stats&show_owner=true&theme=yeblu
-          path: profile/themes/yeblu/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - name: wakatime - yeblu
-        uses: alvar3zjos3/dev-readme-stats-action@952e41aa91c1d09328f3da5a0d068c39459736e2
+          name: ${{ matrix.theme }}
+          path: profile/themes/${{ matrix.theme }}/
+
+  # Un trabajo final para recolectar todos los artefactos y hacer el PR
+  create_pr:
+    needs: generate_svgs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+
+      # Descarga todos los artefactos de la matriz en la carpeta themes
+      # actions/download-artifact@v4 automáticamente creará las subcarpetas usando el nombre del artefacto (ej. profile/themes/default/)
+      - name: Download all theme SVGs
+        uses: actions/download-artifact@v4
         with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=yeblu
-          path: profile/themes/yeblu/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          path: profile/themes/
 
       - name: Create Pull Request with updated stats
         uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
-          commit-message: "Actualizar combinaciones de tarjetas y temas"
+          commit-message:
+            "Actualizar combinaciones de tarjetas y temas (Matrix)"
           branch: "update-stats/patch"
           delete-branch: true
           title: "Actualizar combinaciones de tarjetas y temas"
-          body: |
-            Actualización automática de las tarjetas y temas generados por el flujo de trabajo de GitHub Actions.
+          body:
+            "Actualización automática usando estrategia Matrix. Se generaron
+            imágenes para todos los temas."
           labels: "ci, stats-update"
