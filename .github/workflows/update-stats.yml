@@ -6,12 +6,15 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pull-requests: write
 
 jobs:
   generate_svgs_1:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     strategy:
       fail-fast: false
       max-parallel: 15
