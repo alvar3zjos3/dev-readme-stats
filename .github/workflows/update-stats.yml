@@ -193,7 +193,7 @@ jobs:
           path: profile/themes/${{ matrix.theme }}/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload artifacts
-        uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.theme }}
           path: profile/themes/${{ matrix.theme }}/
@@ -379,7 +379,7 @@ jobs:
           path: profile/themes/${{ matrix.theme }}/wakatime.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload artifacts
-        uses: actions/upload-artifact@65462800fd760344b1a7b4382951275a0abb4808 # v4.3.3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.theme }}
           path: profile/themes/${{ matrix.theme }}/
@@ -387,6 +387,9 @@ jobs:
   create_pr:
     needs: [generate_svgs_1, generate_svgs_2]
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
       - name: Download all theme SVGs
@@ -396,6 +399,7 @@ jobs:
       - name: Create Pull Request with updated stats
         uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           commit-message:
             "Actualizar combinaciones de tarjetas y temas (Matrix)"
           branch: "update-stats/patch"
