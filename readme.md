@@ -1,4 +1,9 @@
 <div align="center">
+  <br />
+  <p>
+    <a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="icono dev readme stats.svg" width="150" alt="Dev Readme Stats Logo" /></a>
+  </p>
+  <br />
   <h1>Dev Readme Stats</h1>
   <p>Genera tarjetas SVG dinámicas con métricas de commits, repositorios, lenguajes y WakaTime para tu README de GitHub.</p>
 </div>
