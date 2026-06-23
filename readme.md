@@ -10,6 +10,8 @@
   <a href="https://github.com/alvar3zjos3/dev-readme-stats/issues"><img alt="Issues" src="https://img.shields.io/github/issues/alvar3zjos3/dev-readme-stats?color=0088ff" /></a>
   <a href="https://github.com/alvar3zjos3/dev-readme-stats/pulls"><img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/alvar3zjos3/dev-readme-stats?color=0088ff" /></a>
   <a href="https://securityscorecards.dev/viewer/?uri=github.com/alvar3zjos3/dev-readme-stats"><img alt="OpenSSF Scorecard" src="https://api.securityscorecards.dev/projects/github.com/alvar3zjos3/dev-readme-stats/badge" /></a>
+  <img alt="Licencia MIT" src="https://img.shields.io/github/license/alvar3zjos3/dev-readme-stats" />
+  <img alt="Último commit" src="https://img.shields.io/github/last-commit/alvar3zjos3/dev-readme-stats" />
 </p>
 
 <p align="center">
@@ -78,6 +80,7 @@
     - [En otras plataformas](#en-otras-plataformas)
     - [Variables de entorno disponibles](#variables-de-entorno-disponibles)
   - [Mantener tu fork actualizado](#mantener-tu-fork-actualizado)
+- [📜 Licencia](#-licencia)
 </details>
 
 ---
@@ -98,13 +101,14 @@
 ## Características principales
 
 - 🃏 **5 tipos de tarjetas** — estadísticas globales, lenguajes principales, WakaTime, pin de repositorio y pin de gist.
-- 🎨 **Más de 30 temas integrados** — dark, radical, dracula, tokyonight, merko, synthwave, etc.
+- 🎨 **Más de 260 temas integrados** — dark, radical, dracula, tokyonight, merko, synthwave, catppuccin, y muchos más.
 - ✏️ **Totalmente personalizable** — colores hex, bordes, iconos, radio, idioma y degradados desde la URL.
 - 🌗 **Tema responsivo** — soporte para modo oscuro/claro de GitHub con `prefers-color-scheme`.
 - 🏅 **Sistema de rangos** — puntuación S → C calculada con un modelo estadístico ponderado sobre 6 métricas.
 - 🌍 **Más de 40 idiomas** — con español (`es`) como idioma por defecto en este fork.
 - 🚀 **Auto-alojable** — despliega en Vercel para evitar límites de velocidad públicos.
 - ⚙️ **GitHub Actions** — genera SVGs estáticos periódicamente sin necesidad de servidor.
+- 🔒 **Seguridad** — hardened runner, dependencias fijadas por hash SHA, OpenSSF Scorecard activo.
 
 ## Cómo funciona internamente
 
@@ -235,7 +239,6 @@ El círculo animado alrededor del rango muestra `100 - percentil_global`. Puedes
 </td>
 <td align="center"><b>rank_icon=percentile</b><br>
 <a href="https://github.com/alvar3zjos3/dev-readme-stats"><img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=stars,commits,prs,issues,contribs&rank_icon=percentile" /></a>
-
 </td>
 </tr>
 </table>
@@ -585,6 +588,15 @@ Estas opciones aplican a **todas** las tarjetas:
 > - `default_repocard` → variante por defecto específica para la **tarjeta pin**, no aparece en otras tarjetas.
 > - `transparent` → fondo completamente transparente, se adapta a cualquier tema de GitHub.
 
+Este fork incluye **más de 260 temas**, organizados en las siguientes categorías:
+
+| Categoría | Ejemplos |
+|---|---|
+| **Clásicos** | `default`, `white`, `dark`, `radical`, `merko`, `gruvbox`, `tokyonight` |
+| **Editores** | `dracula`, `onedark`, `synthwave`, `cobalt`, `monokai`, `nightowl` |
+| **Comunidad** | `catppuccin_mocha`, `catppuccin_latte`, `rose_pine`, `github_dark`, `nord` |
+| **Generativos** (nuevos) | `cosmic_*`, `stellar_*`, `lunar_*`, `ocean_*`, `twilight_*`, `dawn_*`, `dusk_*` |
+
 Algunos de los temas más populares:
 
 <table>
@@ -870,7 +882,6 @@ Por defecto GitHub pone las imágenes una debajo de otra. Usa etiquetas `<img>` 
 
 <img src="https://dev-readme-stats.vercel.app/api?username=alvar3zjos3&hide=issues&border_color=79ff97&border_radius=15&theme=tokyonight"/>
 
-
 ### Sin borde
 
 ```md
@@ -949,7 +960,10 @@ Genera SVGs estáticos periódicamente y los guarda en tu repositorio. No requie
 > [!NOTE]
 > El flujo `generate-theme-doc.yml` crea automáticamente la rama `updated-theme-readme` y abre un **Pull Request** contra `master` en lugar de hacer push directo. No se crean PRs duplicados si ya existe uno abierto.
 
-Crea `/.github/workflows/update-stats.yml` en tu repositorio de perfil (`alvar3zjos3/alvar3zjos3`):
+> [!IMPORTANT]
+> Para que el job `create_pr` pueda abrir Pull Requests, debes ir a **Settings → Actions → General → Workflow permissions** de tu repositorio y activar **"Allow GitHub Actions to create and approve pull requests"**.
+
+Crea `/.github/workflows/update-stats.yml` en tu repositorio de perfil (`TU_USUARIO/TU_USUARIO`):
 
 ```yaml
 name: Generar todas las tarjetas y temas
@@ -963,56 +977,403 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  generate_svgs_1:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    strategy:
+      fail-fast: false
+      max-parallel: 15
+      matrix:
+        theme:
+          [
+            "default",
+            "white",
+            "default_repocard",
+            "transparent",
+            "shadow_red",
+            "shadow_green",
+            "shadow_blue",
+            "dark",
+            "radical",
+            "merko",
+            "gruvbox",
+            "gruvbox_light",
+            "tokyonight",
+            "onedark",
+            "cobalt",
+            "synthwave",
+            "highcontrast",
+            "dracula",
+            "prussian",
+            "monokai",
+            "vue",
+            "nightowl",
+            "buefy",
+            "algolia",
+            "darcula",
+            "bear",
+            "nord",
+            "gotham",
+            "graywhite",
+            "calm",
+            "omni",
+            "react",
+            "jolly",
+            "maroongold",
+            "yeblu",
+            "blueberry",
+            "slateorange",
+            "kacho_ga",
+            "outrun",
+            "ocean_dark",
+            "city_lights",
+            "github_dark",
+            "github_dark_dimmed",
+            "discord_old_blurple",
+            "aura_dark",
+            "panda",
+            "noctis_minimus",
+            "cobalt2",
+            "swift",
+            "aura",
+            "apprentice",
+            "moltack",
+            "codeSTACKr",
+            "rose_pine",
+            "catppuccin_latte",
+            "catppuccin_mocha",
+            "date_night",
+            "one_dark_pro",
+            "rose",
+            "holi",
+            "neon",
+            "blue_navy",
+            "calm_pink",
+            "ambient_gradient",
+            "neon_emerald",
+            "sonic_platinum",
+            "stellar_titanium",
+            "solar_coral",
+            "twilight_silver",
+            "stellar_crimson",
+            "pastel_bronze",
+            "quantum_copper",
+            "stellar_amber",
+            "cosmic_titanium",
+            "stellar_platinum",
+            "retro_coral",
+            "retro_platinum",
+            "sonic_topaz",
+            "velvet_amethyst",
+            "velvet_silver",
+            "cosmic_onyx",
+            "retro_amethyst",
+            "forest_topaz",
+            "stellar_pearl",
+            "solar_quartz",
+            "pastel_topaz",
+            "twilight_pearl",
+            "cyber_platinum",
+            "retro_amber",
+            "solar_onyx",
+            "retro_topaz",
+            "velvet_bronze",
+            "electric_titanium",
+            "stellar_quartz",
+            "midnight_bronze",
+            "pastel_onyx",
+            "dawn_emerald",
+            "dusk_sapphire",
+            "dawn_jade",
+            "stellar_bronze",
+            "forest_copper",
+            "solar_bronze",
+            "lunar_onyx",
+            "electric_amber",
+            "retro_copper",
+            "crystal_jade",
+            "dusk_onyx",
+            "lunar_coral",
+            "dusk_platinum",
+            "pastel_coral",
+            "solar_indigo",
+            "dawn_crimson",
+            "quantum_bronze",
+            "cosmic_coral",
+            "twilight_bronze",
+            "stellar_indigo",
+            "ocean_onyx",
+            "lunar_pearl",
+            "electric_jade",
+            "dawn_platinum",
+            "sonic_violet",
+            "cosmic_jade",
+            "neon_platinum",
+            "solar_platinum",
+            "electric_crimson",
+            "midnight_jade",
+            "pastel_jade",
+            "electric_quartz",
+            "crystal_bronze",
+            "ocean_violet",
+            "stellar_onyx",
+            "forest_violet",
+          ]
+    steps:
+      - name: Harden the runner
+        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411
+        with:
+          egress-policy: audit
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+      - name: stats
+        uses: alvar3zjos3/dev-readme-stats-action@6ce6b8aab3851d24f237e0b9c1160cfb42aa05c9
+        with:
+          card: stats
+          options:
+            username=${{ github.repository_owner }}&theme=${{ matrix.theme }}
+          path: profile/themes/${{ matrix.theme }}/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: top-langs
+        uses: alvar3zjos3/dev-readme-stats-action@6ce6b8aab3851d24f237e0b9c1160cfb42aa05c9
+        with:
+          card: top-langs
+          options:
+            username=${{ github.repository_owner }}&theme=${{ matrix.theme }}
+          path: profile/themes/${{ matrix.theme }}/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: pin
+        uses: alvar3zjos3/dev-readme-stats-action@6ce6b8aab3851d24f237e0b9c1160cfb42aa05c9
+        with:
+          card: pin
+          options:
+            username=${{ github.repository_owner
+            }}&repo=dev-readme-stats&show_owner=true&theme=${{ matrix.theme }}
+          path: profile/themes/${{ matrix.theme }}/pin.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: wakatime
+        uses: alvar3zjos3/dev-readme-stats-action@6ce6b8aab3851d24f237e0b9c1160cfb42aa05c9
+        with:
+          card: wakatime
+          options:
+            username=${{ github.repository_owner }}&theme=${{ matrix.theme }}
+          path: profile/themes/${{ matrix.theme }}/wakatime.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.theme }}
+          path: profile/themes/${{ matrix.theme }}/
+
+  generate_svgs_2:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 15
+      matrix:
+        theme:
+          [
+            "twilight_violet",
+            "cosmic_bronze",
+            "dusk_pearl",
+            "desert_jade",
+            "stellar_jade",
+            "dawn_indigo",
+            "twilight_coral",
+            "dawn_gold",
+            "quantum_gold",
+            "cyber_sapphire",
+            "retro_violet",
+            "pastel_emerald",
+            "cosmic_crimson",
+            "crystal_emerald",
+            "cyber_silver",
+            "crystal_titanium",
+            "midnight_ruby",
+            "cyber_jade",
+            "twilight_copper",
+            "cosmic_pearl",
+            "lunar_sapphire",
+            "retro_sapphire",
+            "velvet_topaz",
+            "velvet_pearl",
+            "electric_indigo",
+            "electric_gold",
+            "forest_ruby",
+            "cosmic_platinum",
+            "dawn_coral",
+            "neon_jade",
+            "lunar_crimson",
+            "forest_indigo",
+            "twilight_topaz",
+            "ocean_gold",
+            "ocean_quartz",
+            "crystal_platinum",
+            "lunar_bronze",
+            "retro_ruby",
+            "retro_indigo",
+            "crystal_sapphire",
+            "sonic_sapphire",
+            "sonic_jade",
+            "twilight_sapphire",
+            "cosmic_amber",
+            "lunar_copper",
+            "cosmic_violet",
+            "cyber_emerald",
+            "velvet_ruby",
+            "stellar_silver",
+            "forest_jade",
+            "cosmic_emerald",
+            "dusk_silver",
+            "forest_sapphire",
+            "midnight_indigo",
+            "desert_onyx",
+            "desert_amethyst",
+            "dawn_onyx",
+            "ocean_bronze",
+            "quantum_silver",
+            "midnight_titanium",
+            "ocean_indigo",
+            "electric_platinum",
+            "velvet_copper",
+            "neon_indigo",
+            "sonic_quartz",
+            "velvet_jade",
+            "dusk_crimson",
+            "dusk_violet",
+            "velvet_indigo",
+            "twilight_platinum",
+            "pastel_platinum",
+            "twilight_onyx",
+            "neon_violet",
+            "dawn_sapphire",
+            "forest_emerald",
+            "forest_crimson",
+            "crystal_pearl",
+            "ocean_crimson",
+            "sonic_onyx",
+            "sonic_copper",
+            "electric_emerald",
+            "ocean_amethyst",
+            "forest_coral",
+            "quantum_platinum",
+            "velvet_sapphire",
+            "twilight_quartz",
+            "retro_onyx",
+            "dusk_gold",
+            "neon_bronze",
+            "cyber_amethyst",
+            "stellar_ruby",
+            "cyber_ruby",
+            "stellar_gold",
+            "cosmic_topaz",
+            "desert_amber",
+            "electric_sapphire",
+            "ocean_emerald",
+            "dusk_bronze",
+            "cyber_indigo",
+            "desert_silver",
+            "lunar_platinum",
+            "twilight_jade",
+            "sonic_emerald",
+            "ocean_coral",
+            "cyber_quartz",
+            "dawn_amber",
+            "electric_violet",
+            "dawn_ruby",
+            "dusk_quartz",
+            "crystal_crimson",
+            "midnight_sapphire",
+            "forest_platinum",
+            "neon_crimson",
+            "velvet_emerald",
+            "dawn_silver",
+            "lunar_jade",
+            "solar_silver",
+            "stellar_coral",
+            "retro_gold",
+            "cosmic_copper",
+            "crystal_onyx",
+            "electric_coral",
+            "desert_gold",
+            "pastel_ruby",
+            "pastel_amber",
+            "cosmic_sapphire",
+            "neon_pearl",
+            "cyber_topaz",
+            "lunar_emerald",
+            "retro_silver",
+            "twilight_ruby",
+            "ocean_titanium",
+          ]
+    steps:
+      - name: Harden the runner
+        uses: step-security/harden-runner@9af89fc71515a100421586dfdb3dc9c984fbf411
+        with:
+          egress-policy: audit
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+      - name: stats
+        uses: alvar3zjos3/dev-readme-stats-action@6ce6b8aab3851d24f237e0b9c1160cfb42aa05c9
+        with:
+          card: stats
+          options:
+            username=${{ github.repository_owner }}&theme=${{ matrix.theme }}
+          path: profile/themes/${{ matrix.theme }}/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: top-langs
+        uses: alvar3zjos3/dev-readme-stats-action@6ce6b8aab3851d24f237e0b9c1160cfb42aa05c9
+        with:
+          card: top-langs
+          options:
+            username=${{ github.repository_owner }}&theme=${{ matrix.theme }}
+          path: profile/themes/${{ matrix.theme }}/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: pin
+        uses: alvar3zjos3/dev-readme-stats-action@6ce6b8aab3851d24f237e0b9c1160cfb42aa05c9
+        with:
+          card: pin
+          options:
+            username=${{ github.repository_owner
+            }}&repo=dev-readme-stats&show_owner=true&theme=${{ matrix.theme }}
+          path: profile/themes/${{ matrix.theme }}/pin.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: wakatime
+        uses: alvar3zjos3/dev-readme-stats-action@6ce6b8aab3851d24f237e0b9c1160cfb42aa05c9
+        with:
+          card: wakatime
+          options:
+            username=${{ github.repository_owner }}&theme=${{ matrix.theme }}
+          path: profile/themes/${{ matrix.theme }}/wakatime.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.theme }}
+          path: profile/themes/${{ matrix.theme }}/
+
+  create_pr:
+    needs: [generate_svgs_1, generate_svgs_2]
     runs-on: ubuntu-latest
     permissions:
       contents: write
       pull-requests: write
     steps:
-      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10
-      
-      # --- TEMA: DEFAULT ---
-      - name: stats - default
-        uses: alvar3zjos3/dev-readme-stats-action@main
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
+      - name: Descargar todos los SVGs generados
+        uses: actions/download-artifact@65a9edc5881444af0b9093a5e628f2fe47ea3b2e # v4.1.7
         with:
-          card: stats
-          options: username=${{ github.repository_owner }}&theme=default
-          path: profile/themes/default/stats.svg
+          path: profile/themes/
+      - name: Crear Pull Request con estadísticas actualizadas
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          
-      - name: top-langs - default
-        uses: alvar3zjos3/dev-readme-stats-action@main
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&theme=default
-          path: profile/themes/default/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          
-      - name: pin - default
-        uses: alvar3zjos3/dev-readme-stats-action@main
-        with:
-          card: pin
-          options: username=${{ github.repository_owner }}&repo=dev-readme-stats&show_owner=true&theme=default
-          path: profile/themes/default/pin.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          
-      - name: wakatime - default
-        uses: alvar3zjos3/dev-readme-stats-action@main
-        with:
-          card: wakatime
-          options: username=${{ github.repository_owner }}&theme=default
-          path: profile/themes/default/wakatime.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Crear pull request con estadísticas actualizadas
-        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1
-        with:
-          commit-message: "Actualizar combinaciones de tarjetas y temas"
+          commit-message:
+            "Actualizar combinaciones de tarjetas y temas (Matrix)"
           branch: "update-stats/patch"
           delete-branch: true
           title: "Actualizar combinaciones de tarjetas y temas"
-          body: |
-            Actualización automática de las tarjetas y temas generados por el flujo de trabajo de GitHub Actions.
+          body: "Actualización automática usando estrategia Matrix."
           labels: "ci, stats-update"
 ```
 
@@ -1134,3 +1495,10 @@ git fetch upstream
 git merge upstream/master
 git push origin master
 ```
+---
+
+# 📜 Licencia
+
+Este proyecto está bajo la licencia **MIT**. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+---
