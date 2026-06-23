@@ -1,6 +1,7 @@
-# This file is used to define code owners for the repository.
-# Code owners are automatically requested for review when someone opens a pull request that modifies code they own.
+# Este archivo se usa para definir a los propietarios del código del repositorio.
 
-# Assign @qwerty541 as the owner for package.json and package-lock.json
-package.json @qwerty541
-package-lock.json @qwerty541
+# A los propietarios se les solicita automáticamente una revisión cuando alguien abre un pull request.
+
+# Asignar a @alvar3zjos3 como propietario de todo el repositorio por defecto
+
+- @alvar3zjos3
