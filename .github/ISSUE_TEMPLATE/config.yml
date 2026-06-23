@@ -2,12 +2,10 @@ blank_issues_enabled: true
 contact_links:
   - name: Pregunta
     url: https://github.com/alvar3zjos3/dev-readme-stats/discussions
-    about: Haz y responde preguntas aquí.
-  - name: Error
-    url: https://github.com/alvar3zjos3/dev-readme-stats/issues/1772
+    about: Haz y responde preguntas aquí en las Discusiones de GitHub.
+
+  - name: Errores técnicos comunes
+    url: https://github.com/alvar3zjos3/dev-readme-stats/blob/master/CONTRIBUTING.md#errores-técnicos-y-solución-de-problemas
     about:
-      Antes de abrir un reporte de error, revisa el issue de códigos de error
-      comunes.
-  - name: Preguntas frecuentes
-    url: https://github.com/alvar3zjos3/dev-readme-stats/discussions/1770
-    about: Consulta primero las preguntas frecuentes antes de preguntar.
+      Antes de abrir un reporte, revisa los fallos de despliegue, tokens o
+      actions documentados.

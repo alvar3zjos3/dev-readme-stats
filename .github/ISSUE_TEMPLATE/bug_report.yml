@@ -6,48 +6,91 @@ body:
   - type: markdown
     attributes:
       value: |
-        :warning: LEE PRIMERO LAS PREGUNTAS FRECUENTES [(#1770)](https://github.com/alvar3zjos3/dev-readme-stats/discussions/1770) Y LOS CÓDIGOS DE ERROR COMUNES [(#1772)](https://github.com/alvar3zjos3/dev-readme-stats/issues/1772).
+        :warning: Antes de abrir el reporte, revisa [CONTRIBUTING.md](https://github.com/alvar3zjos3/dev-readme-stats/blob/master/CONTRIBUTING.md), especialmente la sección de errores técnicos y solución de problemas.
+
+        Asegúrate también de probar la URL directamente en el navegador y de verificar si el problema ocurre en la instancia pública o solo en tu despliegue.
+
   - type: textarea
+    id: bug-description
     attributes:
       label: Describe el error
-      description: Una descripción clara y concisa del problema.
+      description: Explica claramente cuál es el problema.
+      placeholder: La tarjeta devuelve un SVG en blanco al usar...
     validations:
       required: true
+
   - type: textarea
+    id: expected-behavior
     attributes:
       label: Comportamiento esperado
-      description:
-        Una descripción clara y concisa de lo que esperabas que ocurriera.
+      description: Explica qué esperabas que ocurriera.
+      placeholder:
+        Esperaba que la tarjeta mostrara las estadísticas correctamente.
+
   - type: textarea
+    id: reproduce-steps
     attributes:
-      label: Capturas / enlace de demostración
-      description: Si aplica, añade capturas para explicar el problema.
-      placeholder: Pega el enlace de dev-readme-stats como imagen markdown
+      label: Pasos para reproducir
+      description: Indica los pasos exactos para reproducir el problema.
+      placeholder: |
+        1. Abrir la URL...
+        2. Usar estos parámetros...
+        3. Ver el error...
+    validations:
+      required: true
+
+  - type: input
+    id: card-url
+    attributes:
+      label: URL de la tarjeta
+      description: Pega la URL exacta que estás usando.
+      placeholder: https://dev-readme-stats.vercel.app/api?username=...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Entorno afectado
+      description: Indica dónde ocurre el problema.
+      options:
+        - Instancia pública de dev-readme-stats
+        - Instancia autoalojada
+        - GitHub Actions
+        - Desarrollo local
+        - Otro / no estoy seguro
+    validations:
+      required: true
+
   - type: textarea
+    id: logs-screenshots
+    attributes:
+      label: Logs, capturas o salida relevante
+      description:
+        Añade capturas, mensajes de error o logs si ayudan a entender el
+        problema.
+      placeholder: Pega aquí el error, logs de Actions o capturas relevantes.
+
+  - type: textarea
+    id: additional-context
     attributes:
       label: Contexto adicional
-      description: Cualquier otro contexto relevante sobre el problema.
-  - type: markdown
+      description: Añade cualquier detalle adicional que pueda ayudar.
+      placeholder:
+        Esto solo ocurre con WakaTime / solo falla con repos privados / empezó
+        después de...
+
+  - type: checkboxes
+    id: checks
     attributes:
-      value: |
-        ---
-        ### Preguntas frecuentes (extracto)
-
-        Algunas preguntas habituales del FAQ. La versión completa está en [#1770](https://github.com/alvar3zjos3/dev-readme-stats/discussions/1770).
-
-        #### P: Mi tarjeta muestra un error
-
-        **R:** Revisa primero los [códigos de error comunes](https://github.com/alvar3zjos3/dev-readme-stats/issues/1772) y los issues existentes antes de abrir uno nuevo.
-
-        #### P: ¿Cómo ocultar Jupyter Notebook?
-
-        **R:** `&hide=jupyter%20notebook`.
-
-        #### P: No logré desplegar mi propia instancia en Vercel
-
-        **R:** Consulta la documentación:
-          - [Auto-alojamiento en Vercel](https://github.com/alvar3zjos3/dev-readme-stats#auto-alojado-vercelotro)
-
-        #### P: ¿Cómo contar estadísticas privadas?
-
-        **R:** Solo podemos contar commits privados y no tenemos acceso a otra información privada de los usuarios. La única forma es desplegar tu propia instancia y usar tu propio PAT (Personal Access Token).
+      label: Verificaciones previas
+      description: Confirma estos puntos antes de enviar el reporte.
+      options:
+        - label: He revisado CONTRIBUTING.md antes de abrir este reporte.
+          required: true
+        - label: He probado la URL exacta de la tarjeta manualmente.
+          required: true
+        - label:
+            He comprobado si el problema está relacionado con caché, límites de
+            API o configuración.
+          required: false

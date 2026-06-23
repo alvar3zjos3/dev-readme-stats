@@ -1,19 +1,25 @@
-# Días de inactividad antes de marcar un issue como obsoleto
+# Días de inactividad antes de marcar un issue/PR como inactivo
 daysUntilStale: 30
-# Días de inactividad antes de cerrar un issue obsoleto
+
+# Días de inactividad antes de cerrar un issue/PR inactivo
 daysUntilClose: 7
-# Issues con estas etiquetas nunca se considerarán obsoletos
+
+# Issues y PRs con estas etiquetas nunca se considerarán inactivos
 exemptLabels:
   - feature
   - enhancement
   - help wanted
   - bug
 
-# Etiqueta al marcar un issue como obsoleto
-staleLabel: stale
-# Comentario al marcar un issue como obsoleto. Usa `false` para desactivarlo
+# Etiqueta que se añadirá al marcar un issue/PR como inactivo
+staleLabel: inactivo
+
+# Comentario que dejará el bot al marcarlo como inactivo
 markComment: >
-  Este issue se ha marcado automáticamente como obsoleto por falta de actividad
-  reciente. Se cerrará si no hay más actividad. Gracias por tus contribuciones.
-# Comentario al cerrar un issue obsoleto. Usa `false` para desactivarlo
+  Este issue ha sido marcado automáticamente como inactivo por falta de
+  actividad reciente. Si no hay nuevas respuestas o actualizaciones en los
+  próximos 7 días, 
+  se cerrará automáticamente. ¡Gracias por tus contribuciones!
+
+# Comentario al cerrar un issue inactivo. (false = se cierra sin comentario adicional)
 closeComment: false
