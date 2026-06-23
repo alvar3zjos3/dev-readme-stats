@@ -1,28 +1,46 @@
-name: Solicitud de función
-description: Sugiere una idea para este proyecto.
+name: Solicitud de nueva funcionalidad
+description: Sugiere una idea o mejora para el proyecto.
 labels:
   - "enhancement"
 body:
-  - type: textarea
+  - type: markdown
     attributes:
-      label: ¿Tu solicitud está relacionada con un problema? Descríbelo.
+      value: |
+        :warning: **Aviso sobre temas:** Actualmente hemos pausado la adición de nuevos temas integrados para reducir el mantenimiento. Si tu solicitud es para añadir un tema nuevo, te recomendamos usar las [opciones de personalización](https://github.com/alvar3zjos3/dev-readme-stats/blob/master/readme.md#-personalización-general) pasándole los colores por la URL.
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Descripción de la funcionalidad
       description:
-        Una descripción clara y concisa del problema. Ej. Me frustra cuando
-        [...]
+        Explica de forma clara y concisa qué te gustaría añadir o mejorar en el
+        proyecto.
+      placeholder: Me gustaría que la tarjeta pudiera mostrar...
     validations:
       required: true
+
   - type: textarea
+    id: problem-related
     attributes:
-      label: Describe la solución que te gustaría
-      description: Una descripción clara y concisa de lo que quieres que ocurra.
-  - type: textarea
-    attributes:
-      label: Describe alternativas que hayas considerado
+      label: ¿Resuelve algún problema o limitación actual? (Opcional)
       description:
-        Una descripción clara y concisa de otras soluciones o funciones que
-        hayas evaluado.
+        Si tu idea surge porque actualmente no puedes lograr hacer algo
+        específico con las tarjetas, descríbelo aquí.
+      placeholder: Actualmente estoy intentando hacer X pero me frustra que...
+
   - type: textarea
+    id: proposed-solution
     attributes:
-      label: Contexto adicional
+      label: Propuesta técnica o alternativas (Opcional)
       description:
-        Cualquier otro contexto o capturas sobre la solicitud de función.
+        Si tienes una idea de cómo debería implementarse (ej. añadiendo un nuevo
+        parámetro a la URL) o si has pensado en soluciones alternativas,
+        cuéntanoslo.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Contexto adicional o capturas (Opcional)
+      description:
+        Añade enlaces a la API de GitHub, referencias, capturas de pantalla o
+        bocetos visuales que ayuden a entender tu idea.
