@@ -1,8 +1,8 @@
 name: Generar todas las tarjetas y temas
 
 on:
-  schedule:
-    - cron: "0 3 * * *"
+  #schedule:
+  #  - cron: "0 3 * * *"
   workflow_dispatch:
 
 permissions:
