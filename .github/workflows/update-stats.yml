@@ -160,7 +160,7 @@ jobs:
           egress-policy: audit
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
       - name: stats
-        uses: alvar3zjos3/dev-readme-stats-action@6ce6b8aab3851d24f237e0b9c1160cfb42aa05c9
+        uses: alvar3zjos3/dev-readme-stats-action@165f7a45086231c8a61b4ed48037000cc4958b96
         with:
           card: stats
           options:
@@ -168,7 +168,7 @@ jobs:
           path: profile/themes/${{ matrix.theme }}/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs
-        uses: alvar3zjos3/dev-readme-stats-action@6ce6b8aab3851d24f237e0b9c1160cfb42aa05c9
+        uses: alvar3zjos3/dev-readme-stats-action@165f7a45086231c8a61b4ed48037000cc4958b96
         with:
           card: top-langs
           options:
@@ -176,7 +176,7 @@ jobs:
           path: profile/themes/${{ matrix.theme }}/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin
-        uses: alvar3zjos3/dev-readme-stats-action@6ce6b8aab3851d24f237e0b9c1160cfb42aa05c9
+        uses: alvar3zjos3/dev-readme-stats-action@165f7a45086231c8a61b4ed48037000cc4958b96
         with:
           card: pin
           options:
@@ -185,7 +185,7 @@ jobs:
           path: profile/themes/${{ matrix.theme }}/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime
-        uses: alvar3zjos3/dev-readme-stats-action@6ce6b8aab3851d24f237e0b9c1160cfb42aa05c9
+        uses: alvar3zjos3/dev-readme-stats-action@165f7a45086231c8a61b4ed48037000cc4958b96
         with:
           card: wakatime
           options:
@@ -346,7 +346,7 @@ jobs:
           egress-policy: audit
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0
       - name: stats
-        uses: alvar3zjos3/dev-readme-stats-action@6ce6b8aab3851d24f237e0b9c1160cfb42aa05c9
+        uses: alvar3zjos3/dev-readme-stats-action@165f7a45086231c8a61b4ed48037000cc4958b96
         with:
           card: stats
           options:
@@ -354,7 +354,7 @@ jobs:
           path: profile/themes/${{ matrix.theme }}/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: top-langs
-        uses: alvar3zjos3/dev-readme-stats-action@6ce6b8aab3851d24f237e0b9c1160cfb42aa05c9
+        uses: alvar3zjos3/dev-readme-stats-action@165f7a45086231c8a61b4ed48037000cc4958b96
         with:
           card: top-langs
           options:
@@ -362,7 +362,7 @@ jobs:
           path: profile/themes/${{ matrix.theme }}/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: pin
-        uses: alvar3zjos3/dev-readme-stats-action@6ce6b8aab3851d24f237e0b9c1160cfb42aa05c9
+        uses: alvar3zjos3/dev-readme-stats-action@165f7a45086231c8a61b4ed48037000cc4958b96
         with:
           card: pin
           options:
@@ -371,7 +371,7 @@ jobs:
           path: profile/themes/${{ matrix.theme }}/pin.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: wakatime
-        uses: alvar3zjos3/dev-readme-stats-action@6ce6b8aab3851d24f237e0b9c1160cfb42aa05c9
+        uses: alvar3zjos3/dev-readme-stats-action@165f7a45086231c8a61b4ed48037000cc4958b96
         with:
           card: wakatime
           options:
