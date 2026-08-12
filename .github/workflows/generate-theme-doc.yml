@@ -58,18 +58,26 @@ jobs:
           CI: true
 
       - name: Commit cambios en rama temporal
+        id: check_changes
         run: |
           git config --global user.email "no-reply@devreadmestats.com"
           git config --global user.name "Dev Readme Stats Bot"
           git checkout -b updated-theme-readme || git checkout updated-theme-readme
           git add themes/README.md
-          git diff --cached --quiet && echo "Sin cambios, nada que hacer." && exit 0
-          git commit --no-verify --message "docs(theme): auto update theme readme"
-          git push --force origin updated-theme-readme
+          
+          if git diff --cached --quiet; then
+            echo "Sin cambios, nada que hacer."
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            git commit --no-verify --message "docs(theme): auto update theme readme"
+            git push --force origin updated-theme-readme
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Crear Pull Request
+        if: steps.check_changes.outputs.has_changes == 'true'
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -81,7 +89,6 @@ jobs:
               base: "master",
               state: "open",
             });
-
             if (prs.length > 0) {
               console.log(`PR ya existe: ${prs[0].html_url}`);
             } else {
@@ -91,7 +98,7 @@ jobs:
                 title: "docs(theme): auto update theme readme",
                 head: "updated-theme-readme",
                 base: "master",
-                body: "Actualización automática del README de temas generada por el bot.",
+                body: "Actualización automática del README.",
               });
               console.log(`PR creada: ${pr.html_url}`);
             }
