@@ -64,7 +64,7 @@ jobs:
           git config --global user.name "Dev Readme Stats Bot"
           git checkout -b updated-theme-readme || git checkout updated-theme-readme
           git add themes/README.md
-          
+
           if git diff --cached --quiet; then
             echo "Sin cambios, nada que hacer."
             echo "has_changes=false" >> $GITHUB_OUTPUT
